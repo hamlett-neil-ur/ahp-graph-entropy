@@ -1,0 +1,3141 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\PassOptionsToPackage{twoside}{geometry}
+\usepackage{fancyhdr} % CRITICAL: Restored this to fix Undefined Control Sequence
+\usepackage{etoolbox} % Necessary for patching commands if needed
+\usepackage{babel}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\usepackage{float}
+\usepackage{xurl}
+\usepackage{graphicx}
+\usepackage[authoryear,round]{natbib}
+
+% --- Custom Citation Commands ---
+\newcommand{\refcite}[2]{\hyperref[ref:#1]{#2}}
+\newcommand{\autocite}[1]{\hyperref[ref:#1]{\nameref{ref:#1}}}
+
+\graphicspath{{./graphics/}}
+
+% --- Colors ---
+\definecolor{JBlue}{HTML}{0051BA}
+\definecolor{Night}{HTML}{003459}
+\definecolor{Brick}{HTML}{971b2f}
+\definecolor{Lake}{HTML}{2767ff}
+\definecolor{TCotta}{HTML}{c66e43}
+
+\sectionfont{\color{JBlue}}
+\subsectionfont{\color{Night}}
+\subsubsectionfont{\color{Brick}}
+
+\setlength\columnsep{18pt}
+
+% --- Main Page Style Definition ---
+\fancypagestyle{mypagestyle}{%
+    \fancyhf{} 
+    \renewcommand{\headrulewidth}{0.4pt}
+
+    % Outer header (Odd-Left / Even-Right)
+%----------------------------------------------------------
+    % Outer header: Left on Odd / Right on Even
+    %----------------------------------------------------------
+
+    % Left-Odd: Left-aligned stack
+    \fancyhead[LO]{%
+        \small
+        \shortstack[l]{%
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{AHP-factor contribution strength}\\
+            \href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{N. A. Hamlett, D.Sc., MBA}
+        }%
+    }
+
+    % Right-Even: Right-aligned stack
+    \fancyhead[RE]{%
+        \small
+        \shortstack[r]{%
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{AHP-factor contribution strength}\\
+            \href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{N. A. Hamlett, D.Sc., MBA}
+        }%
+    }
+
+    % Inner header (Odd-Right / Even-Left)
+% Inner header: Right on Odd / Left on Even
+    \fancyhead[RO]{%
+        \small
+        \shortstack[r]{%
+            \href{...}{unpublished working paper}
+        }%
+    }
+
+    \fancyhead[LE]{%
+        \small
+        \shortstack[l]{%
+            \href{...}{unpublished working paper}
+        }%
+    }
+    % Footer
+    \fancyfoot[C]{%
+        \small \thepage\\[2pt]
+        {\tiny \textcolor{JBlue}{©2026 Uncertainty Research, LLC — All Rights Reserved}}
+    }
+}
+
+% --- Special Footer for First Page ---
+\fancypagestyle{specialfooter}{%
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \fancyfoot[C]{%
+      \parbox[c]{\textwidth}{%
+          \centering \small \thepage\par \vspace{2pt} 
+          \textcolor{JBlue}{\tiny ©2026 Uncertainty Research, LLC — All Rights Reserved}
+      }%
+  }%
+}
+
+% --- Title and Author Metadata ---
+\title{%
+  \bfseries \textcolor{Night}{Evidentiary reasoning with the Analytical Hierarchy Process:}\\
+  \textcolor{Night}{Use of graph entropy to rank decision factors}
+  \par\vspace{0.6em}
+  \normalfont\normalsize \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
+  \par\vspace{0.4em}
+  \small GitHub: \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{hamlett-neil-ur/ahp-graph-entropy}
+}
+
+\author{
+    \textcolor{Night}{Neil A. Hamlett, D.Sc., MBA} \\
+    \small \includegraphics[height=0.9\baselineskip]{graphics/manualEmailIcon.png}\textnormal{ neil.hamlett@uncertainty-research.science} \qquad
+    \small \includegraphics[height=1.06125\baselineskip]{graphics/LinkedInLogo.png}\textnormal{\href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{LinkedIn Profile}} \\
+    \small \includegraphics[height=1.375\baselineskip]{graphics/git-github-hub-icon-25.png}\textnormal{\href{https://hamlett-neil-ur.github.io/}{Portfolio}} \qquad
+    \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{\href{https://orcid.org/0000-0001-8278-0087}{0000-0001-8278-0087}}
+}
+
+\date{\normalsize \today}
+
+% --- Activation and Overrides ---
+\AtBeginDocument{
+  \pagestyle{mypagestyle}
+  % Forces the first page to use your specific footer style
+  \thispagestyle{specialfooter} 
+}
+
+% Redefine plain style to match your footer (prevents blank pages on chapter starts)
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\small \thepage\\[2pt] {\tiny \textcolor{JBlue}{©2026 Uncertainty Research, LLC — All Rights Reserved}}}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\end_preamble
+\options twoside
+\use_default_options true
+\begin_modules
+customHeadersFooters
+multicol
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "Nunito"
+\font_sans "default" "Nunito"
+\font_typewriter "default" "Avenir"
+\font_math "auto" "default"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\customcolor JayhawkDarkGray 333333
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\spellchecker_ignore english press
+\spellchecker_ignore english princeton
+\spellchecker_ignore english edu
+\spellchecker_ignore english j
+\spellchecker_ignore english ijar
+\spellchecker_ignore english 2023
+\spellchecker_ignore english 108967
+\spellchecker_ignore english Hué
+\spellchecker_ignore english mnsc
+\spellchecker_ignore english 02025
+\spellchecker_ignore english patrec
+\spellchecker_ignore english 2005
+\spellchecker_ignore english 10
+\spellchecker_ignore english 010
+\spellchecker_ignore english pretence
+\spellchecker_ignore english DAG
+\spellchecker_ignore english DAGs
+\spellchecker_ignore english Hué's
+\spellchecker_ignore english Caporale
+\leftmargin 2cm
+\topmargin 4cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\headheight 4.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+sloppy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+twocolumn
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+thispagestyle{specialfooter}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+topfraction}{.8}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Decision makers often require insight into the relative strength of evidence influencing their choices.
+ The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength.
+ Pairwise-comparison analysis specifies edges for a complete,
+ directed,
+ acyclic graph,
+ often called a 
+\emph on
+tournament graph
+\emph default
+.
+ Pairwise-comparison 
+\begin_inset Quotes eld
+\end_inset
+
+preference ratios
+\begin_inset Quotes erd
+\end_inset
+
+ provide tournament-graph edge weights,
+ leading to a novel Laplacian matrix.
+ Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+\end_layout
+
+\begin_layout Section*
+Introduction.
+\end_layout
+
+\begin_layout Standard
+Decision-making nearly always occurs under conditions of incomplete or imperfect information.
+ No less than Nobel-prize economist Frederick von Hayek recognized this :
+\end_layout
+
+\begin_layout Quote
+...I prefer true but imperfect knowledge,
+ even if it leaves much undetermined and unpredictable,
+ to
+\emph on
+ a pretence of exact knowledge that is likely to be false
+\emph default
+ (emphasis added) (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vonHayek1974"
+literal "false"
+
+\end_inset
+
+,
+ cited in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kay2020"
+literal "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The treatment of uncertainty in quantitative decision-making represents a formidable research challenge,
+ exposing multiple facets.
+ We conventionally decompose uncertainty into 
+\emph on
+epistemic
+\emph default
+ and 
+\emph on
+aleatory
+\emph default
+ (or 
+\emph on
+stochastic
+\emph default
+) components (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Salicone2018"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+The present study focuses primarily on the epistemic
+\emph default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hamlett2019,Hamlett2025"
+literal "false"
+
+\end_inset
+
+ argues for the primacy of resolving epistemic uncertainty in business decision making.
+ Exemplified by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zellweger2023,Rindova2024,Ehrig2026"
+literal "false"
+
+\end_inset
+
+,
+ this perspective holds sway in the entrepreneurial and strategic decision-making communities.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jackson2019"
+literal "false"
+
+\end_inset
+
+ corroborates from a philosophy-of-science point of view.
+\end_layout
+
+\begin_layout Subsection*
+Motivation:
+ How strong is my evidence?
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ehrig2026"
+literal "false"
+
+\end_inset
+
+ argue that entrepreneurial decision making in particular inescapably requires 
+\begin_inset Quotes eld
+\end_inset
+
+...logic and reasoning with the aid of 
+\emph on
+very small samples of data
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ (emphasis added).
+ Circumstances demanding this kind of reasoning arise in many domains beyond new-business formation (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Martin2007,Eisenmann2013,Swanson2024"
+literal "false"
+
+\end_inset
+
+).
+ Fundamentally,
+ entrepreneurial ventures amount to 
+\emph on
+epistemic
+\emph default
+ explorations.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Howard2016"
+literal "false"
+
+\end_inset
+
+ devote considerable attention to the adverse effects of imperfect information when trying to select optimum scenarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Nontrivial challenges inevitably arise
+\emph on
+ even
+\emph default
+ when considerable amounts of statistically coherent,
+ phenomenologically illuminating data exist.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+ derive an information-theoretic 
+\emph on
+data-processing inequality
+\emph default
+:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+...no processing of 
+\begin_inset Formula $Y$
+\end_inset
+
+ ...
+ can increase the information that 
+\begin_inset Formula $Y$
+\end_inset
+
+ contains about 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ Corroborating from a statistical-learning perspective,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hastie2023"
+literal "false"
+
+\end_inset
+
+ define 
+\emph on
+irreducible variance
+\emph default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kay2020"
+literal "false"
+
+\end_inset
+
+ warn about pervasive 
+\emph on
+nonstationarity
+\emph default
+ in real-world problems:
+ Statistical-learning training data based on past experience might not represent future conditions very well.
+ More generally,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Townsend2023"
+literal "false"
+
+\end_inset
+
+ articulate a case for 
+\begin_inset Quotes eld
+\end_inset
+
+...computationally irreducible barriers to the predictive capabilities and task performance advantages of AI systems...
+\begin_inset Quotes erd
+\end_inset
+
+ for many tasks.
+\end_layout
+
+\begin_layout Standard
+Building on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Dempster1967}{Dempster's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Dempster1967}{(1967)}
+\end_layout
+
+\end_inset
+
+ seminal idea,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shafer1976"
+literal "false"
+
+\end_inset
+
+ offered a profoundly rigorous approach to quantifying epistemic uncertainty.
+ More-recently,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shenoy2023"
+literal "false"
+
+\end_inset
+
+ applied 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Shafer1976}{Shafer's}
+\end_layout
+
+\end_inset
+
+ reasoning to quantify evidentiary incompleteness in Bayesian networks,
+ a causal-inference methodology commonly employed within the entrepreneurial decision-making community (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Camuffo2024,Ehrig2026"
+literal "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hué2026"
+literal "false"
+
+\end_inset
+
+ use a stochastic-detection area-under-the-curve (AuC) (
+\emph on
+cf
+\emph default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fawcett2006"
+literal "false"
+
+\end_inset
+
+) approach to analyze evidentiary factors' relative strengths.
+ Resembling stepwise regression (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Olive2017"
+literal "false"
+
+\end_inset
+
+),
+ their approach also exhibits conceptual parallels to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shafer1976"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cox2026a,Cox2026b"
+literal "false"
+
+\end_inset
+
+ offers an emerging approach to uncertainty characterization based on sheaf theory (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rosiak2022"
+literal "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection*
+Why the Analytical Hierarchy Process (AHP)?
+\end_layout
+
+\begin_layout Standard
+AHP provides an axiomatic framework (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+) for 
+\begin_inset Quotes eld
+\end_inset
+
+...logic and reasoning with the aid of very small samples of data
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ehrig2026"
+literal "false"
+
+\end_inset
+
+).
+ It is a multi-criterion decision methodology (MCDM) enjoying widespread applicability for group decision making (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+),
+ risk analysis (e.g.,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1987,Vaidya2006,Linkov2006"
+literal "false"
+
+\end_inset
+
+),
+ and other problems.
+ AHP is often applied to situations where substantial amounts of statistically coherent measurements are not immediately available to support more-empirical decision making.
+ 
+\end_layout
+
+\begin_layout Standard
+The AHP methodology begins with one or more experts establishes an 
+\emph on
+evidentiary span
+\emph default
+:
+ The range of measurable factors believed to influence the attractiveness of each distinct scenario under consideration.
+ This panel then performs
+\emph on
+ pairwise comparisons
+\emph default
+ to assign a 
+\begin_inset Quotes eld
+\end_inset
+
+preference ratio
+\begin_inset Quotes erd
+\end_inset
+
+ between each pair of factors within the range (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Merrick2005"
+literal "false"
+
+\end_inset
+
+).
+ Illustrated in an upcoming section,
+ AHP produces the scenario rankings according to attractiveness based upon their respective measurable factors.
+ Bayesian methods (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Li2025"
+literal "false"
+
+\end_inset
+
+) allow for subsequent revision of the pairwise comparisons as stronger empirical evidence emerges.
+\end_layout
+
+\begin_layout Subsection*
+Evidentiary-strength analysis using the AHP.
+\end_layout
+
+\begin_layout Standard
+That 
+\emph on
+a set of AHP pairwise comparisons defines a complete,
+ directed,
+ acyclic graph
+\emph default
+ (DAG) provides the seminal insight underlying this investigation.
+ Complete DAGs belong to a special class of graphs called 
+\emph on
+tournament graphs
+\emph default
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moon2015"
+literal "false"
+
+\end_inset
+
+).
+ In general,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+the entropy of a graph is interpreted 
+\emph on
+as its structural information content
+\emph default
+ and serves as a complexity measure
+\begin_inset Quotes erd
+\end_inset
+
+ (emphasis added) (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dehmer2011,Mowshowitz2012"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ studied the particular characteristics of tournament graphs.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+What questions do entropies of AHP-based tournament graphs allow us to answer
+\emph default
+?
+ Endogenous to the AHP formulation itself,
+ relative entropy quantifies the strength of contribution by the different factors within the evidentiary span.
+ This addresses a the objective pursued by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hué2026"
+literal "false"
+
+\end_inset
+
+.
+ Graph-entropy measures however do not require extensive data comprised of both positive and negative cases as with Hué's approach.
+ Congruent with the AHP methodology explored here,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiroušek2023"
+literal "false"
+
+\end_inset
+
+ use entropy of
+\emph on
+ belief-function graphical models
+\emph default
+ to decompose their relative evidentiary strength.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+By what mechanism do we infer the differential information between AHP-based tournament graphs with distinct evidentiary spans
+\emph default
+?
+ Relative entropy provides a well-understood approach (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+).
+ Generally,
+ the relative entropy in graphical contexts has received considerable attention (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wong1985,Liu2022,Guanlei2025"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ explore entropy differences between same-order tournament graphs with different directional structures.
+ In our case,
+ the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to ommiting decision factors from the latter.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+What innovation is required to define a methodology for AHP-based evidentiary-strength analysis
+\emph default
+?
+ First,
+ we must formulate an entropy definition for tournament graphs with 
+\emph on
+weighted
+\emph default
+ edges.
+ The investigation by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ focused on tournament graphs with unweighted (uniformly unit-weighted) edges.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2015"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kuo2022"
+literal "false"
+
+\end_inset
+
+,
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2022"
+literal "false"
+
+\end_inset
+
+ entropy formulations using edge weights.
+ The preference ratios from the AHP pairwise comparison provide the weights used here.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Why is 
+\begin_inset Quotes eld
+\end_inset
+
+heavy
+\begin_inset Quotes erd
+\end_inset
+
+ graph-entropy machinery needed
+\emph default
+?
+ We might intiutively expect that individual pairwise preference ratios suffice to inform us about the most-influential factors.
+ The AHP's machinery however accounts for 
+\begin_inset Quotes eld
+\end_inset
+
+mutual coupling
+\begin_inset Quotes erd
+\end_inset
+
+ between decision factors (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+).
+ That pairwise comparisons define a graph —
+ a network —
+ provides the basis of its power.
+ Our graph-entropy machinery accounts for the 
+\emph on
+aggegate effect
+\emph default
+ of all the evidence informing a decision or risk assessment.
+ Individual preference ratios fail to provide this.
+\end_layout
+
+\begin_layout Subsection*
+Course of investigation.
+\end_layout
+
+\begin_layout Standard
+We begin with a brief illustration of AHP methodology.
+ A 
+\emph on
+real-world
+\emph default
+ case study concisely demonstrates its application to obtaining a preference-ranked set of scenarios.
+ The actual ranking lies beyond our specific interest.
+ The DAG resulting from the pairwise preferences interests us primarily.
+ 
+\end_layout
+
+\begin_layout Standard
+We then calculate the entropy for our pairwise-preference DAG.
+ This extends work by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ through construction of a Laplacian that includes the edge weights.
+ Our AHP-graph Laplacian fuses elements of that for a conventional unit-edge-weighted DAG Laplacian with components from the AHP reciprocal matrix for edge weights.
+ This incorporates information about degree of influence in the interconnected evidentiary framework.
+\end_layout
+
+\begin_layout Standard
+We then calculate entropies and relative entropies from our AHP-based DAG structure and interpret the results for our real-world case study.
+ Approaches demonstrated by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiroušek2023"
+literal "false"
+
+\end_inset
+
+ guide our thinking.
+ We also explore the relationship between preference ratios relative entroy.
+ 
+\end_layout
+
+\begin_layout Section*
+Illustration of the Analytic Hierarchy Process (AHP).
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ applied AHP methodology in design-tradeoff decisions for hydrogen fuel cells.
+ Their work involves deep consideration of device physics that are tangential to the present exploration.
+ Their use of the AHP methodology primarily interests us.
+\end_layout
+
+\begin_layout Standard
+This case study suits the purposes of this investigation for three reasons.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+It demonstrates a real-world application
+\emph default
+.
+ Introductory AHP presentations often employ contrived cases.
+ A real-world case study provides a more-informative and -convincing demonstration.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+This case is recent
+\emph default
+.
+ Given the AHP literature spans decades,
+ readers might succomb to the temptation to conclude that the method is anochronistic.
+ Our case here demonstrates the application of AHP to a contemporary design problem for a cutting-edge technology.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+An informative but simple illustration can be extracted
+\emph default
+.
+ The AHP problem was designed to be 
+\emph on
+hierarchical
+\emph default
+.
+ Complex multi-criterion decision problems often involve dividing and conquering.
+ A large AHP application might involve the 
+\begin_inset Quotes eld
+\end_inset
+
+nesting
+\begin_inset Quotes erd
+\end_inset
+
+ of smaller AHP formulations,
+ analogous to Russion Matryoshka dolls.
+ Our demonstration considers only one of the 
+\begin_inset Quotes eld
+\end_inset
+
+inner
+\begin_inset Quotes erd
+\end_inset
+
+ AHP formulations,
+ but illustrates the presence of a broader context.
+\end_layout
+
+\begin_layout Standard
+The AHP-methodology description employs the terminology of
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Entropy of edge-weighted,
+ directed acyclic graphs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+%
+\backslash
+onecolumn
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Brown, et al (2020)"
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+Brown,
+ D.
+ E.,
+ 
+\emph on
+et al
+\emph default
+ (2020).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy of tournament digraphs.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Linear Algebra and its Applications
+\emph default
+:
+ 584:371-393.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.laa.2019.09.026
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Bu, et al (2026)"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+Bu,
+ W.,
+ 
+\emph on
+et al
+\emph default
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Energy Conversion and Management
+\emph default
+:
+ 350:120952.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.enconman.2025.120952
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Camuffo, et al (2024)"
+key "Camuffo2024"
+literal "false"
+
+\end_inset
+
+Camuffo,
+ A.,
+ Gambardella,
+ A.,
+ Pignataro,
+ A.
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Theory-driven strategic-management decisions.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Strategy Science
+\emph default
+ 9(4):297-514.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/stsc.2024.0173
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Caporale & Rinaldi (2025)"
+key "Caporale2025"
+literal "false"
+
+\end_inset
+
+Caporale,
+ D.
+ & Rinaldi,
+ A.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The application of analytical hierarchy process to assess adaptation strategies for flood and landslides risks:
+ A case study of a multi-risk area community.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Environmental Science & Policy
+\emph default
+:
+ 163:103959.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.envsci.2024.103959
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Chen, et al (2015)"
+key "Chen2015"
+literal "false"
+
+\end_inset
+
+Chen,
+ Z.,
+ 
+\emph on
+et al
+\emph default
+ (2015).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy of weighted graphs with Randić weights.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Entropy
+\emph default
+:
+ 17:3710-3723.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.3390/e17063710
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cover & Thomas (2006)"
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+Cover,
+ T.
+ M.
+ & Thomas,
+ J.
+ A.
+ (2006).
+ 
+\emph on
+Elements of Information Theory.
+
+\emph default
+ New York:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780471748823"
+target "https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cox & Reid (2000)"
+key "Cox2000"
+literal "false"
+
+\end_inset
+
+Cox,
+ D.
+ R.
+ & Reid,
+ N.
+ (2000).
+ 
+\emph on
+The Theory of the Design of Experiments
+\emph default
+.
+ UK:
+ Routledge.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781584881957"
+target "https://www.routledge.com/The-Theory-of-the-Design-of-Experiments/Cox-Reid/p/book/9781584881957"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cox (2026a)"
+key "Cox2026a"
+literal "false"
+
+\end_inset
+
+Cox Jr.,
+ L.
+ A.
+ (2026a).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Integrating fragmented risk knowledge:
+ Sheaf theory for risk analysts.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Risk Analysis
+\emph default
+:
+ 46(3):e70206.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1111/risa.70206
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cox (2026b)"
+key "Cox2026b"
+literal "false"
+
+\end_inset
+
+Cox Jr.,
+ L.
+ A.
+ (2026b).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Reducing risk misinformation and miscommunication:
+ A sheaf-theoretic perspective.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Risk Analysis
+\emph default
+:
+ 46(4):e70224.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1111/risa.70224
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Dehmer & Mowshowitz (2011)"
+key "Dehmer2011"
+literal "false"
+
+\end_inset
+
+Dehmer,
+ M.
+ & Mowshowitz,
+ A.
+ (2011).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A history of graph entropy measures.
+\begin_inset Quotes erd
+\end_inset
+
+ Information Sciences:
+ 181(1):57-78.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ins.2010.08.041
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Dempster (1967)"
+key "Dempster1967"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Dempster1967}
+\end_layout
+
+\end_inset
+
+Dempster,
+ A.
+ (1967):
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Upper and lower probabilities induced by a multivalued mapping.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Annals of Mathematical Statistics
+\emph default
+:
+ 38(2):235-339.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1214/aoms/1177698950
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Ehrig, et al (2025)"
+key "Ehrig2026"
+literal "false"
+
+\end_inset
+
+Ehrig,
+ T.,
+ Felin,
+ T.,
+ Zenger,
+ T.
+ (2025).
+ "Causal Reasoning and the Scientific Entrepreneur:
+ Beyond Bayes." 
+\emph on
+Bayesian Entrepreneurship
+\emph default
+.
+ Cambridge,
+ MA:
+ The MIT Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780262052160"
+target "https://doi.org/10.7551/mitpress/15918.001.0001"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Eisenmann (2013)"
+key "Eisenmann2013"
+literal "false"
+
+\end_inset
+
+Eisenmann,
+ T.
+ (2013,
+ January).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entrepreneurship:
+ A Working Definition.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Harvard Business Review
+\emph default
+.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://hbr.org/2013/01/what-is-entrepreneurship
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Fawcett (2026)"
+key "Fawcett2006"
+literal "false"
+
+\end_inset
+
+Fawcett,
+ T.
+ (2006).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+An introduction to ROC analysis.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Pattern Recognition Letters
+\emph default
+:
+ 27(8):861-874.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.patrec.2005.10.010
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Guanlei, Xiaogang, Xiaotong (2025)"
+key "Guanlei2025"
+literal "false"
+
+\end_inset
+
+ Guanlei,
+ X.,
+ Siogang,
+ X.,
+ Xiaotong,
+ W.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Relative entropy based uncertinaty principles for graph signals.
+ 
+\emph on
+Signal Processing
+\emph default
+:
+ 227:109708.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.sigpro.2024.109708
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hamlett (2019)"
+key "Hamlett2019"
+literal "false"
+
+\end_inset
+
+Hamlett,
+ N.
+ A.
+ (2019).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Competitive advantage based on information.
+\begin_inset Quotes erd
+\end_inset
+
+ unpublished working paper.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://drive.google.com/file/d/1Cq7oM6BYrGWxmjf1bdhrdrORZnKBvLu4/view
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hamlett (2025)"
+key "Hamlett2025"
+literal "false"
+
+\end_inset
+
+Hamlett,
+ N.
+ A.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A theory and methodology for AI-based digital transformation.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Achieving Digital Transformation through Analytics and AI
+\emph default
+,
+ J.
+ Liebowitz (ed.).
+ Singapore:
+ World Scientific.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1142/9789811296475_0002
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hastie, Tibshirani, Friedman (2009)"
+key "Hastie2023"
+literal "false"
+
+\end_inset
+
+Hastie,
+ T.,
+ Tibshirina,
+ R.,
+ Friedman,
+ J.
+ (2009).
+ 
+\emph on
+The Elements of Statistical Learning
+\emph default
+.
+ Springer Nature.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1007/978-0-387-84858-7
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Howard & Abbas (2016)"
+key "Howard2016"
+literal "false"
+
+\end_inset
+
+Howard,
+ R.
+ A.
+ & Abbas,
+ A.
+ E (2016).
+ 
+\emph on
+Foundations of Decision Analysis
+\emph default
+.
+ New York:
+ Pearson.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "P200000003532"
+target "https://www.pearson.com/en-us/subject-catalog/p/foundations-of-decision-analysis/P200000003532"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hué, et al (2026)"
+key "Hué2026"
+literal "false"
+
+\end_inset
+
+Hué,
+ S.
+ et al (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Measuring the driving forces of predictive performance:
+ Application to credit scoring.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Management Science
+\emph default
+:
+ online first.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/mnsc.2023.02025
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Jackson (2019)"
+key "Jackson2019"
+literal "false"
+
+\end_inset
+
+Jackson,
+ M.
+ C.
+ (2019).
+ 
+\emph on
+Critical Systems Thinking and the Management of Complexity
+\emph default
+.
+ New York:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781119118398"
+target "https://www.wiley.com/en-us/Critical+Systems+Thinking+and+the+Management+of+Complexity-p-9781119118398"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Jiroušek, Kratochvíl, Shenoy (2023)"
+key "Jiroušek2023"
+literal "false"
+
+\end_inset
+
+Jiroušek,
+ R.,
+ Kratochvíl,
+ V.,
+ Shenoy,
+ P.
+ P.
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Computing the decomposable entropy of belief-function graphical models.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+International Journal of Approximate Reasoning
+\emph default
+:
+ 161:108984.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ijar.2023.108984
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Kay & King (2020)"
+key "Kay2020"
+literal "false"
+
+\end_inset
+
+Kay,
+ John & King,
+ Mervyn (2020).
+ 
+\emph on
+Radical Uncertainty
+\emph default
+,
+ New York:
+ Norton.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781324004776"
+target "https://wwnorton.com/books/9781324004776"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Li, et al (2025)"
+key "Li2025"
+literal "false"
+
+\end_inset
+
+Li,
+ H.,
+ 
+\emph on
+et al
+\emph default
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A Bayesian analysis framework for decision making with interval pairwise comparison judgements.
+\begin_inset Quotes erd
+\end_inset
+
+ Decision Analysis:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+online first
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/deca.2024.0207
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Kuo (2022)"
+key "Kuo2022"
+literal "false"
+
+\end_inset
+
+Kuo,
+ H.
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy of weighted graph by edge weights by using Sombor reduced index.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Corrosion and Materials
+\emph default
+:
+ 47:20-28.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.61336/jcm2022-3
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Linkov, et al (2006)"
+key "Linkov2006"
+literal "false"
+
+\end_inset
+
+Linkov,
+ I.,
+ 
+\emph on
+et al
+\emph default
+ (2006).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Multicriteria decision analysis:
+ A comprehensive decision approach of management of contaminated sediments.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Risk Analysis
+\emph default
+:
+ 26(1):61-78:
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1111/j.1539-6924.2006.00713.x
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Liu, et al (2022)"
+key "Liu2022"
+literal "false"
+
+\end_inset
+
+Liu,
+ S.,
+ 
+\emph on
+et al
+\emph default
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Relative entropy of distance distribution based similarity measure of nodes in weighted graph data.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Entropy
+\emph default
+:
+ 24:1154.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.3390/e24081154
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Martin & Olsberg (2007)"
+key "Martin2007"
+literal "false"
+
+\end_inset
+
+Martin,
+ R.
+ L.,
+ & Osberg,
+ S.
+ (2007).
+ Social entrepreneurship:
+ The case for definition.
+ 
+\emph on
+Stanford Social Innovation Review
+\emph default
+,
+ 2007 (Spring).
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://www.ngobiz.org/picture/File/Social%20Enterpeuneur-The%20Case%20of%20Definition.pdf
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Merrick, van Dorp, Singh (2005)"
+key "Merrick2005"
+literal "false"
+
+\end_inset
+
+Merrick,
+ J.
+ R.
+ W.,
+ van Dorp,
+ J.
+ R.,
+ Singh,
+ A.
+ (2005).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Analysis of correlated expert judgements from extended pairwise comparisions.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Decision Analysis
+\emph default
+:
+ 2(1):1-65.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/deca.1050.0031
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Moon (2015)"
+key "Moon2015"
+literal "false"
+
+\end_inset
+
+Moon,
+ J.
+ W.
+ (2015).
+ 
+\emph on
+Topics on Tournaments in Graph Theory
+\emph default
+.
+ Dover.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780486804736"
+target "https://store.doverpublications.com/products/9780486804736"
+literal "false"
+
+\end_inset
+
+.
+ (Originally,
+ New York:
+ Holt,
+ Rinehart,
+ and Winston 1968).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Mowshowitz & Dehmer (2012)"
+key "Mowshowitz2012"
+literal "false"
+
+\end_inset
+
+Mowshowitz,
+ A.
+ & Dehmer,
+ M.
+ (2012).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy and the complexity of graphs revisited.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Entropy
+\emph default
+:
+ 14:559-570.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.3390/e14030559
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Olive (2017)"
+key "Olive2017"
+literal "false"
+
+\end_inset
+
+Olive,
+ D.
+ J.
+ (2017).
+ 
+\emph on
+Linear Regression
+\emph default
+.
+ Cham,
+ CH:
+ Springer Nature.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1007/978-3-319-55252-1
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Pearl (1988)"
+key "Pearl1988"
+literal "false"
+
+\end_inset
+
+Pearl,
+ J.
+ (1988).
+ 
+\emph on
+Probablistic Reasoning in Intelligent Systems:
+ Networks of Plausible Inference
+\emph default
+.
+ Elsevier.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780080514895"
+target "https://doi.org/10.1016/C2009-0-27609-4"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Rindova & Martins (2024)"
+key "Rindova2024"
+literal "false"
+
+\end_inset
+
+Rindova,
+ V.
+ P.
+ & Martins,
+ L.
+ L.
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The imagination advantage:
+ Why and how strategists combine knowledge and imagination in developing theories.
+\begin_inset Quotes erd
+\end_inset
+
+ Strategy Science:
+ 9(4):
+ 297-314.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/stsc.2024.0184
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Rosiak (2022)"
+key "Rosiak2022"
+literal "false"
+
+\end_inset
+
+Rosiak,
+ D.
+ (2022).
+ 
+\emph on
+Sheaf Theory through Examples
+\emph default
+.
+ Cambridge,
+ MA:
+ The MIT Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780262362375"
+target "https://www.penguinrandomhouse.com/books/716385/sheaf-theory-through-examples-by-daniel-rosiak/9780262362375/"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/inte.24.6.19
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (1986)"
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (1986).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Axiomatic foundation of the Analytic Hierarchy Process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Management Science
+\emph default
+:
+ 32(7)841-855.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/mnsc.32.7.841
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (1987)"
+key "Saaty1987"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (1987).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Risk —
+ Its priority and probability:
+ The Analytic Hierarchy Process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Risk Analysis
+\emph default
+:
+ 7(2):159-172.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1111/j.1539-6924.1987.tb00980.x
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (1994)"
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (1994).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+How to make a decision:
+ The Analytic Hierarchy Process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Applied Analytics
+\emph default
+:
+ (24)6:19-43.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/inte.24.6.19
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (2003)"
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (2003).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Decision-making with the AHP:
+ Why is the principal eigenvector necessary.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Journal of Operational Research
+\emph default
+:
+ 145(1):85-91.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/S0377-2217(02)00227-8
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Salicone & Prioli (2018)"
+key "Salicone2018"
+literal "false"
+
+\end_inset
+
+Saliconi,
+ S.
+ & Prioli,
+ M (2018).
+ 
+\emph on
+Measuring Uncertainty within the Theory of Evidence
+\emph default
+.
+ Cham,
+ CH:
+ Springer Nature.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1007/978-3-319-74139-0
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Shafer (1976)"
+key "Shafer1976"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Shafer1976}
+\end_layout
+
+\end_inset
+
+Shafer,
+ G.
+ (1976).
+ 
+\emph on
+A Mathematical Theory of Evidence
+\emph default
+.
+ Princeton,
+ NJ:
+ Princeton University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780691100425"
+target "https://press.princeton.edu/books/paperback/9780691100425/a-mathematical-theory-of-evidence"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Shenoy (2023)"
+key "Shenoy2023"
+literal "false"
+
+\end_inset
+
+Shenoy,
+ P.
+ P.
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Making inferences in incomplete Bayesian networks:
+ A Dempster-Shafer belief-function approach.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+International Journal of Approximate Reasoning:
+
+\emph default
+ 160(2023):108967.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ijar.2023.108967
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Spetzler, Winter, Meyer (2016)"
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+Spetzler,
+ C.,
+ Winger,
+ H.,
+ Meyer,
+ J.
+ (2016).
+ 
+\emph on
+Decision Quality Value Creation from Better Business Decisions
+\emph default
+.
+ New York:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781119176657"
+target "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119176657"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Swanson (2024)"
+key "Swanson2024"
+literal "false"
+
+\end_inset
+
+Swanson,
+ E.
+ B.
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Technology entrepreneurship is more than one might think.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Information and Organization
+\emph default
+:
+ 34:100512.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.infoandorg.2024.100512
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Townsend, et al (2023)"
+key "Townsend2023"
+literal "false"
+
+\end_inset
+
+Townsend,
+ D.
+ M.,
+ 
+\emph on
+et al
+\emph default
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Are futures computable?
+ Knightian uncertainty and artificial intelligence.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Academy of Management Review
+\emph default
+.
+ (50)2:415:440.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.5465/amr.2022.0237
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Vaidya & Sushil (2006)"
+key "Vaidya2006"
+literal "false"
+
+\end_inset
+
+Vaidya,
+ O.
+ S.
+ & Kumar Sushil (2006).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Analytical hierarchy process:
+ An overview of applications.
+\begin_inset Quotes erd
+\end_inset
+
+ European Journal of Operational Research:
+ 169(1):1-29.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ejor.2004.04.028
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "von Hayek (1974)"
+key "vonHayek1974"
+literal "false"
+
+\end_inset
+
+von Hayek,
+ Fredrick (1974),
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The pretence of knowledge
+\begin_inset Quotes erd
+\end_inset
+
+,
+ Nobel Prize Lecture,
+ December 11,
+ 1974,
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://www.nobelprize.org/prizes/economic-sciences/1974/hayek/lecture/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Wong & You (1985)"
+key "Wong1985"
+literal "false"
+
+\end_inset
+
+Wong,
+ A.
+ K.
+ C.
+ & You,
+ M.
+ (1985).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy and distance of random graphs with aplication to structural pattern recognition.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+IEEE Transactions on Pattern Analysis and Machine Intelligence
+\emph default
+:
+ PAMI-7(5):599-609.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1109/TPAMI.1985.4767707
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Zellweger & Zenger (2023)"
+key "Zellweger2023"
+literal "false"
+
+\end_inset
+
+Zellweger,
+ T.,
+ & Zenger,
+ T.
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entrepreneurs as scientists:
+ A pragmatist's approach to producing value out of uncertainty.
+\begin_inset Quotes erd
+\end_inset
+
+ Academy of Management Review:
+ 48(3):397-408.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.5465/amr.2020.0503
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

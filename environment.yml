@@ -1,0 +1,31 @@
+# conda env update -f environment.yml --prune
+name: ahp-entropy
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  # Core Data Science (Optimized for ARM64)
+  - numpy
+  - scipy
+  - pandas
+  # Graph Theory & Network Analysis
+  - networkx
+  - python-louvain  # Useful for community detection in entropy studies
+  # Visualization
+  - matplotlib
+  - seaborn
+  # Development Tools
+  - ipykernel        # Allows use in Jupyter/Spyder[cite: 2]
+  - spyder
+  - spyder-terminal
+  # Database interchange
+  - sqlalchemy
+  - psycopg2         # Required for PostgreSQL backend
+  - neo4j-python-driver
+  - pip:
+    - python-dotenv  # To load those .env files in your .gitignore[cite: 1, 2
+  # Graph-processing and infrastructure.
+  - cython
+  - pygraphviz
