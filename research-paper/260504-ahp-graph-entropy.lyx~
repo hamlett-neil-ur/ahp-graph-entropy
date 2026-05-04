@@ -1,0 +1,261 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\usepackage{babel}
+
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{sectsty}
+%\usepackage{graphics}
+\usepackage{float}
+\usepackage{url}
+\usepackage{graphicx}
+
+
+\graphicspath{{./graphics/}}
+
+\definecolor{JBlue}{HTML}{0051BA}
+\definecolor{Night}{HTML}{003459}
+\definecolor{Brick}{HTML}{971b2f}
+\definecolor{Lake}{HTML}{2767ff}
+\definecolor{TCotta}{HTML}{c66e43}
+
+\sectionfont{\color{JBlue}}
+\subsectionfont{\color{Night}}
+\subsubsectionfont{\color{Brick}}
+
+\setlength\columnsep{18pt}
+
+\fancypagestyle{mypagestyle}{%
+  	\fancyhf{}% Clear header/footer
+	\fancyhead[RE, LO]{ \href{https://t.ly/qO7i}{Quantifying the bias-variance decomposition}\\
+						\textnormal{\href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{N. A. Hamlett, D.Sc., MBA}}}
+	\fancyhead[LE, RO]{unpublished working paper}
+	\fancyfoot[C]{\thepage  \\
+               	 \textcolor{JBlue}{\tiny	©2026 Uncertainty Research, LLC — All Rights Reserved}}
+	  \renewcommand{\headrulewidth}{.4pt}% Header rule of .4pt
+}
+
+
+\fancypagestyle{specialfooter}{%
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+	\fancyfoot[C]{\thepage \\
+                  \textcolor{JBlue}{\tiny ©2026 Uncertainty Research, LLC — All Rights Reserved} }
+}
+\pagestyle{mypagestyle}
+
+
+%\usepackage{blindtext}
+%\pagestyle{fancy}
+
+
+
+\title{\bfseries{\textcolor{JBlue}{Characterizing strenght-of-contribution by//decision factors in the Analytical Hierarchy Proccess/(AHP) using graph entropy}} \\
+		\textnormal{\normalsize unpublished working paper}}
+\author{\textcolor{JBlue}{Neil A. Hamlett, D.Sc., MBA} \\
+    \small \includegraphics[height=0.9\baselineskip]{graphics/manualEmailIcon.png}\textnormal{ neil.hamlett@uncertainty-research.science} \qquad
+    \small \includegraphics[height=1.06125\baselineskip]{graphics/LinkedInLogo.png}\textnormal{  \href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}} \\
+    \small \includegraphics[height=1.375\baselineskip]{graphics/git-github-hub-icon-25.png}\textnormal{  \href{https://hamlett-neil-ur.github.io/}{https://hamlett-neil-ur.github.io/}} \qquad
+    \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{  \href{https://orcid.org/0000-0001-8278-0087}{https://orcid.org/0000-0001-8278-0087}}}
+\date{}
+
+% Added by lyx2lyx
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\end_preamble
+\options twoside
+\use_default_options true
+\begin_modules
+customHeadersFooters
+multicol
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "Nunito"
+\font_sans "default" "Avenir"
+\font_typewriter "default" "Avenir"
+\font_math "auto" "default"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 4cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\headheight 4.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+sloppy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+twocolumn
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+thispagestyle{specialfooter}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+topfraction}{.8}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+%
+\backslash
+onecolumn
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
