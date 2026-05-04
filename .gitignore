@@ -216,3 +216,40 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local secret files
+.env.local
+.env.*.local
+*.secret
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Large data files
+*.csv
+*.json
+*.sql
+*.graphml
+!example_data.json  # Use the '!' to allow small sample files if needed
+
+
+# Conda-specific
+.condarc
+conda-meta/
+*.conda
+
+# Google Drive & macOS Sync
+Icon?
+.DS_Store
+._*
+*.tmp
+
+# Lab Outputs
+*.pickle
+*.npy
+*.npz
+*.joblib
+
