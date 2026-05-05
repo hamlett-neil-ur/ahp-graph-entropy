@@ -25,4 +25,7 @@ dependencies:
   - psycopg2         # Required for PostgreSQL backend
   - neo4j-python-driver
   - pip:
-    - python-dotenv  # To load those .env files in your .gitignore[cite: 1, 2]
+    - python-dotenv  # To load those .env files in your .gitignore[cite: 1, 2
+  # Graph-processing and infrastructure.
+  - cython
+  - pygraphviz
