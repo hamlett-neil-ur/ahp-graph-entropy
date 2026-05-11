@@ -25,7 +25,48 @@ The sketched-out approach thus far considers only a two-tier sub-tree of a large
 
 # GitHub mechanics 🔧🔩🪛
 
-## 1. Commit management.
+## 1. Virtual-environment start-up.
+
+#### a. Navigate to the project directory.
+
+```bash
+cd '~/ahp-graph-entropy'
+```
+
+#### b. Bootstrap into anaconda.
+
+```bash
+source ~/.zshrc
+```
+
+#### c. Inintialize the environment based on the `environment.yml` specification.
+
+```bash
+conda env update --name ahp-graph-entropy --file environment.yml --prune
+```
+
+#### d. Activate the envoronment.
+
+```bash
+conda activate ahp-graph-entropy
+```
+
+#### e. Verify the configuration
+
+```bash
+python --version
+which python
+```
+
+The expected responses resemble
+
+```text
+Python 3.11.15
+~anaconda3/envs/ahp-graph-entropy/bin/python
+```
+
+
+## 2. Commit management.
 
 ### a. Visualize commit graph.
 
