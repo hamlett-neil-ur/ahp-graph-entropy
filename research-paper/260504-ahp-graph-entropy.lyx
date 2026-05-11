@@ -981,6 +981,44 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+Second,
+ hierarchically linked AHP subgraphs must be linked.
+ The 
+\emph on
+Hierarchy
+\emph default
+ term in AHP refers to a hierarchic deconstruction of decisions into contituent factors.
+ The AHP method produces a set of decision-factor pairwise comparisons —
+ and associated tournament graph —
+ for each hierarchic 
+\begin_inset Quotes eld
+\end_inset
+
+cluster
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "§2.5"
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+ describes 
+\emph on
+chain rules
+\emph default
+ for entropy,
+ relative entropy,
+ and mutual information.
+ This mechanisms offer a rigorous approach to link hierarchically adjacent tournament graphs.
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Why is 

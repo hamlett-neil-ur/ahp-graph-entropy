@@ -981,6 +981,44 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+Second,
+ hierarchically linked AHP subgraphs must be linked.
+ The 
+\emph on
+Hierarchy
+\emph default
+ term in AHP refers to a hierarchic deconstruction of decisions into contituent factors.
+ The AHP method produces a set of decision-factor pairwise comparisons —
+ and associated tournament graph —
+ for each hierarchic 
+\begin_inset Quotes eld
+\end_inset
+
+cluster
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "§2.5"
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+ describes 
+\emph on
+chain rules
+\emph default
+ for entropy,
+ relative entropy,
+ and mutual information.
+ 
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Why is 
@@ -1453,7 +1491,7 @@ Elements of Information Theory.
 \begin_inset CommandInset href
 LatexCommand href
 name "9780471748823"
-target "https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X"
+target "https://doi.org/10.1002/047174882X"
 literal "false"
 
 \end_inset

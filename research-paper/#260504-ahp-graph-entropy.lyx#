@@ -52,7 +52,7 @@
     \fancyhead[LO]{%
         \small
         \shortstack[l]{%
-            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{AHP-factor contribution strength}\\
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{Evidentiary reasoning with the Analytical Hierarchy Process}\\
             \href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{N. A. Hamlett, D.Sc., MBA}
         }%
     }
@@ -61,7 +61,7 @@
     \fancyhead[RE]{%
         \small
         \shortstack[r]{%
-            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{AHP-factor contribution strength}\\
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy}{Evidentiary reasoning with the Analytical Hierarchy Process}\\
             \href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{N. A. Hamlett, D.Sc., MBA}
         }%
     }
@@ -313,7 +313,7 @@ topfraction}{.8}
 \begin_layout Abstract
 Decision makers often require insight into the relative strength of evidence influencing their choices.
  The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength.
- Pairwise-comparison analysis specifies edges for a complete,
+ Pairwise-comparison analysis produces lists of edges for a complete,
  directed,
  acyclic graph,
  often called a 
@@ -576,7 +576,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Building on 
+Extending 
 \begin_inset ERT
 status open
 
@@ -600,7 +600,7 @@ refcite{Dempster1967}{(1967)}
 
 \end_inset
 
- seminal idea,
+ seminal concept,
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -752,7 +752,7 @@ literal "false"
 
 ),
  and other problems.
- AHP is often applied to situations where substantial amounts of statistically coherent measurements are not immediately available to support more-empirical decision making.
+ AHP is often applied to situations where substantial amounts of statistically coherent measurements are not immediately available to support more-empirical approaches.
  
 \end_layout
 
@@ -784,7 +784,7 @@ literal "false"
 \end_inset
 
 ).
- Illustrated in an upcoming section,
+ Illustrated in a case study in a subsequent section,
  AHP produces the scenario rankings according to attractiveness based upon their respective measurable factors.
  Bayesian methods (
 \begin_inset CommandInset citation
@@ -862,7 +862,7 @@ What questions do entropies of AHP-based tournament graphs allow us to answer
 \emph default
 ?
  Endogenous to the AHP formulation itself,
- relative entropy quantifies the strength of contribution by the different factors within the evidentiary span.
+ relative entropy quantifies the marginal informational contribution by a subset of factors within the evidentiary span.
  This addresses a the objective pursued by 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -905,8 +905,7 @@ literal "false"
 \end_inset
 
 ).
- Generally,
- the relative entropy in graphical contexts has received considerable attention (
+ Relative entropy in graphical contexts has received considerable attention (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wong1985,Liu2022,Guanlei2025"
@@ -925,7 +924,7 @@ literal "false"
 
  explore entropy differences between same-order tournament graphs with different directional structures.
  In our case,
- the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to ommiting decision factors from the latter.
+ the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to decision factors omitted from the latter.
  
 \end_layout
 
@@ -979,6 +978,44 @@ literal "false"
  entropy formulations using edge weights.
  The preference ratios from the AHP pairwise comparison provide the weights used here.
  
+\end_layout
+
+\begin_layout Standard
+Second,
+ hierarchically linked AHP subgraphs must be linked.
+ The 
+\emph on
+Hierarchy
+\emph default
+ term in AHP refers to a hierarchic deconstruction of decisions into contituent factors.
+ The AHP method produces a set of decision-factor pairwise comparisons —
+ and associated tournament graph —
+ for each hierarchic 
+\begin_inset Quotes eld
+\end_inset
+
+cluster
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "§2.5"
+key "Cover2006"
+literal "false"
+
+\end_inset
+
+ describes 
+\emph on
+chain rules
+\emph default
+ for entropy,
+ relative entropy,
+ and mutual information.
+ This mechanisms offer a rigorous approach to link hierarchically adjacent 
 \end_layout
 
 \begin_layout Standard
@@ -1133,7 +1170,7 @@ nesting
 \end_inset
 
  of smaller AHP formulations,
- analogous to Russion Matryoshka dolls.
+ analogous to Russian Matryoshka dolls.
  Our demonstration considers only one of the 
 \begin_inset Quotes eld
 \end_inset
@@ -1147,7 +1184,7 @@ inner
 \end_layout
 
 \begin_layout Standard
-The AHP-methodology description employs the terminology of
+The AHP-methodology description employs the terminology of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986"
@@ -1156,7 +1193,38 @@ literal "false"
 \end_inset
 
 .
- 
+ Variations in terminology occur througout the AHP-application literature.
+ For example,
+ the quantity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ defines as a 
+\emph on
+priority vector
+\emph default
+ is frequently referred to as a 
+\begin_inset Quotes eld
+\end_inset
+
+weight vector
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+weights
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This work adopts Saaty's conventions.
 \end_layout
 
 \begin_layout Section*
@@ -1415,6 +1483,7 @@ Cover,
 Elements of Information Theory.
 
 \emph default
+ Second edition.
  New York:
  Wiley.
  ISBN:
@@ -1422,7 +1491,7 @@ Elements of Information Theory.
 \begin_inset CommandInset href
 LatexCommand href
 name "9780471748823"
-target "https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X"
+target "https://doi.org/10.1002/047174882X"
 literal "false"
 
 \end_inset
