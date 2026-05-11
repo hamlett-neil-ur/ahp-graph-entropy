@@ -19,7 +19,7 @@ The sketched-out approach thus far considers only a two-tier sub-tree of a large
 
 * Can the AHP *priority vectors* be used for entropy-based coupling between tournament graphs for hierarchically-adjacent sub-trees? After all, we define priority vectors as unit-simplex projections. If we also think if them as probability distributions, can they provide an entropy mechanism by which to couple tournament graphs associated with subordinate sub-trees to the sub-tree of interest?
 
-* 🌟 Entropy *chain rules*. Each pariwise-comparison edge list leads to an entropy structure associated with an AHP decision subtree. [Cover & Thomas (2026), §2.5](https://doi.org/10.1002/047174882X) presents chain rules for entropy, relative entropy, and mutual information. This provides rigorous coupling between the tournament graph for a given AHP decisional layer and that associated with its immediate constituent tournament graph.
+* 🌟 Entropy *chain rules*. Each pariwise-comparison edge list leads to an entropy structure associated with an AHP decision subtree. [Cover & Thomas (2026), §2.5](https://doi.org/10.1002/047174882X) presents chain rules for entropy, relative entropy, and mutual information. This provides rigorous coupling between the tournament graph for a given AHP decisional layer and that associated with its immediate constituent tournament graph. 🌟
 
 
 
