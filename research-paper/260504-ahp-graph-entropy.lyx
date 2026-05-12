@@ -19,6 +19,9 @@
 \usepackage{graphicx}
 \usepackage[authoryear,round]{natbib}
 
+
+\interfootnotelinepenalty=10000
+
 % --- Custom Citation Commands ---
 \newcommand{\refcite}[2]{\hyperref[ref:#1]{#2}}
 \newcommand{\autocite}[1]{\hyperref[ref:#1]{\nameref{ref:#1}}}
@@ -36,15 +39,11 @@
 \subsectionfont{\color{Night}}
 \subsubsectionfont{\color{Brick}}
 
-\setlength\columnsep{18pt}
-
 % --- Main Page Style Definition ---
 \fancypagestyle{mypagestyle}{%
     \fancyhf{} 
     \renewcommand{\headrulewidth}{0.4pt}
 
-    % Outer header (Odd-Left / Even-Right)
-%----------------------------------------------------------
     % Outer header: Left on Odd / Right on Even
     %----------------------------------------------------------
 
@@ -133,6 +132,11 @@
   \fancyfoot[C]{\small \thepage\\[2pt] {\tiny \textcolor{JBlue}{©2026 Uncertainty Research, LLC — All Rights Reserved}}}
   \renewcommand{\headrulewidth}{0pt}
 }
+
+% --- Adjustments for Multi-line Headers ---
+%\setlength{\headheight}{28pt}
+%\setlength{\topmargin}{0pt}
+\setlength\columnsep{18pt}
 \end_preamble
 \options twoside
 \use_default_options true
@@ -169,7 +173,7 @@ multicol
 \paperfontsize 10
 \spacing single
 \use_hyperref false
-\papersize default
+\papersize letter
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -226,10 +230,10 @@ multicol
 \spellchecker_ignore english Hué's
 \spellchecker_ignore english Caporale
 \leftmargin 2cm
-\topmargin 4cm
+\topmargin 1in
 \rightmargin 2cm
 \bottommargin 2.5cm
-\headheight 4.5cm
+\headheight 28pt
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -786,15 +790,47 @@ literal "false"
 ).
  Illustrated in a case study in a subsequent section,
  AHP produces the scenario rankings according to attractiveness based upon their respective measurable factors.
- Bayesian methods (
+ 
+\end_layout
+
+\begin_layout Standard
+Not strictly a stand-alone method,
+ AHP can be fused with other approaches.
+ Bayesian techniques allow for subsequent revision of the pairwise comparisons as stronger empirical evidence emerges (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Li2025"
+key "LiH2025"
 literal "false"
 
 \end_inset
 
-) allow for subsequent revision of the pairwise comparisons as stronger empirical evidence emerges.
+).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiJ2025"
+literal "false"
+
+\end_inset
+
+ combined back-propagation neural networks with the AHP to design shields for neutron generators.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xiao2025"
+literal "false"
+
+\end_inset
+
+ explored simulation-optimization approaches to circumvent elicitation of pairwise comparisons from experts.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lukinskiy2025,Sáenz-Royo(2026)"
+literal "false"
+
+\end_inset
+
+ studied methods to improve the rubustness of expert-judgement inputs.
 \end_layout
 
 \begin_layout Subsection*
@@ -950,14 +986,49 @@ literal "false"
 
  focused on tournament graphs with unweighted (uniformly unit-weighted) edges.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Chen2015}{Chen}
+\end_layout
+
+\end_inset
+
+,
+ et al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Chen2015}{(2015)}
+\end_layout
+
+\end_inset
+
+,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Chen2015,Kuo2022,Liu2022"
+key "Kuo2022"
 literal "false"
 
 \end_inset
 
- formulate entropies for regular (non-directional) graphs comprised of weighted edges.
+,
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2022"
+literal "false"
+
+\end_inset
+
+formulate entropies for regular (non-directional) graphs comprised of weighted edges.
  The preference ratios from the AHP pairwise comparison provide the weights used here.
  
 \end_layout
@@ -1096,13 +1167,13 @@ Case study in the Analytic Hierarchy Process (AHP).
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- applied AHP methodology in design-tradeoff decisions for hydrogen fuel cells.
- Their work involves deep consideration of device physics that are tangential to the present exploration.
+ employed AHP tradeoff decisions for pipeline-material selections.
+ They report mechanics-of-materials technical details that are tangential to the present exploration.
  Their use of the AHP methodology primarily interests us.
 \end_layout
 
@@ -1128,7 +1199,7 @@ This case is recent
 .
  Given the AHP literature spans decades,
  a reader might succomb to the temptation to conclude that the method is anochronistic.
- Our case here demonstrates the application of AHP to a contemporary design problem for a cutting-edge technology.
+ Our case here demonstrates the application of AHP to a contemporary design problem for an economically essential application.
 \end_layout
 
 \begin_layout Enumerate
@@ -1209,6 +1280,204 @@ weights
  This work remains close to Saaty's conventions.
 \end_layout
 
+\begin_layout Subsection*
+Specification of the evidentiary span.
+\end_layout
+
+\begin_layout Standard
+The pattern of reasoning underlying 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
+
+\end_inset
+
+ AHP methodology somewhat resembles that on which applied decision-analysis practices are based.
+ 
+\emph on
+Decision Quality
+\emph default
+ (DQ) represents a prominent examle (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+).
+ DQ begins with 
+\emph on
+framing
+\emph default
+ a decision —
+ specifying its scope —
+ and identifying clear alternatives.
+ This is philosophically consistent with the design-of-experiements practice (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cox2000"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ reproduces the 
+\begin_inset Quotes eld
+\end_inset
+
+Hierarchical structure model
+\begin_inset Quotes erd
+\end_inset
+
+ employed by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ for their materials-selection decision.
+ They identify nine creteria believed to materially influence thier decision.
+ Their decision space contains three distinct scenarios under consideration.
+ 
+\end_layout
+
+\begin_layout Standard
+Our terminology here —
+ evidentiary span —
+ departs from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ in that we shift the focus from decision making to evidentiary reasoning.
+ We ultimately seek to quantify the believed evidentiary contribution by each of the criteria depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Comparative judgements about relative importance of criteria.
+\end_layout
+
+\begin_layout Standard
+AHP next involves 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Hierarchy-decomposition-used"
+
+\end_inset
+
+Hierarchy decomposition used for pipeline material-selection case study.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 9"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr9_lrg.jpg"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "pipeline-hierarchy"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-pressure-vessel-ahp-formulation.png
+	lyxscale 25
+	width 3.25in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Entropy of edge-weighted,
  directed acyclic graphs.
@@ -1272,49 +1541,6 @@ https://doi.org/10.1016/j.laa.2019.09.026
 
 .
  
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-label "Bu, et al (2026)"
-key "Bu2026"
-literal "false"
-
-\end_inset
-
-Bu,
- W.,
- 
-\emph on
-et al
-\emph default
- (2026).
- 
-\begin_inset Quotes eld
-\end_inset
-
-Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
-\begin_inset Quotes erd
-\end_inset
-
- 
-\emph on
-Energy Conversion and Management
-\emph default
-:
- 350:120952.
- 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-https://doi.org/10.1016/j.enconman.2025.120952
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Bibliography
@@ -1407,6 +1633,18 @@ LatexCommand bibitem
 label "Chen, et al (2015)"
 key "Chen2015"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Chen2015}
+\end_layout
 
 \end_inset
 
@@ -1997,6 +2235,42 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Hubbard & Seiersen (2023)"
+key "Hubbard2023"
+literal "false"
+
+\end_inset
+
+Hubbard,
+ D.
+ W.
+ & Seiersen,
+ R.
+ (2023).
+ 
+\emph on
+How to Measure Anything in CyberSecurity Risk
+\emph default
+.
+ New York:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781119892335"
+target "https://doi.org/10.1002/9781119892335"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Hué, et al (2026)"
 key "Hué2026"
 literal "false"
@@ -2146,8 +2420,47 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Li, et al (2025)"
-key "Li2025"
+label "Kuo (2022)"
+key "Kuo2022"
+literal "false"
+
+\end_inset
+
+Kuo,
+ H.
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy of weighted graph by edge weights by using Sombor reduced index.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Corrosion and Materials
+\emph default
+:
+ 47:20-28.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.61336/jcm2022-3
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Li, H., et al (2025)"
+key "LiH2025"
 literal "false"
 
 \end_inset
@@ -2193,35 +2506,39 @@ https://doi.org/10.1287/deca.2024.0207
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Kuo (2022)"
-key "Kuo2022"
+label "Li, J. et al (2025)"
+key "LiJ2025"
 literal "false"
 
 \end_inset
 
-Kuo,
- H.
- (2022).
+Li,
+ J.,
+ 
+\emph on
+et al
+\emph default
+ (2025).
  
 \begin_inset Quotes eld
 \end_inset
 
-Entropy of weighted graph by edge weights by using Sombor reduced index.
+A method for optimizing different geometric shields of D-T neutron generators by combining BP neural network and Analytic Hierarchy Process.
 \begin_inset Quotes erd
 \end_inset
 
  
 \emph on
-Journal of Corrosion and Materials
+Computer Physics Communications
 \emph default
 :
- 47:20-28.
+ 307:109397.
  
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
-https://doi.org/10.61336/jcm2022-3
+https://doi.org/10.1016/j.cpc.2024.109397
 \end_layout
 
 \end_inset
@@ -2309,6 +2626,50 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.3390/e24081154
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Lukinskiy, Lukinskiy, Bazhina (2025)"
+key "Lukinskiy2025"
+literal "false"
+
+\end_inset
+
+Lukinskiy,
+ Valery,
+ Lukinskly,
+ Vladislav,
+ Bazhina,
+ D.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Refining the analytic hierarchy process:
+ A statistical and methodological exploration of expert judgments.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Alexandria Engineering Journal
+\emph default
+:
+ 125:526-536.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.aej.2025.04.022
 \end_layout
 
 \end_inset
@@ -2637,6 +2998,18 @@ literal "false"
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Saaty1986}
+\end_layout
+
+\end_inset
+
 Saaty,
  T.
  L.
@@ -2744,6 +3117,47 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1287/inte.24.6.19
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Sáenz-Royo & Chiclana (2026)"
+key "Sáenz-Royo(2026)"
+literal "false"
+
+\end_inset
+
+Sáenz-Royo,
+ C.
+ & Chiclana,
+ F.
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Contribution of the ratio scale of expert judgments in the analytic hierarchy process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Expert Systems with Applications
+\emph default
+:
+ 296(C):128938.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.eswa.2025.128938
 \end_layout
 
 \end_inset
@@ -3153,6 +3567,49 @@ https://doi.org/10.1109/TPAMI.1985.4767707
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Xiao, et al (2025)"
+key "Xiao2025"
+literal "false"
+
+\end_inset
+
+Xiao,
+ H.,
+ 
+\emph on
+et al
+\emph default
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A simulation optimization approach for weight valuation in analytic hierarchy process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Journal of Operations Research
+\emph default
+:
+ 321(3):851-864.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ejor.2024.10.018
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Zellweger & Zenger (2023)"
 key "Zellweger2023"
 literal "false"
@@ -3181,6 +3638,49 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.5465/amr.2020.0503
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Zeng, D., et al (2015)"
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+Zeng,
+ D.,
+ 
+\emph on
+et al
+\emph default
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Material selection of titanium alloy pipelines considering multi-criteria in an acidic environment based on analytic hierarchy process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+International Journal of Pressure Vessels and Piping
+\emph default
+:
+ 2016:105461.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ijpvp.2025.105461
 \end_layout
 
 \end_inset
