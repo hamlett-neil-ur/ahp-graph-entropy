@@ -1285,6 +1285,64 @@ Specification of the evidentiary span.
 \end_layout
 
 \begin_layout Standard
+The pattern of reasoning underlying 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
+
+\end_inset
+
+ AHP methodology somewhat resembles that on which applied decision-analysis practices are based.
+ 
+\emph on
+Decision Quality
+\emph default
+ (DQ) represents a prominent examle (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+).
+ DQ begins with 
+\emph on
+framing
+\emph default
+ a decision —
+ specifying its scope —
+ and identifying clear alternatives.
+ This is philosophically consistent with the design-of-experiements practice (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cox2000"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1351,14 +1409,7 @@ Comparative judgements about relative importance of criteria.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
- speaks to the importanc
+AHP next involves 
 \end_layout
 
 \begin_layout Standard
@@ -1445,6 +1496,33 @@ onecolumn
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Bu, et al (2026)"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+Bu,
+ W.,
+ 
+\emph on
+et al
+\emph default
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+\begin_inset Quotes erd
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -2205,6 +2283,16 @@ How to Measure Anything in CyberSecurity Risk
  Wiley.
  ISBN:
  
+\begin_inset CommandInset href
+LatexCommand href
+name "9781119892335"
+target "https://doi.org/10.1002/9781119892335"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -2934,6 +3022,18 @@ LatexCommand bibitem
 label "Saaty (1986)"
 key "Saaty1986"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Saaty1986}
+\end_layout
 
 \end_inset
 

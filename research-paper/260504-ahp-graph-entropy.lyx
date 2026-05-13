@@ -1366,12 +1366,12 @@ Hierarchical structure model
  employed by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zeng2025"
+key "Bu2026"
 literal "false"
 
 \end_inset
 
- for their materials-selection decision.
+ for their fuel-cell design.
  They identify nine creteria believed to materially influence thier decision.
  Their decision space contains three distinct scenarios under consideration.
  
@@ -1435,7 +1435,7 @@ Hierarchy decomposition used for pipeline material-selection case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zeng2025"
+key "Bu2026"
 literal "false"
 
 \end_inset
@@ -1444,8 +1444,8 @@ literal "false"
  
 \begin_inset CommandInset href
 LatexCommand href
-name "Figure 9"
-target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr9_lrg.jpg"
+name "Figure 5"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
 literal "false"
 
 \end_inset
@@ -1464,7 +1464,7 @@ name "pipeline-hierarchy"
 
 
 \begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-pressure-vessel-ahp-formulation.png
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
 	lyxscale 25
 	width 3.25in
 
@@ -1541,6 +1541,49 @@ https://doi.org/10.1016/j.laa.2019.09.026
 
 .
  
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Bu, et al (2026)"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+Bu,
+ W.,
+ 
+\emph on
+et al
+\emph default
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Energy Conversion and Management
+\emph default
+:
+ 350:120952.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.enconman.2025.120952
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
