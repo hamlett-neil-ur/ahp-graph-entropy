@@ -1160,6 +1160,229 @@ literal "false"
  
 \end_layout
 
+\begin_layout Subsection*
+AHP as path to achieving 
+\emph on
+Decision Quality
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+The pattern of reasoning underlying 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
+
+\end_inset
+
+ AHP methodology corresponds to patterns on which prominent applied decision-analysis practices are based.
+ 
+\emph on
+Decision Quality
+\emph default
+ (DQ) represents a prominent example (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Decision-Quality-framework.-(Fro"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ depicts the DQ framework.
+ It outlines 
+\emph on
+de facto
+\emph default
+ standards of practice for the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Society of Decision Professionals (SDP)"
+target "https://www.decisionprofessionals.com"
+literal "false"
+
+\end_inset
+
+,
+ a community of applied decision analysts and scientists.
+ The DQ frameworks contains six 
+\emph on
+links
+\emph default
+:
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Decision-Quality-framework.-(Fro"
+
+\end_inset
+
+Decision-Quality framework.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+,
+ Figure 2.1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "decision-quality"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/200202 Spetzler DQ Framework.png
+	lyxscale 40
+	width 3.25in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Establishing an 
+\emph on
+Appropriate Frame
+\emph default
+ specifies the scope of the decision:
+ What specifically is to be decided.
+ Thoughtful framing combines prescriptive with prospcriptive judgements to provide analytical clarity.
+\end_layout
+
+\begin_layout Itemize
+By definition,
+ the act of deciding involves selection of one or more options from a discrete,
+ precisely defined set of 
+\emph on
+Creative Alternatives
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Relevant and Reliable Information
+\emph default
+ constitute the evidence weighed in selecting the best alternative.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Clear Values and Tradeoffs
+\emph default
+ specify the criteria by which the best alternative is identified.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Sound Reasoning
+\emph default
+ defines the logic employed in identifying the best alternative.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Creighton1909"
+literal "false"
+
+\end_inset
+
+ cautioned that 
+\begin_inset Quotes eld
+\end_inset
+
+...it is not possible to lay down definite rules for the guidance of thinking in every case.
+\begin_inset Quotes erd
+\end_inset
+
+ The reasoning approach must therefore fit the circumstances resulting from the links above.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Commitment to Action
+\emph default
+ represents the follow-through in implementing or adopting the selected alternative.
+ Absent a commitment to adopt or act upon the best alternative resulting from the links above,
+ a decision arguably has not occurred.
+ The analysis was academic.
+\end_layout
+
+\begin_layout Standard
+Now,
+ the DQ framework defines a scientific,
+ evidentiary-reasoning pattern that is philosophically consistent with the design-of-experiements practice (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cox2000"
+literal "false"
+
+\end_inset
+
+).
+ Its mention here amplifies the theme of scientific reasoning.
+\end_layout
+
 \begin_layout Section*
 Case study in the Analytic Hierarchy Process (AHP).
 \end_layout
@@ -1167,13 +1390,30 @@ Case study in the Analytic Hierarchy Process (AHP).
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zeng2025"
+key "Bu2026"
 literal "false"
 
 \end_inset
 
- employed AHP tradeoff decisions for pipeline-material selections.
- They report mechanics-of-materials technical details that are tangential to the present exploration.
+ employed AHP in making tradeoff decisions related to the design of a proton exchange membrane fuel cells (PEMFCs),
+ which 
+\begin_inset Quotes eld
+\end_inset
+
+...can effentialy convert chemical energy from fuels into electricity without causing polution...
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ report device-physics technical details that are tangential to the present exploration.
  Their use of the AHP methodology primarily interests us.
 \end_layout
 
@@ -1213,7 +1453,7 @@ An informative but simple illustration can be extracted
 hierarchical
 \emph default
 .
- Complex multi-criterion decision problems often involve dividing and conquering.
+ Complex MCDM problems often involve dividing and conquering.
  A large AHP application might involve the 
 \begin_inset Quotes eld
 \end_inset
@@ -1285,64 +1525,6 @@ Specification of the evidentiary span.
 \end_layout
 
 \begin_layout Standard
-The pattern of reasoning underlying 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Saaty1986}{Saaty's}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Saaty1986}{(1986)}
-\end_layout
-
-\end_inset
-
- AHP methodology somewhat resembles that on which applied decision-analysis practices are based.
- 
-\emph on
-Decision Quality
-\emph default
- (DQ) represents a prominent examle (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Spetzler2016"
-literal "false"
-
-\end_inset
-
-).
- DQ begins with 
-\emph on
-framing
-\emph default
- a decision —
- specifying its scope —
- and identifying clear alternatives.
- This is philosophically consistent with the design-of-experiements practice (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Cox2000"
-literal "false"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1366,21 +1548,15 @@ Hierarchical structure model
  employed by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zeng2025"
+key "Bu2026"
 literal "false"
 
 \end_inset
 
- for their materials-selection decision.
- They identify nine creteria believed to materially influence thier decision.
- Their decision space contains three distinct scenarios under consideration.
- 
-\end_layout
-
-\begin_layout Standard
-Our terminology here —
- evidentiary span —
- departs from 
+ for their fuel-cell design.
+ Explicitly representing the decision-factor hierarchy is a best practice that aids understanding by human decision-makers.
+ Idiosyncratic representative style notwithstanding,
+ it follows the ubiquitous form demonstrated by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986"
@@ -1388,8 +1564,8 @@ literal "false"
 
 \end_inset
 
- in that we shift the focus from decision making to evidentiary reasoning.
- We ultimately seek to quantify the believed evidentiary contribution by each of the criteria depicted in Figure 
+.
+ The elements in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -1401,18 +1577,20 @@ tuple "list"
 
 \end_inset
 
+ map to key DQ links from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Decision-Quality-framework.-(Fro"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
 .
-\end_layout
-
-\begin_layout Subsection*
-Comparative judgements about relative importance of criteria.
-\end_layout
-
-\begin_layout Standard
-AHP next involves 
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Float figure
 placement document
 alignment document
@@ -1435,7 +1613,7 @@ Hierarchy decomposition used for pipeline material-selection case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zeng2025"
+key "Bu2026"
 literal "false"
 
 \end_inset
@@ -1444,8 +1622,8 @@ literal "false"
  
 \begin_inset CommandInset href
 LatexCommand href
-name "Figure 9"
-target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr9_lrg.jpg"
+name "Figure 5"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
 literal "false"
 
 \end_inset
@@ -1458,13 +1636,13 @@ literal "false"
 
 \begin_inset CommandInset label
 LatexCommand label
-name "pipeline-hierarchy"
+name "PEMFC-hierarchy"
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-pressure-vessel-ahp-formulation.png
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
 	lyxscale 25
 	width 3.25in
 
@@ -1476,6 +1654,263 @@ name "pipeline-hierarchy"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+The rectangular box 
+\begin_inset Quotes eld
+\end_inset
+
+PEMFC performance
+\begin_inset Quotes erd
+\end_inset
+
+ at the top represents the 
+\emph on
+Goal or Focus
+\emph default
+,
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
+
+\end_inset
+
+ terms.
+ Thoughtful 
+\emph on
+framing
+\emph default
+,
+ in DQ terms,
+ produce this aspect.
+\end_layout
+
+\begin_layout Itemize
+The curve-cornered boxes 
+\emph on
+Criteria
+\emph default
+.
+ Corresponding to DQ's 
+\emph on
+values
+\emph default
+,
+ the range of measurable factors believed to materially distinguish between alternatives.
+ For this case,
+ they represent
+\emph on
+ 
+\emph default
+device physical-operating parameters 
+\emph on
+current density
+\emph default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+I
+\begin_inset Quotes erd
+\end_inset
+
+,
+ 
+\emph on
+pressure drop
+\emph default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ΔP
+\begin_inset Quotes erd
+\end_inset
+
+,
+ and 
+\emph on
+Oxygen-uniformed index
+\emph default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+UI
+\begin_inset Quotes erd
+\end_inset
+
+.
+ These physical-operating parameters decisively influence the objective.
+ 
+\end_layout
+
+\begin_layout Itemize
+The heptagonal shapes at the bottom depict decomposed crieteria.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ descrbes 
+\begin_inset Quotes eld
+\end_inset
+
+...intermediate set of higher criteria that can both be decomposed into these attributes and are themselves decompositions of the higher level criteria or subcriteria...
+\begin_inset Quotes erd
+\end_inset
+
+.
+ In this case,
+ each of three physical-device design specifications is believed to influence the operating parameters above.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ omits the 
+\emph on
+discrete alternatives
+\emph default
+ from which the decision maker selects.
+ Hierarchy depictions often include the alternatives when the set is small.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ however use a computational model of the device to simulate 36 distinct combinations of angle,
+ width,
+ and height.
+ Using AHP to conduct analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not appear in the hierarchy.
+\end_layout
+
+\begin_layout Standard
+The criterion hierarchy in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ is also idiosyncratic for another reason:
+ Each of the physical-specification sub-criteria influences the operating-parameter criteria.
+ Typically,
+ constituent subcriteria are distinct to their associated criterion.
+ Their representations appear as 
+\begin_inset Quotes eld
+\end_inset
+
+clean
+\begin_inset Quotes erd
+\end_inset
+
+ tree graphs.
+ This excursion from common practice does not invalidate AHPs application,
+ here.
+ One might alternatively consider the 
+\emph on
+Analytic Network Process
+\emph default
+ (ANP) for scenarios like this (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2013,Chen2019"
+literal "false"
+
+\end_inset
+
+).
+ Practically,
+ one assembles a list of unique,
+ unordered criterion pairs for each hierarchic level.
+ If the hierarchy for a given objective (or crietrion) identifies 
+\begin_inset Formula $n$
+\end_inset
+
+ criteria,
+ then 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ criterion pairs must be considered.
+\end_layout
+
+\begin_layout Subsection*
+Comparative judgements about relative importance of criteria.
+\end_layout
+
+\begin_layout Standard
+AHP imbues values and tradeoffs into decision-making through 
+\begin_inset Quotes eld
+\end_inset
+
+...comparative judgments calls for setting up a matrix to carry out 
+\emph on
+pairwise comparisons
+\emph default
+ of the relative importance of the elements [criteria]...
+\begin_inset Quotes erd
+\end_inset
+
+ (emphasis added) (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Subsection*
+Transformation of comparative judments into 
+\emph on
+priority vectors
+\emph default
+.
 \end_layout
 
 \begin_layout Section*
@@ -1501,27 +1936,37 @@ onecolumn
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Bu, et al (2026)"
-key "Bu2026"
+label "Abbas (2026)"
+key "Abbas2026"
 literal "false"
 
 \end_inset
 
-Bu,
- W.,
- 
-\emph on
-et al
-\emph default
+Abbas,
+ A.
  (2026).
  
 \begin_inset Quotes eld
 \end_inset
 
-Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+Is It Approximate?
+ Or Is It A Fundamentally Flawed Decision-Making Method?
 \begin_inset Quotes erd
 \end_inset
 
+ Society of Decision Professionals/INFORMS Decision Analysis Society webinar,
+ May 13,
+ 2026.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "May 2026 Webinar"
+target "https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1568,6 +2013,49 @@ https://doi.org/10.1016/j.laa.2019.09.026
 
 .
  
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Bu, et al (2026)"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+Bu,
+ W.,
+ 
+\emph on
+et al
+\emph default
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Energy Conversion and Management
+\emph default
+:
+ 350:120952.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.enconman.2025.120952
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -1707,6 +2195,25 @@ https://doi.org/10.3390/e17063710
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Chen, et al (2019)"
+key "Chen2019"
+literal "false"
+
+\end_inset
+
+Chen,
+ Y.,
+ 
+\emph on
+et al
+\emph default
+ (2019).
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -1859,6 +2366,39 @@ status open
 \begin_layout Plain Layout
 https://doi.org/10.1111/risa.70224
 \end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Creighton (1909)"
+key "Creighton1909"
+literal "false"
+
+\end_inset
+
+Creighton,
+ J.
+ E.
+ (1909).
+ 
+\emph on
+An Introductory Logic
+\emph default
+.
+ London:
+ MacMillan.
+ LCCN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "33034164"
+target "https://lccn.loc.gov/33034164"
+literal "false"
 
 \end_inset
 
@@ -3149,6 +3689,42 @@ https://doi.org/10.1287/inte.24.6.19
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty & Vargas (2013)"
+key "Saaty2013"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ & Vargas,
+ L.
+ G.
+ (2013).
+ 
+\emph on
+Decision Making with the Analytic Network Process
+\emph default
+.
+ New York:
+ Springer.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781461472797"
+target "https://doi.org/10.1007/978-1-4614-7279-7"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
