@@ -28,6 +28,8 @@ The sketched-out approach thus far considers only a two-tier sub-tree of a large
 
 #### a. Navigate to the project directory.
 
+Navigate in the terminal window to the directory into which the repository was cloned.
+
 ```bash
 cd '~/ahp-graph-entropy'
 ```
@@ -126,6 +128,11 @@ Write a new, clean summary of the combined work (e.g., "Implement evidentiary re
 
 Save and close.
 
+#### ⅴ. Push the commit.
+
+```bash
+git push --force-with-lease
+```
 
 
 ### d. Consolidating commits to a branch (hard quash).

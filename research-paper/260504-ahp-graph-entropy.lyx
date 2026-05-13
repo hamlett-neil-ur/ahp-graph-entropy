@@ -1209,7 +1209,7 @@ literal "false"
 \end_inset
 
 ).
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Decision-Quality-framework.-(Fro"

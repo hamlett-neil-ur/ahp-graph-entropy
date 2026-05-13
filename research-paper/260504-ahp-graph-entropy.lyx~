@@ -1863,19 +1863,7 @@ literal "false"
 \end_inset
 
 ).
- Practically,
- one assembles a list of unique,
- unordered criterion pairs for each hierarchic level.
- If the hierarchy for a given objective (or crietrion) identifies 
-\begin_inset Formula $n$
-\end_inset
-
- criteria,
- then 
-\begin_inset Formula $\binom{n}{2}$
-\end_inset
-
- criterion pairs must be considered.
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -1904,7 +1892,19 @@ literal "false"
 \end_inset
 
 ).
- 
+ Practically,
+ one assembles a list of unique,
+ unordered criterion pairs for each hierarchic level.
+ If the hierarchy for a given objective (or crietrion) identifies 
+\begin_inset Formula $n$
+\end_inset
+
+ criteria,
+ then 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ criterion pairs must be considered.
 \end_layout
 
 \begin_layout Subsection*
