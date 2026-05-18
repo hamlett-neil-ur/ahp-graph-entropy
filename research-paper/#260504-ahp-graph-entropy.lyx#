@@ -6,7 +6,9 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+%\let\binom\undefined
 \PassOptionsToPackage{twoside}{geometry}
+\usepackage{amsmath}
 \usepackage{fancyhdr} % CRITICAL: Restored this to fix Undefined Control Sequence
 \usepackage{etoolbox} % Necessary for patching commands if needed
 \usepackage{babel}
@@ -113,8 +115,8 @@
     \textcolor{Night}{Neil A. Hamlett, D.Sc., MBA} \\
     \small \includegraphics[height=0.9\baselineskip]{graphics/manualEmailIcon.png}\textnormal{ neil.hamlett@uncertainty-research.science} \qquad
     \small \includegraphics[height=1.06125\baselineskip]{graphics/LinkedInLogo.png}\textnormal{\href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{LinkedIn Profile}} \\
-    \small \includegraphics[height=1.375\baselineskip]{graphics/git-github-hub-icon-25.png}\textnormal{\href{https://hamlett-neil-ur.github.io/}{Portfolio}} \qquad
-    \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{\href{https://orcid.org/0000-0001-8278-0087}{0000-0001-8278-0087}}
+    \small \includegraphics[height=1.375\baselineskip]{graphics/git-github-hub-icon-25.png}\textnormal{\href{https://hamlett-neil-ur.github.io/}{hamlett-neil-ur.github.io}} \qquad
+    \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{ORCID: \href{https://orcid.org/0000-0001-8278-0087}{0000-0001-8278-0087}}
 }
 
 \date{\normalsize \today}
@@ -143,6 +145,7 @@
 \begin_modules
 customHeadersFooters
 multicol
+subequations
 \end_modules
 \maintain_unincluded_children no
 \language english
@@ -175,7 +178,7 @@ multicol
 \use_hyperref false
 \papersize letter
 \use_geometry true
-\use_package amsmath 1
+\use_package amsmath 2
 \use_package amssymb 1
 \use_package cancel 1
 \use_package esint 1
@@ -375,8 +378,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The treatment of uncertainty in quantitative decision-making represents a formidable research challenge,
- exposing multiple facets.
+The treatment of uncertainty in quantitative decision making represents a formidable research challenge,
+ confronting multiple facets.
  We conventionally decompose uncertainty into 
 \emph on
 epistemic
@@ -439,7 +442,7 @@ literal "false"
 
 \begin_layout Subsection*
 Motivation:
- How strong is my evidence?
+ How strong is our evidence?
 \end_layout
 
 \begin_layout Standard
@@ -455,9 +458,17 @@ literal "false"
 \end_inset
 
 ...logic and reasoning with the aid of 
-\emph on
-very small samples of data
-\emph default
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+emph{very small samples of data}
+\end_layout
+
+\end_inset
+
 
 \begin_inset Quotes erd
 \end_inset
@@ -655,7 +666,7 @@ literal "false"
 
 \end_inset
 
- use a stochastic-detection area-under-the-curve (AuC) (
+ use a stochastic-detection area-under-the-curve (AuC) approach (
 \emph on
 cf
 \emph default
@@ -668,7 +679,7 @@ literal "false"
 
 \end_inset
 
-) approach to analyze evidentiary factors' relative strengths.
+) to analyze evidentiary factors' relative strengths.
  Resembling stepwise regression (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -767,29 +778,38 @@ evidentiary span
 \emph default
 :
  The range of measurable factors believed to influence the attractiveness of each distinct scenario under consideration.
+ This span is represented as a 
+\emph on
+hierarchy model 
+\emph default
+in the form of a tree graph.
  The responsible individual decision maker or panel of experts then performs
 \emph on
- pairwise comparisons
+ comparative judgements
 \emph default
- to assign a 
+:
+ 
 \begin_inset Quotes eld
 \end_inset
 
-preference ratio
+...the 
+\emph on
+numerical
+\emph default
+ representation of a relationship between two elements that share a common parent
 \begin_inset Quotes erd
 \end_inset
 
- between each pair of factors within the range (
+ (emphasis added) in the tree graph (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Merrick2005"
+key "Saaty1994"
 literal "false"
 
 \end_inset
 
 ).
- Illustrated in a case study in a subsequent section,
- AHP produces the scenario rankings according to attractiveness based upon their respective measurable factors.
+ A case study in a subsequent section demonstrates AHP's use to rank plausible scenarios based on this information.
  
 \end_layout
 
@@ -799,7 +819,7 @@ Not strictly a stand-alone method,
  Bayesian techniques allow for subsequent revision of the pairwise comparisons as stronger empirical evidence emerges (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "LiH2025"
+key "Merrick2005,LiH2025"
 literal "false"
 
 \end_inset
@@ -821,7 +841,7 @@ literal "false"
 
 \end_inset
 
- explored simulation-optimization approaches to circumvent elicitation of pairwise comparisons from experts.
+ explored simulation-optimization approaches to circumvent altogether the elicitation of comparative judgements from experts.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -840,7 +860,7 @@ Evidentiary-strength analysis using the AHP.
 \begin_layout Standard
 That 
 \emph on
-a set of AHP pairwise comparisons defines a complete,
+a set of AHP comparative judgements defines a complete,
  directed,
  acyclic graph
 \emph default
@@ -976,7 +996,7 @@ What innovation is required to define a methodology for AHP-based evidentiary-st
 weighted
 \emph default
  edges.
- The investigation by 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Brown2020"
@@ -984,7 +1004,7 @@ literal "false"
 
 \end_inset
 
- focused on tournament graphs with unweighted (uniformly unit-weighted) edges.
+ graphs with unweighted (uniformly unit-weighted) edges.
  
 \begin_inset ERT
 status open
@@ -1028,7 +1048,7 @@ literal "false"
 
 \end_inset
 
-formulate entropies for regular (non-directional) graphs comprised of weighted edges.
+ formulate entropies for regular (non-directional) graphs comprised of weighted edges.
  The preference ratios from the AHP pairwise comparison provide the weights used here.
  
 \end_layout
@@ -1041,17 +1061,9 @@ Second,
 Hierarchy
 \emph default
  term in AHP refers to a hierarchic deconstruction of decisions into contituent factors.
- The AHP method produces a set of decision-factor pairwise comparisons —
- and associated tournament graph —
- for each hierarchic 
-\begin_inset Quotes eld
-\end_inset
-
-cluster
-\begin_inset Quotes erd
-\end_inset
-
-.
+ The AHP method produces a set of decision-factor comparative judgements —
+ defining a tournament graph —
+ for each hierarchy model.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1085,7 +1097,7 @@ heavy
  graph-entropy machinery needed
 \emph default
 ?
- We might intiutively expect that individual pairwise preference ratios suffice to inform us about the most-influential factors.
+ We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential factors.
  The AHP's machinery however accounts for 
 \begin_inset Quotes eld
 \end_inset
@@ -1103,7 +1115,7 @@ literal "false"
 \end_inset
 
 ).
- That pairwise comparisons define a graph —
+ That comparative judgements define a graph —
  a network —
  provides the basis of its power.
  Our graph-entropy machinery accounts for the 
@@ -1131,8 +1143,8 @@ real-world
 \end_layout
 
 \begin_layout Standard
-We then calculate the entropy for our pairwise-preference DAG.
- This extends work by 
+We then calculate the entropy for our comparative-judgement DAG.
+ This extends 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Brown2020"
@@ -1141,7 +1153,7 @@ literal "false"
 \end_inset
 
  through construction of a Laplacian that includes the edge weights.
- Our AHP-graph Laplacian fuses elements of that for a conventional unit-edge-weighted DAG Laplacian with components from the AHP reciprocal matrix for edge weights.
+ Our AHP-graph Laplacian fuses elements of that for a conventional unit-edge-weighted DAG Laplacian with values from the comparative-judgements for edge weights.
  This incorporates information about degree of influence in the interconnected evidentiary framework.
 \end_layout
 
@@ -1207,7 +1219,13 @@ literal "false"
 \end_inset
 
 ).
- 
+ This context —
+ exogenous to the mechanics of AHP —
+ allow us to highlight our focus on evidentiary reasoning in the context of decision making.
+\end_layout
+
+\begin_layout Standard
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Decision-Quality-framework.-(Fro"
@@ -1304,6 +1322,23 @@ Appropriate Frame
  specifies the scope of the decision:
  What specifically is to be decided.
  Thoughtful framing combines prescriptive with prospcriptive judgements to provide analytical clarity.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+ describes this as 
+\begin_inset Quotes eld
+\end_inset
+
+...the most creative part of decision making that has a significant effect on the outcome...
+\begin_inset Quotes erd
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1355,6 +1390,7 @@ literal "false"
 \end_inset
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
+ AHP is itself a distinct reasoning approach.
 \end_layout
 
 \begin_layout Itemize
@@ -1369,8 +1405,7 @@ Commitment to Action
 \end_layout
 
 \begin_layout Standard
-Now,
- the DQ framework defines a scientific,
+The DQ framework defines a scientific,
  evidentiary-reasoning pattern that is philosophically consistent with the design-of-experiements practice (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1380,11 +1415,18 @@ literal "false"
 \end_inset
 
 ).
- Its mention here amplifies the theme of scientific reasoning.
+ Its mention here amplifies the theme of evidentiary reasoning.
 \end_layout
 
 \begin_layout Section*
-Case study in the Analytic Hierarchy Process (AHP).
+Case study in the Analytic Hierarchy Process (AHP)
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ahp-case-study"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1413,7 +1455,7 @@ literal "false"
 
 \end_inset
 
- report device-physics technical details that are tangential to the present exploration.
+ report device-physics technical details that are tangential to our purposes.
  Their use of the AHP methodology primarily interests us.
 \end_layout
 
@@ -1445,42 +1487,33 @@ This case is recent
 \begin_layout Enumerate
 
 \emph on
-An informative but simple illustration can be extracted
+It strikes a balance between tractability and complexity
 \emph default
 .
- The AHP problem was designed to be 
-\emph on
-hierarchical
-\emph default
-.
- Complex MCDM problems often involve dividing and conquering.
- A large AHP application might involve the 
-\begin_inset Quotes eld
-\end_inset
-
-nesting
-\begin_inset Quotes erd
-\end_inset
-
- of smaller AHP formulations,
- analogous to Russian Matryoshka dolls.
- Our demonstration considers only one of the 
-\begin_inset Quotes eld
-\end_inset
-
-inner
-\begin_inset Quotes erd
-\end_inset
-
- AHP formulations,
- but illustrates the presence of a broader context.
+ Many pedantic demonstrations are borderline-trivial,
+ constructed to illustrate AHP mechanics.
+ The present investigation benefits from a moderately greater degree of complexity.
+ The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent clusters.
 \end_layout
 
 \begin_layout Standard
-The AHP-methodology description herein employs the terminology of 
+The following offers neither criticism nor endorsement of 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty1986"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+.
+ Their work merely serves to illustrate AHP mechanics.
+\end_layout
+
+\begin_layout Standard
+We strive to select AHP terminology that remains close 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994"
 literal "false"
 
 \end_inset
@@ -1538,13 +1571,9 @@ tuple "list"
 \end_inset
 
  reproduces the 
-\begin_inset Quotes eld
-\end_inset
-
-Hierarchical structure model
-\begin_inset Quotes erd
-\end_inset
-
+\emph on
+hierarchical model
+\emph default
  employed by 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1554,12 +1583,24 @@ literal "false"
 \end_inset
 
  for their fuel-cell design.
- Explicitly representing the decision-factor hierarchy is a best practice that aids understanding by human decision-makers.
+ Visual depiction of the decision-factor hierarchy aids in understanding by human decision-makers.
  Idiosyncratic representative style notwithstanding,
- it follows the ubiquitous form demonstrated by 
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ follows the ubiquitous form demonstrated by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty1986"
+key "Saaty1986,Saaty1994"
 literal "false"
 
 \end_inset
@@ -1609,7 +1650,7 @@ name "fig:Hierarchy-decomposition-used"
 
 \end_inset
 
-Hierarchy decomposition used for pipeline material-selection case study.
+Hierarchy hierarchy used for proton exchange membrane fuel cell (PEMFC) case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1695,17 +1736,16 @@ refcite{Saaty1986}{(1986)}
 \end_inset
 
  terms.
- Thoughtful 
+ A clear goal or focus results from thoughtful 
 \emph on
 framing
 \emph default
 ,
- in DQ terms,
- produce this aspect.
+ in DQ terms.
 \end_layout
 
 \begin_layout Itemize
-The curve-cornered boxes 
+The curve-cornered boxes represent 
 \emph on
 Criteria
 \emph default
@@ -1715,7 +1755,7 @@ Criteria
 values
 \emph default
 ,
- the range of measurable factors believed to materially distinguish between alternatives.
+ the these span range of measurable factors believed to materially distinguish between alternatives.
  For this case,
  they represent
 \emph on
@@ -1726,11 +1766,7 @@ device physical-operating parameters
 current density
 \emph default
  
-\begin_inset Quotes eld
-\end_inset
-
-I
-\begin_inset Quotes erd
+\begin_inset Formula $I$
 \end_inset
 
 ,
@@ -1739,24 +1775,16 @@ I
 pressure drop
 \emph default
  
-\begin_inset Quotes eld
-\end_inset
-
-ΔP
-\begin_inset Quotes erd
+\begin_inset Formula $\Delta P$
 \end_inset
 
 ,
  and 
 \emph on
-Oxygen-uniformed index
+Oxygen-uniformity index
 \emph default
  
-\begin_inset Quotes eld
-\end_inset
-
-UI
-\begin_inset Quotes erd
+\begin_inset Formula $UI$
 \end_inset
 
 .
@@ -1814,10 +1842,23 @@ literal "false"
 
 \end_inset
 
- however use a computational model of the device to simulate 36 distinct combinations of angle,
+ however use a computational to simulate 36 distinct combinations of angle,
  width,
  and height.
- Using AHP to conduct analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not appear in the hierarchy.
+ The clutter arising from depicting each scenario in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ would detract from its clarity.
+ Using AHP to analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not appear in the hierarchy.
 \end_layout
 
 \begin_layout Standard
@@ -1834,7 +1875,7 @@ tuple "list"
 \end_inset
 
  is also idiosyncratic for another reason:
- Each of the physical-specification sub-criteria influences the operating-parameter criteria.
+ Each of the physical-specification sub-criteria influences the each operating-parameter criteria.
  Typically,
  constituent subcriteria are distinct to their associated criterion.
  Their representations appear as 
@@ -1861,19 +1902,27 @@ literal "false"
 \end_inset
 
 ).
- Practically,
- one assembles a list of unique,
- unordered criterion pairs for each hierarchic level.
- If the hierarchy for a given objective (or crietrion) identifies 
-\begin_inset Formula $n$
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
 \end_inset
 
- criteria,
- then 
-\begin_inset Formula $\binom{n}{2}$
-\end_inset
-
- criterion pairs must be considered.
+ includes an uncommon feature that clarifies interpretation:
+ It shows edge directivity.
+ Always directed tree graphs,
+ representation of AHP hiearchy models tend to omit directional indication.
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -1881,11 +1930,12 @@ Comparative judgements about relative importance of criteria.
 \end_layout
 
 \begin_layout Standard
-AHP imbues values and tradeoffs into decision-making through 
+AHP imbues values and tradeoffs into decision-making through comparative judgements:
+ 
 \begin_inset Quotes eld
 \end_inset
 
-...comparative judgments calls for setting up a matrix to carry out 
+...a matrix to carry out 
 \emph on
 pairwise comparisons
 \emph default
@@ -1903,6 +1953,933 @@ literal "false"
 
 ).
  
+\emph on
+Pairwise
+\emph default
+ is the operative word,
+ here.
+ Practically,
+ one assembles a list of unique,
+ unordered criterion pairs for each hierarchic level.
+ If the hierarchy for a given objective (or crietrion) identifies 
+\begin_inset Formula $n$
+\end_inset
+
+ criteria,
+ then 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ criterion pairs must be considered.
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains four hierarchic models,
+ each based on three constituent criteria.
+ Consequently,
+ 
+\begin_inset Formula $\binom{3}{2}=3$
+\end_inset
+
+ criterion pairs must be considered for each.
+ Each criterion pair corresponds to a directed edge for the tournament graph by which the hierarchy model is represented.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains the comparative judgements assigned by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ for each hierarchy-model criterion pair depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ We defer construction of coresponding matrices to the next subsection.
+ Explicit representation of the comparative judgements contributes clarity of the reasoning.
+ Moreover,
+ the directed-graph edge list in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ provides a key of departure for subsequent analysis that extends APH methodology.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+O-C
+\begin_inset Quotes erd
+\end_inset
+
+ model corresponds to the highest level of the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ hierarchy,
+ relating the relative importance of each of the device operating parameters 
+\begin_inset Formula $I$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Delta P$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $UI$
+\end_inset
+
+.
+ The subsequent hierarchy models specify how 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ believe that the device-design parameters angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+ height 
+\begin_inset Formula $H$
+\end_inset
+
+,
+ and width 
+\begin_inset Formula $W$
+\end_inset
+
+ influence the operating parameters.
+\end_layout
+
+\begin_layout Standard
+Now,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Table 1"
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Table 1"
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+ specifies a 
+\emph on
+fundamental scale
+\emph default
+ containing subjective heuristics to represent the 
+\emph on
+intensity of importance
+\emph default
+ between criterion pairs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Table 5"
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ adopts this scale,
+ as do other AHP applications appearing in the literature.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+,
+ the most-rigorous description of the AHP methodology,
+ contains no explicit justification as to why these specific values are necessary.
+ 
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ speaks to preferential ordering,
+ alternative,
+ more-rigorous enumerations of importance can be applied.
+ Application of the personal-probability indifference principle occurs as one alternative (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Savage1972,deFinetti1972"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hubbard2023"
+literal "false"
+
+\end_inset
+
+ —
+ addressing the specific domain of cybersecurity —
+ describe more-emprical approaches to 
+\emph on
+measurement
+\emph default
+.
+ Such techniques could similarly be adapted to AHP comparative judgements.
+ 
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Decision-factor-judgements.-(Aft"
+
+\end_inset
+
+Comparative judgements for each hierarchy-model criterion pair.
+ (After 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+,
+ Tables 8-11)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "decision-factor-judgements"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="4">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hierarchy
+\end_layout
+
+\begin_layout Plain Layout
+model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+reference
+\end_layout
+
+\begin_layout Plain Layout
+criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+comparative
+\end_layout
+
+\begin_layout Plain Layout
+criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+intensity of
+\end_layout
+
+\begin_layout Plain Layout
+importance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O-C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O-C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O-C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C-
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -1911,6 +2888,150 @@ Transformation of comparative judments into
 priority vectors
 \emph default
 .
+\end_layout
+
+\begin_layout Standard
+AHP 
+\emph on
+priority vectors
+\emph default
+ provide the key quantitative mechanism for evidentiary aggregation in MCDM applications.
+ Mechanically,
+ this is accomplished by constructiong a 
+\emph on
+reciprocal matrix
+\emph default
+ from the comparative judgements for each hierarchy model.
+ A reciprocal matrix is a Hermetian matrix with unit-valued diagonals and intensity-importance values assigned to off-diagonal elements.
+ For the O-C model in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ this appears as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather}
+\boldsymbol{A}_{\mbox{O-C}}=\left[\begin{array}{ccc}
+1 & a_{I,\Delta P} & a_{I,UI}\\
+a_{\Delta P,I} & 1 & a_{\Delta P,UI}\\
+a_{UI,I} & a_{UI,\Delta P} & 1
+\end{array}\right]\label{eq:reciprocal-matrix-O-C}\\
+=\left[\begin{array}{ccc}
+1 & 7 & 4\\
+\nicefrac{1}{7} & 1 & \nicefrac{1}{3}\\
+\nicefrac{1}{4} & 3 & 1
+\end{array}\right]\mbox{.}
+\end{gather}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-O-C"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) follows from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+a_{j,i}=a^{-1}_{i,j}\mbox{,}
+\]
+
+\end_inset
+
+by which we avoid logical contradiction in our reasoning.
+ If 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}_{O-C}=\boldsymbol{\varLambda}_{O-C}\boldsymbol{X}_{O-C}
+\end{equation}
+
+\end_inset
+
+represents the eigenvalue/eigenvector formulation for equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-O-C"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ then the resulting priority vector 
+\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
+\end_inset
+
+ becomes the Perron (or principal) eigenvector (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\left[\boldsymbol{\omega}_{O-C}\right]_{i}=\frac{\left[\boldsymbol{X}_{O-C}\right]_{i,}}{}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -2403,6 +3524,40 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "de Fineeti (1972)"
+key "deFinetti1972"
+literal "false"
+
+\end_inset
+
+de Finetti,
+ B.
+ (1972).
+ 
+\emph on
+Theory of Probability
+\emph default
+.
+ Chichester,
+ UK:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781119286387"
+target "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119286387"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -3694,6 +4849,48 @@ https://doi.org/10.1287/inte.24.6.19
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Saaty (2003)"
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (2003).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Decision-making with the AHP:
+ Why is the principal eigenvector necessary.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Journal of Operational Research
+\emph default
+:
+ 145(1):85-91.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/S0377-2217(02)00227-8
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Saaty & Vargas (2013)"
 key "Saaty2013"
 literal "false"
@@ -3771,48 +4968,6 @@ https://doi.org/10.1016/j.eswa.2025.128938
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Saaty (2003)"
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-Saaty,
- T.
- L.
- (2003).
- 
-\begin_inset Quotes eld
-\end_inset
-
-Decision-making with the AHP:
- Why is the principal eigenvector necessary.
-\begin_inset Quotes erd
-\end_inset
-
- 
-\emph on
-European Journal of Operational Research
-\emph default
-:
- 145(1):85-91.
- 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-https://doi.org/10.1016/S0377-2217(02)00227-8
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 label "Salicone & Prioli (2018)"
 key "Salicone2018"
 literal "false"
@@ -3842,6 +4997,40 @@ https://doi.org/10.1007/978-3-319-74139-0
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Savage (1972)"
+key "Savage1972"
+literal "false"
+
+\end_inset
+
+Savage,
+ L.
+ (1972).
+ 
+\emph on
+The Foundations of Statistics
+\emph default
+.
+ Garden City,
+ NY:
+ Dover.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780486137100"
+target "https://store.doverpublications.com/products/9780486137100"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
