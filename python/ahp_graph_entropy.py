@@ -149,11 +149,23 @@ ho_mc.join_priority_vector_to_reciprocal_matrix()
 
 #%%
 
+from networkx import DiGraph
 
+ho_mc.comparative_judgement_network = DiGraph()
+
+
+ho_mc.comparative_judgement_network.add_edges_from(
+                                                     ho_mc.comparative_judgements
+                                                          .assign(importance = lambda Ξ : Ξ['importance']
+                                                                                           .apply(func = lambda ξ : {'importance' : ξ}))
+                                                          [['comparative_factor',
+                                                            'reference_factor',
+                                                            'importance'           ]]
+                                                          .to_records(index = False)
+                                                   ) 
 
 
 #%%
-
 
 
 

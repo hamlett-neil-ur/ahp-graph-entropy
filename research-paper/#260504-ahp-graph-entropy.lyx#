@@ -20,7 +20,10 @@
 \usepackage{xurl}
 \usepackage{graphicx}
 \usepackage[authoryear,round]{natbib}
+\usepackage{enumitem}
 
+
+\DeclareMathOperator*{\argmax}{argmax}
 
 \interfootnotelinepenalty=10000
 
@@ -72,14 +75,14 @@
     \fancyhead[RO]{%
         \small
         \shortstack[r]{%
-            \href{...}{unpublished working paper}
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
         }%
     }
 
     \fancyhead[LE]{%
         \small
         \shortstack[l]{%
-            \href{...}{unpublished working paper}
+            \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
         }%
     }
     % Footer
@@ -104,7 +107,7 @@
 % --- Title and Author Metadata ---
 \title{%
   \bfseries \textcolor{Night}{Evidentiary reasoning with the Analytical Hierarchy Process:}\\
-  \textcolor{Night}{Use of graph entropy to rank decision factors}
+  \textcolor{Night}{Use of graph entropy to rank decision elements}
   \par\vspace{0.6em}
   \normalfont\normalsize \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
   \par\vspace{0.4em}
@@ -114,7 +117,7 @@
 \author{
     \textcolor{Night}{Neil A. Hamlett, D.Sc., MBA} \\
     \small \includegraphics[height=0.9\baselineskip]{graphics/manualEmailIcon.png}\textnormal{ neil.hamlett@uncertainty-research.science} \qquad
-    \small \includegraphics[height=1.06125\baselineskip]{graphics/LinkedInLogo.png}\textnormal{\href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{LinkedIn Profile}} \\
+    \small \includegraphics[height=1.06125\baselineskip]{graphics/LinkedInLogo.png}\textnormal{\href{https://www.linkedin.com/in/neil-hamlett-strategic-quant/}{neil-hamlett-strategic-quant}} \\
     \small \includegraphics[height=1.375\baselineskip]{graphics/git-github-hub-icon-25.png}\textnormal{\href{https://hamlett-neil-ur.github.io/}{hamlett-neil-ur.github.io}} \qquad
     \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{ORCID: \href{https://orcid.org/0000-0001-8278-0087}{0000-0001-8278-0087}}
 }
@@ -319,7 +322,7 @@ topfraction}{.8}
 
 \begin_layout Abstract
 Decision makers often require insight into the relative strength of evidence influencing their choices.
- The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength.
+ The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elemens' relative evidentiary strength.
  Pairwise-comparison analysis produces lists of edges for a complete,
  directed,
  acyclic graph,
@@ -328,17 +331,15 @@ Decision makers often require insight into the relative strength of evidence inf
 tournament graph
 \emph default
 .
- Pairwise-comparison 
-\begin_inset Quotes eld
-\end_inset
-
-preference ratios
-\begin_inset Quotes erd
-\end_inset
-
- provide tournament-graph edge weights,
+ 
+\emph on
+Intensities of importance
+\emph default
+ from comparative judgements between evidentiary elements provide tournament-graph edge weights,
  leading to a novel Laplacian matrix.
- Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+ Relative-entropy calculations based on Laplacians for induced subgraph quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+ A previously published case study related to a fuel-cell design demonstrates the approach.
+ The graph-entropy method provides clearer strength-of-contribution indications than sensitivity analysis from the case study.
 \end_layout
 
 \begin_layout Section*
@@ -378,8 +379,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The treatment of uncertainty in quantitative decision making represents a formidable research challenge,
- confronting multiple facets.
+The treatment of uncertainty in quantitative decision making represents a formidable research challenge confronting multiple facets.
  We conventionally decompose uncertainty into 
 \emph on
 epistemic
@@ -474,7 +474,7 @@ emph{very small samples of data}
 \end_inset
 
  (emphasis added).
- Circumstances demanding reasoning of this sort arise in many domains beyond new-business formation (
+ Circumstances demanding this sort of reasoning arise in many contexts beyond new-business formation (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Martin2007,Eisenmann2013,Swanson2024"
@@ -497,7 +497,9 @@ literal "false"
 
 \end_inset
 
- devote considerable attention to the adverse effects of imperfect information when trying to select optimum scenarios.
+ devoted considerable attention to the adverse effects of imperfect information —
+ an endemic condition within entrepreneurship —
+ when trying to select optimum scenarios.
  
 \end_layout
 
@@ -624,7 +626,7 @@ literal "false"
 
 \end_inset
 
- offered a profoundly rigorous approach to quantifying epistemic uncertainty.
+ offered a rigorous approach to quantifying epistemic uncertainty.
  More-recently,
  
 \begin_inset CommandInset citation
@@ -747,7 +749,7 @@ literal "false"
 \end_inset
 
 ).
- It is a multi-criterion decision methodology (MCDM) enjoying widespread applicability for group decision making (
+ It is a multi-criterion decision methodology (MCDM) enjoying widespread applicability to group decision making (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1994"
@@ -777,12 +779,26 @@ The AHP methodology begins with identifying a plausible
 evidentiary span
 \emph default
 :
- The range of measurable factors believed to influence the attractiveness of each distinct scenario under consideration.
- This span is represented as a 
+ The range of measurable factors —
+ 
 \emph on
-hierarchy model 
+elements
 \emph default
-in the form of a tree graph.
+ in the vernacular of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994"
+literal "false"
+
+\end_inset
+
+ —
+ believed to influence the attractiveness of each distinct scenario under consideration.
+ A 
+\emph on
+hierarchy model
+\emph default
+ represents this as a tree graph.
  The responsible individual decision maker or panel of experts then performs
 \emph on
  comparative judgements
@@ -809,14 +825,14 @@ literal "false"
 \end_inset
 
 ).
- A case study in a subsequent section demonstrates AHP's use to rank plausible scenarios based on this information.
+ A case study in a subsequent section demonstrates AHP's use to rank plausible scenarios based on such information.
  
 \end_layout
 
 \begin_layout Standard
 Not strictly a stand-alone method,
  AHP can be fused with other approaches.
- Bayesian techniques allow for subsequent revision of the pairwise comparisons as stronger empirical evidence emerges (
+ Bayesian techniques allow for subsequent revision of the comparative judgements as stronger empirical evidence emerges (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Merrick2005,LiH2025"
@@ -825,6 +841,7 @@ literal "false"
 \end_inset
 
 ).
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "LiJ2025"
@@ -850,7 +867,7 @@ literal "false"
 
 \end_inset
 
- studied methods to improve the rubustness of expert-judgement inputs.
+ studied methods to improve the rubustness of expert inputs into comparative judgements.
 \end_layout
 
 \begin_layout Subsection*
@@ -858,16 +875,16 @@ Evidentiary-strength analysis using the AHP.
 \end_layout
 
 \begin_layout Standard
-That 
+That the
 \emph on
-a set of AHP comparative judgements defines a complete,
+ comparative judgements for an AHP hierarchy model define a complete,
  directed,
  acyclic graph
 \emph default
  (DAG) provides the seminal insight underlying this investigation.
- Complete DAGs belong to a special class of graphs called 
+ Complete DAGs belong to a special class of graph called 
 \emph on
-tournament graphs
+tournament graph
 \emph default
  (
 \begin_inset CommandInset citation
@@ -908,18 +925,18 @@ literal "false"
 
 \end_inset
 
- studied the particular characteristics of tournament graphs.
+ studied the particular characteristics of tournament graph.
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-What questions do entropies of AHP-based tournament graphs allow us to answer
+What questions do entropies of AHP-based tournament graph allow us to answer
 \emph default
 ?
  Endogenous to the AHP formulation itself,
- relative entropy quantifies the marginal informational contribution by a subset of factors within the evidentiary span.
- This addresses a the objective pursued by 
+ relative entropy quantifies the marginal informational contribution by a subset of elements within the evidentiary span.
+ This addresses the objective pursued by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hué2026"
@@ -928,7 +945,8 @@ literal "false"
 \end_inset
 
 .
- Graph-entropy measures however do not require extensive data comprised of both positive and negative cases as with Hué's approach.
+ Graph-entropy measures however do not require extensive empirical data spanning of both positive and negative cases,
+ as with Hué's approach.
  Congruent with the AHP methodology explored here,
  
 \begin_inset CommandInset citation
@@ -942,14 +960,14 @@ literal "false"
 \emph on
  belief-function graphical models
 \emph default
- to decompose their relative evidentiary strength.
+ to decompose their elements' relative evidentiary strength.
  
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-By what mechanism do we infer the differential information between AHP-based tournament graphs with distinct evidentiary spans
+By what mechanism do we infer the differential information between hierarchically-coupled AHP hierarchy models
 \emph default
 ?
  Relative entropy provides a well-understood approach (
@@ -978,9 +996,9 @@ literal "false"
 
 \end_inset
 
- explore entropy differences between same-order tournament graphs with different directional structures.
+ explored entropy differences between same-order tournament graphs with differing directional structures.
  In our case,
- the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to decision factors omitted from the latter.
+ the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to elements omitted from the latter.
  
 \end_layout
 
@@ -991,7 +1009,7 @@ What innovation is required to define a methodology for AHP-based evidentiary-st
 \emph default
 ?
  First,
- we must formulate an entropy definition for tournament graphs with 
+ we must formulate an entropy definition for tournament graph with 
 \emph on
 weighted
 \emph default
@@ -1004,7 +1022,7 @@ literal "false"
 
 \end_inset
 
- graphs with unweighted (uniformly unit-weighted) edges.
+ graph with unweighted (uniformly unit-weighted) edges.
  
 \begin_inset ERT
 status open
@@ -1048,21 +1066,21 @@ literal "false"
 
 \end_inset
 
- formulate entropies for regular (non-directional) graphs comprised of weighted edges.
- The preference ratios from the AHP pairwise comparison provide the weights used here.
+ formulate entropies for regular (non-directional) graph comprised of weighted edges.
+ The intensities of importance from the AHP pairwise comparison provide the weights used here.
  
 \end_layout
 
 \begin_layout Standard
 Second,
- relative entropies of hierarchically linked AHP subgraphs must be coupled.
+ relative entropies of hierarchically linked AHP subgraph must be coupled.
  The 
 \emph on
 Hierarchy
 \emph default
- term in AHP refers to a hierarchic deconstruction of decisions into contituent factors.
- The AHP method produces a set of decision-factor comparative judgements —
- defining a tournament graph —
+ term in AHP refers to a hierarchic deconstruction of decisions into contituent elements.
+ The AHP method produces a set of decision-element comparative judgements —
+ represented by a tournament graph —
  for each hierarchy model.
  
 \begin_inset CommandInset citation
@@ -1080,7 +1098,7 @@ chain rules
  for entropy,
  relative entropy,
  and mutual information.
- Such mechanisms offer a rigorous approach to link hierarchically adjacent tournament graphs.
+ Such mechanisms offer a rigorous approach to link hierarchically adjacent tournament graph.
 \end_layout
 
 \begin_layout Standard
@@ -1097,7 +1115,7 @@ heavy
  graph-entropy machinery needed
 \emph default
 ?
- We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential factors.
+ We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential elements.
  The AHP's machinery however accounts for 
 \begin_inset Quotes eld
 \end_inset
@@ -1106,7 +1124,7 @@ mutual coupling
 \begin_inset Quotes erd
 \end_inset
 
- between decision factors (
+ between elements (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986"
@@ -1123,7 +1141,7 @@ literal "false"
 aggegate effect
 \emph default
  of all the evidence informing a decision or risk assessment.
- Individual preference ratios fail to provide this.
+ Individual importance intensities fail to provide this.
 \end_layout
 
 \begin_layout Subsection*
@@ -1137,13 +1155,14 @@ We begin with a brief illustration of AHP methodology.
 real-world
 \emph default
  case study concisely demonstrates its application to obtaining a preference-ranked set of scenarios.
- The actual ranking lies beyond our specific interest.
- The DAGs resulting from the pairwise preferences provide our focus.
+ The actual ranking lies beyond our specific interest,
+ but is included for completeness.
+ The DAGs resulting from the comparative judgements provide our point of departure into a novel methodology.
  
 \end_layout
 
 \begin_layout Standard
-We then calculate the entropy for our comparative-judgement DAG.
+We then calculate the entropies for our comparative-judgement DAGs associated with distinct hierarchy models.
  This extends 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1152,14 +1171,18 @@ literal "false"
 
 \end_inset
 
- through construction of a Laplacian that includes the edge weights.
- Our AHP-graph Laplacian fuses elements of that for a conventional unit-edge-weighted DAG Laplacian with values from the comparative-judgements for edge weights.
+ through adoption of a Laplacian structure that includes edge weights.
+ Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted DAG Laplacian with comparative-judgement importance intensities,
+ which provide the edge weights.
  This incorporates information about degree of influence in the interconnected evidentiary framework.
 \end_layout
 
 \begin_layout Standard
-We then calculate entropies and relative entropies from our AHP-based DAG structure and interpret the results for our real-world case study.
- Approaches demonstrated by 
+Finally,
+ we calculate entropies and relative entropies from our AHP-based DAG structure comprised of multiple,
+ hierarchically coupled hierarchy models.
+ We interpret the results for our real-world case study.
+ Approaches analogous to those by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jiroušek2023"
@@ -1168,8 +1191,8 @@ literal "false"
 \end_inset
 
  guide our thinking.
- We also explore the relationship between preference ratios relative entroy.
- 
+ We also explore the relationship between importance intensities and relative entroy.
+ This quantifies relative strengths of contribution by subsets of evidentiary elements.
 \end_layout
 
 \begin_layout Subsection*
@@ -1237,8 +1260,8 @@ tuple "list"
 
 \end_inset
 
- depicts the DQ framework.
- It outlines 
+ depicts the DQ framework,
+ a 
 \emph on
 de facto
 \emph default
@@ -1251,66 +1274,13 @@ literal "false"
 
 \end_inset
 
-,
- a community of applied decision analysts and scientists.
+.
+ SDP is a community of applied decision analysts and scientists.
  The DQ frameworks contains six 
 \emph on
 links
 \emph default
 :
-\begin_inset Float figure
-placement document
-alignment document
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Decision-Quality-framework.-(Fro"
-
-\end_inset
-
-Decision-Quality framework.
- (From 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Spetzler2016"
-literal "false"
-
-\end_inset
-
-,
- Figure 2.1)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "decision-quality"
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/200202 Spetzler DQ Framework.png
-	lyxscale 40
-	width 3.25in
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
  
 \end_layout
 
@@ -1405,8 +1375,21 @@ Commitment to Action
 \end_layout
 
 \begin_layout Standard
-The DQ framework defines a scientific,
- evidentiary-reasoning pattern that is philosophically consistent with the design-of-experiements practice (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+par
+\backslash
+indent 
+\end_layout
+
+\end_inset
+
+ The DQ framework defines a scientific,
+ evidentiary reasoning pattern that is philosophically consistent with the design-of-experiements practice (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cox2000"
@@ -1416,6 +1399,69 @@ literal "false"
 
 ).
  Its mention here amplifies the theme of evidentiary reasoning.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty2003"
+literal "false"
+
+\end_inset
+
+ emphasizes the importance of logical consistency in application of AHP.
+\begin_inset Float figure
+placement h
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Decision-Quality-framework.-(Fro"
+
+\end_inset
+
+Decision-Quality framework.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+,
+ Figure 2.1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "decision-quality"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/200202 Spetzler DQ Framework.png
+	lyxscale 40
+	width 3.25in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1437,12 +1483,12 @@ literal "false"
 
 \end_inset
 
- employed AHP in making tradeoff decisions related to the design of a proton exchange membrane fuel cells (PEMFCs),
+ employed AHP in making tradeoff decisions during the design of Proton Exchange Membrane Fuel Cells (PEMFCs),
  which 
 \begin_inset Quotes eld
 \end_inset
 
-...can effentialy convert chemical energy from fuels into electricity without causing polution...
+...efficiently convert chemical energy from fuels into electricity without causing polution...
 \begin_inset Quotes erd
 \end_inset
 
@@ -1479,7 +1525,7 @@ It demonstrates a real-world application
 This case is recent
 \emph default
 .
- Given the AHP literature spans decades,
+ Given that the AHP literature spans decades,
  a reader might succomb to the temptation to conclude that the method is anochronistic.
  Our case here demonstrates the application of AHP to a contemporary design problem for an economically essential application.
 \end_layout
@@ -1493,7 +1539,7 @@ It strikes a balance between tractability and complexity
  Many pedantic demonstrations are borderline-trivial,
  constructed to illustrate AHP mechanics.
  The present investigation benefits from a moderately greater degree of complexity.
- The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent clusters.
+ The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent hierarchy models.
 \end_layout
 
 \begin_layout Standard
@@ -1631,70 +1677,6 @@ tuple "list"
 \end_inset
 
 .
- 
-\begin_inset Float figure
-placement document
-alignment document
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Hierarchy-decomposition-used"
-
-\end_inset
-
-Hierarchy hierarchy used for proton exchange membrane fuel cell (PEMFC) case study.
- (From 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "Figure 5"
-target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
-literal "false"
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "PEMFC-hierarchy"
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
-	lyxscale 25
-	width 3.25in
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -1813,10 +1795,87 @@ literal "false"
 .
  In this case,
  each of three physical-device design specifications is believed to influence the operating parameters above.
+ 
+\begin_inset Float figure
+placement h
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Hierarchy-decomposition-used"
+
+\end_inset
+
+Hierarchy hierarchy used for proton exchange membrane fuel cell (PEMFC) case study.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 5"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "PEMFC-hierarchy"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
+	lyxscale 25
+	width 3.25in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Figure 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+par
+\backslash
+indent 
+\end_layout
+
+\end_inset
+
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -1833,7 +1892,7 @@ tuple "list"
 discrete alternatives
 \emph default
  from which the decision maker selects.
- Hierarchy depictions often include the alternatives when the set is small.
+ Hierarchy-model depictions often include the alternatives when the set is small.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1842,9 +1901,11 @@ literal "false"
 
 \end_inset
 
- however use a computational to simulate 36 distinct combinations of angle,
+ however computationally simulate device performance based on 36 distinct combinations of geometric parameters —
+ angle,
  width,
- and height.
+ and height —
+ to construct distinct alternatives.
  The clutter arising from depicting each scenario in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1886,7 +1947,7 @@ clean
 \begin_inset Quotes erd
 \end_inset
 
- tree graphs.
+ tree graph.
  This excursion from common practice does not invalidate AHPs application,
  here.
  One might alternatively consider the 
@@ -1906,7 +1967,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Figure 
+Finally,
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -1920,9 +1982,9 @@ tuple "list"
 
  includes an uncommon feature that clarifies interpretation:
  It shows edge directivity.
- Always directed tree graphs,
+ Always directed tree graph,
  representation of AHP hiearchy models tend to omit directional indication.
- 
+ This reinforces our own graphical interpretation of AHP.
 \end_layout
 
 \begin_layout Subsection*
@@ -1960,17 +2022,17 @@ Pairwise
  here.
  Practically,
  one assembles a list of unique,
- unordered criterion pairs for each hierarchic level.
- If the hierarchy for a given objective (or crietrion) identifies 
+ unordered factor pairs for each hierarchy model.
+ If the model for a given objective (or crietrion) identifies 
 \begin_inset Formula $n$
 \end_inset
 
- criteria,
+ elements,
  then 
 \begin_inset Formula $\binom{n}{2}$
 \end_inset
 
- criterion pairs must be considered.
+ element pairs must be considered.
  
 \end_layout
 
@@ -1988,14 +2050,14 @@ tuple "list"
 \end_inset
 
  contains four hierarchic models,
- each based on three constituent criteria.
+ each based on three constituent elements.
  Consequently,
  
 \begin_inset Formula $\binom{3}{2}=3$
 \end_inset
 
- criterion pairs must be considered for each.
- Each criterion pair corresponds to a directed edge for the tournament graph by which the hierarchy model is represented.
+ element pairs must be considered for each.
+ Each element pair corresponds to a directed edge for the tournament graph by which the hierarchy model is represented.
 \end_layout
 
 \begin_layout Standard
@@ -2019,7 +2081,7 @@ literal "false"
 
 \end_inset
 
- for each hierarchy-model criterion pair depicted in Figure 
+ for each hierarchy-model element pair depicted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -2033,7 +2095,7 @@ tuple "list"
 
 .
  We defer construction of coresponding matrices to the next subsection.
- Explicit representation of the comparative judgements contributes clarity of the reasoning.
+ Explicit representation here of the comparative judgements contributes clarity of the reasoning.
  Moreover,
  the directed-graph edge list in Table 
 \begin_inset CommandInset ref
@@ -2047,7 +2109,7 @@ tuple "list"
 
 \end_inset
 
- provides a key of departure for subsequent analysis that extends APH methodology.
+ provides a key of departure for subsequent analysis that extends AHP methodology.
 \end_layout
 
 \begin_layout Standard
@@ -2204,6 +2266,34 @@ measurement
 .
  Such techniques could similarly be adapted to AHP comparative judgements.
  
+\end_layout
+
+\begin_layout Standard
+The construction of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ anticipates its use in defining a directed graph in the sequel.
+ The AHP literature —
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994,Saaty2003"
+literal "false"
+
+\end_inset
+
+,
+ in particular —
+ presccribes nothing about the ordering if 
 \begin_inset Float table
 placement document
 alignment document
@@ -2274,7 +2364,7 @@ reference
 \end_layout
 
 \begin_layout Plain Layout
-criterion
+element
 \end_layout
 
 \end_inset
@@ -2287,7 +2377,7 @@ comparative
 \end_layout
 
 \begin_layout Plain Layout
-criterion
+element
 \end_layout
 
 \end_inset
@@ -2990,27 +3080,23 @@ a_{j,i}=a^{-1}_{i,j}\mbox{,}
 \end_inset
 
 by which we avoid logical contradiction in our reasoning.
- If 
+ 
+\end_layout
+
+\begin_layout Standard
+If 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A}_{O-C}=\boldsymbol{\varLambda}_{O-C}\boldsymbol{X}_{O-C}
+\boldsymbol{A}_{O-C}\boldsymbol{X}_{O-C}=\boldsymbol{X}_{O-C}\boldsymbol{\varLambda}_{O-C}\mbox{,}\label{eq:eigenstructure-o-c}
 \end{equation}
 
 \end_inset
 
-represents the eigenvalue/eigenvector formulation for equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:reciprocal-matrix-O-C"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+represents the eigenvector/eigenvalue decomposition of reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{O-C}$
 \end_inset
 
-),
+,
  then the resulting priority vector 
 \begin_inset Formula $\boldsymbol{\omega}_{O-C}$
 \end_inset
@@ -3025,18 +3111,382 @@ literal "false"
 
 ):
 \begin_inset Formula 
-\[
-\left[\boldsymbol{\omega}_{O-C}\right]_{i}=\frac{\left[\boldsymbol{X}_{O-C}\right]_{i,}}{}
-\]
+\begin{equation}
+\left[\boldsymbol{\omega}_{O-C}\right]_{i}=\frac{\left[\boldsymbol{X}_{O-C}\right]_{i,\mbox{argmax}(\boldsymbol{\varLambda}_{O-c})}}{\sum_{i}\left[\boldsymbol{X}_{O-C}\right]_{i,\mbox{argmax}(\boldsymbol{\varLambda}_{O-c})}}\mbox{.}\label{eq:priority-vector-o-c}
+\end{equation}
+
+\end_inset
+
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Reciprocal-matrix-and"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains the reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{O-C}$
+\end_inset
+
+ and the priority vector 
+\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
+\end_inset
+
+ resulting from the comparative judgements for the PEMFC-performance hierarcy model.
+ The results coincide —
+ within roundoff precision —
+ with those reported by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+placement h
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Reciprocal-matrix-and"
+
+\end_inset
+
+Reciprocal matrix and priority vector resulting from 
+\begin_inset Formula $\boldsymbol{A}_{O-C}.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "reciprocal-matrix-priority-vector-o-c"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+reference
+\end_layout
+
+\begin_layout Plain Layout
+factor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.705
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.211
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.084
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The mechanics illustrated by equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-O-C,eq:eigenstructure-o-c,eq:priority-vector-o-c"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) are completely general.
+ That 
+\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
+\end_inset
+
+ is a projection onto the unit simplex 
+\begin_inset Formula $\Delta^{3}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\mid\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right\} 
+\]
+
+\end_inset
+
+ is highly significant.
+ All AHP calculation results are constrained to the interval 
+\begin_inset Formula $\left[0,\,1\right]$
+\end_inset
+
+.
+ This inlcudes both AHP-calculation results and standardization of inputs demonstrated in the next subsection.
+\end_layout
+
 \begin_layout Section*
 Entropy of edge-weighted,
- directed acyclic graphs.
+ directed acyclic graph.
+\end_layout
+
+\begin_layout Section*
+Data availability.
+\end_layout
+
+\begin_layout Standard
+This GitHub repository 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://github.com/hamlett-neil-ur/ahp-graph-entropy
+\end_layout
+
+\end_inset
+
+ contains the data and the python and Neo4j logic on which this paper is based.
 \end_layout
 
 \begin_layout Standard
@@ -3112,7 +3562,7 @@ et al
 \begin_inset Quotes eld
 \end_inset
 
-Entropy of tournament digraphs.
+Entropy of tournament digraph.
 \begin_inset Quotes erd
 \end_inset
 
@@ -3295,7 +3745,7 @@ et al
 \begin_inset Quotes eld
 \end_inset
 
-Entropy of weighted graphs with Randić weights.
+Entropy of weighted graph with Randić weights.
 \begin_inset Quotes erd
 \end_inset
 
@@ -3529,7 +3979,7 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "de Fineeti (1972)"
+label "de Finetti (1972)"
 key "deFinetti1972"
 literal "false"
 
@@ -4496,7 +4946,7 @@ Moon,
  (2015).
  
 \emph on
-Topics on Tournaments in Graph Theory
+Topics on Tournaments in graph Theory
 \emph default
 .
  Dover.
@@ -4536,7 +4986,7 @@ Mowshowitz,
 \begin_inset Quotes eld
 \end_inset
 
-Entropy and the complexity of graphs revisited.
+Entropy and the complexity of graph revisited.
 \begin_inset Quotes erd
 \end_inset
 
@@ -5130,7 +5580,7 @@ literal "false"
 
 Spetzler,
  C.,
- Winger,
+ Winter,
  H.,
  Meyer,
  J.
@@ -5252,7 +5702,8 @@ literal "false"
 Vaidya,
  O.
  S.
- & Kumar Sushil (2006).
+ & Kumar S.
+ (2006).
  
 \begin_inset Quotes eld
 \end_inset
@@ -5333,7 +5784,7 @@ Wong,
 \begin_inset Quotes eld
 \end_inset
 
-Entropy and distance of random graphs with aplication to structural pattern recognition.
+Entropy and distance of random graph with aplication to structural pattern recognition.
 \begin_inset Quotes erd
 \end_inset
 

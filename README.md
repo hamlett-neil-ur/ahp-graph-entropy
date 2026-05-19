@@ -20,6 +20,21 @@ The sketched-out approach thus far considers only a two-tier sub-tree of a large
 
 * 🌟 Entropy *chain rules*. Each pariwise-comparison edge list leads to an entropy structure associated with an AHP decision subtree. [Cover & Thomas (2026), §2.5](https://doi.org/10.1002/047174882X) presents chain rules for entropy, relative entropy, and mutual information. This provides rigorous coupling between the tournament graph for a given AHP decisional layer and that associated with its immediate constituent tournament graph. 🌟
 
+### Weave in the [*Decision-Quality* (DQ)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119176657) narrative more-deeply. 
+Its appearance amplifies the theme of evidentiary reasoning. Given the current composition risks its appearance as tangential, gratuitious. If DQ becomes a more-central theme, then this work's attractiveness for certain target journals might be enhanced.
+
+### Incorporate preemptive responses to axiomatic weakness in AHP.
+
+#### Problem.
+
+AHP suffers from axiomatic deficiencies, which result in logical contradictions. Rank-reversal arises as a commonly described example. Concomitantly, AHP — as defined by [Saaty (1986)](https://doi.org/10.1287/mnsc.32.7.841) — despite *axiomatic* bravado — violates the von Neumann/Morgensern Axioms (e.g., [Kochenderfer (2015), §3.1.1](https://doi.org/10.7551/mitpress/10187.001.0001)). This introduces pronounced risk that the work would not pass peer review en route to publication.
+
+#### Approach to resolution.
+
+A cursory, 🤖AI🤖-assisted search produced three artifacts.
+
+* ["Three strategies"]
+
 
 
 # GitHub mechanics 🔧🔩🪛
