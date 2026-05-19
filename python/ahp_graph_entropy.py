@@ -113,7 +113,25 @@ class calculateHierarchyModelEntropy:
         
         return self.reciprocal_matrix_priority_vector
     #
-
+    def construct_comparative_judgement_network(self):
+    
+        from networkx import DiGraph
+        
+        self.comparative_judgement_network = DiGraph()
+        
+        
+        self.comparative_judgement_network.add_edges_from(
+                                                             self.comparative_judgements
+                                                                  .assign(importance = lambda Ξ : Ξ['importance']
+                                                                                                   .apply(func = lambda ξ : {'importance' : ξ}))
+                                                                  [['comparative_factor',
+                                                                    'reference_factor',
+                                                                    'importance'           ]]
+                                                                  .to_records(index = False)
+                                                           )
+        
+        return self.comparative_judgement_network.edges()
+    #
 
 
 #%%
@@ -131,9 +149,12 @@ judgement_comparison = (read_csv(filepath_or_buffer = path_to_judgement_comparis
                             .set_index(keys = 'hierarchy_model',
                                        drop = True              ))
 
-
-
-
+judgement_graph_label_map = {'current_density' : 'I',
+                             'oxygen_uniformity' : 'UI',
+                             'pressure_drop' : 'ΔP',
+                             'height' : 'H',
+                             'width' : 'W',
+                             'angle' : 'θ'             }
 
 
 #%%
@@ -144,38 +165,84 @@ ho_mc = calculateHierarchyModelEntropy(comparative_judgements = judgement_compar
 ho_mc.construct_reciprocal_matrix_from_comparative_judgements()
 ho_mc.calculate_priority_vector_from_reciprocal_matrix()
 ho_mc.join_priority_vector_to_reciprocal_matrix()
-
+ho_mc.construct_comparative_judgement_network()
 
 
 #%%
 
-from networkx import DiGraph
+from networkx import circular_layout, draw_networkx_nodes, draw_networkx_labels,draw_networkx_edges
+import matplotlib.pyplot as plt
 
-ho_mc.comparative_judgement_network = DiGraph()
+from matplotlib.font_manager import FontProperties
 
-
-ho_mc.comparative_judgement_network.add_edges_from(
-                                                     ho_mc.comparative_judgements
-                                                          .assign(importance = lambda Ξ : Ξ['importance']
-                                                                                           .apply(func = lambda ξ : {'importance' : ξ}))
-                                                          [['comparative_factor',
-                                                            'reference_factor',
-                                                            'importance'           ]]
-                                                          .to_records(index = False)
-                                                   ) 
-
+times_bold_italic = FontProperties(
+    family='Times New Roman',
+    weight='bold',
+    style='italic'
+)
 
 #%%
 
 
 
 
-
 #%%
 
+(judgement_graph_figure,
+ judgement_graph_axes   ) = plt.subplots(nrows = 1,
+                                         ncols = 1,
+                                         figsize = (5, 3.75))
+
+vertex_positions  = circular_layout(G = ho_mc.comparative_judgement_network)
+edge_widths = [ho_mc.comparative_judgement_network
+                    [edge_tail]
+                    [edge_head]
+                    .get('importance')
+               for (edge_tail,
+                    edge_head)
+               in ho_mc.comparative_judgement_network
+                       .edges()                        ]
+
+draw_networkx_edges(G = ho_mc.comparative_judgement_network,
+                    pos = vertex_positions,
+                    width = edge_widths,
+                    edge_color = '#333333',
+                    node_size = 3600,
+                    arrowsize = 18,
+                    arrowstyle = '-|>',
+                    connectionstyle = 'arc3,rad=0.1',
+                    ax = judgement_graph_axes       )
+draw_networkx_nodes(G = ho_mc.comparative_judgement_network,
+                    pos = vertex_positions,
+                    node_size = 3600,
+                    node_color = '#73cbf2',
+                    alpha = 0.9,
+                    edgecolors = '#003459',
+                    linewidths = 5,
+                    ax = judgement_graph_axes)
 
 
+draw_networkx_labels(G = ho_mc.comparative_judgement_network,
+                     pos = vertex_positions,
+                     labels = {vertex_label : vertex_abbreviation
+                               for (vertex_label,
+                                    vertex_abbreviation)
+                               in judgement_graph_label_map.items()
+                               if vertex_label 
+                               in ho_mc.comparative_judgement_network
+                                       .nodes()                       },
+                     font_size = 16,
+                     font_color = '#003459',
+                     font_family = 'Times New Roman',
+                     font_weight = 'bold',
+                     ax = judgement_graph_axes                               )
 
+judgement_graph_axes.margins(0.20)
+judgement_graph_axes.set_axis_off()
+judgement_graph_figure.tight_layout()
+judgement_graph_figure.savefig(fname = './illustrations/objective_criterion_graph.png',
+                               dpi = 512,
+                               transparent = True)
 
 
 #%%

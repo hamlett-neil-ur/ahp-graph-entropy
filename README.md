@@ -27,14 +27,37 @@ Its appearance amplifies the theme of evidentiary reasoning. Given the current c
 
 #### Problem.
 
-AHP suffers from axiomatic deficiencies, which result in logical contradictions. Rank-reversal arises as a commonly described example. Concomitantly, AHP — as defined by [Saaty (1986)](https://doi.org/10.1287/mnsc.32.7.841) — despite *axiomatic* bravado — violates the von Neumann/Morgensern Axioms (e.g., [Kochenderfer (2015), §3.1.1](https://doi.org/10.7551/mitpress/10187.001.0001)). This introduces pronounced risk that the work would not pass peer review en route to publication.
+AHP suffers from axiomatic deficiencies, which result in logical contradictions. Rank-reversal arises as a commonly described example. Concomitantly, AHP — as defined by [Saaty (1986)](https://doi.org/10.1287/mnsc.32.7.841) — despite *axiomatic bravado* — violates the von Neumann/Morgensern Axioms (e.g., [Kochenderfer (2015), §3.1.1](https://doi.org/10.7551/mitpress/10187.001.0001)). This introduces pronounced risk that the work would not pass peer review en route to publication.
+
+That [Saaty (1986)](https://doi.org/10.1287/mnsc.32.7.841) based judgement comparison on an arbitrary, ad hoc set of *intensities of importance* that receive widespread, unquestioning use — including by the selected case study [Bu, *et al* (2020)](https://doi.org/10.1016/j.laa.2019.09.026) — represents particular weakness.
 
 #### Approach to resolution.
 
-A cursory, 🤖AI🤖-assisted search produced three artifacts.
+A cursory, 🤖AI🤖-assisted search produced three Google-Doc artifacts.
 
-* ["Three strategies"]
+* ["Three strategies"](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/I%20am%20writing%20a%20formal%20paper%20that%20I%20would%20like%20to....gdoc);
+* ["Specific litarature"](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/1.%20I%20see%20Lootsma%20and%20Barzilia%20at%20https%3A%20%20doi.org%20....gdoc); and
+* ["von Neumann/Morgenstern axioms"](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/von%20neumann%20morgenstern%20axioms.gdoc). 
 
+The `"Three strategies"` includes the recommendaiton for an information-theoretic emphasis. Prominently,
+```text
+       We treat the hierarchical decomposition not as an explicit expected utility 
+       mapping under vNM assumptions, but rather as an informational network topology. 
+       The derived principal eigenvectors represent steady-state probability distributions 
+       over a unit simplex, isolating the structural configurations of decision criteria. 
+       By assessing the graph entropy of these matrices, we measure the propagation of 
+       evidentiary consistency rather than behavioral preference utility.
+```
+
+Congruent ideas already form the basis for the work's foundational logic. Alternatives to [Saaty's (1986)](https://doi.org/10.1287/mnsc.32.7.841) ad hoc intensity-of-importance scale already receive passing mention. These include personal probabilities ([Savage (1972)](https://store.doverpublications.com/products/9780486137100); [de Finetti (1974)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119286387)), as well as more-empirical measurments along the lines of [Hubbard & Seiersen (2023)](https://doi.org/10.1002/9781119892335).
+
+#### Plan of action.
+
+* Cursorily address — pre [`arχiv.org`](https://arxiv.org/) posting — narratives appearing in the ["Three strategies"](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/I%20am%20writing%20a%20formal%20paper%20that%20I%20would%20like%20to....gdoc) analysis.
+* Work the more-robust recommendations from [`"Three strategies"`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/I%20am%20writing%20a%20formal%20paper%20that%20I%20would%20like%20to....gdoc) and [`"Specific litarature"`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/1.%20I%20see%20Lootsma%20and%20Barzilia%20at%20https%3A%20%20doi.org%20....gdoc) into the "Entropy of edge-weighted ⋯" section of the [`research paper`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf). 
+* Post a draft of [`research paper`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf) to [`arχiv.org`](https://arxiv.org/).
+* Weave into a subsequent revision — post [`arχiv.org`](https://arxiv.org/) posting — narratives appearing in the ["Three strategies"](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/I%20am%20writing%20a%20formal%20paper%20that%20I%20would%20like%20to....gdoc) analysis.
+* Select peer-reviewed journal and submit.
 
 
 # GitHub mechanics 🔧🔩🪛

@@ -21,6 +21,13 @@
 \usepackage{graphicx}
 \usepackage[authoryear,round]{natbib}
 \usepackage{enumitem}
+\usepackage{emoji}
+\setemojifont{Apple Color Emoji}
+
+\usepackage{fontspec}
+\usepackage{luacode}
+\usepackage{twemojis}
+
 
 
 \DeclareMathOperator*{\argmax}{argmax}
@@ -170,7 +177,7 @@ subequations
 \use_microtype true
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -354,10 +361,18 @@ Decision-making nearly always occurs under conditions of incomplete or imperfect
 \begin_layout Quote
 ...I prefer true but imperfect knowledge,
  even if it leaves much undetermined and unpredictable,
- to
-\emph on
- a pretence of exact knowledge that is likely to be false
-\emph default
+ to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+emph{a pretence of exact knowledge that is likely to be false}
+\end_layout
+
+\end_inset
+
  (emphasis added) (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1361,6 +1376,18 @@ literal "false"
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
  AHP is itself a distinct reasoning approach.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+twemoji{warning}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2243,7 +2270,7 @@ literal "false"
  Application of the personal-probability indifference principle occurs as one alternative (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Savage1972,deFinetti1972"
+key "Savage1972,deFinetti1974"
 literal "false"
 
 \end_inset
@@ -2293,7 +2320,93 @@ literal "false"
 
 ,
  in particular —
- presccribes nothing about the ordering if 
+ presccribes nothing about the ordering of element pairs in comparative judgement.
+ Construction of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ employed the following convention.
+\end_layout
+
+\begin_layout Itemize
+Populate the 
+\begin_inset Quotes eld
+\end_inset
+
+intensity of importance
+\begin_inset Quotes erd
+\end_inset
+
+ column with the value greater than unity.
+\end_layout
+
+\begin_layout Itemize
+Assign to the 
+\begin_inset Quotes eld
+\end_inset
+
+reference element
+\begin_inset Quotes erd
+\end_inset
+
+ column the most-preferred element,
+ associated with the prefered intensity-of-importance value.
+ Subsequently,
+ element corresponds to the head of the directed graph edge connecting the two elements.
+\end_layout
+
+\begin_layout Itemize
+Populate the 
+\begin_inset Quotes eld
+\end_inset
+
+comparative element
+\begin_inset Quotes erd
+\end_inset
+
+ column the less-preferred element.
+ This element corresponds to the tail of the directed-graph edge.
+\end_layout
+
+\begin_layout Standard
+This convention imbues two conveniences.
+ First,
+ the structure of the table endogenously contains the directive structure of the graph.
+ Second,
+ it inclines us to think of importance intensities in terms as personal probabilities (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Savage1972,deFinetti1974"
+literal "false"
+
+\end_inset
+
+) in lieu of the problematic 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+.
+ 
 \begin_inset Float table
 placement document
 alignment document
@@ -2322,7 +2435,46 @@ literal "false"
 \end_inset
 
 ,
- Tables 8-11)
+ Tables 
+\begin_inset CommandInset href
+LatexCommand href
+name "8"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0040"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0045"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "10"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0050"
+literal "false"
+
+\end_inset
+
+,
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "11"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0055"
+literal "false"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3979,15 +4131,15 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "de Fineeti (1972)"
-key "deFinetti1972"
+label "de Finetti (1974)"
+key "deFinetti1974"
 literal "false"
 
 \end_inset
 
 de Finetti,
  B.
- (1972).
+ (1974).
  
 \emph on
 Theory of Probability
@@ -5371,7 +5523,7 @@ literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -5480,7 +5632,16 @@ literal "false"
 \end_inset
 
 .
+ (Originally Savage,
+ L.
+ (1954).
  
+\emph on
+The Foundations of Statistics
+\emph default
+.
+ New York:
+ Wiley.) 
 \end_layout
 
 \begin_layout Bibliography
