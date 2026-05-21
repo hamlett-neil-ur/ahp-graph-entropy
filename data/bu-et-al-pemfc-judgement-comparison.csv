@@ -1,0 +1,13 @@
+﻿hierarchy_model,reference_factor,comparative_factor,importance
+objective_criterion,current_density,pressure_drop,7
+objective_criterion,current_density,oxygen_uniformity,4
+objective_criterion,oxygen_uniformity,pressure_drop,3
+criterion_pressure_drop,height,width,7
+criterion_pressure_drop,height,angle,5
+criterion_pressure_drop,angle,width,2
+criterion_oxygen_uniformity,angle,height,5
+criterion_oxygen_uniformity,width,height,5
+criterion_oxygen_uniformity,width,angle,3
+criterion_current_desnsity,width,angle,5
+criterion_current_desnsity,width,height,3
+criterion_current_desnsity,height,angle,2

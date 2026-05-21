@@ -229,7 +229,7 @@ __marimo__/
 
 
 # Large data files
-*.csv
+
 *.json
 *.sql
 *.graphml
