@@ -13,6 +13,7 @@
 \usepackage{etoolbox} % Necessary for patching commands if needed
 \usepackage{babel}
 \usepackage{hyperref}
+\usepackage{subcaption}
 \usepackage{lipsum}
 \usepackage{xcolor}
 \usepackage{sectsty}
@@ -329,7 +330,7 @@ topfraction}{.8}
 
 \begin_layout Abstract
 Decision makers often require insight into the relative strength of evidence influencing their choices.
- The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elemens' relative evidentiary strength.
+ The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative evidentiary strength.
  Pairwise-comparison analysis produces lists of edges for a complete,
  directed,
  acyclic graph,
@@ -338,11 +339,11 @@ Decision makers often require insight into the relative strength of evidence inf
 tournament graph
 \emph default
 .
- 
+ The resulting 
 \emph on
-Intensities of importance
+Intensities of Importance
 \emph default
- from comparative judgements between evidentiary elements provide tournament-graph edge weights,
+ provide tournament-graph edge weights,
  leading to a novel Laplacian matrix.
  Relative-entropy calculations based on Laplacians for induced subgraph quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
  A previously published case study related to a fuel-cell design demonstrates the approach.
@@ -416,7 +417,7 @@ literal "false"
 \end_inset
 
 ).
- 
+ Sound evidentiary reasoning must account for the consequences of both uncertainty components.
 \end_layout
 
 \begin_layout Standard
@@ -437,7 +438,7 @@ literal "false"
  Exemplified by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zellweger2023,Rindova2024,Ehrig2026"
+key "Zellweger2023,Rindova2024,Townsend2025,Ehrig2026"
 literal "false"
 
 \end_inset
@@ -489,7 +490,7 @@ emph{very small samples of data}
 \end_inset
 
  (emphasis added).
- Circumstances demanding this sort of reasoning arise in many contexts beyond new-business formation (
+ Circumstances demanding this sort of reasoning arise in numerous contexts beyond new-business formation (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Martin2007,Eisenmann2013,Swanson2024"
@@ -503,7 +504,15 @@ literal "false"
 \emph on
 epistemic
 \emph default
- explorations.
+ explorations (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Camuffo2024"
+literal "false"
+
+\end_inset
+
+).
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -560,11 +569,17 @@ data-processing inequality
 \end_inset
 
  Corroborating from a statistical-learning perspective,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hastie2023"
-literal "false"
+ Hastie,
+ Tibshirani,
+ Friedman 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Hastie2009}{(2009)}
+\end_layout
 
 \end_inset
 
@@ -591,7 +606,7 @@ nonstationarity
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Townsend2023"
+key "Townsend2025"
 literal "false"
 
 \end_inset
@@ -641,7 +656,7 @@ literal "false"
 
 \end_inset
 
- offered a rigorous approach to quantifying epistemic uncertainty.
+ offered a rigorous approach to quantifying epistemic uncertainty in evidentiary reasoning.
  More-recently,
  
 \begin_inset CommandInset citation
@@ -651,19 +666,7 @@ literal "false"
 
 \end_inset
 
- applied 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Shafer1976}{Shafer's}
-\end_layout
-
-\end_inset
-
- reasoning to quantify evidentiary incompleteness in Bayesian networks,
+ applied Shafer's reasoning to quantify evidentiary incompleteness in Bayesian networks,
  a causal-inference methodology commonly employed within the entrepreneurial decision-making community (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -696,7 +699,7 @@ literal "false"
 
 \end_inset
 
-) to analyze evidentiary factors' relative strengths.
+) to analyze evidentiary elements' relative strengths.
  Resembling stepwise regression (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -808,7 +811,7 @@ literal "false"
 \end_inset
 
  —
- believed to influence the attractiveness of each distinct scenario under consideration.
+ believed to differentiate the relative attractiveness within the range of scenarios under consideration.
  A 
 \emph on
 hierarchy model
@@ -932,6 +935,7 @@ literal "false"
 \end_inset
 
 ).
+ Structural information content bears direct relevence to the present concern of evidentiary reasoning.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -940,7 +944,7 @@ literal "false"
 
 \end_inset
 
- studied the particular characteristics of tournament graph.
+ studied the particular characteristics of tournament graphs.
 \end_layout
 
 \begin_layout Standard
@@ -950,7 +954,11 @@ What questions do entropies of AHP-based tournament graph allow us to answer
 \emph default
 ?
  Endogenous to the AHP formulation itself,
- relative entropy quantifies the marginal informational contribution by a subset of elements within the evidentiary span.
+ 
+\emph on
+relative entropy
+\emph default
+ quantifies the marginal informational contribution by a subset of elements within the evidentiary span.
  This addresses the objective pursued by 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -994,7 +1002,7 @@ literal "false"
 \end_inset
 
 ).
- Relative entropy for graphs has received considerable attention (
+ Relative entropy for graphs has been well-researched (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wong1985,Liu2022,Guanlei2025"
@@ -1013,7 +1021,7 @@ literal "false"
 
  explored entropy differences between same-order tournament graphs with differing directional structures.
  In our case,
- the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost due to elements omitted from the latter.
+ the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost by ommission of elements from the latter.
  
 \end_layout
 
@@ -1030,14 +1038,35 @@ weighted
 \emph default
  edges.
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Brown2020"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Brown2020}{Brown}
+\end_layout
 
 \end_inset
 
- graph with unweighted (uniformly unit-weighted) edges.
+,
+ 
+\emph on
+et al
+\emph default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Brown2020}{(2020)}
+\end_layout
+
+\end_inset
+
+ analyzed graphs with unweighted (uniformly unit-weighted) edges.
  
 \begin_inset ERT
 status open
@@ -1082,7 +1111,7 @@ literal "false"
 \end_inset
 
  formulate entropies for regular (non-directional) graph comprised of weighted edges.
- The intensities of importance from the AHP pairwise comparison provide the weights used here.
+ The intensities of importance from the AHP comparative judgements provide the weights used here.
  
 \end_layout
 
@@ -1160,62 +1189,54 @@ aggegate effect
 \end_layout
 
 \begin_layout Subsection*
-Course of investigation.
-\end_layout
 
-\begin_layout Standard
-We begin with a brief illustration of AHP methodology.
- A 
-\emph on
-real-world
-\emph default
- case study concisely demonstrates its application to obtaining a preference-ranked set of scenarios.
- The actual ranking lies beyond our specific interest,
- but is included for completeness.
- The DAGs resulting from the comparative judgements provide our point of departure into a novel methodology.
- 
-\end_layout
-
-\begin_layout Standard
-We then calculate the entropies for our comparative-judgement DAGs associated with distinct hierarchy models.
- This extends 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Brown2020"
-literal "false"
-
-\end_inset
-
- through adoption of a Laplacian structure that includes edge weights.
- Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted DAG Laplacian with comparative-judgement importance intensities,
- which provide the edge weights.
- This incorporates information about degree of influence in the interconnected evidentiary framework.
-\end_layout
-
-\begin_layout Standard
-Finally,
- we calculate entropies and relative entropies from our AHP-based DAG structure comprised of multiple,
- hierarchically coupled hierarchy models.
- We interpret the results for our real-world case study.
- Approaches analogous to those by 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Jiroušek2023"
-literal "false"
-
-\end_inset
-
- guide our thinking.
- We also explore the relationship between importance intensities and relative entroy.
- This quantifies relative strengths of contribution by subsets of evidentiary elements.
-\end_layout
-
-\begin_layout Subsection*
-AHP as path to achieving 
 \emph on
 Decision Quality
 \emph default
+ as a check on the completeness of evidentiary reasoning.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Decision Quality
+\emph default
+ (DQ) represents a prominent applied decision-analysis framework that emphasizes evidentiary reasoning (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+).
+ Philosophically congruentment with design-of-experiements practice (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cox2000"
+literal "false"
+
+\end_inset
+
+),
+ DQ provides a 
+\emph on
+de facto
+\emph default
+ standard of practice for the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Society of Decision Professionals (SDP)"
+target "https://www.decisionprofessionals.com"
+literal "false"
+
+\end_inset
+
 .
+ SDP is a community of applied decision analysts and scientists.
+ Introducing DQ here —
+ independent of the mechanics of AHP —
+ reinforces our logical completeness.
 \end_layout
 
 \begin_layout Standard
@@ -1243,27 +1264,8 @@ refcite{Saaty1986}{(1986)}
 
 \end_inset
 
- AHP methodology corresponds to patterns on which prominent applied decision-analysis practices are based.
- 
-\emph on
-Decision Quality
-\emph default
- (DQ) represents a prominent example (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Spetzler2016"
-literal "false"
-
-\end_inset
-
-).
- This context —
- exogenous to the mechanics of AHP —
- allow us to highlight our focus on evidentiary reasoning in the context of decision making.
-\end_layout
-
-\begin_layout Standard
-Figure 
+ AHP methodology loosely maps to the DQ framework.
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Decision-Quality-framework.-(Fro"
@@ -1276,21 +1278,6 @@ tuple "list"
 \end_inset
 
  depicts the DQ framework,
- a 
-\emph on
-de facto
-\emph default
- standards of practice for the 
-\begin_inset CommandInset href
-LatexCommand href
-name "Society of Decision Professionals (SDP)"
-target "https://www.decisionprofessionals.com"
-literal "false"
-
-\end_inset
-
-.
- SDP is a community of applied decision analysts and scientists.
  The DQ frameworks contains six 
 \emph on
 links
@@ -1399,44 +1386,8 @@ Commitment to Action
  Absent a commitment to adopt or act upon the best alternative resulting from the links above,
  a decision arguably has not occurred.
  The analysis was academic.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-par
-\backslash
-indent 
-\end_layout
-
-\end_inset
-
- The DQ framework defines a scientific,
- evidentiary reasoning pattern that is philosophically consistent with the design-of-experiements practice (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Cox2000"
-literal "false"
-
-\end_inset
-
-).
- Its mention here amplifies the theme of evidentiary reasoning.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986,Saaty2003"
-literal "false"
-
-\end_inset
-
- emphasizes the importance of logical consistency in application of AHP.
 \begin_inset Float figure
-placement h
+placement bh
 alignment document
 wide false
 sideways false
@@ -1491,8 +1442,59 @@ name "decision-quality"
 
 \end_layout
 
+\begin_layout Subsection*
+Course of investigation.
+\end_layout
+
+\begin_layout Standard
+We begin with a brief illustration of AHP methodology.
+ A 
+\emph on
+real-world
+\emph default
+ case study concisely demonstrates its application to obtaining a preference-ranked set of scenarios.
+ The actual ranking lies beyond our specific interest,
+ but is included for completeness.
+ The DAGs resulting from the comparative judgements provide our point of departure into a novel methodology.
+ 
+\end_layout
+
+\begin_layout Standard
+We then calculate the entropies for our comparative-judgement DAGs associated with distinct hierarchy models.
+ This extends 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ through adoption of a Laplacian structure that includes edge weights.
+ Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted DAG Laplacian with comparative-judgement importance intensities,
+ which provide the edge weights.
+ This incorporates information about degree of influence in the interconnected evidentiary framework.
+\end_layout
+
+\begin_layout Standard
+Finally,
+ we calculate entropies and relative entropies from our AHP-based DAG structure comprised of multiple,
+ hierarchically coupled hierarchy models.
+ We interpret the results for our real-world case study.
+ Approaches analogous to those by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiroušek2023"
+literal "false"
+
+\end_inset
+
+ guide our thinking.
+ We also explore the relationship between importance intensities and relative entroy.
+ This quantifies relative strengths of contribution by subsets of evidentiary elements.
+\end_layout
+
 \begin_layout Section*
-Case study in the Analytic Hierarchy Process (AHP)
+AHP case study 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:ahp-case-study"
@@ -1528,12 +1530,19 @@ literal "false"
 
 \end_inset
 
- report device-physics technical details that are tangential to our purposes.
- Their use of the AHP methodology primarily interests us.
+ contains device-physics technical details that are tangential to our purposes.
+ The AHP mechanics employed by the former primarily interests us.
 \end_layout
 
 \begin_layout Standard
-This case study suits the purposes of this investigation for three reasons.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ particularly suits the purposes of this investigation for three reasons.
 \end_layout
 
 \begin_layout Enumerate
@@ -1583,7 +1592,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-We strive to select AHP terminology that remains close 
+We strive in the following to select AHP terminology that remains close to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986,Saaty1994"
@@ -1623,7 +1632,11 @@ weights
 \end_inset
 
 .
- This work remains close to Saaty's conventions.
+ We employ 
+\emph on
+priority vector
+\emph default
+ here.
 \end_layout
 
 \begin_layout Subsection*
@@ -1645,7 +1658,7 @@ tuple "list"
 
  reproduces the 
 \emph on
-hierarchical model
+hierarchy model
 \emph default
  employed by 
 \begin_inset CommandInset citation
@@ -1656,7 +1669,9 @@ literal "false"
 \end_inset
 
  for their fuel-cell design.
- Visual depiction of the decision-factor hierarchy aids in understanding by human decision-makers.
+ Visual depiction —
+ as a tree graph —
+ of the decision-element hierarchy aids in understanding by human decision-makers.
  Idiosyncratic representative style notwithstanding,
  Figure 
 \begin_inset CommandInset ref
@@ -1670,7 +1685,7 @@ tuple "list"
 
 \end_inset
 
- follows the ubiquitous form demonstrated by 
+ follows the ubiquitous form appearing in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986,Saaty1994"
@@ -1678,8 +1693,9 @@ literal "false"
 
 \end_inset
 
-.
- The elements in Figure 
+,
+ and throughout the MCDM literature.
+ Structural elements of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -1764,7 +1780,7 @@ Criteria
 values
 \emph default
 ,
- the these span range of measurable factors believed to materially distinguish between alternatives.
+ the these define the span of measurable criteria believed to materially distinguish between alternatives.
  For this case,
  they represent
 \emph on
@@ -1841,7 +1857,7 @@ name "fig:Hierarchy-decomposition-used"
 
 \end_inset
 
-Hierarchy hierarchy used for proton exchange membrane fuel cell (PEMFC) case study.
+Hierarchy model used for proton exchange membrane fuel cell (PEMFC) case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1902,7 +1918,7 @@ indent
 
 \end_inset
 
- Figure 
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -1929,9 +1945,21 @@ literal "false"
 \end_inset
 
  however computationally simulate device performance based on 36 distinct combinations of geometric parameters —
- angle,
- width,
- and height —
+ angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+ width 
+\begin_inset Formula $W$
+\end_inset
+
+,
+ and height 
+\begin_inset Formula $H$
+\end_inset
+
+ —
  to construct distinct alternatives.
  The clutter arising from depicting each scenario in Figure 
 \begin_inset CommandInset ref
@@ -2049,8 +2077,8 @@ Pairwise
  here.
  Practically,
  one assembles a list of unique,
- unordered factor pairs for each hierarchy model.
- If the model for a given objective (or crietrion) identifies 
+ unordered element pairs for each hierarchy model.
+ If the hierarchy model for a given objective (or crietrion) spans 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2136,7 +2164,7 @@ tuple "list"
 
 \end_inset
 
- provides a key of departure for subsequent analysis that extends AHP methodology.
+ provides a key of departure for subsequent extension of the AHP methodology.
 \end_layout
 
 \begin_layout Standard
@@ -2148,7 +2176,7 @@ O-C
 \begin_inset Quotes erd
 \end_inset
 
- model corresponds to the highest level of the Figure 
+ model corresponds to the highest level of the hierarchy model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -2160,8 +2188,8 @@ tuple "list"
 
 \end_inset
 
- hierarchy,
- relating the relative importance of each of the device operating parameters 
+.
+ It represents the contribution by each of the device operating parameters 
 \begin_inset Formula $I$
 \end_inset
 
@@ -2175,16 +2203,8 @@ tuple "list"
 \begin_inset Formula $UI$
 \end_inset
 
-.
- The subsequent hierarchy models specify how 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- believe that the device-design parameters angle 
+ to overall performance of the PEMFC device.
+ The constituent hierarchy depict the belief that geometric-design parameters angle 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -2225,7 +2245,8 @@ literal "false"
 \emph on
 fundamental scale
 \emph default
- containing subjective heuristics to represent the 
+ containing arbitrary,
+ subjective heuristics to represent the 
 \emph on
 intensity of importance
 \emph default
@@ -2240,7 +2261,7 @@ literal "false"
 \end_inset
 
  adopts this scale,
- as do other AHP applications appearing in the literature.
+ as do many other AHP applications appearing in the literature.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2266,7 +2287,7 @@ literal "false"
 
  speaks to preferential ordering,
  alternative,
- more-rigorous enumerations of importance can be applied.
+ more-rigorous enumerations of importance intensities can be applied.
  Application of the personal-probability indifference principle occurs as one alternative (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2292,7 +2313,7 @@ measurement
 \emph default
 .
  Such techniques could similarly be adapted to AHP comparative judgements.
- 
+ Application of such alternatives to Saaty's fundamental scale deflects a common critique of AHP's logical rigor.
 \end_layout
 
 \begin_layout Standard
@@ -2380,6 +2401,7 @@ comparative element
 This convention imbues two conveniences.
  First,
  the structure of the table endogenously contains the directive structure of the graph.
+ This simplifies the algorithmic logic used to construct the resultant tournament graph.
  Second,
  it inclines us to think of importance intensities in terms as personal probabilities (
 \begin_inset CommandInset citation
@@ -3302,6 +3324,22 @@ literal "false"
 
 .
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}a}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float table
 placement h
 alignment document
@@ -3354,7 +3392,7 @@ reference
 \end_layout
 
 \begin_layout Plain Layout
-factor
+element
 \end_layout
 
 \end_inset
@@ -3580,6 +3618,850 @@ factor
 \end_layout
 
 \begin_layout Standard
+Table
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Reciprocal-matrices-and"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains the same information for the constituent hierarchy models,
+ 
+\begin_inset Formula $C-I$
+\end_inset
+
+,
+ 
+\begin_inset Formula $C-UI$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $C-\Delta P$
+\end_inset
+
+.
+ The results do not coincide as closely with those from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+,
+ which are not reported with high degrees of numerical precision.
+ The python 
+\emph on
+scipy
+\emph default
+ library (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Virtanen2020"
+literal "false"
+
+\end_inset
+
+) produced the 
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+ values appearing in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Reciprocal-matrices-and"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ do not report how their calculations were performed.
+ Lacking these details,
+ exact reproduction proves difficult.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+addtocounter{table}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}b}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement h
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Reciprocal-matrices-and"
+
+\end_inset
+
+Reciprocal matrices and priority vectors from 
+\begin_inset Formula $\boldsymbol{A}_{C-\Delta P}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\boldsymbol{A}_{C-I}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\boldsymbol{A}_{C-UI}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "reciprocal-matrix-priority-vector-constituent"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="6">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hierarchy
+\end_layout
+
+\begin_layout Plain Layout
+model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.230
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.648
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1220
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0856
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.618
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.230
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.740
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0938
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{1}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1666
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The mechanics illustrated by equations (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3699,6 +4581,18 @@ LatexCommand bibitem
 label "Brown, et al (2020)"
 key "Brown2020"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Brown2020}
+\end_layout
 
 \end_inset
 
@@ -4253,7 +5147,7 @@ https://doi.org/10.1214/aoms/1177698950
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Ehrig, et al (2025)"
+label "Ehrig, et al (2026)"
 key "Ehrig2026"
 literal "false"
 
@@ -4265,7 +5159,7 @@ Ehrig,
  T.,
  Zenger,
  T.
- (2025).
+ (2026).
  "Causal Reasoning and the Scientific Entrepreneur:
  Beyond Bayes." 
 \emph on
@@ -4490,8 +5384,20 @@ https://doi.org/10.1142/9789811296475_0002
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 label "Hastie, Tibshirani, Friedman (2009)"
-key "Hastie2023"
+key "Hastie2009"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Hastie2009}
+\end_layout
 
 \end_inset
 
@@ -5809,8 +6715,56 @@ https://doi.org/10.1016/j.infoandorg.2024.100512
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Townsend, et al (2023)"
-key "Townsend2023"
+label "Townsend, Hunt, Rady (2024)"
+key "Townsend2024"
+literal "false"
+
+\end_inset
+
+Townsend,
+ D.
+ M.,
+ Hunt,
+ R.
+ A.,
+ Rady,
+ J.
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Chance,
+ probability,
+ and uncertainty at the edge of human reasoning:
+ What is Knightian uncertainty?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Strategic Entrepreneurship Journal
+\emph default
+:
+ 18(3)451-474.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1002/sej.1516
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Townsend, et al (2025)"
+key "Townsend2025"
 literal "false"
 
 \end_inset
@@ -5882,6 +6836,51 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1016/j.ejor.2004.04.028
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Virtanen, et al (2020)"
+key "Virtanen2020"
+literal "false"
+
+\end_inset
+
+Virtanen,
+ P.,
+ 
+\emph on
+et al
+\emph default
+ (2020).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+SciPy 1.0:
+ fundamental algorithms for scientific computing in Python
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\emph on
+Nature Methods
+\emph default
+:
+ 17:261-272.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1038/s41592-019-0686-2
 \end_layout
 
 \end_inset

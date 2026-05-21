@@ -42,6 +42,8 @@ class calculateHierarchyModelEntropy:
                  comparative_judgements = None):
         
         self.comparative_judgements = comparative_judgements
+        
+        self.construct_hierarchy_model_tournament_graph()
     
     #
     def construct_reciprocal_matrix_from_comparative_judgements(self):
@@ -49,7 +51,7 @@ class calculateHierarchyModelEntropy:
         from itertools import product
         from pandas import DataFrame, concat
         
-        evidentiary_span = (set(ho_mc.comparative_judgements['reference_factor'])
+        evidentiary_span = (set(self.comparative_judgements['reference_factor'])
                                  .union(self.comparative_judgements['comparative_factor']))
         
         pairwise_span = (DataFrame(data = product(evidentiary_span,
@@ -62,8 +64,10 @@ class calculateHierarchyModelEntropy:
                                                            .merge(right = self.comparative_judgements),
                                                          pairwise_span
                                                            .merge(right = self.comparative_judgements
-                                                                              .rename(columns = {'reference_factor' : 'comparative_factor',
-                                                                                                 'comparative_factor' : 'reference_factor'})
+                                                                              .rename(columns = {'reference_factor' : 'comparative_factor_ι',
+                                                                                                 'comparative_factor' : 'reference_factor_ι'})
+                                                                              .rename(columns = {'comparative_factor_ι' : 'comparative_factor',
+                                                                                                 'reference_factor_ι' : 'reference_factor'})
                                                                               .assign(importance = lambda Ξ : Ξ['importance']
                                                                                                                .apply(func = lambda ξ : 1/ξ)))])
         
@@ -86,7 +90,7 @@ class calculateHierarchyModelEntropy:
         from numpy.linalg import eig
         
         (self.Λ,
-         self.Χ) =  eig(ho_mc.reciprocal_matrix
+         self.Χ) =  eig(self.reciprocal_matrix
                              .set_index(keys = 'reference_factor',
                                         drop = True                )
                              .to_numpy()                             )
@@ -132,6 +136,112 @@ class calculateHierarchyModelEntropy:
         
         return self.comparative_judgement_network.edges()
     #
+    def construct_comparative_judgement_network_plot(self):
+    
+        from numpy import sign
+        from networkx import circular_layout, draw_networkx_nodes, draw_networkx_labels,draw_networkx_edges
+        import matplotlib.pyplot as plt
+        
+        apply_coordinate_offset = lambda χ : (χ[0] - 0.1 * sign(χ[0]),
+                                              χ[1] - 0.3 * sign(χ[1]))
+        
+        plt.rcParams['font.style'] = 'italic'
+        
+        (judgement_graph_figure,
+         judgement_graph_axes   ) = plt.subplots(nrows = 1,
+                                                 ncols = 1,
+                                                 figsize = (5, 3.75))
+        
+        
+        vertex_positions  = circular_layout(G = self.comparative_judgement_network)
+        edge_widths = [self.comparative_judgement_network
+                            [edge_tail]
+                            [edge_head]
+                            .get('importance')
+                       for (edge_tail,
+                            edge_head)
+                       in self.comparative_judgement_network
+                               .edges()                        ]
+        
+        graph_edges = draw_networkx_edges(G = self.comparative_judgement_network,
+                                          pos = vertex_positions,
+                                          width = list(map(lambda ι : 1.25 * ι,
+                                                           edge_widths          )),
+                                          edge_color = '#002540',
+                                          node_size = 3600,
+                                          arrowsize = 18,
+                                          arrowstyle = '-|>',
+                                          connectionstyle = 'arc3,rad=0.1',
+                                          ax = judgement_graph_axes                 )
+        draw_networkx_nodes(G = self.comparative_judgement_network,
+                            pos = vertex_positions,
+                            node_size = 3600,
+                            node_color = '#73cbf2',
+                            alpha = 0.9,
+                            edgecolors = '#003459',
+                            linewidths = 5,
+                            ax = judgement_graph_axes                )
+        
+        
+        graph_label_text = draw_networkx_labels(G = self.comparative_judgement_network,
+                                                pos = vertex_positions,
+                                                labels = {vertex_label : vertex_abbreviation
+                                                          for (vertex_label,
+                                                               vertex_abbreviation)
+                                                          in judgement_graph_label_map.items()
+                                                          if vertex_label 
+                                                          in self.comparative_judgement_network
+                                                                  .nodes()                       },
+                                                font_size = 24,
+                                                font_color = '#003459',
+                                                font_family = 'Times New Roman',
+                                                font_weight = 'bold',
+                                                ax = judgement_graph_axes                               )
+        
+        graph_edge_head_coordinates = {edge_width : apply_coordinate_offset(arrow_patch.get_path()
+                                                                                       .vertices
+                                                                                       [2])
+                                       for (edge_width,
+                                            arrow_patch)
+                                       in dict(zip(edge_widths,
+                                                   graph_edges))
+                                                 .items()                              } 
+        
+        for (edge_weight,
+             edge_head_offset) in graph_edge_head_coordinates.items():
+            judgement_graph_axes.text(x = edge_head_offset[0],
+                                      y = edge_head_offset[1],
+                                      s = edge_weight,
+                                      fontsize = 20,
+                                      fontfamily = 'monospace',
+                                      color = '#333333',
+                                      style = 'normal',
+                                      weight = 'semibold',
+                                      horizontalalignment = 'center',
+                                      verticalalignment = 'center'    )
+        
+        judgement_graph_axes.margins(0.15)
+        judgement_graph_axes.set_axis_off()
+        judgement_graph_figure.tight_layout()
+        # judgement_graph_figure.savefig(fname = './illustrations/objective_criterion_graph.png',
+        #                                dpi = 512,
+        #                                transparent = True)
+        
+        self.judgement_graph_plot_axes = {'plot' : judgement_graph_figure,
+                                           'axes' : judgement_graph_axes    }
+        
+        return self.judgement_graph_plot_axes
+    #
+    def construct_hierarchy_model_tournament_graph(self):
+    
+        self.construct_reciprocal_matrix_from_comparative_judgements()
+        self.calculate_priority_vector_from_reciprocal_matrix()
+        self.join_priority_vector_to_reciprocal_matrix()
+        self.construct_comparative_judgement_network()
+        self.construct_comparative_judgement_network_plot()
+        
+        return self.reciprocal_matrix_priority_vector
+    #
 
 
 #%%
@@ -154,106 +264,74 @@ judgement_graph_label_map = {'current_density' : 'I',
                              'pressure_drop' : 'ΔP',
                              'height' : 'H',
                              'width' : 'W',
-                             'angle' : 'θ'             }
+                             'angle' : 'θ',
+                             'objective_criterion' : 'O-C',
+                             'criterion_pressure_drop' : 'C-ΔP',
+                             'criterion_oxygen_uniformity' : 'C-UI',
+                             'criterion_current_desnsity' : 'C-I',
+                             'priority_vector' : 'ωᵢ',
+                             'reference_factor' : 'element'
+                             }
 
-
-#%%
-
-ho_mc = calculateHierarchyModelEntropy(comparative_judgements = judgement_comparison.loc['objective_criterion']
-                                                                                    .reset_index(drop = True)   )
-
-ho_mc.construct_reciprocal_matrix_from_comparative_judgements()
-ho_mc.calculate_priority_vector_from_reciprocal_matrix()
-ho_mc.join_priority_vector_to_reciprocal_matrix()
-ho_mc.construct_comparative_judgement_network()
 
 
 #%%
 
-from networkx import circular_layout, draw_networkx_nodes, draw_networkx_labels,draw_networkx_edges
-import matplotlib.pyplot as plt
+structural_hierarchy = {
+                          hierarchy_model : calculateHierarchyModelEntropy(comparative_judgements = judgement_comparison.loc[hierarchy_model]
+                                                                                                              .reset_index(drop = True)   )
+                        
+                           for hierarchy_model
+                           in set(judgement_comparison.index)
+                        }
+ho_mc = structural_hierarchy.get('objective_criterion')
 
-from matplotlib.font_manager import FontProperties
 
-times_bold_italic = FontProperties(
-    family='Times New Roman',
-    weight='bold',
-    style='italic'
+
+#%%
+
+# (
+#  ho_mc.judgement_graph_plot_axes.get('plot')
+#                                 .savefig(fname = './illustrations/objective_criterion_graph.png',
+#                                          dpi = 512,
+#                                          transparent = True) 
+# )
+
+
+#%%
+
+from pandas import concat
+(
+    concat(
+           objs = [
+                  structural_hierarchy.get(hierarchy_model)
+                                      .reciprocal_matrix_priority_vector
+                                      .assign(hierarchy_model = judgement_graph_label_map.get(hierarchy_model),
+                                              reference_factor = lambda Ξ : Ξ['reference_factor']
+                                                                             .map(func = judgement_graph_label_map))
+                                      .rename(columns = judgement_graph_label_map)
+                  for hierarchy_model 
+                  in set(judgement_comparison.index)
+                  if hierarchy_model != 'objective_criterion'
+                 ]
+                )
+    [['hierarchy_model',
+      'element',
+      'θ',
+      'H',
+      'W',
+      'ωᵢ'              ]]
+    .sort_values(by = ['hierarchy_model',
+                       'element'          ])
+    .reset_index(drop = True)
+    .to_csv(path_or_buf = './data/bu-et-al-pmefc-recip-mtx-pri-vec.csv',
+            index = False,
+            encoding = 'utf-8')
 )
 
-#%%
-
-
 
 
 #%%
-
-(judgement_graph_figure,
- judgement_graph_axes   ) = plt.subplots(nrows = 1,
-                                         ncols = 1,
-                                         figsize = (5, 3.75))
-
-vertex_positions  = circular_layout(G = ho_mc.comparative_judgement_network)
-edge_widths = [ho_mc.comparative_judgement_network
-                    [edge_tail]
-                    [edge_head]
-                    .get('importance')
-               for (edge_tail,
-                    edge_head)
-               in ho_mc.comparative_judgement_network
-                       .edges()                        ]
-
-draw_networkx_edges(G = ho_mc.comparative_judgement_network,
-                    pos = vertex_positions,
-                    width = edge_widths,
-                    edge_color = '#333333',
-                    node_size = 3600,
-                    arrowsize = 18,
-                    arrowstyle = '-|>',
-                    connectionstyle = 'arc3,rad=0.1',
-                    ax = judgement_graph_axes       )
-draw_networkx_nodes(G = ho_mc.comparative_judgement_network,
-                    pos = vertex_positions,
-                    node_size = 3600,
-                    node_color = '#73cbf2',
-                    alpha = 0.9,
-                    edgecolors = '#003459',
-                    linewidths = 5,
-                    ax = judgement_graph_axes)
-
-
-draw_networkx_labels(G = ho_mc.comparative_judgement_network,
-                     pos = vertex_positions,
-                     labels = {vertex_label : vertex_abbreviation
-                               for (vertex_label,
-                                    vertex_abbreviation)
-                               in judgement_graph_label_map.items()
-                               if vertex_label 
-                               in ho_mc.comparative_judgement_network
-                                       .nodes()                       },
-                     font_size = 16,
-                     font_color = '#003459',
-                     font_family = 'Times New Roman',
-                     font_weight = 'bold',
-                     ax = judgement_graph_axes                               )
-
-judgement_graph_axes.margins(0.20)
-judgement_graph_axes.set_axis_off()
-judgement_graph_figure.tight_layout()
-judgement_graph_figure.savefig(fname = './illustrations/objective_criterion_graph.png',
-                               dpi = 512,
-                               transparent = True)
-
-
-#%%
-
-
-
-
-
-
-#%%
-
 
 
 
