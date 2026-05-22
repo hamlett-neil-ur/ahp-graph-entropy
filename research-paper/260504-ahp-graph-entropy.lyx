@@ -114,7 +114,7 @@
 
 % --- Title and Author Metadata ---
 \title{%
-  \bfseries \textcolor{Night}{Evidentiary reasoning with the Analytical Hierarchy Process:}\\
+  \bfseries \textcolor{Night}{Evidentiary reasoning within the Analytical Hierarchy Process:}\\
   \textcolor{Night}{Use of graph entropy to rank decision elements}
   \par\vspace{0.6em}
   \normalfont\normalsize \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
@@ -329,9 +329,9 @@ topfraction}{.8}
 \end_layout
 
 \begin_layout Abstract
-Decision makers often require insight into the relative strength of evidence influencing their choices.
- The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative evidentiary strength.
- Pairwise-comparison analysis produces lists of edges for a complete,
+Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
+ The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative strength.
+ Comparative-judgement analysis produces lists of edges for a complete,
  directed,
  acyclic graph,
  often called a 
@@ -345,7 +345,7 @@ Intensities of Importance
 \emph default
  provide tournament-graph edge weights,
  leading to a novel Laplacian matrix.
- Relative-entropy calculations based on Laplacians for induced subgraph quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+ Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
  A previously published case study related to a fuel-cell design demonstrates the approach.
  The graph-entropy method provides clearer strength-of-contribution indications than sensitivity analysis from the case study.
 \end_layout
@@ -886,6 +886,15 @@ literal "false"
 \end_inset
 
  studied methods to improve the rubustness of expert inputs into comparative judgements.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Syed 2020"
+literal "false"
+
+\end_inset
+
+ describe AHP's use in eliciting prior probabilities for Bayesian reliability analysis.
 \end_layout
 
 \begin_layout Subsection*
@@ -947,13 +956,12 @@ literal "false"
  studied the particular characteristics of tournament graphs.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
+What questions do entropies of AHP-based tournament graph allow us to answer?
+\end_layout
 
-\emph on
-What questions do entropies of AHP-based tournament graph allow us to answer
-\emph default
-?
- Endogenous to the AHP formulation itself,
+\begin_layout Standard
+Endogenous to the AHP formulation itself,
  
 \emph on
 relative entropy
@@ -987,13 +995,12 @@ literal "false"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph*
+By what mechanism do we infer the differential information between hierarchically-coupled AHP hierarchy models?
+\end_layout
 
-\emph on
-By what mechanism do we infer the differential information between hierarchically-coupled AHP hierarchy models
-\emph default
-?
- Relative entropy provides a well-understood approach (
+\begin_layout Standard
+Relative entropy provides a well-understood approach (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cover2006"
@@ -1025,13 +1032,12 @@ literal "false"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph*
+What innovation is required to define a methodology for AHP-based evidentiary-strength analysis?
+\end_layout
 
-\emph on
-What innovation is required to define a methodology for AHP-based evidentiary-strength analysis
-\emph default
-?
- First,
+\begin_layout Standard
+First,
  we must formulate an entropy definition for tournament graph with 
 \emph on
 weighted
@@ -1145,9 +1151,7 @@ chain rules
  Such mechanisms offer a rigorous approach to link hierarchically adjacent tournament graph.
 \end_layout
 
-\begin_layout Standard
-
-\emph on
+\begin_layout Paragraph
 Why is 
 \begin_inset Quotes eld
 \end_inset
@@ -1156,10 +1160,11 @@ heavy
 \begin_inset Quotes erd
 \end_inset
 
- graph-entropy machinery needed
-\emph default
-?
- We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential elements.
+ graph-entropy machinery needed?
+\end_layout
+
+\begin_layout Standard
+We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential elements.
  The AHP's machinery however accounts for 
 \begin_inset Quotes eld
 \end_inset
@@ -2404,9 +2409,34 @@ This convention imbues two conveniences.
  This simplifies the algorithmic logic used to construct the resultant tournament graph.
  Second,
  it inclines us to think of importance intensities in terms as personal probabilities (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Savage1972}{Savage}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Savage1972}{(1972)}
+\end_layout
+
+\end_inset
+
+;
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Savage1972,deFinetti1974"
+key "deFinetti1974"
 literal "false"
 
 \end_inset
@@ -4500,6 +4530,402 @@ tuple "list"
  This inlcudes both AHP-calculation results and standardization of inputs demonstrated in the next subsection.
 \end_layout
 
+\begin_layout Subsection*
+Inconsistencies in comparative judgements.
+\end_layout
+
+\begin_layout Standard
+Glenn Shafer once opined,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+...probability is not really about numbers;
+ it is about the structure of reasoning...
+\begin_inset Quotes erd
+\end_inset
+
+ (quoted in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 15"
+key "Pearl1988"
+literal "false"
+
+\end_inset
+
+).
+ The AHP methodology contains mechanisms to diagnose the possible consequences of inconsistencies and contradictions in the structure of reasoning by which AHP inputs are developed (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003,Pant2022"
+literal "false"
+
+\end_inset
+
+).
+ Here,
+ we consider the types of inconsistencies from which concerns might arise.
+ We then review 
+\emph on
+consistency indices
+\emph default
+,
+ AHP's mechanism to quantify the degree of inconsistency.
+ Finally,
+ we consider alternative graph-theoretic approaches to mitigate inconsistencies in reasoning.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Types of inconsistencies in AHP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ expressed concern about three types of inconsistencies that might adversely affect decision making aided by the AHP.
+ The opportunities for inconsistency particularly in comparative judgements.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ asserted that logical inconsistency in the AHP method is more a feature than a bug:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+...a modicum of inconsistency may be considered as a good thing,
+ and forced consistency without knowledge of the precise values as an undesirable compulsion.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The DQ framework strives for sound reasoning.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+ articulates the goal of 
+\begin_inset Quotes eld
+\end_inset
+
+...a decision-making process with some constraints wherein the task is to obtain the maximum benefit from the available resources to get the best achievable results.
+\begin_inset Quotes erd
+\end_inset
+
+ The consequences to these goals arising from avoidable inconsistencies bear circumspectful consideration.
+\end_layout
+
+\begin_layout Paragraph*
+Circular reasoning.
+\end_layout
+
+\begin_layout Standard
+This preference ordering
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+A\succ B\mbox{,}\\
+B\succ C\mbox{, and}\\
+C\succ A
+\end{array}\label{eq:circular-reasoning-preference-ordering}
+\end{equation}
+
+\end_inset
+
+illustrates a preference ordering that contains circular reasoning.
+ This obviously codifies a logical contradiction.
+ It also violates the 
+\emph on
+completeness
+\emph default
+ and 
+\emph on
+transitivity
+\emph default
+ rational-preference constraints specified by the von-Neumann-Morgenstern axioms (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+American mathematician William Thurston argued that 
+\begin_inset Quotes eld
+\end_inset
+
+Mathematics is not about numbers,
+ equations,
+ computations,
+ or algorithms:
+ It is about understanding
+\begin_inset Quotes erd
+\end_inset
+
+ (quoted in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 76"
+key "Cook2018"
+literal "false"
+
+\end_inset
+
+).
+ That applying computational machinery like AHP to a contradictory logical construct might enhance understanding seems counterintuitive.
+ Alerting producers of contradictory comparative judgements and facilitating elimination of the circular-reasoning instances better serves the goals of sound reasoning and best-observable results.
+\end_layout
+
+\begin_layout Paragraph*
+Variances between panel members' judgements.
+\end_layout
+
+\begin_layout Standard
+MCDM methods often support group decisions.
+ This involves eliciting comparative judgements from a range of experts.
+ Panel members will generally provide differing ordering preferences and importance intensities.
+ Table
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Illustration-of-disparate"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ provides illustrated cardinal inconsistency in ordering preference.
+ This speaks noting to variances in importance intensities.
+\end_layout
+
+\begin_layout Standard
+Aggegation of elicited probabilities from panels of experts has been explored extensively (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler1975"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lindley1979"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Barons2022"
+literal "false"
+
+\end_inset
+
+).
+ If each individual contributors' comparative judgements are free of circular reasoning,
+ then established elicited-probability aggregation methods should apply.
+ Some challenges may accompany the resulting probability distributions.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cooke2026"
+literal "false"
+
+\end_inset
+
+ studied the practice and observed,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Methods based on the 'wisdom of crowds' that aggregate point forecasts of multiple experts are unlikely to yield good performance in such cases,
+ regardless of the precise method by which judgments are weighted and aggregated.
+ 
+\begin_inset Float table
+placement h
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Illustration-of-disparate"
+
+\end_inset
+
+Illustration of disparate preference orderings from parwise judgments by a group.
+ (After 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "illustrative-preference-ordering-diparities"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ordering
+\end_layout
+
+\begin_layout Plain Layout
+preference
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+preference
+\end_layout
+
+\begin_layout Plain Layout
+incidence
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\succ B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\succ C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\succ C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Longitudinal comparative-judgement inconsistencies.
+\end_layout
+
 \begin_layout Section*
 Entropy of edge-weighted,
  directed acyclic graph.
@@ -4568,6 +4994,52 @@ LatexCommand href
 name "May 2026 Webinar"
 target "https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents"
 literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Barons, Mascaro, Hanea (2022)"
+key "Barons2022"
+literal "false"
+
+\end_inset
+
+Barons,
+ M.
+ J.,
+ Mascaro,
+ S.,
+ Hanea,
+ A.
+ M.
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Balancing the Elicitation Burden and the Richness of Expert Input When Quantifying Discrete Bayesian Networks.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Risk Analysis
+\emph default
+:
+ 42(6):1196-1234.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1111/risa.13772
+\end_layout
 
 \end_inset
 
@@ -4652,7 +5124,7 @@ et al
 \begin_inset Quotes eld
 \end_inset
 
-Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process- entropy weight method.
+Multi-criteria evaluation of symmetric tesla-like valve flow channel geometry on proton exchange membrane fuel cell performance using analytic hierarchy process-entropy weight method.
 \begin_inset Quotes erd
 \end_inset
 
@@ -4831,6 +5303,105 @@ et al
 \emph default
  (2019).
  
+\begin_inset Quotes eld
+\end_inset
+
+Analytic network process:
+ Academic insights and perspectives analysis.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Cleaner Production
+\emph default
+:
+ 235:1276-1294.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.jclepro.2019.07.016
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cook (2018)"
+key "Cook2018"
+literal "false"
+
+\end_inset
+
+Cook,
+ M.
+ (2018).
+ 
+\emph on
+Mathematicians:
+ An Outer View of the Inner World
+\emph default
+.
+ Providence,
+ RI:
+ American Mathematical Society.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781470448387"
+target "https://bookstore.ams.org/mbk-116"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cooke (2026)"
+key "Cooke2026"
+literal "false"
+
+\end_inset
+
+Cooke,
+ R.
+ M.
+ (2026).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Wisdom/Madness of Crowds and Perils of Point Forecasts.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Decision Analysis
+\emph default
+:
+ article in advance.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/deca.2025.0437
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -5304,6 +5875,60 @@ https://doi.org/10.1016/j.sigpro.2024.109708
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Hagberg, Schult, Swart (2008)"
+key "Hagberg (2008)"
+literal "false"
+
+\end_inset
+
+Hagberg,
+ A.
+ A.,
+ Schult D.
+ A,
+ Swart,
+ P.
+ J.
+ (2008).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Exploring network structure,
+ dynameics,
+ and function using NetworkX.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Proceedings of the 7th Python in Science Conference (Scipy2008)
+\emph default
+.
+ Gäel Varoquaux,
+ Travis Vaught,
+ and Jarrod Millman (Eds),
+ (Pasadena,
+ CA USA),
+ pp.
+ 11–15,
+ Aug 2008.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.25080/TCWV9851
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Hamlett (2019)"
 key "Hamlett2019"
 literal "false"
@@ -5650,6 +6275,41 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Kochenderfer (2015)"
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+Kochenderfer,
+ M.
+ J.
+ (2015).
+ 
+\emph on
+Decision Making Under Uncertainty:
+ Theory and Application
+\emph default
+.
+ Cambridge,
+ MA:
+ MIT Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780262331708"
+target "https://doi.org/10.7551/mitpress/10187.001.0001"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Kuo (2022)"
 key "Kuo2022"
 literal "false"
@@ -5769,6 +6429,52 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1016/j.cpc.2024.109397
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Lindley, Tversky, Brown (1979)"
+key "Lindley1979"
+literal "false"
+
+\end_inset
+
+Lindley,
+ D.
+ V.,
+ Tversky,
+ A.,
+ Brown,
+ R.
+ V.
+ (1979):
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On the Reconciliation of Probability Assessments.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of the Royal Statistical Society.
+ Series A (General)
+\emph default
+:
+ 142(2)146-180.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.2307/2345078
 \end_layout
 
 \end_inset
@@ -6094,6 +6800,50 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1007/978-3-319-55252-1
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Pant, et al (2022)"
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+Pant,
+ S.
+ 
+\emph on
+et al
+\emph default
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Consistency Indices in Analytic Hierarchy Process:
+ A Review.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+MDPI Mathematics
+\emph default
+:
+ 10(8):1206.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.3390/math10081206
 \end_layout
 
 \end_inset
@@ -6494,13 +7244,13 @@ Measuring Uncertainty within the Theory of Evidence
  Cham,
  CH:
  Springer Nature.
+ ISBN:
  
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-https://doi.org/10.1007/978-3-319-74139-0
-\end_layout
+\begin_inset CommandInset href
+LatexCommand href
+name "9783319741390"
+target "https://doi.org/10.1007/978-3-319-74139-0"
+literal "false"
 
 \end_inset
 
@@ -6513,6 +7263,18 @@ LatexCommand bibitem
 label "Savage (1972)"
 key "Savage1972"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Savage1972}
+\end_layout
 
 \end_inset
 
@@ -6639,6 +7401,45 @@ https://doi.org/10.1016/j.ijar.2023.108967
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Spetzler & Staël Von Holstein (1975)"
+key "Spetzler1975"
+literal "false"
+
+\end_inset
+
+Spetzler,
+ C.
+ S & Staël Von Holstein,
+ C.
+ S.
+ (1975).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Exceptional Paper—
+Probability Encoding in Decision Analysis.
+\begin_inset Quotes erd
+\end_inset
+
+ Management Science:
+ 22(3):340-358.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/mnsc.22.3.340
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Spetzler, Winter, Meyer (2016)"
 key "Spetzler2016"
 literal "false"
@@ -6670,6 +7471,57 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.jlp.2019.104024
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Sun, Kroesen, Razael (2025)"
+key "Sun2025"
+literal "false"
+
+\end_inset
+
+Sun,
+ G.,
+ Kroesen,
+ M.
+ Rezael,
+ J.
+ (2025).
+ 
+\emph on
+Decision Analysis
+\emph default
+:
+ 22(4):284-304.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/deca.2024.0308
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -6710,6 +7562,39 @@ https://doi.org/10.1016/j.infoandorg.2024.100512
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Syed, Shabarchin, Lawryshyn (2020)"
+key "Syed 2020"
+literal "false"
+
+\end_inset
+
+Syed,
+ Z.,
+ Shabarchin,
+ O.,
+ Lawryshyn,
+ Y.
+ (2020).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A novel tool for Bayesian reliability analysis using AHP as a framework for prior elicitation.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Loss Prevention in the Process Industries
+\emph default
+:
+ 64:104024.
+ 
 \end_layout
 
 \begin_layout Bibliography
