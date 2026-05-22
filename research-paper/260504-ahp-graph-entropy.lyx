@@ -4638,7 +4638,19 @@ Circular reasoning.
 \end_layout
 
 \begin_layout Standard
-This preference ordering
+Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circular-reasoning-preference-ordering"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+)
 \begin_inset Formula 
 \begin{equation}
 \begin{array}{c}
@@ -4650,7 +4662,7 @@ C\succ A
 
 \end_inset
 
-illustrates a preference ordering that contains circular reasoning.
+exemplifies a preference ordering that contains circular reasoning.
  This obviously codifies a logical contradiction.
  It also violates the 
 \emph on
