@@ -331,7 +331,7 @@ topfraction}{.8}
 \begin_layout Abstract
 Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
  The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative strength.
- Comparative-judgement analysis produces lists of edges for a complete,
+ Comparative judgements produce lists of edges for a complete,
  directed,
  acyclic graph,
  often called a 
@@ -347,7 +347,7 @@ Intensities of Importance
  leading to a novel Laplacian matrix.
  Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
  A previously published case study related to a fuel-cell design demonstrates the approach.
- The graph-entropy method provides clearer strength-of-contribution indications than sensitivity analysis from the case study.
+ The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
 \end_layout
 
 \begin_layout Section*
@@ -417,7 +417,7 @@ literal "false"
 \end_inset
 
 ).
- Sound evidentiary reasoning must account for the consequences of both uncertainty components.
+ Sound evidentiary reasoning must account for the consequences of both.
 \end_layout
 
 \begin_layout Standard
@@ -699,7 +699,7 @@ literal "false"
 
 \end_inset
 
-) to analyze evidentiary elements' relative strengths.
+) to ascertain evidentiary elements' relative strengths.
  Resembling stepwise regression (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -811,7 +811,7 @@ literal "false"
 \end_inset
 
  —
- believed to differentiate the relative attractiveness within the range of scenarios under consideration.
+ believed to differentiate within the range of scenarios under consideration.
  A 
 \emph on
 hierarchy model
@@ -826,15 +826,11 @@ hierarchy model
 \begin_inset Quotes eld
 \end_inset
 
-...the 
-\emph on
-numerical
-\emph default
- representation of a relationship between two elements that share a common parent
+...the numerical representation of a relationship between two elements that share a common parent
 \begin_inset Quotes erd
 \end_inset
 
- (emphasis added) in the tree graph (
+ in the tree graph (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1994"
@@ -843,7 +839,7 @@ literal "false"
 \end_inset
 
 ).
- A case study in a subsequent section demonstrates AHP's use to rank plausible scenarios based on such information.
+ A case study subsequently demonstrates AHP's use to rank plausible scenarios.
  
 \end_layout
 
@@ -909,9 +905,9 @@ That the
  acyclic graph
 \emph default
  (DAG) provides the seminal insight underlying this investigation.
- Complete DAGs belong to a special class of graph called 
+ Complete DAGs belong to a special class of graphs called 
 \emph on
-tournament graph
+tournament graphs
 \emph default
  (
 \begin_inset CommandInset citation
@@ -1123,7 +1119,7 @@ literal "false"
 
 \begin_layout Standard
 Second,
- relative entropies of hierarchically linked AHP subgraph must be coupled.
+ relative entropies of hierarchically coupled hierarchy models must be coupled.
  The 
 \emph on
 Hierarchy
@@ -1447,6 +1443,27 @@ name "decision-quality"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+par
+\backslash
+indent 
+\end_layout
+
+\end_inset
+
+Now,
+ use of AHP by no means suffices to achieve DQ.
+ Thoughtful application of AHP does adress a subset of DQ's links.
+ Featuring AHP as an approach to DQ does not however define our objective.
+ Here we explore AHP's ability to highlight sets of decisional values and spans of reliable information influence the results of sound reasoning.
+\end_layout
+
 \begin_layout Subsection*
 Course of investigation.
 \end_layout
@@ -1457,7 +1474,7 @@ We begin with a brief illustration of AHP methodology.
 \emph on
 real-world
 \emph default
- case study concisely demonstrates its application to obtaining a preference-ranked set of scenarios.
+ case study concisely demonstrates its application to preference-ranking a set of scenarios.
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
  The DAGs resulting from the comparative judgements provide our point of departure into a novel methodology.
@@ -1535,8 +1552,8 @@ literal "false"
 
 \end_inset
 
- contains device-physics technical details that are tangential to our purposes.
- The AHP mechanics employed by the former primarily interests us.
+ describe device-physics technical details that are tangential to our purposes.
+ The AHP mechanics primarily interests us.
 \end_layout
 
 \begin_layout Standard
@@ -1674,10 +1691,9 @@ literal "false"
 \end_inset
 
  for their fuel-cell design.
- Visual depiction —
- as a tree graph —
- of the decision-element hierarchy aids in understanding by human decision-makers.
- Idiosyncratic representative style notwithstanding,
+ Visual,
+ tree-graph depiction of the decision-element hierarchy aids in understanding by human decision-makers.
+ Idiosyncratic style notwithstanding,
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1690,7 +1706,7 @@ tuple "list"
 
 \end_inset
 
- follows the ubiquitous form appearing in 
+ follows the ubiquitous form patterned after 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986,Saaty1994"
@@ -1699,7 +1715,7 @@ literal "false"
 \end_inset
 
 ,
- and throughout the MCDM literature.
+ and appearing throughout the MCDM literature.
  Structural elements of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1823,7 +1839,7 @@ Oxygen-uniformity index
 \end_layout
 
 \begin_layout Itemize
-The heptagonal shapes at the bottom depict decomposed crieteria.
+The heptagonal shapes at the bottom depict decomposed criteria.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1832,7 +1848,7 @@ literal "false"
 
 \end_inset
 
- descrbes 
+ describes 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1842,7 +1858,23 @@ literal "false"
 
 .
  In this case,
- each of three physical-device design specifications is believed to influence the operating parameters above.
+ each of three physical-device geometric specifictions —
+ angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+ width 
+\begin_inset Formula $W$
+\end_inset
+
+,
+ and height 
+\begin_inset Formula $H$
+\end_inset
+
+ —
+ is believed to influence the operating parameters above.
  
 \begin_inset Float figure
 placement h
@@ -1949,23 +1981,7 @@ literal "false"
 
 \end_inset
 
- however computationally simulate device performance based on 36 distinct combinations of geometric parameters —
- angle 
-\begin_inset Formula $\theta$
-\end_inset
-
-,
- width 
-\begin_inset Formula $W$
-\end_inset
-
-,
- and height 
-\begin_inset Formula $H$
-\end_inset
-
- —
- to construct distinct alternatives.
+ however computationally simulate device performance based on 36 distinct combinations of geometric parameters to construct distinct alternatives.
  The clutter arising from depicting each scenario in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1979,7 +1995,7 @@ tuple "list"
 \end_inset
 
  would detract from its clarity.
- Using AHP to analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not appear in the hierarchy.
+ Using AHP to analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not explicitly appear in the hierarchy.
 \end_layout
 
 \begin_layout Standard
@@ -1996,7 +2012,7 @@ tuple "list"
 \end_inset
 
  is also idiosyncratic for another reason:
- Each of the physical-specification sub-criteria influences the each operating-parameter criteria.
+ Each of the geometric-specification sub-criteria influences the each operating-parameter criteria.
  Typically,
  constituent subcriteria are distinct to their associated criterion.
  Their representations appear as 
@@ -2042,9 +2058,9 @@ tuple "list"
 
  includes an uncommon feature that clarifies interpretation:
  It shows edge directivity.
- Always directed tree graph,
- representation of AHP hiearchy models tend to omit directional indication.
- This reinforces our own graphical interpretation of AHP.
+ Always directed tree graphs,
+ AHP hiearchy hierarchy-models tend to omit edge direction.
+ Its appearance here reinforces our own graphical interpretation of AHP.
 \end_layout
 
 \begin_layout Subsection*
@@ -2155,7 +2171,7 @@ tuple "list"
 
 .
  We defer construction of coresponding matrices to the next subsection.
- Explicit representation here of the comparative judgements contributes clarity of the reasoning.
+ Explicit depiction of the comparative judgements here contributes to the clarity of present course of reasoning.
  Moreover,
  the directed-graph edge list in Table 
 \begin_inset CommandInset ref
@@ -2209,7 +2225,7 @@ tuple "list"
 \end_inset
 
  to overall performance of the PEMFC device.
- The constituent hierarchy depict the belief that geometric-design parameters angle 
+ The constituent hierarchy models account for the belief that geometric-design parameters angle 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -2246,7 +2262,7 @@ literal "false"
 
 \end_inset
 
- specifies a 
+ specify a 
 \emph on
 fundamental scale
 \emph default
@@ -2259,13 +2275,21 @@ intensity of importance
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Table 5"
 key "Bu2026"
 literal "false"
 
 \end_inset
 
- adopts this scale,
+ employ this scale (their 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 5"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0025"
+literal "false"
+
+\end_inset
+
+),
  as do many other AHP applications appearing in the literature.
  
 \begin_inset CommandInset citation
@@ -2277,7 +2301,7 @@ literal "false"
 
 ,
  the most-rigorous description of the AHP methodology,
- contains no explicit justification as to why these specific values are necessary.
+ contains no explicit prescription for the necessity of these values.
  
 \end_layout
 
@@ -2292,8 +2316,8 @@ literal "false"
 
  speaks to preferential ordering,
  alternative,
- more-rigorous enumerations of importance intensities can be applied.
- Application of the personal-probability indifference principle occurs as one alternative (
+ more-rigorous importance-intensity assignments can be considered.
+ Application of the personal-probability indifference principle arises as one option (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Savage1972,deFinetti1974"
@@ -2317,8 +2341,7 @@ literal "false"
 measurement
 \emph default
 .
- Such techniques could similarly be adapted to AHP comparative judgements.
- Application of such alternatives to Saaty's fundamental scale deflects a common critique of AHP's logical rigor.
+ Application of such alternatives in lieu of Saaty's fundamental scale deflects a common critique of AHP's logical rigor.
 \end_layout
 
 \begin_layout Standard
@@ -2385,8 +2408,7 @@ reference element
 
  column the most-preferred element,
  associated with the prefered intensity-of-importance value.
- Subsequently,
- element corresponds to the head of the directed graph edge connecting the two elements.
+ This element subsequently corresponds to the head of the directed graph edge connecting the two elements.
 \end_layout
 
 \begin_layout Itemize
@@ -2403,7 +2425,7 @@ comparative element
 \end_layout
 
 \begin_layout Standard
-This convention imbues two conveniences.
+This convention imbues two conveniences into the procedure.
  First,
  the structure of the table endogenously contains the directive structure of the graph.
  This simplifies the algorithmic logic used to construct the resultant tournament graph.
@@ -2441,20 +2463,12 @@ literal "false"
 
 \end_inset
 
-) in lieu of the problematic 
+) in lieu of the arguably problematic 
 \begin_inset Quotes eld
 \end_inset
 
 fundamental scale
 \begin_inset Quotes erd
-\end_inset
-
- from 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1994"
-literal "false"
-
 \end_inset
 
 .
@@ -3239,18 +3253,6 @@ a_{UI,I} & a_{UI,\Delta P} & 1
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
 Equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3277,13 +3279,27 @@ tuple "list"
 
  and 
 \begin_inset Formula 
-\[
-a_{j,i}=a^{-1}_{i,j}\mbox{,}
-\]
+\begin{equation}
+\begin{array}{c}
+a_{j,i}=a^{-1}_{i,j}\;\forall\,i\neq j\\
+a_{i,i}=1
+\end{array}\mbox{.}\label{eq:reciprocal-matrix-elements}
+\end{equation}
 
 \end_inset
 
-by which we avoid logical contradiction in our reasoning.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
@@ -3301,7 +3317,7 @@ represents the eigenvector/eigenvalue decomposition of reciprocal matrix
 \end_inset
 
 ,
- then the resulting priority vector 
+ the resulting priority vector 
 \begin_inset Formula $\boldsymbol{\omega}_{O-C}$
 \end_inset
 
@@ -3341,13 +3357,34 @@ tuple "list"
 \begin_inset Formula $\boldsymbol{\omega}_{O-C}$
 \end_inset
 
- resulting from the comparative judgements for the PEMFC-performance hierarcy model.
+ resulting from the comparative judgements (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) for the PEMFC-performance hierarcy model.
  The results coincide —
  within roundoff precision —
  with those reported by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bu2026"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 12"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
 literal "false"
 
 \end_inset
@@ -3388,11 +3425,23 @@ name "tab:Reciprocal-matrix-and"
 
 \end_inset
 
-Reciprocal matrix and priority vector resulting from 
-\begin_inset Formula $\boldsymbol{A}_{O-C}.$
+Reciprocal matrix and priority vector resulting from Table-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
 \end_inset
 
+ hierarchy model 
+\begin_inset Formula $\boldsymbol{A}_{O-C}$
+\end_inset
 
+.
 \end_layout
 
 \end_inset
@@ -3648,7 +3697,7 @@ element
 \end_layout
 
 \begin_layout Standard
-Table
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Reciprocal-matrices-and"
@@ -3660,8 +3709,7 @@ tuple "list"
 
 \end_inset
 
- contains the same information for the constituent hierarchy models,
- 
+ contains the same information for the constituent hierarchy models 
 \begin_inset Formula $C-I$
 \end_inset
 
@@ -3684,6 +3732,15 @@ literal "false"
 
 \end_inset
 
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 12"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
+literal "false"
+
+\end_inset
+
 ,
  which are not reported with high degrees of numerical precision.
  The python 
@@ -3702,7 +3759,7 @@ literal "false"
 \begin_inset Formula $\omega_{i}$
 \end_inset
 
- values appearing in Table 
+ values in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Reciprocal-matrices-and"
@@ -3723,7 +3780,16 @@ literal "false"
 
 \end_inset
 
- do not report how their calculations were performed.
+ do not report how their 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table-12"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
+literal "false"
+
+\end_inset
+
+ calculations were performed.
  Lacking these details,
  exact reproduction proves difficult.
  
@@ -3766,7 +3832,19 @@ name "tab:Reciprocal-matrices-and"
 
 \end_inset
 
-Reciprocal matrices and priority vectors from 
+Reciprocal matrices and priority vectors based Table-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Decision-factor-judgements.-(Aft"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ hierarchy models 
 \begin_inset Formula $\boldsymbol{A}_{C-\Delta P}$
 \end_inset
 
@@ -4527,11 +4605,11 @@ tuple "list"
 \end_inset
 
 .
- This inlcudes both AHP-calculation results and standardization of inputs demonstrated in the next subsection.
+ This inlcudes both AHP-calculation results and standardization of inputs demonstrated in a subsequent subsection.
 \end_layout
 
 \begin_layout Subsection*
-Inconsistencies in comparative judgements.
+On inconsistencies in comparative judgements.
 \end_layout
 
 \begin_layout Standard
@@ -4548,14 +4626,15 @@ Glenn Shafer once opined,
  (quoted in 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "p. 15"
 key "Pearl1988"
 literal "false"
 
 \end_inset
 
-).
- The AHP methodology contains mechanisms to diagnose the possible consequences of inconsistencies and contradictions in the structure of reasoning by which AHP inputs are developed (
+,
+ p.
+ 15).
+ The AHP methodology contains mechanisms to identify inconsistencies and contradictions in the structure of reasoning (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty2003,Pant2022"
@@ -4565,7 +4644,7 @@ literal "false"
 
 ).
  Here,
- we consider the types of inconsistencies from which concerns might arise.
+ we consider the types of inconsistencies in comparative judgements from which concerns might arise.
  We then review 
 \emph on
 consistency indices
@@ -4578,7 +4657,7 @@ consistency indices
 \end_layout
 
 \begin_layout Subsubsection*
-Types of inconsistencies in AHP.
+Types of inconsistencies comparative judgements.
 \end_layout
 
 \begin_layout Standard
@@ -4590,7 +4669,7 @@ literal "false"
 \end_inset
 
  expressed concern about three types of inconsistencies that might adversely affect decision making aided by the AHP.
- The opportunities for inconsistency particularly in comparative judgements.
+ Such opportunities particularly arise in comparative judgements.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4599,7 +4678,7 @@ literal "false"
 
 \end_inset
 
- asserted that logical inconsistency in the AHP method is more a feature than a bug:
+ seemingly suggested that accomodation of logical inconsistency in the AHP method might be more a feature than a bug:
  
 \begin_inset Quotes eld
 \end_inset
@@ -4638,7 +4717,28 @@ Circular reasoning.
 \end_layout
 
 \begin_layout Standard
-This preference ordering
+Expressing the first inconsistency scenario from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+,
+ equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circular-reasoning-preference-ordering"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+)
 \begin_inset Formula 
 \begin{equation}
 \begin{array}{c}
@@ -4650,9 +4750,9 @@ C\succ A
 
 \end_inset
 
-illustrates a preference ordering that contains circular reasoning.
- This obviously codifies a logical contradiction.
- It also violates the 
+exemplifies a preference ordering that contains circular reasoning.
+ This obviously codifies a logical contradiction,
+ violating the 
 \emph on
 completeness
 \emph default
@@ -4669,6 +4769,47 @@ literal "false"
 \end_inset
 
 ).
+ Furthermore,
+ it also violates one of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{deFinetti1974}{de Finetti's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{deFinetti1974}{(1974)}
+\end_layout
+
+\end_inset
+
+ principles of coherence:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+...no limits on the probabilities that an individual may assign,
+ except 
+\emph on
+they must not be in contradiction among themselves
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ (emphasis added).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4680,7 +4821,11 @@ Mathematics is not about numbers,
  equations,
  computations,
  or algorithms:
- It is about understanding
+ 
+\emph on
+It is about understanding
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -4693,20 +4838,47 @@ literal "false"
 
 \end_inset
 
+;
+ emphasis added).
+ Applying computational machinery like AHP to a contradictory logical construct does not enhance understanding.
+ It invites confusion.
+ Alerting producers of contradictory comparative judgements and facilitating elimination of the circular-reasoning instances better serves the goals of sound reasoning (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+) and best-observable results (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
 ).
- That applying computational machinery like AHP to a contradictory logical construct might enhance understanding seems counterintuitive.
- Alerting producers of contradictory comparative judgements and facilitating elimination of the circular-reasoning instances better serves the goals of sound reasoning and best-observable results.
 \end_layout
 
 \begin_layout Paragraph*
-Variances between panel members' judgements.
+Variances between panel members' comparative judgements.
 \end_layout
 
 \begin_layout Standard
 MCDM methods often support group decisions.
- This involves eliciting comparative judgements from a range of experts.
+ This requires eliciting comparative judgements from a range of experts.
  Panel members will generally provide differing ordering preferences and importance intensities.
- Table
+ Based on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+,
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Illustration-of-disparate"
@@ -4718,164 +4890,32 @@ tuple "list"
 
 \end_inset
 
- provides illustrated cardinal inconsistency in ordering preference.
- This speaks noting to variances in importance intensities.
+ illustrates cardinal inconsistencies in ordering preferences from comparative judgements by a panel of five experts.
  
-\begin_inset Float table
-placement h
-alignment center
-wide false
-sideways false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
 
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Illustration-of-disparate"
-
-\end_inset
-
-Illustration of disparate preference orderings from parwise judgments by a group.
- (After 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-)
+\backslash
+refcite{Saaty2003}{Saaty's}
 \end_layout
 
 \end_inset
 
-
-\begin_inset CommandInset label
-LatexCommand label
-name "illustrative-preference-ordering-diparities"
-
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ordering
-\end_layout
-
-\begin_layout Plain Layout
-preference
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-preference
-\end_layout
-
-\begin_layout Plain Layout
-incidence
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\succ B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $B\succ C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\succ C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
+ 
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
+\backslash
+refcite{Saaty2003}{(2003)}
 \end_layout
 
 \end_inset
 
-
+ illustration omits importance-intensity estimates.
 \end_layout
 
 \begin_layout Standard
@@ -4906,7 +4946,39 @@ literal "false"
 \end_inset
 
 ).
- If individual contributors 
+ If each individual contributors' comparative judgements are free of circular reasoning —
+ a condition satisfied in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Illustration-of-disparate"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ —
+ then established elicited-probability aggregation methods apply.
+ Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-elements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) provides the mechainsm to apply elicitation-aggregation methods when ordering preferences differ.
+\end_layout
+
+\begin_layout Standard
+Some challenges may accompany the resulting probability distributions.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cooke2026"
@@ -4921,6 +4993,369 @@ literal "false"
 
 Methods based on the 'wisdom of crowds' that aggregate point forecasts of multiple experts are unlikely to yield good performance in such cases,
  regardless of the precise method by which judgments are weighted and aggregated.
+\begin_inset Quotes erd
+\end_inset
+
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Table 1"
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+) elicits such point estimates.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiH2025"
+literal "false"
+
+\end_inset
+
+ explored elicitation of comparative judgements as interval estimates to circumvent this difficulty.
+ 
+\begin_inset Float table
+placement document
+alignment center
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Illustration-of-disparate"
+
+\end_inset
+
+Illustration of disparate preference orderings from parwise judgments by a panel of five experts.
+ (After 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "illustrative-preference-ordering-diparities"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ordering
+\end_layout
+
+\begin_layout Plain Layout
+preference 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+preference
+\end_layout
+
+\begin_layout Plain Layout
+incidence 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ordering
+\end_layout
+
+\begin_layout Plain Layout
+preference 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+preference
+\end_layout
+
+\begin_layout Plain Layout
+incidence 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+incidence
+\end_layout
+
+\begin_layout Plain Layout
+total
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\succ B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\succ A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\succ C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C\succ B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\succ C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C\succ A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Longitudinal comparative-judgement inconsistencies.
+\end_layout
+
+\begin_layout Standard
+Finally,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ expresses concern that 
+\begin_inset Quotes eld
+\end_inset
+
+...people would be required to be like robots unable to change their minds with new evidence...
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Nothing elsewhere in the literature defining the AHP methodology proscribes such standard Bayesian updating (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1987,Saaty1994"
+literal "false"
+
+\end_inset
+
+).
+ In fact,
+ recent research explicitly adapts AHP to Bayesian patterns of reasoning (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Merrick2005,Altuzarra2007,LiH2025"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Inconsistency indices.
 \end_layout
 
 \begin_layout Section*
@@ -4996,6 +5431,50 @@ literal "false"
 
 .
  
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Altuzarra, Moreno-Jiménez, Salvador (2007)"
+key "Altuzarra2007"
+literal "false"
+
+\end_inset
+
+Altuzarra,
+ A.,
+ Moreno-Jiménez,
+ J.
+ M.,
+ Salvador,
+ M.
+ (2007).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A Bayesian priorization procedure for AHP-group decision making.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Jouranl of Operations Research
+\emph default
+:
+ 182(1)367-382.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ejor.2006.07.025
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -5596,6 +6075,18 @@ LatexCommand bibitem
 label "de Finetti (1974)"
 key "deFinetti1974"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:deFinetti1974}
+\end_layout
 
 \end_inset
 
@@ -6368,15 +6859,7 @@ A Bayesian analysis framework for decision making with interval pairwise compari
 \end_inset
 
  Decision Analysis:
- 
-\begin_inset Quotes eld
-\end_inset
-
-online first
-\begin_inset Quotes erd
-\end_inset
-
-.
+ 22(4)235-254.
  
 \begin_inset Flex URL
 status open
@@ -7069,6 +7552,18 @@ literal "false"
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Saaty1994}
+\end_layout
+
+\end_inset
+
 Saaty,
  T.
  L.
@@ -7107,6 +7602,18 @@ LatexCommand bibitem
 label "Saaty (2003)"
 key "Saaty2003"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Saaty2003}
+\end_layout
 
 \end_inset
 
@@ -7592,6 +8099,16 @@ Journal of Loss Prevention in the Process Industries
 :
  64:104024.
  
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.jlp.2019.104024
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
