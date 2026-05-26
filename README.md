@@ -6,7 +6,7 @@ Abstract Decision makers often require insight into the relative strength of the
 
 ## Draft research paper. 📝 
 
-[`260504-ahp-graph-entropy.pdf`](./research-paper/260504-ahp-graph-entropy.pdf).
+[`260526-ahp-graph-entropy.pdf`](./research-paper/260526-ahp-graph-entropy.pdf).
 
 ## 𝓣𝓸 𝓓𝓸. 🏗️🧱👷
 
