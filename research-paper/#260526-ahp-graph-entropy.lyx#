@@ -1487,7 +1487,7 @@ Commitment to Action
  a decision arguably has not occurred.
  The analysis was academic.
 \begin_inset Float figure
-placement h
+placement bh
 alignment document
 wide false
 sideways false
@@ -4762,12 +4762,12 @@ Types of inconsistencies comparative judgements.
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty1986,Saaty2003"
+key "Saaty2003"
 literal "false"
 
 \end_inset
 
- expressed concern about four types of inconsistencies that might adversely affect decision making aided by the AHP.
+ expressed concern about three types of inconsistencies that might adversely affect decision making aided by the AHP.
  Such opportunities particularly arise in comparative judgements.
  
 \begin_inset CommandInset citation
@@ -5508,95 +5508,7 @@ which only constrains transitivity of ordering preferences.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
 
-\end_inset
-
- contains an extensive set of definitions,
- axioms,
- and theorems culminating in the demonstration that,
- given a (square) reciprocal matrix 
-\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
-\end_inset
-
- for a hierarchy model 
-\begin_inset Formula $\mathfrak{H}$
-\end_inset
-
- with the eigenvector/eigenvalue decomposition
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{X}_{\mathfrak{H}}=\boldsymbol{X}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}\mbox{,}\label{eq:general-reciprocal-eigendecomposition}
-\end{equation}
-
-\end_inset
-
-then 
-\begin_inset Formula 
-\begin{equation}
-[\boldsymbol{\Lambda}_{\mathfrak{H}}]_{\mbox{argmax}(\boldsymbol{\Lambda}_{\mathfrak{H}})}=n\label{eq:reciprocal-consistency-condition}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
- where 
-\begin_inset Formula $n$
-\end_inset
-
- denotes the order of 
-\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Transitive consistency bears important decision-theoretic consequences:
- 
-\begin_inset Quotes eld
-\end_inset
-
-...when alternatives are scaled through paired comparisons,
- adding a new alternative can change the relative ranking of the old ones when the judgements are inconsistent or when several criteria are used
-\begin_inset Quotes erd
-\end_inset
-
- (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Subsubsection*

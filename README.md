@@ -105,7 +105,7 @@ The expected responses resemble
 
 ```text
 Python 3.11.15
-~anaconda3/envs/ahp-graph-entropy/bin/python
+~/anaconda3/envs/ahp-graph-entropy/bin/python
 ```
 
 
