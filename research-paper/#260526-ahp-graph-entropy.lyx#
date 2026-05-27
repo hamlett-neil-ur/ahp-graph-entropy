@@ -150,8 +150,10 @@
 %\setlength{\headheight}{28pt}
 %\setlength{\topmargin}{0pt}
 \setlength\columnsep{18pt}
+% Increase the gap between the header rule and the start of the text
+\setlength{\headsep}{1em}
 \end_preamble
-\options twoside
+\options twocolumn
 \use_default_options true
 \begin_modules
 customHeadersFooters
@@ -284,10 +286,6 @@ status open
 sloppy
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -301,12 +299,6 @@ status open
 
 \backslash
 twocolumn
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-maketitle
 \end_layout
 
 \begin_layout Plain Layout
@@ -328,26 +320,79 @@ topfraction}{.8}
 
 \end_layout
 
-\begin_layout Abstract
-Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+twocolumn[
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+begin{abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abstract Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
  The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative strength.
  Comparative judgements produce lists of edges for a complete,
  directed,
  acyclic graph,
- often called a 
-\emph on
-tournament graph
-\emph default
-.
- The resulting 
-\emph on
-Intensities of Importance
-\emph default
- provide tournament-graph edge weights,
+ often called a tournament graph.
+ The resulting Intensities of Importance provide tournament-graph edge weights,
  leading to a novel Laplacian matrix.
  Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
  A previously published case study related to a fuel-cell design demonstrates the approach.
  The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+vspace{1.5em}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+hrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1437,6 +1482,8 @@ Relevant and Reliable Information
 Clear Values and Tradeoffs
 \emph default
  specify the criteria by which the best alternative is identified.
+ They specify the decision makers' values,
+ and justify the optimality of the best alternative.
 \end_layout
 
 \begin_layout Itemize
@@ -1463,18 +1510,17 @@ literal "false"
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
  AHP is itself a distinct reasoning approach.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-twemoji{warning}
-\end_layout
+ Injudiciously applied,
+ it does not however guarantee satisfaction of the von Neumann-Morgernstern axioms 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 58"
+key "Kochenderfer2015"
+literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1487,9 +1533,9 @@ Commitment to Action
  a decision arguably has not occurred.
  The analysis was academic.
 \begin_inset Float figure
-placement bh
+placement document
 alignment document
-wide false
+wide true
 sideways false
 status open
 
@@ -1508,13 +1554,12 @@ Decision-Quality framework.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Spetzler2016"
+key "SDP-DQ"
 literal "false"
 
 \end_inset
 
-,
- Figure 2.1)
+)
 \end_layout
 
 \end_inset
@@ -1528,9 +1573,9 @@ name "decision-quality"
 
 
 \begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/200202 Spetzler DQ Framework.png
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/sdp-who_we_are-dq-capture.png
 	lyxscale 40
-	width 3.25in
+	width 5.5in
 
 \end_inset
 
@@ -1993,7 +2038,7 @@ name "fig:Hierarchy-decomposition-used"
 
 \end_inset
 
-Hierarchy model used for proton exchange membrane fuel cell (PEMFC) case study.
+Hierarchy model used for Proton Exchange Membrane Fuel Cell (PEMFC) case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2193,7 +2238,7 @@ literal "false"
 \emph on
 Pairwise
 \emph default
- is the operative word,
+ is the operative term,
  here.
  Practically,
  one assembles a list of unique,
@@ -4762,12 +4807,12 @@ Types of inconsistencies comparative judgements.
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty2003"
+key "Saaty1986,Saaty2003"
 literal "false"
 
 \end_inset
 
- expressed concern about three types of inconsistencies that might adversely affect decision making aided by the AHP.
+ expressed concern about four types of inconsistencies that might adversely affect decision making aided by the AHP.
  Such opportunities particularly arise in comparative judgements.
  
 \begin_inset CommandInset citation
@@ -4859,7 +4904,7 @@ completeness
 \emph on
 transitivity
 \emph default
- rational-preference constraints specified by the von-Neumann-Morgenstern axioms (
+ rational-preference constraints of the von-Neumann-Morgenstern axioms (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kochenderfer2015"
@@ -5124,7 +5169,7 @@ literal "false"
  explored elicitation of comparative judgements as interval estimates to circumvent this difficulty.
  
 \begin_inset Float table
-placement document
+placement t
 alignment center
 wide true
 sideways false
@@ -5188,11 +5233,11 @@ preference 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-preference
+incidence
 \end_layout
 
 \begin_layout Plain Layout
-incidence 1
+preference 1
 \end_layout
 
 \end_inset
@@ -5214,11 +5259,11 @@ preference 2
 \begin_inset Text
 
 \begin_layout Plain Layout
-preference
+incidence
 \end_layout
 
 \begin_layout Plain Layout
-incidence 2
+preference 2
 \end_layout
 
 \end_inset
@@ -5454,7 +5499,7 @@ literal "false"
 \end_layout
 
 \begin_layout Paragraph*
-Comparative-judgement transitivity.
+Transitive inconsistencies.
 \end_layout
 
 \begin_layout Standard
@@ -5465,15 +5510,27 @@ literal "false"
 
 \end_inset
 
- defines a transitive-consistency criterion
+ defines a criterion for transitive consistency 
 \begin_inset Formula 
 \begin{equation}
-a_{i,j}\,a_{j,k}=a_{i,k}\mbox{.}\label{eq:transitive-judgement-consistency}
+\begin{array}{c}
+a_{i,j}\,a_{j,k}=a_{i,k}\\
+\mbox{where}\:a_{i,j}=[\boldsymbol{A}_{\mathfrak{H}}]_{i,j}
+\end{array}\label{eq:transitive-judgement-consistency}
 \end{equation}
 
 \end_inset
 
-This provides the basis for consistency indices.
+for reciprocity matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ associated with hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+.
+ This provides the basis for consistency indices.
  Now,
  (
 \begin_inset CommandInset ref
@@ -5508,11 +5565,673 @@ which only constrains transitivity of ordering preferences.
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
 
+\end_inset
+
+ contains an extensive set of definitions,
+ axioms,
+ and theorems culminating in the demonstration that,
+ if the eigenvector/eigenvalue decomposition of a 
+\emph on
+consistent
+\emph default
+ reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{X}_{\mathfrak{H}}=\boldsymbol{X}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}\mbox{,}\label{eq:general-reciprocal-eigendecomposition}
+\end{equation}
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\begin{equation}
+\lambda_{\mathfrak{H}}=n\label{eq:reciprocal-consistency-condition}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+ where 
+\begin_inset Formula $n$
+\end_inset
+
+ denotes the order of 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{\mathfrak{H}}=[\boldsymbol{\Lambda}_{\mathfrak{H}}]_{\text{argmax}(\boldsymbol{\Lambda}_{\mathfrak{H}})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Transitive consistency bears important decision-theoretic consequences:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+...when alternatives are scaled through paired comparisons,
+ adding a new alternative can change the relative ranking of the old ones when the judgements are inconsistent or when several criteria are used
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsubsection*
-Inconsistency indices.
+A consistency index for reciprocal matrices.
+\end_layout
+
+\begin_layout Standard
+A consequence of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-condition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ 
+\begin_inset Formula 
+\begin{equation}
+CI=\frac{\lambda_{\mathfrak{H}}-n}{n-1}\label{eq:reciprocal-consistency-index}
+\end{equation}
+
+\end_inset
+
+provides a commonly used 
+\emph on
+Consistency Index
+\emph default
+ for a reciprocal matrix
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+).
+ From (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-condition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ one obtains 
+\begin_inset Formula $CI=$
+\end_inset
+
+0 for a perfectly consistent reciprocal matrix.
+ 
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+Consistency Ratio
+\emph default
+
+\begin_inset Formula 
+\begin{equation}
+CR=\frac{CI}{RI}\label{eq:reciprocal-consistency-ratio}
+\end{equation}
+
+\end_inset
+
+accompanies the consistency index.
+ In (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-ratio"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ the denominator 
+\begin_inset Formula $RI$
+\end_inset
+
+ results from calculating 
+\begin_inset Formula $CI$
+\end_inset
+
+ for a large number of reciprocal matrices with randomly generated comparative judgements.
+ Tabulated 
+\begin_inset Formula $RI$
+\end_inset
+
+ values are commonly repeated,
+ such as 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 6"
+target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0030"
+literal "false"
+
+\end_inset
+
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+.
+ Reproducing the common result with higher numerical precision,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Donhegan1991"
+literal "false"
+
+\end_inset
+
+ reported 
+\begin_inset Formula $RI=0.4887$
+\end_inset
+
+ for reciprocal-matrix order 
+\begin_inset Formula $n=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Consistency-indices-for"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains the consistency analysis for the hierarchy models on which 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ was based.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+ cited a threshold 
+\begin_inset Formula $CR_{\mathfrak{H}}\lesssim0.1$
+\end_inset
+
+,
+ above which one 
+\begin_inset Quotes eld
+\end_inset
+
+...questions the credibility of judgements.
+\begin_inset Quotes erd
+\end_inset
+
+ Comparative-judgement transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:transitive-judgement-consistency"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) provides the basis for creduilty,
+ here.
+ 
+\end_layout
+
+\begin_layout Standard
+By this criterion,
+ the 
+\begin_inset Formula $CR_{C-UI}$
+\end_inset
+
+ value in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Consistency-indices-for"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ raises questions about the consistency of reasoning in comparative judgements underlying the 
+\begin_inset Formula $C-UI$
+\end_inset
+
+ hierarchy model.
+ Not-reproduced results in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ reported a lower value for 
+\begin_inset Formula $CR_{C-UI}$
+\end_inset
+
+,
+ albeit much closer to the threshold in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Consistency-indices-for"
+
+\end_inset
+
+Consistency indices for hierarchy models in PEMFC-design case study.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "pemfc-case-consistency-indices"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hierarchy
+\end_layout
+
+\begin_layout Plain Layout
+model (
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{\mathfrak{Y}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n_{\mathfrak{H}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $CI_{\mathfrak{H}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $CR_{\mathfrak{H}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O-C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.032
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0162
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.033
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.004
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0018
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.004
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-UI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0678
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.139
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C-\Delta P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0071
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.014
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Preference ordering of case-study alternatives.
 \end_layout
 
 \begin_layout Section*
@@ -6352,6 +7071,49 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1214/aoms/1177698950
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Donhegan & Dodd (1991)"
+key "Donhegan1991"
+literal "false"
+
+\end_inset
+
+Donegan,
+ H.
+ A.
+ & Dodd,
+ F.
+ J.
+ (1991).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A note on Saaty's random indices.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Mathematical and Computer Modelling
+\emph default
+:
+ 15(10)135-137.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/0895-7177(91)90098-R
 \end_layout
 
 \end_inset
@@ -7611,6 +8373,49 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Ren & Sun (2025)"
+key "Ren2025"
+literal "false"
+
+\end_inset
+
+Ren,
+ Q.
+ & Sun,
+ M.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Using AHP-Entropy method to explore the influencing factors of spatial demand of EVs public charging stations:
+ A case study of Jinan,
+ China.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Cleaner Production
+\emph default
+:
+ 491:144779.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.jclepro.2025.144779
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Rindova & Martins (2024)"
 key "Rindova2024"
 literal "false"
@@ -8108,6 +8913,36 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Shen & Wu (2023)"
+key "Shen2023"
+literal "false"
+
+\end_inset
+
+Shen,
+ Z.
+ & Wu,
+ K.
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+AHP-entropy Weight Method Based Comprehensive Evaluation Approach for Distribution Network Research.
+\begin_inset Quotes erd
+\end_inset
+
+ 2023 3rd International Conference on New Energy and Power Engineering (ICNEPE),
+ November 24-26,
+ 2023,
+ Huzhou,
+ China.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Shenoy (2023)"
 key "Shenoy2023"
 literal "false"
@@ -8144,6 +8979,40 @@ https://doi.org/10.1016/j.ijar.2023.108967
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Society of Decision Professionals (DQ)"
+key "SDP-DQ"
+literal "false"
+
+\end_inset
+
+Society of Decision Professionals.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Decision Quality
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://www.decisionprofessionals.com/who-we-are/decision-quality
+\end_layout
+
+\end_inset
+
+.
+ Accessed May 27,
+ 2026.
 \end_layout
 
 \begin_layout Bibliography
