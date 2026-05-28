@@ -1176,7 +1176,7 @@ What innovation is required to define a methodology for AHP-based evidentiary-st
 
 \begin_layout Standard
 First,
- we must formulate an entropy definition for tournament graph with 
+ we must formulate an entropy definition for tournament graphs with 
 \emph on
 weighted
 \emph default
@@ -1254,7 +1254,7 @@ literal "false"
 
 \end_inset
 
- formulate entropies for regular (non-directional) graph comprised of weighted edges.
+ formulate entropies for regular (non-directional) graphs comprised of weighted edges.
  The intensities of importance from the AHP comparative judgements provide the weights used here.
  
 \end_layout
@@ -1362,7 +1362,7 @@ literal "false"
 \end_inset
 
 ).
- Philosophically congruentment with design-of-experiements practice (
+ Philosophically congruent with design-of-experiements practice (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cox2000"
@@ -1517,17 +1517,7 @@ literal "false"
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
  AHP is itself a distinct reasoning approach.
- Injudiciously applied,
- it does not however guarantee satisfaction of the von Neumann-Morgernstern axioms 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "p. 58"
-key "Kochenderfer2015"
-literal "false"
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1611,8 +1601,19 @@ indent
 Now,
  use of AHP by no means suffices to achieve DQ.
  Thoughtful application of AHP does adress a subset of DQ's links.
+ Injudiciously applied,
+ it does not however guarantee satisfaction of the von Neumann-Morgenstern axioms 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 58"
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+ undergirding decision science.
  Featuring AHP as an approach to DQ does not however define our objective.
- Here we explore AHP's ability to highlight sets of decisional values and spans of reliable information influence the results of sound reasoning.
+ Here we explore AHP's ability to highlight how subsets of decisional values and spans of reliable information influence the results of sound reasoning.
 \end_layout
 
 \begin_layout Subsection*
@@ -1687,7 +1688,7 @@ literal "false"
 
  employed AHP to select materials from which to construct pipelines for use in an offshore oil and gas project.
  Their analysis consideres material-mechanical and -chemical technical details that are tangential to our purposes.
- The AHP mechanics primarily interests us.
+ The AHP mechanics primarily interest us.
 \end_layout
 
 \begin_layout Standard
@@ -2115,8 +2116,7 @@ literal "false"
 transitive-consistency
 \emph default
  criterion that,
- analogous to but stronger than the van Neumann-Morgenstern transitivity axiom,
- 
+ analogous to but stronger than the van Neumann-Morgenstern transitivity axiom 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 58"
@@ -2135,7 +2135,7 @@ literal "false"
 
 proscribes circular reasoning.
  Enforcing this constraint during the comparative-judgement process can prove challenging,
- particluarly as the number of hierarchy-model element grows.
+ particluarly as the number of hierarchy-model elements grows.
  Conventionally,
  AHP practitioners calculate a 
 \emph on
@@ -2151,7 +2151,7 @@ literal "false"
 \end_inset
 
 ).
- Representing comparative judgements as a directed graph provide an unambiguous mechanism to identify such violations of transitivity.
+ Representing comparative judgements as a directed graph provides an unambiguous mechanism to identify violations of von Neumann-Morgenstern transitivity.
  
 \end_layout
 
@@ -2182,7 +2182,7 @@ Material selection of titanium alloy
 \begin_inset Quotes erd
 \end_inset
 
- Alignment of AHP to mainstream decision science involves speicification of a utility function.
+ Alignment of AHP to mainstream decision science involves specification of a utility function.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2332,7 +2332,19 @@ literal "false"
 
 \end_inset
 
- for each hierarchy-model element pair depicted in the target-to-criterion model.
+ for each hierarchy-model element pair depicted in the target-to-criterion model in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
  Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2349,10 +2361,22 @@ tuple "list"
  We defer construction of coresponding matrices to the next subsection.
  Explicit depiction of the comparative judgements here contributes to the clarity of present course of reasoning.
  Moreover,
- the directed-graph edge list in Table 
+ the directed-graph edge list in Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2369,22 +2393,20 @@ Now,
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Table 1"
 key "Saaty1986"
 literal "false"
 
 \end_inset
 
- and 
+ Table 1 and 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Table 1"
 key "Saaty1994"
 literal "false"
 
 \end_inset
 
- specify a 
+ Table 1 specify a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2397,7 +2419,7 @@ fundamental scale
 \emph on
 intensity of importance
 \emph default
- between criterion pairs.
+ between hierarchy-model element pairs.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2440,7 +2462,7 @@ literal "false"
 
 \end_inset
 
- speaks to preferential ordering,
+ does speak to preferential ordering and transitive consistency,
  alternative,
  more-rigorous importance-intensity assignments can be considered.
  Application of the personal-probability indifference principle arises as one option (
@@ -2471,7 +2493,7 @@ measurement
 \end_layout
 
 \begin_layout Standard
-The construction of Table 
+The construction of Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:target-criterion-element-judgements"
@@ -2483,7 +2505,19 @@ tuple "list"
 
 \end_inset
 
- anticipates its use in defining a directed graph in the sequel.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ anticipates their use in defining directed graphs in the sequel.
  The AHP literature —
  
 \begin_inset CommandInset citation
@@ -2496,19 +2530,7 @@ literal "false"
 ,
  in particular —
  presccribes nothing about the ordering of element pairs in comparative judgement.
- Construction of Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- employed the following convention.
+ Construction of the tables follows the following convention.
 \end_layout
 
 \begin_layout Itemize
@@ -2598,6 +2620,55 @@ fundamental scale
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+That Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains unit-valued importance intensities —
+ hierarchy-model element pairs regarding which comparative-judgement experts were indifferent —
+ raises both interest and a challenge.
+ Four undirected edges appear.
+ For purposes of this investigation it voilates the assumption that comparative-judgement element pairs define a strictly directed graph.
+ Unit-valued importance intensities imply undirected edges.
+ 
+\end_layout
+
+\begin_layout Standard
+Moreover,
+ indifference in comparative judgements can lead to suboptimal use of the decisional evidence at-hand.
+ Generally speaking,
+ directed graphs entail more information —
+ lower entropy —
+ than simple graphs 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dehmer2011,Mowshowitz2012"
+literal "false"
+
+\end_inset
+
+.
+ Indifference between elements leaves information on the table.
+\end_layout
+
+\begin_layout Standard
+Our DAG construction subsequently consideres this.
+ If we are indifferent to element pairs,
+ then the cardinality of combinations such occurrences serves as a proxy for their explicit appearance.
+ This not only reduces the complexity of the associated directed graph,
+ it makes more optimum use of the available evidence.
+ 
 \begin_inset ERT
 status open
 
