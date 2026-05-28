@@ -2,11 +2,11 @@
 
 ## Abstract.
 
-Abstract Decision makers often require insight into the relative strength of the evidence on which their choices hinge. The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength. Pairwise-comparison analysis specifies edges for a complete, directed, acyclic graph, often called a *tournament graph*. Pairwise-comparison “preference ratios” provide tournament-graph edge weights, leading to a novel Laplacian matrix. Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them. Relative-entropy *chain rules* provide mechanisms to couple hierarchically adjacent AHP tournament graphs into an overarching entropy structure for a multi-level decision problem. A case study related to a hydrogen fuel-cell design ([`Bu, *et al* (2026)`](https://doi.org/10.1016/j.enconman.2025.120952)) provides a practical demonstration of the prosed method.
+Abstract Decision makers often require insight into the relative strength of the evidence on which their choices hinge. The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength. Pairwise-comparison analysis specifies edges for a complete, directed, acyclic graph, often called a *tournament graph*. Pairwise-comparison “preference ratios” provide tournament-graph edge weights, leading to a novel Laplacian matrix. Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them. Relative-entropy *chain rules* provide mechanisms to couple hierarchically adjacent AHP tournament graphs into an overarching entropy structure for a multi-level decision problem. A case study related to `⋯ 𝓊𝓃𝒹ℯ𝓇 𝓇ℯ𝒸ℴ𝓃𝓈𝒾𝒹ℯ𝓇𝒶𝓉𝒾ℴ𝓃 ⋯` provides a practical demonstration of the prosed method.
 
 ## Draft research paper. 📝 
 
-[`260526-ahp-graph-entropy.pdf`](./research-paper/260526-ahp-graph-entropy.pdf).
+[`260526-ahp-graph-entropy.pdf`](./research-paper/260528-ahp-graph-entropy.pdf).
 
 ## 𝓣𝓸 𝓓𝓸. 🏗️🧱👷
 

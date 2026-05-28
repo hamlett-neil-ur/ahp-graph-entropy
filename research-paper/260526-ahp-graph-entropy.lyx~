@@ -348,7 +348,7 @@ begin{abstract}
 \end_layout
 
 \begin_layout Standard
-Abstract Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
+Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
  The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative strength.
  Comparative judgements produce lists of edges for a complete,
  directed,
@@ -405,6 +405,9 @@ Decision-making nearly always occurs under conditions of incomplete or imperfect
 \end_layout
 
 \begin_layout Quote
+\begin_inset Quotes eld
+\end_inset
+
 ...I prefer true but imperfect knowledge,
  even if it leaves much undetermined and unpredictable,
  to 
@@ -417,6 +420,10 @@ status open
 emph{a pretence of exact knowledge that is likely to be false}
 \end_layout
 
+\end_inset
+
+...
+\begin_inset Quotes erd
 \end_inset
 
  (emphasis added) (
@@ -1573,7 +1580,7 @@ name "decision-quality"
 
 
 \begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/sdp-who_we_are-dq-capture.png
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/sdp-who_we_are-dq-source.png
 	lyxscale 40
 	width 5.5in
 
@@ -1747,9 +1754,20 @@ It strikes a balance between tractability and complexity
 \begin_layout Enumerate
 
 \emph on
-The case focuses on sensitivity analysis
+The case emphasizes sensitivity analysis
 \emph default
 .
+ This aligns well with the focus of the present investigation.
+ Although 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ ultimately arrived at an optimum design configuration,
+ their extensive sensitivity analysis provides a baseline against which to compare the proposed graph-entropy approach.
 \end_layout
 
 \begin_layout Standard
