@@ -357,7 +357,7 @@ Decision makers often require insight into the relative strength of the evidence
  The resulting Intensities of Importance provide tournament-graph edge weights,
  leading to a novel Laplacian matrix.
  Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
- A previously published case study related to a fuel-cell design demonstrates the approach.
+ A previously published case study related to a offshore-pipeline material selection demonstrates the approach.
  The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
 \begin_inset ERT
 status open
@@ -1680,37 +1680,20 @@ name "sec:ahp-case-study"
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- employed AHP in making tradeoff decisions during the design of Proton Exchange Membrane Fuel Cells (PEMFCs),
- which 
-\begin_inset Quotes eld
-\end_inset
-
-...efficiently convert chemical energy from fuels into electricity without causing polution...
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- describe device-physics technical details that are tangential to our purposes.
+ employed AHP to select materials from which to construct pipelines for use in an offshore oil and gas project.
+ Their analysis consideres material-mechanical and -chemical technical details that are tangential to our purposes.
  The AHP mechanics primarily interests us.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
@@ -1749,32 +1732,14 @@ It strikes a balance between tractability and complexity
  constructed to illustrate AHP mechanics.
  The present investigation benefits from a moderately greater degree of complexity.
  The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent hierarchy models.
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-The case emphasizes sensitivity analysis
-\emph default
-.
- This aligns well with the focus of the present investigation.
- Although 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- ultimately arrived at an optimum design configuration,
- their extensive sensitivity analysis provides a baseline against which to compare the proposed graph-entropy approach.
+ That it consideres nine distinct criteria also makes it interesting.
 \end_layout
 
 \begin_layout Standard
 The following offers neither criticism nor endorsement of 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
@@ -1855,12 +1820,12 @@ hierarchy model
  employed by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- for their fuel-cell design.
+ for their pipeline-material selection.
  Visual,
  tree-graph depiction of the decision-element hierarchy aids in understanding by human decision-makers.
  Idiosyncratic style notwithstanding,
@@ -1918,11 +1883,16 @@ The rectangular box
 \begin_inset Quotes eld
 \end_inset
 
-PEMFC performance
+Target:
+ material selection 
+\begin_inset Formula $\cdots$
+\end_inset
+
+
 \begin_inset Quotes erd
 \end_inset
 
- at the top represents the 
+ at the left represents the 
 \emph on
 Goal or Focus
 \emph default
@@ -1954,97 +1924,91 @@ refcite{Saaty1986}{(1986)}
  terms.
  A clear goal or focus results from thoughtful 
 \emph on
-framing
+Framing
 \emph default
 ,
  in DQ terms.
 \end_layout
 
 \begin_layout Itemize
-The curve-cornered boxes represent 
+The horizontally centered box identifies 
 \emph on
 Criteria
 \emph default
 .
  Corresponding to DQ's 
 \emph on
-values
+Values
 \emph default
 ,
  the these define the span of measurable criteria believed to materially distinguish between alternatives.
- For this case,
- they represent
-\emph on
- 
-\emph default
-device physical-operating parameters 
-\emph on
-current density
-\emph default
- 
-\begin_inset Formula $I$
-\end_inset
-
-,
- 
-\emph on
-pressure drop
-\emph default
- 
-\begin_inset Formula $\Delta P$
-\end_inset
-
-,
- and 
-\emph on
-Oxygen-uniformity index
-\emph default
- 
-\begin_inset Formula $UI$
-\end_inset
-
-.
- These physical-operating parameters decisively influence the objective.
- 
-\end_layout
-
-\begin_layout Itemize
-The heptagonal shapes at the bottom depict decomposed criteria.
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty1986"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- describes 
-\begin_inset Quotes eld
+ identified nine such criteria.
+\end_layout
+
+\begin_layout Itemize
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
 \end_inset
 
-...intermediate set of higher criteria that can both be decomposed into these attributes and are themselves decompositions of the higher level criteria or subcriteria...
-\begin_inset Quotes erd
-\end_inset
-
-.
- In this case,
- each of three physical-device geometric specifictions —
- angle 
-\begin_inset Formula $\theta$
+ explicitly depicts the 
+\emph on
+Alternatives
+\emph default
+ under consideration.
+ That only three —
+ distinguished by labels 
+\begin_inset Formula $TA_{3}$
 \end_inset
 
 ,
- width 
-\begin_inset Formula $W$
+ 
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 ,
- and height 
-\begin_inset Formula $H$
+ and 
+\begin_inset Formula $TA_{36}$
 \end_inset
 
- —
- is believed to influence the operating parameters above.
+,
+ each corresponding to a distinct chemical composition (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 1"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl1"
+literal "false"
+
+\end_inset
+
+) —
+ are considered makes their explicit representation here practical.
+ When the number of alternatives is large —
+ such as analyzing the risk of a large porfolio of distinct assets —
+ showing all of them clutters the hierarch-model depiction.
  
 \begin_inset Float figure
 placement h
@@ -2064,11 +2028,11 @@ name "fig:Hierarchy-decomposition-used"
 
 \end_inset
 
-Hierarchy model used for Proton Exchange Membrane Fuel Cell (PEMFC) case study.
+Hierarchy model used for offshore-pipeline material-selection case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
@@ -2077,8 +2041,8 @@ literal "false"
  
 \begin_inset CommandInset href
 LatexCommand href
-name "Figure 5"
-target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
+name "Figure 9"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr9_lrg.jpg"
 literal "false"
 
 \end_inset
@@ -2091,14 +2055,14 @@ literal "false"
 
 \begin_inset CommandInset label
 LatexCommand label
-name "PEMFC-hierarchy"
+name "case-study-hierarchy-model"
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
-	lyxscale 25
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-pressure-vessel-ahp-formulation.png
+	lyxscale 15
 	width 3.25in
 
 \end_inset
@@ -2125,6 +2089,73 @@ indent
 
 \end_inset
 
+That the target-to-criterion hierarchy model in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ introduces a modicum of complexity.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ specifies a 
+\emph on
+transitive-consistency
+\emph default
+ criterion that,
+ analogous to but stronger than the van Neumann-Morgenstern transitivity axiom,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 58"
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\left(A\succ B\right)\wedge\left(B\succ C\right)\Rightarrow A\succ C\label{eq:vonNeumann-Morgernstern-transitivity-1}
+\end{equation}
+
+\end_inset
+
+proscribes circular reasoning.
+ Enforcing this constraint during the comparative-judgement process can prove challenging,
+ particluarly as the number of hierarchy-model element grows.
+ Conventionally,
+ AHP practitioners calculate a 
+\emph on
+Consistency Index
+\emph default
+,
+ which algebraically quantifies the degree to which this transitivity is satisfied (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+).
+ Representing comparative judgements as a directed graph provide an unambiguous mechanism to identify such violations of transitivity.
+ 
+\end_layout
+
+\begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2137,100 +2168,67 @@ tuple "list"
 
 \end_inset
 
- omits the 
-\emph on
-discrete alternatives
-\emph default
- from which the decision maker selects.
- Hierarchy-model depictions often include the alternatives when the set is small.
+ depicts a hierarchically structured decision.
+ The identified target describes a decisional activity:
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- however computationally simulate device performance based on 36 distinct combinations of geometric parameters to construct distinct alternatives.
- The clutter arising from depicting each scenario in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- would detract from its clarity.
- Using AHP to analyze the risk of a large porfolio of distinct assets exemplifies another scenario in which the alterantives do not explicitly appear in the hierarchy.
-\end_layout
-
-\begin_layout Standard
-The criterion hierarchy in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- is also idiosyncratic for another reason:
- Each of the geometric-specification sub-criteria influences the each operating-parameter criteria.
- Typically,
- constituent subcriteria are distinct to their associated criterion.
- Their representations appear as 
 \begin_inset Quotes eld
 \end_inset
 
-clean
+Material selection of titanium alloy 
+\begin_inset Formula $\cdots$
+\end_inset
+
+.
 \begin_inset Quotes erd
 \end_inset
 
- tree graph.
- This excursion from common practice does not invalidate AHPs application,
- here.
- One might alternatively consider the 
-\emph on
-Analytic Network Process
-\emph default
- (ANP) for scenarios like this (
+ Alignment of AHP to mainstream decision science involves speicification of a utility function.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty2013,Chen2019"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
-).
+ speak to utility qualities,
+ but do not explicitly articulate a utility function or theory.
+ Their nine criteria include eight mechanics-of-material characteristics,
+ 
+\begin_inset Formula $B_{1}\mbox{,}\cdots,B_{8}$
+\end_inset
+
+,
+ and one economic one 
+\begin_inset Formula $B_{9}$
+\end_inset
+
+.
+ The latter suggests an economic basis for utility.
  
 \end_layout
 
 \begin_layout Standard
-Finally,
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
+The constituent criterion-to-alternative hierarchy models address how each of the candidate chemical compositions address the alternatives.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
 
 \end_inset
 
- includes an uncommon feature that clarifies interpretation:
- It shows edge directivity.
- Always directed tree graphs,
- AHP hiearchy hierarchy-models tend to omit edge direction.
- Its appearance here reinforces our own graphical interpretation of AHP.
+ describe an extensive material-testing regime to ascertain the the performance of each with respect to the material-mechanical criteria.
+ Although comparative judgments introduce subjective aspects to the material-selection decision,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ also bring to bear extensive emprical experimental evidence.
 \end_layout
 
 \begin_layout Subsection*
@@ -2295,14 +2293,21 @@ tuple "list"
 
 \end_inset
 
- contains four hierarchic models,
- each based on three constituent elements.
+ contains ten hierarchic models:
+ One target-to-criterion model comprised of nine elements;
+ and nine criterion-to-alternative models,
+ each with three elements.
  Consequently,
  
+\begin_inset Formula $\binom{9}{2}=36$
+\end_inset
+
+ element pairs must be considered for the target-to-criterion model.
+ Each criterion-to-alternative model entails 
 \begin_inset Formula $\binom{3}{2}=3$
 \end_inset
 
- element pairs must be considered for each.
+ element pairs.
  Each element pair corresponds to a directed edge for the tournament graph by which the hierarchy model is represented.
 \end_layout
 
@@ -2310,7 +2315,7 @@ tuple "list"
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2322,15 +2327,16 @@ tuple "list"
  contains the comparative judgements assigned by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- for each hierarchy-model element pair depicted in Figure 
+ for each hierarchy-model element pair depicted in the target-to-criterion model.
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
+reference "tab:criterion-alternative-comparative-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2339,14 +2345,14 @@ tuple "list"
 
 \end_inset
 
-.
+ contains the judgements for each of the criterion-to-alternative models.
  We defer construction of coresponding matrices to the next subsection.
  Explicit depiction of the comparative judgements here contributes to the clarity of present course of reasoning.
  Moreover,
  the directed-graph edge list in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2356,60 +2362,6 @@ tuple "list"
 \end_inset
 
  provides a key of departure for subsequent extension of the AHP methodology.
-\end_layout
-
-\begin_layout Standard
-The 
-\begin_inset Quotes eld
-\end_inset
-
-O-C
-\begin_inset Quotes erd
-\end_inset
-
- model corresponds to the highest level of the hierarchy model in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-.
- It represents the contribution by each of the device operating parameters 
-\begin_inset Formula $I$
-\end_inset
-
-,
- 
-\begin_inset Formula $\Delta P$
-\end_inset
-
-,
- and 
-\begin_inset Formula $UI$
-\end_inset
-
- to overall performance of the PEMFC device.
- The constituent hierarchy models account for the belief that geometric-design parameters angle 
-\begin_inset Formula $\theta$
-\end_inset
-
-,
- height 
-\begin_inset Formula $H$
-\end_inset
-
-,
- and width 
-\begin_inset Formula $W$
-\end_inset
-
- influence the operating parameters.
 \end_layout
 
 \begin_layout Standard
@@ -2433,9 +2385,13 @@ literal "false"
 \end_inset
 
  specify a 
-\emph on
+\begin_inset Quotes eld
+\end_inset
+
 fundamental scale
-\emph default
+\begin_inset Quotes erd
+\end_inset
+
  containing arbitrary,
  subjective heuristics to represent the 
 \emph on
@@ -2445,7 +2401,7 @@ intensity of importance
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
@@ -2453,8 +2409,8 @@ literal "false"
  employ this scale (their 
 \begin_inset CommandInset href
 LatexCommand href
-name "Table 5"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0025"
+name "Table 7"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl7"
 literal "false"
 
 \end_inset
@@ -2518,7 +2474,7 @@ measurement
 The construction of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2543,7 +2499,7 @@ literal "false"
  Construction of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2642,6 +2598,21 @@ fundamental scale
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}a}
+\end_layout
+
+\end_inset
+
  
 \begin_inset Float table
 placement document
@@ -2657,25 +2628,27 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Decision-factor-judgements.-(Aft"
+name "tab:target-criterion-element-judgements"
 
 \end_inset
 
-Comparative judgements for each hierarchy-model criterion pair.
+Comparative judgements for each element pair within the target-to-criterion hierarchy model of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
  (After 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
-,
- Tables 
-\begin_inset CommandInset href
-LatexCommand href
-name "8"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0040"
+key "Zeng2025"
 literal "false"
 
 \end_inset
@@ -2684,33 +2657,13 @@ literal "false"
  
 \begin_inset CommandInset href
 LatexCommand href
-name "9"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0045"
+name "Table 10"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl10"
 literal "false"
 
 \end_inset
 
-,
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "10"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0050"
-literal "false"
-
-\end_inset
-
-,
- and 
-\begin_inset CommandInset href
-LatexCommand href
-name "11"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0055"
-literal "false"
-
-\end_inset
-
-)
+.)
 \end_layout
 
 \end_inset
@@ -2718,13 +2671,1385 @@ literal "false"
 
 \begin_inset CommandInset label
 LatexCommand label
-name "decision-factor-judgements"
+name "target-criterion-judgements"
 
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="4">
+<lyxtabular version="3" rows="36" columns="3">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+reference
+\end_layout
+
+\begin_layout Plain Layout
+element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+comparative
+\end_layout
+
+\begin_layout Plain Layout
+element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+intensity of
+\end_layout
+
+\begin_layout Plain Layout
+importance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+addtocounter{table}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}b}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:criterion-alternative-comparative-judgements"
+
+\end_inset
+
+Comparative judgements for each element pair within each of the criterion-to-alternative hierarchy models in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ (After 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 8"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl8"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "criterion-alternative-judgements"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="28" columns="4">
 <features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
 <column alignment="center" valignment="top" color="default">
 <column alignment="center" valignment="top" color="default">
@@ -2789,16 +4114,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-O-C
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $I$
+\begin_inset Formula $B_{1}$
 \end_inset
 
 
@@ -2810,7 +4126,677 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Delta P$
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -2833,16 +4819,7 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-O-C
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $I$
+\begin_inset Formula $B_{6}$
 \end_inset
 
 
@@ -2854,7 +4831,19 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $UI$
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -2866,7 +4855,7 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-4
+2
 \end_layout
 
 \end_inset
@@ -2877,16 +4866,7 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-O-C
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $UI$
+\begin_inset Formula $B_{6}$
 \end_inset
 
 
@@ -2898,31 +4878,7 @@ O-C
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C-
-\begin_inset Formula $\Delta P$
+\begin_inset Formula $TA_{36}$
 \end_inset
 
 
@@ -2934,115 +4890,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C-
-\begin_inset Formula $\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C-
-\begin_inset Formula $\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
+\begin_inset Formula $TA_{3}$
 \end_inset
 
 
@@ -3065,8 +4913,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-C-
-\begin_inset Formula $UI$
+\begin_inset Formula $B_{6}$
 \end_inset
 
 
@@ -3078,7 +4925,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\theta$
+\begin_inset Formula $TA_{36}$
 \end_inset
 
 
@@ -3090,103 +4937,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C-
-\begin_inset Formula $UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C-
-\begin_inset Formula $UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -3209,8 +4960,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-C-
-\begin_inset Formula $I$
+\begin_inset Formula $B_{7}$
 \end_inset
 
 
@@ -3222,7 +4972,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $W$
+\begin_inset Formula $TA_{3}$
 \end_inset
 
 
@@ -3234,7 +4984,54 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\theta$
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
 \end_inset
 
 
@@ -3257,8 +5054,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-C-
-\begin_inset Formula $I$
+\begin_inset Formula $B_{7}$
 \end_inset
 
 
@@ -3270,7 +5066,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $W$
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -3282,7 +5078,242 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $H$
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
 \end_inset
 
 
@@ -3305,8 +5336,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-C-
-\begin_inset Formula $I$
+\begin_inset Formula $B_{9}$
 \end_inset
 
 
@@ -3318,7 +5348,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $H$
+\begin_inset Formula $TA_{36}$
 \end_inset
 
 
@@ -3330,7 +5360,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\theta$
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -3342,7 +5372,7 @@ C-
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+5
 \end_layout
 
 \end_inset
@@ -3353,6 +5383,22 @@ C-
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}}
 \end_layout
 
 \end_inset
@@ -3384,7 +5430,7 @@ reciprocal matrix
  For the O-C model in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3438,7 +5484,7 @@ tuple "list"
 ) follows from Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3530,7 +5576,7 @@ tuple "list"
  resulting from the comparative judgements (Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3598,7 +5644,7 @@ name "tab:Reciprocal-matrix-and"
 Reciprocal matrix and priority vector resulting from Table-
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4005,7 +6051,7 @@ name "tab:Reciprocal-matrices-and"
 Reciprocal matrices and priority vectors based Table-
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Decision-factor-judgements.-(Aft"
+reference "tab:target-criterion-element-judgements"
 plural "false"
 caps "false"
 noprefix "false"
@@ -5570,24 +7616,20 @@ tuple "list"
 
 \end_inset
 
-) imposes a stronger constraint than the von Neumann-Morgenstern transitivity axiom 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "p. 58"
-key "Kochenderfer2015"
-literal "false"
+) imposes a stronger constraint than the von Neumann-Morgenstern transitivity axiom previously stated in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
 
 \end_inset
 
-
-\begin_inset Formula 
-\begin{equation}
-\left(A\succ B\right)\wedge\left(B\succ C\right)\Rightarrow A\succ C\mbox{,}\label{eq:vonNeumann-Morgernstern-transitivity}
-\end{equation}
-
-\end_inset
-
-which only constrains transitivity of ordering preferences.
+),
+ which only constrains transitivity of ordering preferences.
 \end_layout
 
 \begin_layout Standard
@@ -7173,7 +9215,7 @@ Bayesian Entrepreneurship
 \begin_inset CommandInset href
 LatexCommand href
 name "9780262052160"
-target "https://doi.org/10.7551/mitpress/15918.001.0001"
+target "https://doi.org/10.7551/mitpress/15918.003.0011"
 literal "false"
 
 \end_inset
