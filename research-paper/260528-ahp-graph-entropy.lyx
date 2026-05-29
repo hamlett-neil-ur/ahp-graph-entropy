@@ -2291,7 +2291,19 @@ Pairwise
  Practically,
  one assembles a list of unique,
  unordered element pairs for each hierarchy model.
- If the hierarchy model for a given objective (or crietrion) spans 
+ Conventionally,
+ explicit representation of hierarchy-element comparative judgements is skipped.
+ The results applied directly to a reciprocal matrix.
+ Since these results provide our excursion into graph-based evidentiary reasoning,
+ we pay particular attention here.
+\end_layout
+
+\begin_layout Subsubsection*
+Comparative-judgement principles.
+\end_layout
+
+\begin_layout Standard
+If the hierarchy model for a given objective (or crietrion) spans 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2301,16 +2313,16 @@ Pairwise
 \end_inset
 
  element pairs must be considered.
- 
-\end_layout
-
-\begin_layout Standard
-The cardinality 
+ The cardinality 
 \begin_inset Formula $\binom{n}{2}$
 \end_inset
 
  specifies the range of hierarchy-model element pairs that must be considered.
- Application of comparative judgement imposes an ordering that must subsequently be observed.
+ 
+\end_layout
+
+\begin_layout Standard
+Application of comparative judgement imposes an ordering that must subsequently be observed.
  Consider a hierarchy model 
 \begin_inset Formula $\mathfrak{H}$
 \end_inset
@@ -2334,9 +2346,21 @@ The cardinality
 \end_inset
 
  distinct mappings
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
-(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}\mbox{,}
+(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}\:\forall\,i\neq j\mbox{,}\label{eq:comparative-judgement-assignment}
 \end{equation}
 
 \end_inset
@@ -2346,24 +2370,46 @@ where
 \end_inset
 
  denotes a corresponding element of a reciprocal matrix.
- Avoiding redundancy of effort focuses us on 
-\begin_inset Formula $\binom{n}{2}$
-\end_inset
-
- applications of 
+ The mapping 
 \begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
 \end_inset
 
-,
- irrespective of the element pairs' orders.
- After 
-\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+ imposes
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+e_{i}\succcurlyeq e_{j}\Rightarrow a_{i,j}\geq1\\
+e_{i}\prec e_{j}\Rightarrow a_{i,j}<1
+\end{array}\mbox{.}
+\end{equation}
+
 \end_inset
 
- however the ordering must be maintained.
- Subsequently,
- this provides the directions of our hierarchy-models' graphs' edges.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+Consequently,
+ after its application,
+ element ordering must be maintained.
+ Finally,
  
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ is postive-definite.
+\end_layout
+
+\begin_layout Subsubsection*
+Material-selection comparative judgements.
 \end_layout
 
 \begin_layout Standard
@@ -2472,339 +2518,6 @@ tuple "list"
 \end_inset
 
  provide a key of departure for subsequent extension of the AHP methodology.
-\end_layout
-
-\begin_layout Standard
-Now,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
- Table 1 and 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1994"
-literal "false"
-
-\end_inset
-
- Table 1 offer a 
-\begin_inset Quotes eld
-\end_inset
-
-fundamental scale
-\begin_inset Quotes erd
-\end_inset
-
- containing arbitrary,
- subjective heuristics for assignment of 
-\emph on
-intensity-of-importance
-\emph default
- values to hierarchy-model element pairs.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Zeng2025"
-literal "false"
-
-\end_inset
-
- employ this scale (their 
-\begin_inset CommandInset href
-LatexCommand href
-name "Table 7"
-target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl7"
-literal "false"
-
-\end_inset
-
-),
- as do many other AHP applications appearing in the literature.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
-,
- the most-rigorous description of the AHP methodology,
- contains no explicit prescription for the necessity of these values.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
- does however speak to preferential ordering and transitive consistency.
- Consequently,
- alternative,
- more-rigorous importance-intensity assignments can be considered.
- Application of the personal-probability indifference principle arises as one option (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Savage1972,deFinetti1974"
-literal "false"
-
-\end_inset
-
-).
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hubbard2023"
-literal "false"
-
-\end_inset
-
- —
- addressing the specific domain of cybersecurity —
- describe more-emprical approaches to 
-\emph on
-measurement
-\emph default
-.
- Application of such alternatives in lieu of Saaty's 
-\begin_inset Quotes eld
-\end_inset
-
-fundamental scale
-\begin_inset Quotes erd
-\end_inset
-
- deflects a common critique of AHP's logical rigor.
-\end_layout
-
-\begin_layout Standard
-The construction of Tables 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:criterion-alternative-comparative-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- anticipates their use in defining directed graphs in the sequel.
- The AHP literature —
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986,Saaty1994,Saaty2003"
-literal "false"
-
-\end_inset
-
-,
- in particular —
- presccribes nothing about the ordering of element pairs in comparative judgement.
- Construction of the tables follows the following convention.
-\end_layout
-
-\begin_layout Itemize
-Populate the 
-\begin_inset Quotes eld
-\end_inset
-
-intensity of importance
-\begin_inset Quotes erd
-\end_inset
-
- column with the value greater than or equal to unity.
-\end_layout
-
-\begin_layout Itemize
-Assign to the 
-\begin_inset Quotes eld
-\end_inset
-
-reference element
-\begin_inset Quotes erd
-\end_inset
-
- column the most-preferred element,
- associated with the prefered intensity-of-importance value.
- This element subsequently corresponds to the head of the directed graph edge connecting the two elements.
-\end_layout
-
-\begin_layout Itemize
-Populate the 
-\begin_inset Quotes eld
-\end_inset
-
-comparative element
-\begin_inset Quotes erd
-\end_inset
-
- column the less-preferred element.
- This element corresponds to the tail of the directed-graph edge.
-\end_layout
-
-\begin_layout Standard
-This convention imbues two conveniences into the procedure.
- First,
- the structure of the table endogenously contains the directive structure of the graph.
- This simplifies the algorithmic logic used to construct the resultant tournament graph.
- Second,
- it inclines us to think of importance intensities in terms as personal probabilities (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Savage1972}{Savage}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Savage1972}{(1972)}
-\end_layout
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "deFinetti1974"
-literal "false"
-
-\end_inset
-
-) in lieu of the arguably problematic 
-\begin_inset Quotes eld
-\end_inset
-
-fundamental scale
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-That Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- contains unit-valued importance intensities —
- hierarchy-model element pairs regarding which comparative-judgement experts were indifferent —
- raises both interest and a challenge.
- Four undirected edges appear.
- This introduces an aspect of complexity.
- Unit-valued importance intensities imply undirected edges.
- In such cases,
- 
-\emph on
-mixed graphs
-\emph default
- occur:
- Graphs containing both directed and undirected edges.
-\end_layout
-
-\begin_layout Standard
-We subsequently handle this in construction of the graph Laplacians,
- on which entropy calculations are based.
- Our Laplacians must account for both directed and undirected edges,
- as well as other-than-unity edge weights.
- Aluded to previously,
- graph-Laplacian constructions for distinct graph classes appear separately in the literature (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wong1985"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Dehmer2011"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Mowshowitz2012"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Brown2020"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Liu2022"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Guanlei2025"
-literal "false"
-
-\end_inset
-
-).
- Judiciously combining graph-class-specific Laplacian structures with our mixed-graph structures represents the present challenge.
 \end_layout
 
 \begin_layout Standard
@@ -5616,6 +5329,366 @@ arabic{table}}
 
 \end_layout
 
+\begin_layout Subsubsection*
+Assignment of intensities of importance.
+\end_layout
+
+\begin_layout Standard
+Now,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ Table 1 and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1994"
+literal "false"
+
+\end_inset
+
+ Table 1 offer a 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ containing heuristics for assignment of 
+\emph on
+intensity-of-importance
+\emph default
+ values to hierarchy-model element pairs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2001b"
+literal "false"
+
+\end_inset
+
+ offers a psychophysics justification for this scale,
+ and argues for an upper bound of 
+\begin_inset Formula $9$
+\end_inset
+
+ when assigning values to importance intensities.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ employ this scale (their 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 7"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl7"
+literal "false"
+
+\end_inset
+
+),
+ as do many other AHP applications appearing in the literature.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+,
+ the most-rigorous description of the AHP methodology,
+ contains no explicit prescription for this schema for importance-intensity assignment.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty2001b"
+literal "false"
+
+\end_inset
+
+ do however speak to preferential ordering,
+ transitive consistency,
+ and homogeneity considerations.
+ Consequently,
+ alternative,
+ more-rigorous importance-intensity assignments can be considered.
+ Application of the personal-probability indifference principle arises as one option (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Savage1972,deFinetti1974"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hubbard2023"
+literal "false"
+
+\end_inset
+
+ —
+ addressing the specific domain of cybersecurity —
+ describe more-emprical approaches to 
+\emph on
+measurement
+\emph default
+.
+ Application of such alternatives in lieu of Saaty's 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ deflects a common critique of AHP's logical rigor.
+\end_layout
+
+\begin_layout Subsubsection*
+Construction of the comparative-judgement table.
+\end_layout
+
+\begin_layout Standard
+The construction of Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ anticipates their use in defining directed graphs in the sequel.
+ The AHP literature —
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994,Saaty2003"
+literal "false"
+
+\end_inset
+
+,
+ in particular —
+ presccribes nothing about the ordering of element pairs in comparative judgement.
+ Construction of the tables follows the following convention.
+\end_layout
+
+\begin_layout Itemize
+Populate the 
+\begin_inset Quotes eld
+\end_inset
+
+intensity of importance
+\begin_inset Quotes erd
+\end_inset
+
+ column with the value greater than or equal to unity.
+\end_layout
+
+\begin_layout Itemize
+Assign to the 
+\begin_inset Quotes eld
+\end_inset
+
+reference element
+\begin_inset Quotes erd
+\end_inset
+
+ column the most-preferred element,
+ associated with the prefered intensity-of-importance value.
+ This element subsequently corresponds to the head of the directed graph edge connecting the two elements.
+\end_layout
+
+\begin_layout Itemize
+Populate the 
+\begin_inset Quotes eld
+\end_inset
+
+comparative element
+\begin_inset Quotes erd
+\end_inset
+
+ column the less-preferred element.
+ This element corresponds to the tail of the directed-graph edge.
+\end_layout
+
+\begin_layout Standard
+This convention imbues two conveniences into the procedure.
+ First,
+ the structure of the table endogenously contains the directive structure of the graph.
+ This simplifies the algorithmic logic used to construct the resultant tournament graph.
+ Second,
+ it inclines us to think of importance intensities in terms as personal probabilities (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Savage1972}{Savage}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Savage1972}{(1972)}
+\end_layout
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "deFinetti1974"
+literal "false"
+
+\end_inset
+
+) in lieu of the arguably problematic 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Comparative-judgement indifference and its consequences.
+\end_layout
+
+\begin_layout Standard
+That Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains unit-valued importance intensities —
+ hierarchy-model element pairs regarding which comparative-judgement experts were indifferent —
+ raises both interest and a challenge.
+ Four undirected edges appear.
+ This introduces an aspect of complexity.
+ Unit-valued importance intensities imply undirected edges.
+ In such cases,
+ 
+\emph on
+mixed graphs
+\emph default
+ occur:
+ Graphs containing both directed and undirected edges.
+\end_layout
+
+\begin_layout Standard
+We subsequently handle this in construction of the graph Laplacians,
+ on which entropy calculations are based.
+ Our Laplacians must account for both directed and undirected edges,
+ as well as other-than-unity edge weights.
+ Aluded to previously,
+ graph-Laplacian constructions for distinct graph classes appear separately in the literature (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wong1985"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dehmer2011"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mowshowitz2012"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2022"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guanlei2025"
+literal "false"
+
+\end_inset
+
+).
+ Judiciously combining graph-class-specific Laplacian structures with our mixed-graph structures represents the task of the present investigation.
+\end_layout
+
 \begin_layout Subsection*
 Transformation of comparative judments into 
 \emph on
@@ -5637,7 +5710,103 @@ reciprocal matrix
 \emph default
  from the comparative judgements for each hierarchy model.
  A reciprocal matrix is a Hermetian matrix with unit-valued diagonals and intensity-importance values assigned to off-diagonal elements.
- For the O-C model in Table 
+\end_layout
+
+\begin_layout Subsubsection*
+Construction of reciprocal matrices from comparative judgements.
+\end_layout
+
+\begin_layout Standard
+As the name implies,
+ a reciprocal matrix is a matrix of comparative judgements within which upper-diagonal elements are reciprocals of the lower.
+ Consider again a hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+ comprised of 
+\begin_inset Formula $n$
+\end_inset
+
+ elements,
+ 
+\begin_inset Formula $\mathfrak{H}\supseteq\left\{ e_{1},\cdots,e_{n}\right\} $
+\end_inset
+
+.
+ Then the corresponding reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ becomes
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}_{\mathfrak{H}}=\left[\begin{array}{cccc}
+1 & a_{1,2} & \cdots & a_{1,n}\\
+a_{2,1} & 1 & \cdots & a_{2,n}\\
+\vdots & \ddots & 1 & \vdots\\
+a_{n,1} & a_{n,2} & \cdots & 1
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+subject to 
+\begin_inset Formula 
+\begin{equation}
+a_{i,j}=a^{-1}_{j,i}\mbox{,}
+\end{equation}
+
+\end_inset
+
+and where 
+\begin_inset Formula $\left(e_{i},e_{j}\right)$
+\end_inset
+
+ are assigned 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Weight-vector calculation.
+\end_layout
+
+\begin_layout Paragraph*
+Principal-eigenvectory method.
+\end_layout
+
+\begin_layout Paragraph*
+Geometric-mean method.
+\end_layout
+
+\begin_layout Paragraph*
+Entropy-weight method.
+\end_layout
+
+\begin_layout Standard
+For the O-C model in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:target-criterion-element-judgements"
@@ -9515,6 +9684,51 @@ https://doi.org/10.1016/j.patrec.2005.10.010
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Forman & Peniwati (1996)"
+key "Forman1996"
+literal "false"
+
+\end_inset
+
+Forman,
+ E.
+ & Peniwati,
+ K.
+ (1996).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Aggregating individual judgements and priorities with the Analytical Hierarchy Process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Proceedings of the International Symposium on the Analytic Hierarchy Process
+\emph default
+ (ISAHP 1996),
+ Vancouver,
+ Canada,
+ July 12-15,
+ 1996,
+ pp 383-391.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.13033/isahp.y1996.009
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Guanlei, Xiaogang, Xiaotong (2025)"
 key "Guanlei2025"
 literal "false"
@@ -10914,6 +11128,95 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1287/inte.24.6.19
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (2001a)"
+key "Saaty2001a"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (2001).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Decision-making with the AHP:
+ Why is the principal eigenvector necessary?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Proceedings of the International Symposium on the Analytic Hierarchy Process
+\emph default
+ (ISAHP 2001),
+ Berne,
+ CH,
+ August 2–4,
+ 2001,
+ pp 384-396.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.13033/isahp.y2001.029
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (2001b)"
+key "Saaty2001b"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (2001).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Deriving the AHP 1-9 scale from first principles.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Proceedings of the International Symposium on the Analytic Hierarchy Process
+\emph default
+ (ISAHP 2001),
+ Berne,
+ CH,
+ August 2–4,
+ 2001,
+ pp 397-401.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.13033/isahp.y2001.030
 \end_layout
 
 \end_inset
