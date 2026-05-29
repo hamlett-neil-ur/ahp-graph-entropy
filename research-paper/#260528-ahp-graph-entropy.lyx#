@@ -348,16 +348,23 @@ begin{abstract}
 \end_layout
 
 \begin_layout Standard
-Decision makers often require insight into the relative strength of the evidence on which their choices hinge.
- The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of evidentiary elements' relative strength.
- Comparative judgements produce lists of edges for a complete,
- directed,
- acyclic graph,
- often called a tournament graph.
- The resulting Intensities of Importance provide tournament-graph edge weights,
- leading to a novel Laplacian matrix.
+Decision makers often require insight into the relative strength of the elements of evidence on which their choices hinge.
+ The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of elements' relative strength.
+ Comparative judgements (
+\begin_inset Quotes eld
+\end_inset
+
+pairwise comparisons
+\begin_inset Quotes erd
+\end_inset
+
+) produce lists of edges for a complete graph.
+ Under certain conditions,
+ such graphs are also directed and acyclic,
+ belonging to the class of tournament graphs.
+ Intensities of Importance from comparative judgements provide weights for graphs' edges.
  Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
- A previously published case study related to a offshore-pipeline material selection demonstrates the approach.
+ A previously published case study related to an offshore-pipeline material selection demonstrates the approach.
  The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
 \begin_inset ERT
 status open
@@ -869,7 +876,7 @@ literal "false"
 hierarchy model
 \emph default
  represents this as a tree graph.
- The responsible individual decision maker or panel of experts then performs
+ The responsible individual decision maker or a panel of experts then performs
 \emph on
  comparative judgements
 \emph default
@@ -891,7 +898,7 @@ literal "false"
 \end_inset
 
 ).
- A case study subsequently demonstrates AHP's use to rank plausible scenarios.
+ A case study subsequently demonstrates AHP's use to rank plausible alternatives.
  
 \end_layout
 
@@ -950,13 +957,8 @@ Evidentiary-strength analysis using the AHP.
 \end_layout
 
 \begin_layout Standard
-That the
-\emph on
- comparative judgements for an AHP hierarchy model define a complete,
- directed,
- acyclic graph
-\emph default
- (DAG) provides the seminal insight underlying this investigation.
+That comparative judgements for an AHP hierarchy model define a complete graph provides the seminal insight underlying this investigation.
+ Additional opportunities arise when the resulting graph is also directed and acyclic.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -970,10 +972,24 @@ literal "false"
 \begin_inset Quotes eld
 \end_inset
 
-Partially ordered sets with a finite number of elements can be conveniently represented by a directed graph.
+Partially ordered sets with a finite number of elements can be conveniently represented by a directed graph
 \begin_inset Quotes erd
 \end_inset
 
+.
+ Complete DAGs belong to a special class of graphs called 
+\emph on
+tournament graphs
+\emph default
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moon2015"
+literal "false"
+
+\end_inset
+
+).
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -987,14 +1003,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Complete DAGs belong to a special class of graphs called 
-\emph on
-tournament graphs
-\emph default
- (
+Entropy —
+ a key concept from information theory —
+ provides an abstract but rigorous framework for characterizing evidentiary strength (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Moon2015"
+key "Cover2006"
 literal "false"
 
 \end_inset
@@ -1035,7 +1049,7 @@ literal "false"
 \end_layout
 
 \begin_layout Paragraph
-What questions do entropies of AHP-based tournament graph allow us to answer?
+What questions do entropies of AHP-based graphs allow us to answer?
 \end_layout
 
 \begin_layout Standard
@@ -1074,7 +1088,7 @@ literal "false"
 \end_layout
 
 \begin_layout Paragraph*
-By what mechanism do we infer the differential information between hierarchically-coupled AHP hierarchy models?
+By what mechanism do we infer the differential information between hierarchically-adjacent AHP hierarchy models?
 \end_layout
 
 \begin_layout Standard
@@ -1176,7 +1190,8 @@ What innovation is required to define a methodology for AHP-based evidentiary-st
 
 \begin_layout Standard
 First,
- we must formulate an entropy definition for tournament graph with 
+ we must formulate an entropy definition for complete,
+ mixed graphs with 
 \emph on
 weighted
 \emph default
@@ -1210,7 +1225,7 @@ refcite{Brown2020}{(2020)}
 
 \end_inset
 
- analyzed graphs with unweighted (uniformly unit-weighted) edges.
+ analyzed directed graphs with unweighted (uniformly unit-weighted) edges.
  
 \begin_inset ERT
 status open
@@ -1254,14 +1269,14 @@ literal "false"
 
 \end_inset
 
- formulate entropies for regular (non-directional) graph comprised of weighted edges.
- The intensities of importance from the AHP comparative judgements provide the weights used here.
+ formulate entropies for regular (non-directional) graphs comprised of weighted edges.
+ The intensities of importance from the AHP comparative judgements provide graph-edge weights used here.
  
 \end_layout
 
 \begin_layout Standard
 Second,
- relative entropies of hierarchically coupled hierarchy models must be coupled.
+ relative entropies of hierarchically adjacent hierarchy models must be coupled.
  The 
 \emph on
 Hierarchy
@@ -1298,7 +1313,7 @@ heavy
 \begin_inset Quotes erd
 \end_inset
 
- graph-entropy machinery needed?
+ machinery of graph entropy called-for?
 \end_layout
 
 \begin_layout Standard
@@ -1362,7 +1377,7 @@ literal "false"
 \end_inset
 
 ).
- Philosophically congruentment with design-of-experiements practice (
+ Philosophically congruent with design-of-experiements practice (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cox2000"
@@ -1430,11 +1445,11 @@ tuple "list"
 \end_inset
 
  depicts the DQ framework,
- The DQ frameworks contains six 
+ comprised of six 
 \emph on
-links
+links.
+
 \emph default
-:
  
 \end_layout
 
@@ -1462,6 +1477,7 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
+.
  
 \end_layout
 
@@ -1490,7 +1506,11 @@ Clear Values and Tradeoffs
 \emph default
  specify the criteria by which the best alternative is identified.
  They specify the decision makers' values,
- and justify the optimality of the best alternative.
+ clarifying 
+\emph on
+why
+\emph default
+ the best alternative actually is the best.
 \end_layout
 
 \begin_layout Itemize
@@ -1498,7 +1518,7 @@ Clear Values and Tradeoffs
 \emph on
 Sound Reasoning
 \emph default
- defines the logic employed in identifying the best alternative.
+ defines the logic employed in identifying the best alternative given the available evidence.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1517,17 +1537,7 @@ literal "false"
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
  AHP is itself a distinct reasoning approach.
- Injudiciously applied,
- it does not however guarantee satisfaction of the von Neumann-Morgernstern axioms 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "p. 58"
-key "Kochenderfer2015"
-literal "false"
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1536,9 +1546,12 @@ literal "false"
 Commitment to Action
 \emph default
  represents the follow-through in implementing or adopting the selected alternative.
- Absent a commitment to adopt or act upon the best alternative resulting from the links above,
+ Absent a commitment to adopt or act upon the best alternative,
  a decision arguably has not occurred.
  The analysis was academic.
+ Persistence with the status quo nearly always occurs among the alternatives under consideration.
+ Such a selection should however result from applying sound reasoning to the relevant available evidence.
+ 
 \begin_inset Float figure
 placement document
 alignment document
@@ -1611,8 +1624,19 @@ indent
 Now,
  use of AHP by no means suffices to achieve DQ.
  Thoughtful application of AHP does adress a subset of DQ's links.
- Featuring AHP as an approach to DQ does not however define our objective.
- Here we explore AHP's ability to highlight sets of decisional values and spans of reliable information influence the results of sound reasoning.
+ Injudiciously applied,
+ it does not however guarantee satisfaction of the von Neumann-Morgenstern axioms 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 58"
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+ undergirding decision science.
+ Featuring AHP as an approach to DQ in no way constitutes our objective here.
+ We instead explore AHP's ability to highlight how subsets of decisional values and spans of evidence influence the results of sound reasoning.
 \end_layout
 
 \begin_layout Subsection*
@@ -1628,12 +1652,12 @@ real-world
  case study concisely demonstrates its application to preference-ranking a set of scenarios.
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
- The DAGs resulting from the comparative judgements provide our point of departure into a novel methodology.
+ The complete graphs resulting from the comparative judgements provide our point of departure into a novel methodology.
  
 \end_layout
 
 \begin_layout Standard
-We then calculate the entropies for our comparative-judgement DAGs associated with distinct hierarchy models.
+We then calculate the entropies for our comparative-judgement graphs associated with distinct hierarchy models.
  This extends 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1642,15 +1666,15 @@ literal "false"
 
 \end_inset
 
- through adoption of a Laplacian structure that includes edge weights.
- Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted DAG Laplacian with comparative-judgement importance intensities,
+ through adoption of a Laplacian structure that includes edge weights and unit-weight undirected edges.
+ Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted directed-graph Laplacian with comparative-judgement importance intensities,
  which provide the edge weights.
  This incorporates information about degree of influence in the interconnected evidentiary framework.
 \end_layout
 
 \begin_layout Standard
 Finally,
- we calculate entropies and relative entropies from our AHP-based DAG structure comprised of multiple,
+ we calculate entropies and relative entropies from our AHP-based graph structure comprised of multiple,
  hierarchically coupled hierarchy models.
  We interpret the results for our real-world case study.
  Approaches analogous to those by 
@@ -1686,8 +1710,8 @@ literal "false"
 \end_inset
 
  employed AHP to select materials from which to construct pipelines for use in an offshore oil and gas project.
- Their analysis consideres material-mechanical and -chemical technical details that are tangential to our purposes.
- The AHP mechanics primarily interests us.
+ Their analysis considers material-mechanical and -chemical technical details that are tangential to our purposes.
+ The AHP mechanics primarily interest us.
 \end_layout
 
 \begin_layout Standard
@@ -1698,7 +1722,7 @@ literal "false"
 
 \end_inset
 
- particularly suits the purposes of this investigation for four reasons.
+ particularly suits the purposes of this investigation for three reasons.
 \end_layout
 
 \begin_layout Enumerate
@@ -1732,7 +1756,7 @@ It strikes a balance between tractability and complexity
  constructed to illustrate AHP mechanics.
  The present investigation benefits from a moderately greater degree of complexity.
  The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent hierarchy models.
- That it consideres nine distinct criteria also makes it interesting.
+ That it considers nine distinct criteria also makes it interesting.
 \end_layout
 
 \begin_layout Standard
@@ -1825,8 +1849,61 @@ literal "false"
 
 \end_inset
 
- for their fuel-cell design.
- Visual,
+ for their pipeline-material selection.
+ It depicts a hierarchically structured decision.
+ The identified target describes a decisional activity:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Material selection of titanium alloy 
+\begin_inset Formula $\cdots$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ Their nine criteria include eight mechanics-of-material characteristics,
+ 
+\begin_inset Formula $B_{1}\mbox{,}\cdots,B_{8}$
+\end_inset
+
+,
+ and one economic one 
+\begin_inset Formula $B_{9}$
+\end_inset
+
+.
+ The latter suggests an economic basis for utility.
+ 
+\end_layout
+
+\begin_layout Standard
+The constituent criterion-to-alternative hierarchy models address how each of the candidate chemical compositions address the alternatives.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ describe an extensive material-testing regime to ascertain the the performance of each with respect to the material-mechanical criteria.
+ Although comparative judgments introduce subjective aspects to the material-selection decision,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ also bring to bear extensive emprical experimental evidence.
+\end_layout
+
+\begin_layout Standard
+Visual,
  tree-graph depiction of the decision-element hierarchy aids in understanding by human decision-makers.
  Idiosyncratic style notwithstanding,
  Figure 
@@ -1841,7 +1918,7 @@ tuple "list"
 
 \end_inset
 
- follows the ubiquitous form patterned after 
+ follows the ubiquitous pattern originating with 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986,Saaty1994"
@@ -1879,7 +1956,7 @@ tuple "list"
 \end_layout
 
 \begin_layout Itemize
-The rectangular box 
+The rectangular box to the left 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1987,7 +2064,7 @@ Alternatives
 \end_inset
 
 ,
- eac corresponding to a distinct chemical composition (
+ each corresponding to a distinct chemical composition (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -2011,7 +2088,7 @@ literal "false"
  showing all of them clutters the hierarch-model depiction.
  
 \begin_inset Float figure
-placement h
+placement t
 alignment document
 wide false
 sideways false
@@ -2089,7 +2166,7 @@ indent
 
 \end_inset
 
-That the target-to-criterion hierarchy model in Figure 
+The target-to-criterion hierarchy model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -2101,6 +2178,8 @@ tuple "list"
 
 \end_inset
 
+,
+ spanning nine elements,
  introduces a modicum of complexity.
  
 \begin_inset CommandInset citation
@@ -2114,9 +2193,8 @@ literal "false"
 \emph on
 transitive-consistency
 \emph default
- criterion that proscribes —
- analogous to the van Neumann-Morgenstern transitivity axiom —
- circular reasoning 
+ criterion that,
+ analogous to but stronger than the van Neumann-Morgenstern transitivity axiom 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 58"
@@ -2125,17 +2203,55 @@ literal "false"
 
 \end_inset
 
-
+ 
 \begin_inset Formula 
 \begin{equation}
-\left(A\succ B\right)\wedge\left(B\succ C\right)\Rightarrow A\succ C\mbox{.}\label{eq:vonNeumann-Morgernstern-transitivity-1}
+\left(A\succ B\right)\wedge\left(B\succ C\right)\Rightarrow A\succ C\label{eq:vonNeumann-Morgernstern-transitivity-1}
 \end{equation}
 
 \end_inset
 
+proscribes circular reasoning.
+ 
+\end_layout
+
+\begin_layout Standard
 Enforcing this constraint during the comparative-judgement process can prove challenging,
- particluarly as the number of hierarchy-model element grows.
- Representing comparative judgements as a directed graph provides mechanisms to identify violations of transitivity.
+ particluarly as the number of hierarchy-model elements grows.
+ Conventionally,
+ AHP practitioners calculate a 
+\emph on
+Consistency Index
+\emph default
+,
+ which algebraically quantifies the degree to which this transitivity is satisfied (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+).
+ Representing comparative judgements as a directed graph provides an unambiguous mechanism to identify violations of von Neumann-Morgenstern transitivity.
+ 
+\end_layout
+
+\begin_layout Standard
+Alignment of AHP to mainstream decision science involves specification of a utility function.
+ AHP goals do not explicitly represent utilities in the conventional,
+ decision-science sense.
+ AHP practitioners can impose such an association exogenous to the mechanics of the methodolgy itself.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ speak to utility qualities,
+ but do not explicitly articulate a utility function or theory.
  
 \end_layout
 
@@ -2189,6 +2305,68 @@ Pairwise
 \end_layout
 
 \begin_layout Standard
+The cardinality 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ specifies the range of hierarchy-model element pairs that must be considered.
+ Application of comparative judgement imposes an ordering that must subsequently be observed.
+ Consider a hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+ comprised of 
+\begin_inset Formula $n$
+\end_inset
+
+ elements,
+ 
+\begin_inset Formula $\mathfrak{H}\supseteq\left\{ e_{1},\cdots,e_{n}\right\} $
+\end_inset
+
+.
+ Comparative judgement 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+ entails 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ distinct mappings
+\begin_inset Formula 
+\begin{equation}
+(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}\mbox{,}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ denotes a corresponding element of a reciprocal matrix.
+ Avoiding redundancy of effort focuses us on 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ applications of 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+,
+ irrespective of the element pairs' orders.
+ After 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+ however the ordering must be maintained.
+ Subsequently,
+ this provides the directions of our hierarchy-models' graphs' edges.
+ 
+\end_layout
+
+\begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2216,7 +2394,7 @@ tuple "list"
 \end_inset
 
  element pairs.
- Each element pair corresponds to a directed edge for the tournament graph by which the hierarchy model is represented.
+ Each element pair corresponds to an edge for the graph by which the hierarchy model is represented.
 \end_layout
 
 \begin_layout Standard
@@ -2240,11 +2418,36 @@ literal "false"
 
 \end_inset
 
- for each hierarchy-model element pair depicted in the target-to-criterion model.
- We defer construction of coresponding matrices to the next subsection.
+ for each element pair depicted in the target-to-criterion hierarchy model in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains element-pair judgements for each of the criterion-to-alternative models.
+ We defer construction of coresponding reciprocal matrices to the next subsection.
  Explicit depiction of the comparative judgements here contributes to the clarity of present course of reasoning.
- Moreover,
- the directed-graph edge list in Table 
+ In particular,
+ the edge lists in Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:target-criterion-element-judgements"
@@ -2256,7 +2459,19 @@ tuple "list"
 
 \end_inset
 
- provides a key of departure for subsequent extension of the AHP methodology.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ provide a key of departure for subsequent extension of the AHP methodology.
 \end_layout
 
 \begin_layout Standard
@@ -2264,22 +2479,20 @@ Now,
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Table 1"
 key "Saaty1986"
 literal "false"
 
 \end_inset
 
- and 
+ Table 1 and 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Table 1"
 key "Saaty1994"
 literal "false"
 
 \end_inset
 
- specify a 
+ Table 1 offer a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2288,11 +2501,11 @@ fundamental scale
 \end_inset
 
  containing arbitrary,
- subjective heuristics to represent the 
+ subjective heuristics for assignment of 
 \emph on
-intensity of importance
+intensity-of-importance
 \emph default
- between criterion pairs.
+ values to hierarchy-model element pairs.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2327,7 +2540,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Since 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1986"
@@ -2335,7 +2547,8 @@ literal "false"
 
 \end_inset
 
- speaks to preferential ordering,
+ does however speak to preferential ordering and transitive consistency.
+ Consequently,
  alternative,
  more-rigorous importance-intensity assignments can be considered.
  Application of the personal-probability indifference principle arises as one option (
@@ -2362,11 +2575,19 @@ literal "false"
 measurement
 \emph default
 .
- Application of such alternatives in lieu of Saaty's fundamental scale deflects a common critique of AHP's logical rigor.
+ Application of such alternatives in lieu of Saaty's 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ deflects a common critique of AHP's logical rigor.
 \end_layout
 
 \begin_layout Standard
-The construction of Table 
+The construction of Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:target-criterion-element-judgements"
@@ -2378,7 +2599,19 @@ tuple "list"
 
 \end_inset
 
- anticipates its use in defining a directed graph in the sequel.
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ anticipates their use in defining directed graphs in the sequel.
  The AHP literature —
  
 \begin_inset CommandInset citation
@@ -2391,19 +2624,7 @@ literal "false"
 ,
  in particular —
  presccribes nothing about the ordering of element pairs in comparative judgement.
- Construction of Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- employed the following convention.
+ Construction of the tables follows the following convention.
 \end_layout
 
 \begin_layout Itemize
@@ -2415,7 +2636,7 @@ intensity of importance
 \begin_inset Quotes erd
 \end_inset
 
- column with the value greater than unity.
+ column with the value greater than or equal to unity.
 \end_layout
 
 \begin_layout Itemize
@@ -2493,6 +2714,73 @@ fundamental scale
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+That Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains unit-valued importance intensities —
+ hierarchy-model element pairs regarding which comparative-judgement experts were indifferent —
+ raises both interest and a challenge.
+ Four undirected edges appear.
+ This introduces an aspect of complexity.
+ Unit-valued importance intensities imply undirected edges.
+ In such cases,
+ 
+\emph on
+mixed graphs
+\emph default
+ occur:
+ Graphs containing both directed and undirected edges.
+\end_layout
+
+\begin_layout Standard
+We subsequently handle this in construction of the graph Laplacians,
+ on which entropy calculations are based.
+ Our Laplacians must account for both directed and undirected edges,
+ as well as other-than-unity edge weights.
+ Aluded to previously,
+ graph-Laplacian constructions for distinct graph characteristics appear separately in the literature (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wong1985"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2022"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guanlei2025"
+literal "false"
+
+\end_inset
+
+;
+ )
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3895,7 +4183,7 @@ name "tab:criterion-alternative-comparative-judgements"
 
 \end_inset
 
-Comparative-judgements for each element pair within each of the criterion-to-alternative hierarchy models in Figure 
+Comparative judgements for each element pair within each of the criterion-to-alternative hierarchy models in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -4021,6 +4309,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4030,6 +4321,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4039,7 +4333,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4062,6 +4356,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4071,6 +4368,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4080,7 +4380,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4103,6 +4403,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4112,6 +4415,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4121,7 +4427,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -4132,6 +4438,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
 
 \end_layout
 
@@ -4141,6 +4450,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4150,6 +4462,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4159,7 +4474,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4170,6 +4485,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
 
 \end_layout
 
@@ -4179,6 +4497,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4188,6 +4509,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4197,7 +4521,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -4208,6 +4532,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
 
 \end_layout
 
@@ -4217,6 +4544,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4226,6 +4556,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4235,7 +4568,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4246,6 +4579,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4255,6 +4591,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4264,6 +4603,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4273,7 +4615,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4284,6 +4626,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4293,6 +4638,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4302,6 +4650,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4311,7 +4662,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4322,6 +4673,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4331,6 +4685,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4340,6 +4697,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4349,7 +4709,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -4360,6 +4720,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
 
 \end_layout
 
@@ -4369,6 +4732,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4378,6 +4744,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4387,7 +4756,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -4398,6 +4767,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
 
 \end_layout
 
@@ -4407,6 +4779,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4416,6 +4791,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4425,7 +4803,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4436,6 +4814,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
 
 \end_layout
 
@@ -4445,6 +4826,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4454,6 +4838,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4463,7 +4850,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4474,6 +4861,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
 
 \end_layout
 
@@ -4483,6 +4873,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4492,6 +4885,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4501,7 +4897,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4512,6 +4908,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
 
 \end_layout
 
@@ -4521,6 +4920,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4530,6 +4932,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4539,7 +4944,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4550,6 +4955,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
 
 \end_layout
 
@@ -4559,6 +4967,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4568,6 +4979,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4577,7 +4991,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7
 \end_layout
 
 \end_inset
@@ -4588,6 +5002,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
 
 \end_layout
 
@@ -4597,6 +5014,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4606,6 +5026,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4615,7 +5038,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -4626,6 +5049,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
 
 \end_layout
 
@@ -4635,6 +5061,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4644,6 +5073,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4653,7 +5085,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4664,6 +5096,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
 
 \end_layout
 
@@ -4673,6 +5108,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4682,6 +5120,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4691,7 +5132,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4702,6 +5143,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
 
 \end_layout
 
@@ -4711,6 +5155,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4720,6 +5167,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4729,7 +5179,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4740,6 +5190,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
 
 \end_layout
 
@@ -4749,6 +5202,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4758,6 +5214,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4767,7 +5226,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -4778,6 +5237,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
 
 \end_layout
 
@@ -4787,6 +5249,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4796,6 +5261,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4805,7 +5273,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4816,6 +5284,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
 
 \end_layout
 
@@ -4825,6 +5296,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4834,6 +5308,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4843,7 +5320,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -4854,6 +5331,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
 
 \end_layout
 
@@ -4863,6 +5343,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4872,6 +5355,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4881,7 +5367,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4892,6 +5378,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
 
 \end_layout
 
@@ -4901,6 +5390,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4910,6 +5402,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4919,7 +5414,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -4930,6 +5425,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
 
 \end_layout
 
@@ -4939,6 +5437,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4948,6 +5449,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -4957,7 +5461,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -4968,6 +5472,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
 
 \end_layout
 
@@ -4977,6 +5484,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -4986,6 +5496,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -4995,7 +5508,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3
 \end_layout
 
 \end_inset
@@ -5006,6 +5519,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
 
 \end_layout
 
@@ -5015,6 +5531,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
 
 \end_layout
 
@@ -5024,6 +5543,9 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
 
 \end_layout
 
@@ -5033,7 +5555,7 @@ importance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -8876,7 +9398,7 @@ Bayesian Entrepreneurship
 \begin_inset CommandInset href
 LatexCommand href
 name "9780262052160"
-target "https://doi.org/10.7551/mitpress/15918.001.0001"
+target "https://doi.org/10.7551/mitpress/15918.003.0011"
 literal "false"
 
 \end_inset
@@ -9393,8 +9915,10 @@ literal "false"
 \end_inset
 
 Kay,
- John & King,
- Mervyn (2020).
+ J.
+ & King,
+ M.
+ (2020).
  
 \emph on
 Radical Uncertainty
@@ -11298,7 +11822,7 @@ https://doi.org/10.5465/amr.2020.0503
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Zeng, D., et al (2015)"
+label "Zeng, D., et al (2025)"
 key "Zeng2025"
 literal "false"
 
