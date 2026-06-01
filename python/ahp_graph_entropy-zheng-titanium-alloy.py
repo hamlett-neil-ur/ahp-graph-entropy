@@ -259,17 +259,21 @@ judgement_comparison = (read_csv(filepath_or_buffer = path_to_judgement_comparis
                             .set_index(keys = 'hierarchy_model',
                                        drop = True              ))
 
-judgement_graph_label_map = {'current_density' : 'I',
-                             'oxygen_uniformity' : 'UI',
-                             'pressure_drop' : 'ΔP',
-                             'height' : 'H',
-                             'width' : 'W',
-                             'angle' : 'θ',
-                             'objective_criterion' : 'O-C',
-                             'criterion_pressure_drop' : 'C-ΔP',
-                             'criterion_oxygen_uniformity' : 'C-UI',
-                             'criterion_current_desnsity' : 'C-I',
-                             'priority_vector' : 'ωᵢ',
+judgement_graph_label_map = {
+                             'target' : 'TA_opt',
+                             'B1' : 'B1',
+                             'B2' : 'B2',
+                             'B3' : 'B3',
+                             'B4' : 'B4',
+                             'B5' : 'B5',
+                             'B6' : 'B6',
+                             'B7' : 'B7',
+                             'B8' : 'B8',
+                             'B9' : 'B9',
+                             'TA3' : 'TA3',
+                             'TA10' : 'TA10',
+                             'TA36' : 'TA36',
+
                              'reference_factor' : 'element'
                              }
 
@@ -284,7 +288,8 @@ structural_hierarchy = {
                            for hierarchy_model
                            in set(judgement_comparison.index)
                         }
-ho_mc = structural_hierarchy.get('objective_criterion')
+ho_b1 = structural_hierarchy.get('B1')
+ho_target = structural_hierarchy.get('target')
 
 
 
@@ -300,8 +305,7 @@ ho_mc = structural_hierarchy.get('objective_criterion')
 
 #%%
 
-from math import comb
-comb(3,2)
+ho_b1.judgement_graph_plot_axes.get('plot')
 
 
 
@@ -313,7 +317,102 @@ comb(3,2)
 #%%
 
 
+from numpy import sign
+from networkx import circular_layout, draw_networkx_nodes, draw_networkx_labels,draw_networkx_edges
+import matplotlib.pyplot as plt
 
+apply_coordinate_offset = lambda χ : (χ[0] - 0.1 * sign(χ[0]),
+                                      χ[1] - 0.3 * sign(χ[1]))
+
+plt.rcParams['font.style'] = 'italic'
+
+(judgement_graph_figure,
+ judgement_graph_axes   ) = plt.subplots(nrows = 1,
+                                         ncols = 1,
+                                         figsize = (5, 3.75))
+
+
+vertex_positions  = circular_layout(G = ho_b1.comparative_judgement_network)
+edge_widths = [ho_b1.comparative_judgement_network
+                    [edge_tail]
+                    [edge_head]
+                    .get('importance')
+               for (edge_tail,
+                    edge_head)
+               in ho_b1.comparative_judgement_network
+                       .edges()                        ]
+
+graph_edges = draw_networkx_edges(G = ho_b1.comparative_judgement_network,
+                                  pos = vertex_positions,
+                                  width = list(map(lambda ι : 1.25 * ι,
+                                                   edge_widths          )),
+                                  edge_color = '#002540',
+                                  node_size = 3600,
+                                  arrowsize = 18,
+                                  arrowstyle = '-|>',
+                                  connectionstyle = 'arc3,rad=0.1',
+                                  ax = judgement_graph_axes                 )
+hex_address_indexed_graph_edges = {hex(id(patch)) : patch
+                                   for patch
+                                   in graph_edges               }
+
+draw_networkx_nodes(G = ho_b1.comparative_judgement_network,
+                    pos = vertex_positions,
+                    node_size = 3600,
+                    node_color = '#73cbf2',
+                    alpha = 0.9,
+                    edgecolors = '#003459',
+                    linewidths = 5,
+                    ax = judgement_graph_axes                )
+
+
+graph_label_text = draw_networkx_labels(G = ho_b1.comparative_judgement_network,
+                                        pos = vertex_positions,
+                                        labels = {vertex_label : vertex_abbreviation
+                                                  for (vertex_label,
+                                                       vertex_abbreviation)
+                                                  in judgement_graph_label_map.items()
+                                                  if vertex_label 
+                                                  in ho_b1.comparative_judgement_network
+                                                          .nodes()                       },
+                                        font_size = 24,
+                                        font_color = '#003459',
+                                        font_family = 'Times New Roman',
+                                        font_weight = 'bold',
+                                        ax = judgement_graph_axes                               )
+
+graph_edge_head_coordinates = {edge_width : apply_coordinate_offset(arrow_patch.get_path()
+                                                                               .vertices
+                                                                               [2])
+                               for (edge_width,
+                                    arrow_patch)
+                               in dict(zip(edge_widths,
+                                           graph_edges))
+                                         .items()                              } 
+
+graph_edge_head_coordinates =  {edge_hex_index : apply_coordinate_offset(edge_patch_object.get_path()
+                                                                                          .vertices
+                                                                                          [2]        )
+                                for (edge_hex_index,
+                                     edge_patch_object)
+                                in hex_address_indexed_graph_edges.items()                             }
+
+for (edge_weight,
+     edge_head_offset) in graph_edge_head_coordinates.items():
+    judgement_graph_axes.text(x = edge_head_offset[0],
+                              y = edge_head_offset[1],
+                              s = edge_weight,
+                              fontsize = 20,
+                              fontfamily = 'monospace',
+                              color = '#333333',
+                              style = 'normal',
+                              weight = 'semibold',
+                              horizontalalignment = 'center',
+                              verticalalignment = 'center'    )
+
+judgement_graph_axes.margins(0.15)
+judgement_graph_axes.set_axis_off()
+judgement_graph_figure.tight_layout()
 
 
 

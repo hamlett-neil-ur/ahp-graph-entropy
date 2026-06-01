@@ -185,3 +185,13 @@ git reset --soft $(git rev-list --max-parents=0 HEAD)
 git commit --amend -m "Consolidated commit message"
 git push --force-with-lease
 ```
+
+
+### e. Remove previously-staged content from the online repository.
+
+
+```bash
+git rm -r --cached research-materials
+git commit -m "Untrack research-materials directory and enforce .gitignore"
+git push origin main
+```

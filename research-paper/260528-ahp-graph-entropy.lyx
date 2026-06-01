@@ -566,7 +566,7 @@ epistemic
  explorations (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Camuffo2024"
+key "Zellweger2023,Camuffo2024a"
 literal "false"
 
 \end_inset
@@ -725,11 +725,11 @@ literal "false"
 
 \end_inset
 
- applied Shafer's reasoning to quantify evidentiary incompleteness in Bayesian networks,
+ applied Shafer's reasoning approach to quantify evidentiary incompleteness in Bayesian networks,
  a causal-inference methodology commonly employed within the entrepreneurial decision-making community (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Camuffo2024,Ehrig2026"
+key "Camuffo2024b,Ehrig2026"
 literal "false"
 
 \end_inset
@@ -875,7 +875,7 @@ literal "false"
 \emph on
 hierarchy model
 \emph default
- represents this as a tree graph.
+ represents such spans as tree graphs.
  The responsible individual decision maker or a panel of experts then performs
 \emph on
  comparative judgements
@@ -898,7 +898,7 @@ literal "false"
 \end_inset
 
 ).
- A case study subsequently demonstrates AHP's use to rank plausible alternatives.
+ A case study herein demonstrates AHP's use to rank plausible alternatives.
  
 \end_layout
 
@@ -977,7 +977,7 @@ Partially ordered sets with a finite number of elements can be conveniently repr
 \end_inset
 
 .
- Complete DAGs belong to a special class of graphs called 
+ Complete Directed Acyclic Graphs (DAGs) belong to a special class of graphs called 
 \emph on
 tournament graphs
 \emph default
@@ -1283,7 +1283,7 @@ Hierarchy
 \emph default
  term in AHP refers to a hierarchic deconstruction of decisions into contituent elements.
  The AHP method produces a set of decision-element comparative judgements —
- represented by a tournament graph —
+ represented by a complete graph —
  for each hierarchy model.
  
 \begin_inset CommandInset citation
@@ -1301,7 +1301,7 @@ chain rules
  for entropy,
  relative entropy,
  and mutual information.
- Such mechanisms offer a rigorous approach to link hierarchically adjacent tournament graph.
+ Such mechanisms offer a rigorous approach to link hierarchically coupled graphs.
 \end_layout
 
 \begin_layout Paragraph
@@ -1318,7 +1318,7 @@ heavy
 
 \begin_layout Standard
 We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential elements.
- The AHP's machinery however accounts for 
+ The AHP's machinery however introduces 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1346,7 +1346,7 @@ literal "false"
 ).
  That comparative judgements define a graph —
  a network —
- provides the basis of its power.
+ provides the basis of their power.
  Our graph-entropy machinery accounts for the 
 \emph on
 aggegate effect
@@ -1536,7 +1536,8 @@ literal "false"
 \end_inset
 
  The reasoning approach must therefore fit the circumstances resulting from the links above.
- AHP is itself a distinct reasoning approach.
+ AHP is itself a distinct reasoning approach,
+ with accompanying advantages and disadvantages.
  
 \end_layout
 
@@ -1710,8 +1711,8 @@ literal "false"
 \end_inset
 
  employed AHP to select materials from which to construct pipelines for use in an offshore oil and gas project.
- Their analysis considers material-mechanical and -chemical technical details that are tangential to our purposes.
- The AHP mechanics primarily interest us.
+ Their analysis considers metalurgical technical details that are tangential to our purposes.
+ We principally focus on the AHP mechanics.
 \end_layout
 
 \begin_layout Standard
@@ -1905,7 +1906,7 @@ literal "false"
 \begin_layout Standard
 Visual,
  tree-graph depiction of the decision-element hierarchy aids in understanding by human decision-makers.
- Idiosyncratic style notwithstanding,
+ Its idiosyncratic style notwithstanding,
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1919,14 +1920,43 @@ tuple "list"
 \end_inset
 
  follows the ubiquitous pattern originating with 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986,Saaty1994"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty}
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{1986}
+\end_layout
 
 \end_inset
 
 ,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1994}{1994}
+\end_layout
+
+\end_inset
+
+),
  and appearing throughout the MCDM literature.
  Structural elements of Figure 
 \begin_inset CommandInset ref
@@ -2064,7 +2094,7 @@ Alternatives
 \end_inset
 
 ,
- each corresponding to a distinct chemical composition (
+ each corresponding to a distinct Titanium alloy (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -2166,7 +2196,7 @@ indent
 
 \end_inset
 
-The target-to-criterion hierarchy model in Figure 
+That the target-to-criterion hierarchy model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -2178,9 +2208,7 @@ tuple "list"
 
 \end_inset
 
-,
- spanning nine elements,
- introduces a modicum of complexity.
+ spans nine elements introduces a modicum of complexity.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2206,7 +2234,7 @@ literal "false"
  
 \begin_inset Formula 
 \begin{equation}
-\left(A\succ B\right)\wedge\left(B\succ C\right)\Rightarrow A\succ C\label{eq:vonNeumann-Morgernstern-transitivity-1}
+\left(A\succ B\right)\wedge\left(B\succ C\right)\Leftrightarrow A\succ C\label{eq:vonNeumann-Morgernstern-transitivity-1}
 \end{equation}
 
 \end_inset
@@ -2239,7 +2267,7 @@ literal "false"
 
 \begin_layout Standard
 Alignment of AHP to mainstream decision science involves specification of a utility function.
- AHP goals do not explicitly represent utilities in the conventional,
+ AHP goals do not by default correspond to utilities in the conventional,
  decision-science sense.
  AHP practitioners can impose such an association exogenous to the mechanics of the methodolgy itself.
  
@@ -2360,7 +2388,23 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}\:\forall\,i\neq j\mbox{,}\label{eq:comparative-judgement-assignment}
+(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}>0\:\forall\,i\neq j\mbox{,}\label{eq:comparative-judgement-assignment}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+(e_{j},e_{i}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{j,i}=a^{-1}_{i,j}\mbox{, and}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left(e_{i},e_{i}\right):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,i}\equiv1\mbox{,}\label{eq:reciprocal-matrix-diagonal-identity}
 \end{equation}
 
 \end_inset
@@ -2369,7 +2413,11 @@ where
 \begin_inset Formula $a_{i,j}$
 \end_inset
 
- denotes a corresponding element of a reciprocal matrix.
+ denotes the reciprocal-matrix element corresponding to 
+\begin_inset Formula $(e_{i},e_{j})$
+\end_inset
+
+.
  The mapping 
 \begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
 \end_inset
@@ -2398,14 +2446,57 @@ end{subequations}
 \end_inset
 
 Consequently,
- after its application,
- element ordering must be maintained.
- Finally,
+ after applying the comparative judgement 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+,
+ element ordering must be maintained in order to accurately interpret 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+.
+ By (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:comparative-judgement-assignment"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
  
 \begin_inset Formula $a_{i,j}$
 \end_inset
 
- is postive-definite.
+ is positive-definite.
+ The 
+\begin_inset Formula $\binom{n}{2}$
+\end_inset
+
+ distinct mappings exclude the reciprocal-matrix diagonal elements 
+\begin_inset Formula $a_{i,i}$
+\end_inset
+
+,
+ which by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-diagonal-identity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ are axiomatically assigned values of unity.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5330,7 +5421,7 @@ arabic{table}}
 \end_layout
 
 \begin_layout Subsubsection*
-Assignment of intensities of importance.
+Assigning intensities of importance.
 \end_layout
 
 \begin_layout Standard
@@ -5461,7 +5552,7 @@ fundamental scale
 \end_layout
 
 \begin_layout Subsubsection*
-Construction of the comparative-judgement table.
+Constructing comparative-judgement tables.
 \end_layout
 
 \begin_layout Standard
@@ -5501,8 +5592,20 @@ literal "false"
 
 ,
  in particular —
- presccribes nothing about the ordering of element pairs in comparative judgement.
- Construction of the tables follows the following convention.
+ prescribes nothing about the ordering of element pairs in comparative judgement.
+ Construction of Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements,tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ follows the following convention.
 \end_layout
 
 \begin_layout Itemize
@@ -5514,7 +5617,15 @@ intensity of importance
 \begin_inset Quotes erd
 \end_inset
 
- column with the value greater than or equal to unity.
+ column with the value greater than or equal to unity 
+\begin_inset Formula $a_{i,j}\mid(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}\geq1$
+\end_inset
+
+ for each element pair 
+\begin_inset Formula $(e_{i},e_{j})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -5526,8 +5637,16 @@ reference element
 \begin_inset Quotes erd
 \end_inset
 
- column the most-preferred element,
- associated with the prefered intensity-of-importance value.
+ column the corresponding most-preferred element 
+\begin_inset Formula $e_{j}\mid e_{j}\succcurlyeq e_{i}$
+\end_inset
+
+,
+ associated with the prefered intensity-of-importance value 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+.
  This element subsequently corresponds to the head of the directed graph edge connecting the two elements.
 \end_layout
 
@@ -5540,7 +5659,11 @@ comparative element
 \begin_inset Quotes erd
 \end_inset
 
- column the less-preferred element.
+ column with the less-preferred element 
+\begin_inset Formula $e_{i}\mid e_{i}\prec e_{j}$
+\end_inset
+
+.
  This element corresponds to the tail of the directed-graph edge.
 \end_layout
 
@@ -5548,7 +5671,7 @@ comparative element
 This convention imbues two conveniences into the procedure.
  First,
  the structure of the table endogenously contains the directive structure of the graph.
- This simplifies the algorithmic logic used to construct the resultant tournament graph.
+ This simplifies the algorithmic logic used to construct the resultant complete graph.
  Second,
  it inclines us to think of importance intensities in terms as personal probabilities (
 \begin_inset ERT
@@ -5583,7 +5706,7 @@ literal "false"
 
 \end_inset
 
-) in lieu of the arguably problematic 
+) in lieu of the less-widely-recognized problematic 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5612,7 +5735,11 @@ tuple "list"
 \end_inset
 
  contains unit-valued importance intensities —
- hierarchy-model element pairs regarding which comparative-judgement experts were indifferent —
+ occurrences of 
+\begin_inset Formula $(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto1$
+\end_inset
+
+ —
  raises both interest and a challenge.
  Four undirected edges appear.
  This introduces an aspect of complexity.
@@ -5770,11 +5897,27 @@ a_{i,j}=a^{-1}_{j,i}\mbox{,}
 
 \end_inset
 
-and where 
-\begin_inset Formula $\left(e_{i},e_{j}\right)$
+and where values of 
+\begin_inset Formula $a_{i,j}$
 \end_inset
 
- are assigned 
+ are assigned according to 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+ as specified by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:comparative-judgement-assignment,eq:reciprocal-matrix-diagonal-identity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
 \begin_inset ERT
 status open
 
@@ -5786,30 +5929,14 @@ end{subequations}
 
 \end_inset
 
- 
-\end_layout
 
-\begin_layout Subsubsection*
-Weight-vector calculation.
-\end_layout
-
-\begin_layout Paragraph*
-Principal-eigenvectory method.
-\end_layout
-
-\begin_layout Paragraph*
-Geometric-mean method.
-\end_layout
-
-\begin_layout Paragraph*
-Entropy-weight method.
 \end_layout
 
 \begin_layout Standard
-For the O-C model in Table 
+Equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:target-criterion-element-judgements"
+reference "eq:reciprocal-matrix-B1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -5818,8 +5945,113 @@ tuple "list"
 
 \end_inset
 
-,
- this appears as 
+) illustrated reciprocal-matrix construction for criterion-to-alternative hierarchy model 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+A_{B_{1}}=\left(\begin{array}{ccc}
+1 & 3 & \nicefrac{1}{3}\\
+\nicefrac{1}{3} & 1 & \nicefrac{1}{5}\\
+3 & 5 & 1
+\end{array}\right)\label{eq:reciprocal-matrix-B1}
+\end{equation}
+
+\end_inset
+
+It straightforwardly arises from applying the method above to the rows in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Priority-vector calculation.
+\end_layout
+
+\begin_layout Standard
+The AHP-application literature contains different approaches to translating a reciprocial matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ for a hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+ into a priority vector 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+.
+ We summarize here comparisons previously described by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1984"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+First,
+ that 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+ is a projection onto the unit simplex 
+\begin_inset Formula $\Delta^{n}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right.\right\} 
+\]
+
+\end_inset
+
+is highly significant.
+ All AHP calculation results are constrained to the interval 
+\begin_inset Formula $\left[0,\,1\right]$
+\end_inset
+
+.
+ This inlcudes both AHP-calculation results and standardization of inputs demonstrated in a subsequent subsection.
+\end_layout
+
+\begin_layout Paragraph*
+Principal-eigenvector method.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2001a,Saaty2003"
+literal "false"
+
+\end_inset
+
+ strongly argued for the principal eigenvector as the definitive approach to calculating priority vectors 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+.
+ Consider the eigenvector/eigenvalue decomposition
 \begin_inset ERT
 status open
 
@@ -5833,52 +6065,61 @@ begin{subequations}
 
 
 \begin_inset Formula 
-\begin{gather}
-\boldsymbol{A}_{\mbox{O-C}}=\left[\begin{array}{ccc}
-1 & a_{I,\Delta P} & a_{I,UI}\\
-a_{\Delta P,I} & 1 & a_{\Delta P,UI}\\
-a_{UI,I} & a_{UI,\Delta P} & 1
-\end{array}\right]\label{eq:reciprocal-matrix-O-C}\\
-=\left[\begin{array}{ccc}
-1 & 7 & 4\\
-\nicefrac{1}{7} & 1 & \nicefrac{1}{3}\\
-\nicefrac{1}{4} & 3 & 1
-\end{array}\right]\mbox{.}
-\end{gather}
+\begin{equation}
+\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}=\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}
+\end{equation}
 
 \end_inset
 
-Equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:reciprocal-matrix-O-C"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+of the reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
-) follows from Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ for a hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
 \end_inset
 
- and 
+.
+ As usual,
+ 
+\begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
+\end_inset
+
+ denotes a matrix whose dimensions correspond exactly to those of 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+,
+ and whose columns are the eigenvectors thereof.
+ 
+\begin_inset Formula $\boldsymbol{\Lambda}_{\mathfrak{H}}$
+\end_inset
+
+ is a diagonal matrix of the corresponding eigenvalues and 
+\begin_inset Formula $\boldsymbol{\lambda}_{\mathfrak{H}}$
+\end_inset
+
+ a vector of the diagonal elements of 
+\begin_inset Formula $\boldsymbol{\Lambda}_{\mathfrak{H}}$
+\end_inset
+
+ .
+ The principal eigenvalue then appears as
 \begin_inset Formula 
 \begin{equation}
-\begin{array}{c}
-a_{j,i}=a^{-1}_{i,j}\;\forall\,i\neq j\\
-a_{i,i}=1
-\end{array}\mbox{.}\label{eq:reciprocal-matrix-elements}
+\lambda^{\mathcal{P}}_{\mathfrak{H}}=\left[\boldsymbol{\lambda}_{\mathfrak{H}}\right]_{\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}\mbox{.}
+\end{equation}
+
+\end_inset
+
+The priority vector 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+ follows from the principal eigenvector as
+\begin_inset Formula 
+\begin{equation}
+\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}
 \end{equation}
 
 \end_inset
@@ -5895,469 +6136,35 @@ end{subequations}
 
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Standard
-If 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{A}_{O-C}\boldsymbol{X}_{O-C}=\boldsymbol{X}_{O-C}\boldsymbol{\varLambda}_{O-C}\mbox{,}\label{eq:eigenstructure-o-c}
-\end{equation}
-
-\end_inset
-
-represents the eigenvector/eigenvalue decomposition of reciprocal matrix 
-\begin_inset Formula $\boldsymbol{A}_{O-C}$
-\end_inset
-
-,
- the resulting priority vector 
-\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
-\end_inset
-
- becomes the Perron (or principal) eigenvector (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-):
-\begin_inset Formula 
-\begin{equation}
-\left[\boldsymbol{\omega}_{O-C}\right]_{i}=\frac{\left[\boldsymbol{X}_{O-C}\right]_{i,\mbox{argmax}(\boldsymbol{\varLambda}_{O-c})}}{\sum_{i}\left[\boldsymbol{X}_{O-C}\right]_{i,\mbox{argmax}(\boldsymbol{\varLambda}_{O-c})}}\mbox{.}\label{eq:priority-vector-o-c}
-\end{equation}
-
-\end_inset
-
-Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Reciprocal-matrix-and"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- contains the reciprocal matrix 
-\begin_inset Formula $\boldsymbol{A}_{O-C}$
-\end_inset
-
- and the priority vector 
-\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
-\end_inset
-
- resulting from the comparative judgements (Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-) for the PEMFC-performance hierarcy model.
- The results coincide —
- within roundoff precision —
- with those reported by 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "Table 12"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
-literal "false"
-
-\end_inset
-
-.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-renewcommand{
-\backslash
-thetable}{
-\backslash
-arabic{table}a}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float table
-placement h
-alignment document
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Reciprocal-matrix-and"
-
-\end_inset
-
-Reciprocal matrix and priority vector resulting from Table-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- hierarchy model 
-\begin_inset Formula $\boldsymbol{A}_{O-C}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "reciprocal-matrix-priority-vector-o-c"
-
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="5">
-<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-reference
-\end_layout
-
-\begin_layout Plain Layout
-element
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $I$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\omega_{i}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $I$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.705
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{4}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.211
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{7}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.084
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
 \begin_layout Standard
-Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Reciprocal-matrices-and"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- contains the same information for the constituent hierarchy models 
-\begin_inset Formula $C-I$
-\end_inset
-
-,
- 
-\begin_inset Formula $C-UI$
-\end_inset
-
-,
- and 
-\begin_inset Formula $C-\Delta P$
-\end_inset
-
-.
- The results do not coincide as closely with those from 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Saaty2001a"
 literal "false"
 
 \end_inset
 
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "Table 12"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
-literal "false"
-
-\end_inset
-
-,
- which are not reported with high degrees of numerical precision.
- The python 
+ grounds the rationale for this priority-vector choice in the 
 \emph on
-scipy
+Perron-Frobenius Theorem
 \emph default
- library (
+ (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Virtanen2020"
+key "Horn2012,Hawkins2021"
 literal "false"
 
 \end_inset
 
-) produced the 
-\begin_inset Formula $\omega_{i}$
-\end_inset
-
- values in Table 
+).
+ Priority-ordering stability by AHP proves highly sensitive to the transitive consistency of comparative judgements.
+ More-strenuous than von Neumann-Morgenstern transitivity (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Reciprocal-matrices-and"
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -6366,809 +6173,38 @@ tuple "list"
 
 \end_inset
 
-.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
- do not report how their 
-\begin_inset CommandInset href
-LatexCommand href
-name "Table-12"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0060"
-literal "false"
-
-\end_inset
-
- calculations were performed.
- Lacking these details,
- exact reproduction proves difficult.
- 
+),
+ AHP transitivity requires
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
 \backslash
-addtocounter{table}{-1}
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-renewcommand{
-\backslash
-thetable}{
-\backslash
-arabic{table}b}
+begin{subequations}
 \end_layout
 
 \end_inset
 
 
-\begin_inset Float table
-placement h
-alignment center
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Reciprocal-matrices-and"
+\begin_inset Formula 
+\begin{equation}
+a_{i,j}a_{j,k}=a_{i,k}\mbox{.}\label{eq:saaty-ahp-transitivity}
+\end{equation}
 
 \end_inset
 
-Reciprocal matrices and priority vectors based Table-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:target-criterion-element-judgements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- hierarchy models 
-\begin_inset Formula $\boldsymbol{A}_{C-\Delta P}$
-\end_inset
-
-,
+Transitive consistency applies not just to preferential ordering,
+ but also of intensities of importance.
  
-\begin_inset Formula $\boldsymbol{A}_{C-I}$
-\end_inset
-
-,
- 
-\begin_inset Formula $\boldsymbol{A}_{C-UI}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "reciprocal-matrix-priority-vector-constituent"
-
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="6">
-<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-hierarchy
-\end_layout
-
-\begin_layout Plain Layout
-model
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-element
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\omega_{i}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-I$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.230
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-I$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.648
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-I$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.1220
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0856
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.618
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-UI$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.230
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.740
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{7}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0938
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C-\Delta P$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nicefrac{1}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.1666
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-renewcommand{
-\backslash
-thetable}{
-\backslash
-arabic{table}}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-The mechanics illustrated by equations (
+By induction,
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:reciprocal-matrix-O-C,eq:eigenstructure-o-c,eq:priority-vector-o-c"
+reference "eq:saaty-ahp-transitivity"
 plural "false"
 caps "false"
 noprefix "false"
@@ -7177,30 +6213,109 @@ tuple "list"
 
 \end_inset
 
-) are completely general.
- That 
-\begin_inset Formula $\boldsymbol{\omega}_{O-C}$
-\end_inset
-
- is a projection onto the unit simplex 
-\begin_inset Formula $\Delta^{3}$
-\end_inset
-
- where
+) extends to higher orders
 \begin_inset Formula 
-\[
-\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\mid\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right\} 
-\]
+\begin{equation}
+a_{1,2}a_{2,3}\cdots a_{n-1,n}=a_{1,n}\mbox{.}
+\end{equation}
 
 \end_inset
 
- is highly significant.
- All AHP calculation results are constrained to the interval 
-\begin_inset Formula $\left[0,\,1\right]$
+ In fact,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2001a"
+literal "false"
+
+\end_inset
+
+ proves a limiting case
+\begin_inset Formula 
+\begin{equation}
+\lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}=\boldsymbol{\omega}_{\mathfrak{H}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+for some arbitrary positive-definite 
+\begin_inset Formula $\boldsymbol{\omega}$
 \end_inset
 
 .
- This inlcudes both AHP-calculation results and standardization of inputs demonstrated in a subsequent subsection.
+ This associates 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+ with the limiting case of transitive consistency specified by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph*
+Arithmetic- and geometric-mean methods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Forman1996"
+literal "false"
+
+\end_inset
+
+ argued that arithmetic or geometric means provided suitable priority vectors in some cases.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ employed the geometric-mean approach
+\begin_inset Formula 
+\begin{equation}
+\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2001a"
+literal "false"
+
+\end_inset
+
+ demonstrated the accompanying risk of rank-reversal even under near-trivial conditions.
+\end_layout
+
+\begin_layout Paragraph*
+Entropy-weight method.
 \end_layout
 
 \begin_layout Subsection*
@@ -7249,708 +6364,6 @@ consistency indices
  Finally,
  we consider alternative graph-theoretic approaches to mitigate inconsistencies in reasoning.
  
-\end_layout
-
-\begin_layout Subsubsection*
-Types of inconsistencies comparative judgements.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986,Saaty2003"
-literal "false"
-
-\end_inset
-
- expressed concern about four types of inconsistencies that might adversely affect decision making aided by the AHP.
- Such opportunities particularly arise in comparative judgements.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
- seemingly suggested that accomodation of logical inconsistency in the AHP method might be more a feature than a bug:
- 
-\begin_inset Quotes eld
-\end_inset
-
-...a modicum of inconsistency may be considered as a good thing,
- and forced consistency without knowledge of the precise values as an undesirable compulsion.
-\begin_inset Quotes erd
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-The DQ framework strives for sound reasoning.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pant2022"
-literal "false"
-
-\end_inset
-
- articulates the goal of 
-\begin_inset Quotes eld
-\end_inset
-
-...a decision-making process with some constraints wherein the task is to obtain the maximum benefit from the available resources to get the best achievable results.
-\begin_inset Quotes erd
-\end_inset
-
- The consequences to these goals arising from avoidable inconsistencies bear circumspectful consideration.
-\end_layout
-
-\begin_layout Paragraph*
-Circular reasoning.
-\end_layout
-
-\begin_layout Standard
-Expressing the first inconsistency scenario from 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-,
- equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:circular-reasoning-preference-ordering"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-)
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{c}
-A\succ B\mbox{,}\\
-B\succ C\mbox{, and}\\
-C\succ A
-\end{array}\label{eq:circular-reasoning-preference-ordering}
-\end{equation}
-
-\end_inset
-
-exemplifies a preference ordering that contains circular reasoning.
- This obviously codifies a logical contradiction,
- violating the 
-\emph on
-completeness
-\emph default
- and 
-\emph on
-transitivity
-\emph default
- rational-preference constraints of the von-Neumann-Morgenstern axioms (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Kochenderfer2015"
-literal "false"
-
-\end_inset
-
-).
- Furthermore,
- it also violates one of 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{deFinetti1974}{de Finetti's}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{deFinetti1974}{(1974)}
-\end_layout
-
-\end_inset
-
- principles of coherence:
- 
-\begin_inset Quotes eld
-\end_inset
-
-...no limits on the probabilities that an individual may assign,
- except 
-\emph on
-they must not be in contradiction among themselves
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
- (emphasis added).
- 
-\end_layout
-
-\begin_layout Standard
-American mathematician William Thurston argued that 
-\begin_inset Quotes eld
-\end_inset
-
-Mathematics is not about numbers,
- equations,
- computations,
- or algorithms:
- 
-\emph on
-It is about understanding
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
- (quoted in 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "p. 76"
-key "Cook2018"
-literal "false"
-
-\end_inset
-
-;
- emphasis added).
- Applying computational machinery like AHP to a contradictory logical construct does not enhance understanding.
- It invites confusion.
- Alerting producers of contradictory comparative judgements and facilitating elimination of the circular-reasoning instances better serves the goals of sound reasoning (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Spetzler2016"
-literal "false"
-
-\end_inset
-
-) and best-observable results (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pant2022"
-literal "false"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Paragraph*
-Variances between panel members' comparative judgements.
-\end_layout
-
-\begin_layout Standard
-MCDM methods often support group decisions.
- This requires eliciting comparative judgements from a range of experts.
- Panel members will generally provide differing ordering preferences and importance intensities.
- Based on 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-,
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Illustration-of-disparate"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- illustrates cardinal inconsistencies in ordering preferences from comparative judgements by a panel of five experts.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Saaty2003}{Saaty's}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Saaty2003}{(2003)}
-\end_layout
-
-\end_inset
-
- illustration omits importance-intensity estimates.
-\end_layout
-
-\begin_layout Standard
-Aggegation of elicited probabilities from panels of experts has been explored extensively (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Spetzler1975"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Lindley1979"
-literal "false"
-
-\end_inset
-
-;
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Barons2022"
-literal "false"
-
-\end_inset
-
-).
- If each individual contributors' comparative judgements are free of circular reasoning —
- a condition satisfied in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Illustration-of-disparate"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
- —
- then established elicited-probability aggregation methods apply.
- Equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:reciprocal-matrix-elements"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-) provides the mechainsm to apply elicitation-aggregation methods when ordering preferences differ.
-\end_layout
-
-\begin_layout Standard
-Some challenges may accompany the resulting probability distributions.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Cooke2026"
-literal "false"
-
-\end_inset
-
- studied the practice and observed,
- 
-\begin_inset Quotes eld
-\end_inset
-
-Methods based on the 'wisdom of crowds' that aggregate point forecasts of multiple experts are unlikely to yield good performance in such cases,
- regardless of the precise method by which judgments are weighted and aggregated.
-\begin_inset Quotes erd
-\end_inset
-
- The 
-\begin_inset Quotes eld
-\end_inset
-
-fundamental scale
-\begin_inset Quotes erd
-\end_inset
-
- (
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Table 1"
-key "Saaty1994"
-literal "false"
-
-\end_inset
-
-) elicits such point estimates.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "LiH2025"
-literal "false"
-
-\end_inset
-
- explored elicitation of comparative judgements as interval estimates to circumvent this difficulty.
- 
-\begin_inset Float table
-placement t
-alignment center
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Illustration-of-disparate"
-
-\end_inset
-
-Illustration of disparate preference orderings from parwise judgments by a panel of five experts.
- (After 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "illustrative-preference-ordering-diparities"
-
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="5">
-<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<column alignment="center" valignment="top" color="default">
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ordering
-\end_layout
-
-\begin_layout Plain Layout
-preference 1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-incidence
-\end_layout
-
-\begin_layout Plain Layout
-preference 1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ordering
-\end_layout
-
-\begin_layout Plain Layout
-preference 2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-incidence
-\end_layout
-
-\begin_layout Plain Layout
-preference 2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-incidence
-\end_layout
-
-\begin_layout Plain Layout
-total
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\succ B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $B\succ A$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $B\succ C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C\succ B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row color="default">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\succ C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $C\succ A$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph*
-Longitudinal comparative-judgement inconsistencies.
-\end_layout
-
-\begin_layout Standard
-Finally,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty2003"
-literal "false"
-
-\end_inset
-
- expresses concern that 
-\begin_inset Quotes eld
-\end_inset
-
-...people would be required to be like robots unable to change their minds with new evidence...
-\begin_inset Quotes erd
-\end_inset
-
-.
- Nothing elsewhere in the literature defining the AHP methodology proscribes such standard Bayesian updating (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986,Saaty1987,Saaty1994"
-literal "false"
-
-\end_inset
-
-).
- In fact,
- recent research explicitly adapts AHP to Bayesian patterns of reasoning (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Merrick2005,Altuzarra2007,LiH2025"
-literal "false"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Paragraph*
-Transitive inconsistencies.
 \end_layout
 
 \begin_layout Standard
@@ -8944,8 +7357,52 @@ https://doi.org/10.1016/j.enconman.2025.120952
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "Camuffo, et al (2024)"
-key "Camuffo2024"
+label "Camuffo, et al (2024a)"
+key "Camuffo2024a"
+literal "false"
+
+\end_inset
+
+Camuffo,
+ A.,
+ 
+\emph on
+et al
+\emph default
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A scientific approach to entrepreneurial decision-making:
+ Large-scale replication and extension.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Strategic Management Journal
+\emph default
+:
+ 45(6):1209-1237.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1002/smj.3580
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Camuffo, et al (2024b)"
+key "Camuffo2024b"
 literal "false"
 
 \end_inset
@@ -8981,6 +7438,7 @@ https://doi.org/10.1287/stsc.2024.0173
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -9944,18 +8402,91 @@ Hastie,
 The Elements of Statistical Learning
 \emph default
 .
+ Cham,
+ CH:
  Springer Nature.
+ ISBN:
  
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-https://doi.org/10.1007/978-0-387-84858-7
-\end_layout
+\begin_inset CommandInset href
+LatexCommand href
+name "9780387848587"
+target "https://doi.org/10.1007/978-0-387-84858-7"
+literal "false"
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hawkins (2021)"
+key "Hawkins2021"
+literal "false"
+
+\end_inset
+
+Hawkins,
+ J.
+ (2021).
+ 
+\emph on
+Ergodic Dynamics
+\emph default
+.
+ Cham,
+ CH:
+ Springer Nature.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9783030592424"
+target "https://doi.org/10.1007/978-3-030-59242-4"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Horn & Johnson (2012)"
+key "Horn2012"
+literal "false"
+
+\end_inset
+
+Horn,
+ R.
+ A.
+ & Johnson,
+ C.
+ R.
+ (2012).
+ 
+\emph on
+Matrix Analysis
+\emph default
+.
+ Cambridge,
+ UK:
+ Cambridge University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780511810817"
+target "https://doi.org/10.1017/CBO9780511810817"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -10981,6 +9512,48 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1287/inte.24.6.19
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty & Vargas (1984)"
+key "Saaty1984"
+literal "false"
+
+\end_inset
+
+Saaty T.,
+ L.
+ & Vargas,
+ L.
+ G.
+ (1984).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Inconsistency and rank preservation.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Mathematical Psychology
+\emph default
+:
+ 28(2):205-214.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/0022-2496(84)90027-0
 \end_layout
 
 \end_inset
