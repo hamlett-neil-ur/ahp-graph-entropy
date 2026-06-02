@@ -628,17 +628,11 @@ data-processing inequality
 \end_inset
 
  Corroborating from a statistical-learning perspective,
- Hastie,
- Tibshirani,
- Friedman 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Hastie2009}{(2009)}
-\end_layout
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hastie2009"
+literal "false"
 
 \end_inset
 
@@ -1623,7 +1617,7 @@ indent
 \end_inset
 
 Now,
- use of AHP by no means suffices to achieve DQ.
+ the use of AHP by no means suffices to achieve DQ.
  Thoughtful application of AHP does adress a subset of DQ's links.
  Injudiciously applied,
  it does not however guarantee satisfaction of the von Neumann-Morgenstern axioms 
@@ -1744,7 +1738,7 @@ This case is recent
 .
  Given that the AHP literature spans decades,
  a reader might succomb to the temptation to conclude that the method is anochronistic.
- Our case here demonstrates the application of AHP to a contemporary design problem for an economically essential application.
+ Our case here demonstrates the application of AHP to a contemporary design problem for an economically meaningful application.
 \end_layout
 
 \begin_layout Enumerate
@@ -1865,7 +1859,7 @@ Material selection of titanium alloy
 \begin_inset Quotes erd
 \end_inset
 
- Their nine criteria include eight mechanics-of-material characteristics,
+ Their nine criteria include eight metalurgical characteristics,
  
 \begin_inset Formula $B_{1}\mbox{,}\cdots,B_{8}$
 \end_inset
@@ -1881,7 +1875,7 @@ Material selection of titanium alloy
 \end_layout
 
 \begin_layout Standard
-The constituent criterion-to-alternative hierarchy models address how each of the candidate chemical compositions address the alternatives.
+The constituent criterion-to-alternative hierarchy models address how each of the candidate alloys address the metalurgical desidirata.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1890,7 +1884,7 @@ literal "false"
 
 \end_inset
 
- describe an extensive material-testing regime to ascertain the the performance of each with respect to the material-mechanical criteria.
+ describe an extensive material-testing regime to ascertain the the performance of each alloy with respect to the metalurgicasl criteria.
  Although comparative judgments introduce subjective aspects to the material-selection decision,
  
 \begin_inset CommandInset citation
@@ -2118,7 +2112,7 @@ literal "false"
  showing all of them clutters the hierarch-model depiction.
  
 \begin_inset Float figure
-placement t
+placement h
 alignment document
 wide false
 sideways false
@@ -2222,7 +2216,7 @@ literal "false"
 transitive-consistency
 \emph default
  criterion that,
- analogous to but stronger than the van Neumann-Morgenstern transitivity axiom 
+ analogous to but stronger than the von Neumann-Morgenstern transitivity axiom 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 58"
@@ -2234,7 +2228,7 @@ literal "false"
  
 \begin_inset Formula 
 \begin{equation}
-\left(A\succ B\right)\wedge\left(B\succ C\right)\Leftrightarrow A\succ C\label{eq:vonNeumann-Morgernstern-transitivity-1}
+\left(A\succ B\right)\wedge\left(B\succ C\right)\Leftrightarrow A\succ C\mbox{,}\label{eq:vonNeumann-Morgernstern-transitivity-1}
 \end{equation}
 
 \end_inset
@@ -5626,6 +5620,16 @@ intensity of importance
 \end_inset
 
 .
+ If 
+\begin_inset Formula $(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{i,j}<1$
+\end_inset
+
+,
+ then pick 
+\begin_inset Formula $(e_{j},e_{i}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{j,i}\geq1$
+\end_inset
+
+ instead.
 \end_layout
 
 \begin_layout Itemize
@@ -6035,6 +6039,23 @@ is highly significant.
 \end_layout
 
 \begin_layout Paragraph*
+Summary of priority-vector approaches.
+\end_layout
+
+\begin_layout Standard
+We summarize here comparisons previously described by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1984"
+literal "false"
+
+\end_inset
+
+.
+ We also make passing observation of a more-empirical approach to obtaining priority vectors.
+\end_layout
+
+\begin_layout Subparagraph*
 Principal-eigenvector method.
 \end_layout
 
@@ -6107,7 +6128,7 @@ of the reciprocal matrix
  The principal eigenvalue then appears as
 \begin_inset Formula 
 \begin{equation}
-\lambda^{\mathcal{P}}_{\mathfrak{H}}=\left[\boldsymbol{\lambda}_{\mathfrak{H}}\right]_{\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}\mbox{.}
+\lambda^{\mathcal{P}}_{\mathfrak{H}}=\left[\boldsymbol{\lambda}_{\mathfrak{H}}\right]_{\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}\mbox{.}\label{eq:reciprocal-matrix-principal-eigenvector}
 \end{equation}
 
 \end_inset
@@ -6119,7 +6140,7 @@ The priority vector
  follows from the principal eigenvector as
 \begin_inset Formula 
 \begin{equation}
-\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}
+\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
 \end{equation}
 
 \end_inset
@@ -6233,7 +6254,7 @@ literal "false"
  proves a limiting case
 \begin_inset Formula 
 \begin{equation}
-\lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}=\boldsymbol{\omega}_{\mathfrak{H}}
+\lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}=\boldsymbol{\omega}_{\mathfrak{H}}\label{eq:limit-perron-eigenvalue-definition}
 \end{equation}
 
 \end_inset
@@ -6250,7 +6271,7 @@ end{subequations}
 
 \end_inset
 
-for some arbitrary positive-definite 
+given some arbitrary positive-definite 
 \begin_inset Formula $\boldsymbol{\omega}$
 \end_inset
 
@@ -6274,8 +6295,8 @@ tuple "list"
 ).
 \end_layout
 
-\begin_layout Paragraph*
-Arithmetic- and geometric-mean methods.
+\begin_layout Subparagraph*
+Geometric-mean methods.
 \end_layout
 
 \begin_layout Standard
@@ -6298,12 +6319,15 @@ literal "false"
  employed the geometric-mean approach
 \begin_inset Formula 
 \begin{equation}
-\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}
+\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty2001a"
@@ -6311,11 +6335,3436 @@ literal "false"
 
 \end_inset
 
- demonstrated the accompanying risk of rank-reversal even under near-trivial conditions.
+ demonstrated the accompanying risk of rank-reversal with this approach even under near-trivial conditions.
+ Nonetheless,
+ when a high degree of comparative-judgement transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) occurs,
+ results from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) converge to those produced by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ The approach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) offers transparency and reproducibility advantages.
+\end_layout
+
+\begin_layout Subparagraph*
+Entropy-weight method.
+\end_layout
+
+\begin_layout Standard
+Now,
+ the priority-vector methods based on subjectively based comparative judgements.
+ Sometimes more-empirical bases for priority vectors become beneificial.
+ This allows for consideration of phenomenological information exogenous to the comparative judgements.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Entropy-Weight Method 
+\emph default
+provides such an approach.
+ Examples of its use appear in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Qu2022,Shen2023,Ren2025"
+literal "false"
+
+\end_inset
+
+.
+ It requires a larger number of alternanitives than 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ considered.
+ Practically,
+ one normalizes —
+ standardizes to a scale in 
+\begin_inset Formula $\left[0,\,1\right]$
+\end_inset
+
+ —
+ the measurements to which priority vectors are applied.
+ A series of calculations including entropy leads to an emprically-based priority vector.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ applied a hybrid approach to the design of fuel cells.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pemfc-hierarchy-model"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ reproduces their hierarchy model.
+ The intermediate criteria 
+\begin_inset Formula $I$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Delta P$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $UI$
+\end_inset
+
+ represent device physical-operating parameters.
+ The subcriteria 
+\begin_inset Formula $Angle$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Width$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $Height$
+\end_inset
+
+ correspond to geometric design parameters.
+ 
+\begin_inset Float figure
+placement h
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hierarchy model used in design of Proton-Exchange Membrane Fuel Cell (PEMFC).
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 5"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0196890425014761-gr5_lrg.jpg"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "pemfc-hierarchy-model"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/2605 energy confersion and mgmt — multi-crieterion evaluation of symmetric ⋯ fig 5.jpg
+	lyxscale 15
+	width 3.25in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ performed computational simulations to establish relationships between the device-geometry subcriteria and the operating parameters.
+ These simulation results led to an emprical basis for an entropy-based priority vector.
+ Combining this with a priority vector based on comparative judgements produced a 
+\begin_inset Quotes eld
+\end_inset
+
+hybrid
+\begin_inset Quotes erd
+\end_inset
+
+ priority vector on which their design decision was based.
 \end_layout
 
 \begin_layout Paragraph*
-Entropy-weight method.
+Priority vectors used for pipeline-material selection.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ lists the proirity vectors for each hierarchy model depicted by Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "case-study-hierarchy-model"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ based on the comparative judgements in Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements,tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ The priority vector 
+\begin_inset Formula $\boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}}$
+\end_inset
+
+ values result from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ In the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathds{L}^{2}$
+\end_inset
+
+ distance
+\begin_inset Quotes erd
+\end_inset
+
+ column,
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) produces 
+\begin_inset Formula $\boldsymbol{\omega}^{\text{(GM)}}_{\mathfrak{H}}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+ hierarchy model corresponds to the 
+\begin_inset Quotes eld
+\end_inset
+
+Target
+\begin_inset Quotes erd
+\end_inset
+
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "case-study-hierarchy-model"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By visual comparison between Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 25"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr25_lrg.jpg"
+literal "false"
+
+\end_inset
+
+ (and 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 12"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl12"
+literal "false"
+
+\end_inset
+
+) from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+,
+ the proirity-vector values for hierarchy models 
+\begin_inset Formula $B_{1},\cdots,B_{9}$
+\end_inset
+
+ coincide exactly.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathds{L}^{2}$
+\end_inset
+
+ distance
+\begin_inset Quotes erd
+\end_inset
+
+ column in the former indicates negligible differences between 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\end_inset
+
+ calculated by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The priority-vector values for the 
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+ hierarchy model differ from those reported by 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 11"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl11"
+literal "false"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ differ from those in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ in about the fifth significant digit.
+ This is consistent with the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathds{L}^{2}$
+\end_inset
+
+ distance
+\begin_inset Quotes erd
+\end_inset
+
+ column.
+ As the hierarchy-model element span expands,
+ achieving transitive consistency (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) becomes increasingly difficult.
+ Comensurately,
+ the equivalence between (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) becomes increasingly tenuous.
+ 
+\end_layout
+
+\begin_layout Standard
+For large sets of alternatives,
+ the divergence between priority vectors based on (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) increases the likelihood of rank reversal for the latter.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Priority vectors for pipeline-material selection case study 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ based on comparative judgements in Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements,tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "material-selection-priority-vectors"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="37" columns="4">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hierarchy
+\end_layout
+
+\begin_layout Plain Layout
+model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+element
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $e_{\mathfrak{H}_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+priority 
+\end_layout
+
+\begin_layout Plain Layout
+vector 
+\begin_inset Formula $\boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathds{L}^{2}$
+\end_inset
+
+ distance
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\Vert \boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}}-\boldsymbol{\omega}^{\text{(GM)}}_{\mathfrak{H}}\right\Vert $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.850E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1047
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6369
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1047
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.560E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6369
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.850E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1047
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6369
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2493
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.003E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1571
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5936
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2426
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.329E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0879
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6694
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2493
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.003E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1571
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5936
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6370
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.489E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2583
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1047
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+7.704E-34
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1220
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6483
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2583
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.850E-32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1047
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.6370
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1436
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5.473E-05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0462
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.1156
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0353
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0858
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0711
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.3793
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0361
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -6374,70 +9823,12 @@ literal "false"
 
 \end_inset
 
- defines a criterion for transitive consistency 
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{c}
-a_{i,j}\,a_{j,k}=a_{i,k}\\
-\mbox{where}\:a_{i,j}=[\boldsymbol{A}_{\mathfrak{H}}]_{i,j}
-\end{array}\label{eq:transitive-judgement-consistency}
-\end{equation}
-
-\end_inset
-
-for reciprocity matrix 
-\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
-\end_inset
-
- associated with hierarchy model 
-\begin_inset Formula $\mathfrak{H}$
-\end_inset
-
-.
- This provides the basis for consistency indices.
- Now,
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:transitive-judgement-consistency"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-) imposes a stronger constraint than the von Neumann-Morgenstern transitivity axiom previously stated in (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vonNeumann-Morgernstern-transitivity-1"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-),
- which only constrains transitivity of ordering preferences.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
-
-\end_inset
-
  contains an extensive set of definitions,
  axioms,
  and theorems culminating in the demonstration that,
  if the eigenvector/eigenvalue decomposition of a 
 \emph on
-consistent
+perfectly consistent
 \emph default
  reciprocal matrix 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
@@ -6483,7 +9874,7 @@ end{subequations}
 
 \end_inset
 
- where 
+where 
 \begin_inset Formula $n$
 \end_inset
 
@@ -6496,6 +9887,19 @@ end{subequations}
 \end_inset
 
 .
+ Such a matrix invariantly satisfies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity,eq:limit-perron-eigenvalue-definition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -6538,7 +9942,18 @@ tuple "list"
 \end_inset
 
 ),
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 CI=\frac{\lambda_{\mathfrak{H}}-n}{n-1}\label{eq:reciprocal-consistency-index}
@@ -6597,6 +10012,18 @@ CR=\frac{CI}{RI}\label{eq:reciprocal-consistency-ratio}
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
 accompanies the consistency index.
  In (
 \begin_inset CommandInset ref
@@ -6624,25 +10051,7 @@ tuple "list"
 \begin_inset Formula $RI$
 \end_inset
 
- values are commonly repeated,
- such as 
-\begin_inset CommandInset href
-LatexCommand href
-name "Table 6"
-target "https://www.sciencedirect.com/science/article/pii/S0196890425014761?via%3Dihub#t0030"
-literal "false"
-
-\end_inset
-
- in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
-\end_inset
-
-.
+ values are commonly repeated.
  Reproducing the common result with higher numerical precision,
  
 \begin_inset CommandInset citation
@@ -6653,14 +10062,26 @@ literal "false"
 \end_inset
 
  reported 
-\begin_inset Formula $RI=0.4887$
+\begin_inset Formula $RI_{3}=0.4887$
 \end_inset
 
  for reciprocal-matrix order 
 \begin_inset Formula $n=3$
 \end_inset
 
+ and 
+\begin_inset Formula $RI_{9}=1.3733$
+\end_inset
+
+ for 
+\begin_inset Formula $n=9$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Subsubsection*
+Consistency-index values for the material-selection case study.
 \end_layout
 
 \begin_layout Standard
@@ -6676,40 +10097,14 @@ tuple "list"
 
 \end_inset
 
- contains the consistency analysis for the hierarchy models on which 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
-
+ lists 
+\begin_inset Formula $CI$
 \end_inset
 
- was based.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pant2022"
-literal "false"
-
-\end_inset
-
- cited a threshold 
-\begin_inset Formula $CR_{\mathfrak{H}}\lesssim0.1$
-\end_inset
-
-,
- above which one 
-\begin_inset Quotes eld
-\end_inset
-
-...questions the credibility of judgements.
-\begin_inset Quotes erd
-\end_inset
-
- Comparative-judgement transitivity (
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:transitive-judgement-consistency"
+reference "eq:reciprocal-consistency-index"
 plural "false"
 caps "false"
 noprefix "false"
@@ -6718,18 +10113,109 @@ tuple "list"
 
 \end_inset
 
-) provides the basis for creduilty,
- here.
+),
  
-\end_layout
-
-\begin_layout Standard
-By this criterion,
- the 
-\begin_inset Formula $CR_{C-UI}$
+\begin_inset Formula $CR$
 \end_inset
 
- value in Table 
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-ratio"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ 
+\begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-principal-eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ and the order of 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ for each of the ten hierarchy models defined by Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ As with the priority vectors,
+ the values for 
+\begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
+\end_inset
+
+ coincide almost exactly with those in 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 12"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl12"
+literal "false"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $CI$
+\end_inset
+
+ and 
+\begin_inset Formula $CR$
+\end_inset
+
+ differe slightly since 
+\begin_inset Formula $RI$
+\end_inset
+
+ values based 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Donhegan1991"
+literal "false"
+
+\end_inset
+
+ —
+ which contain greater numerical precision —
+ do not exactly coincide.
+ Comparable similarities occur for the target model 
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+ between Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Consistency-indices-for"
@@ -6741,34 +10227,27 @@ tuple "list"
 
 \end_inset
 
- raises questions about the consistency of reasoning in comparative judgements underlying the 
-\begin_inset Formula $C-UI$
-\end_inset
-
- hierarchy model.
- Not-reproduced results in 
+ values and those from 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bu2026"
+key "Zeng2025"
 literal "false"
 
 \end_inset
 
- reported a lower value for 
-\begin_inset Formula $CR_{C-UI}$
-\end_inset
-
-,
- albeit much closer to the threshold in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pant2022"
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 11"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl11"
 literal "false"
 
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement document
 alignment center
@@ -6786,7 +10265,27 @@ name "tab:Consistency-indices-for"
 
 \end_inset
 
-Consistency indices for hierarchy models in PEMFC-design case study.
+Consistency indices for hierarchy models defined by Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ from the offshore-pipeline material-selection case study (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \end_inset
@@ -6794,13 +10293,13 @@ Consistency indices for hierarchy models in PEMFC-design case study.
 
 \begin_inset CommandInset label
 LatexCommand label
-name "pemfc-case-consistency-indices"
+name "material-selection-case-consistency-indices"
 
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
+<lyxtabular version="3" rows="11" columns="5">
 <features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
 <column alignment="center" valignment="top" color="default">
 <column alignment="center" valignment="top" color="default">
@@ -6816,8 +10315,35 @@ hierarchy
 \end_layout
 
 \begin_layout Plain Layout
-model (
 \begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $CI$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-index"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
 \end_inset
 
 )
@@ -6829,10 +10355,26 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\lambda_{\mathfrak{Y}}$
+\begin_inset Formula $CR$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-ratio"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -6841,22 +10383,26 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $n_{\mathfrak{H}}$
+\begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
-
+ 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Formula $CI_{\mathfrak{H}}$
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-principal-eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
@@ -6865,7 +10411,11 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $CR_{\mathfrak{H}}$
+order
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
 
@@ -6879,7 +10429,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $O-C$
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{1}$
 \end_inset
 
 
@@ -6891,7 +10455,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.032
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0193
 \end_layout
 
 \end_inset
@@ -6900,7 +10478,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.039
 \end_layout
 
 \end_inset
@@ -6909,7 +10501,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0162
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.039
 \end_layout
 
 \end_inset
@@ -6918,7 +10524,7 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.033
+3
 \end_layout
 
 \end_inset
@@ -6929,7 +10535,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $C-I$
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{2}$
 \end_inset
 
 
@@ -6941,7 +10561,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.004
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0193
 \end_layout
 
 \end_inset
@@ -6950,7 +10584,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.039
 \end_layout
 
 \end_inset
@@ -6959,7 +10607,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0018
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.039
 \end_layout
 
 \end_inset
@@ -6968,48 +10630,634 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0193
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0268
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.055
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.054
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0035
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.007
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.007
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0268
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.055
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.054
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0192
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
 0.004
 \end_layout
 
 \end_inset
 </cell>
-</row>
-<row color="default">
 <cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $C-UI$
-\end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.136
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0678
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.004
 \end_layout
 
 \end_inset
@@ -7018,7 +11266,113 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.139
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0193
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.040
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
 \end_layout
 
 \end_inset
@@ -7029,7 +11383,7 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $C-\Delta P$
+\begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
 
@@ -7041,7 +11395,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.014
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.0702
 \end_layout
 
 \end_inset
@@ -7050,7 +11418,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-3
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.051
 \end_layout
 
 \end_inset
@@ -7059,7 +11441,21 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0071
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+9.562
 \end_layout
 
 \end_inset
@@ -7068,7 +11464,7 @@ model (
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+9
 \end_layout
 
 \end_inset
@@ -7081,10 +11477,139 @@ model (
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+The coincidence between 
+\begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
+\end_inset
+
+ and the order of 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Consistency-indices-for"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ provides the raw indication of the extent to which (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-consistency-condition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) is satisfied.
+ Except for the 
+\begin_inset Formula $TA_{\text{opt}}$
+\end_inset
+
+ hierarchy mnodel,
+ the quantities coincide very closely.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
+
+\end_inset
+
+ identify the heuristic 
+\begin_inset Formula $CR\apprle0.1$
+\end_inset
+
+ as a 
+\begin_inset Quotes eld
+\end_inset
+
+good-enough
+\begin_inset Quotes erd
+\end_inset
+
+ condition for most purposes.
+ All of the 
+\begin_inset Formula $CR$
+\end_inset
+
+ values in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Consistency-indices-for"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ meet this condition.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ describes a procedure to 
+\begin_inset Quotes eld
+\end_inset
+
+...transform a positive reciprocal matrix to a near-consistent matrix.
+\begin_inset Quotes erd
+\end_inset
+
+ This involves applying perturbations to the matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ following a procedure described by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Harker1987"
+literal "false"
+
+\end_inset
+
+.
+ Performing such a procedure may lead to an epistemic conundrum:
+ One applies algorithmic logic to override comparative judgements.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ elsewhere argued that 
+\begin_inset Quotes eld
+\end_inset
+
+When we deal with tangibles,
+ a pairwise comparison judgment matrix may be perfectly consistent but irrelevant and far off the mark of the true values.
+ For several reasons a modicum of inconsistency may be considered as a good thing and forced consistency without knowledge of the precise values as an undesirable compulsion.
+\begin_inset Quotes erd
 \end_inset
 
 
@@ -8217,6 +12742,9 @@ label{ref:Guanlei2025}
 \end_inset
 
 Relative entropy based uncertainty principles for graph signals.
+\begin_inset Quotes erd
+\end_inset
+
  
 \emph on
 Signal Processing
@@ -8362,6 +12890,47 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1142/9789811296475_0002
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Harker (1987)"
+key "Harker1987"
+literal "false"
+
+\end_inset
+
+Harker,
+ P.
+ T.
+ (1987).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Derivatives of the Perron root of a positive reciprocal matrix:
+ With application to the analytic hierarchy process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Applied Mathmatics and Computation
+\emph default
+:
+ 22(2-3):217-232.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/0096-3003(87)90043-9
 \end_layout
 
 \end_inset
@@ -9394,6 +13963,49 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Qu, et al (2022)"
+key "Qu2022"
+literal "false"
+
+\end_inset
+
+Qu,
+ W.,
+ 
+\emph on
+et al
+\emph default
+ (2022).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Entropy-Weight-Method-Based Integrated Models for Short-Term Intersection Traffic Flow Prediction.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Entropy
+\emph default
+:
+ 24(7):849.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.3390/e24070849
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Ren & Sun (2025)"
 key "Ren2025"
 literal "false"
@@ -10084,7 +14696,11 @@ AHP-entropy Weight Method Based Comprehensive Evaluation Approach for Distributi
 \begin_inset Quotes erd
 \end_inset
 
- 2023 3rd International Conference on New Energy and Power Engineering (ICNEPE),
+ 
+\emph on
+Proceedings of the 3rd International Conference on New Energy and Power Engineering
+\emph default
+ (ICNEPE),
  November 24-26,
  2023,
  Huzhou,

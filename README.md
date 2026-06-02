@@ -6,7 +6,7 @@
 
 ## Draft research paper. 📝 
 
-[`260526-ahp-graph-entropy.pdf`](./research-paper/260528-ahp-graph-entropy.pdf).
+[`260528-ahp-graph-entropy.pdf`](./research-paper/260528-ahp-graph-entropy.pdf).
 
 ## 𝓣𝓸 𝓓𝓸. 🏗️🧱👷
 
