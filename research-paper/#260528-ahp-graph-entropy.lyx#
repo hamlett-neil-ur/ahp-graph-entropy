@@ -130,7 +130,7 @@
     \small \includegraphics[height=1.375\baselineskip]{graphics/ORCID-ID-icon-1.png}\textnormal{ORCID: \href{https://orcid.org/0000-0001-8278-0087}{0000-0001-8278-0087}}
 }
 
-\date{\normalsize \today}
+\date{\normalsize Updated: \today}
 
 % --- Activation and Overrides ---
 \AtBeginDocument{
@@ -358,7 +358,7 @@ pairwise comparisons
 \begin_inset Quotes erd
 \end_inset
 
-) produce lists of edges for a complete graph.
+) between elements of a given hierarchy model produce lists of edges for a complete graph.
  Under certain conditions,
  such graphs are also directed and acyclic,
  belonging to the class of tournament graphs.
@@ -883,7 +883,7 @@ hierarchy model
 \begin_inset Quotes erd
 \end_inset
 
- in the tree graph (
+ in a tree graph (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Saaty1994"
@@ -929,12 +929,20 @@ literal "false"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Lukinskiy2025,Sáenz-Royo(2026)"
+key "Lukinskiy2025"
 literal "false"
 
 \end_inset
 
- studied methods to improve the rubustness of expert inputs into comparative judgements.
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sáenz-Royo(2026)"
+literal "false"
+
+\end_inset
+
+studied methods to improve the rubustness of expert inputs into comparative judgements.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1081,6 +1089,61 @@ literal "false"
  
 \end_layout
 
+\begin_layout Standard
+Evidentiary strength relates to the concept of 
+\emph on
+Value of Information
+\emph default
+ on which the disciplines Information Economics (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Birchler2007"
+literal "false"
+
+\end_inset
+
+) and Decision Analysis (
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Chapter 18"
+key "Howard2016"
+literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abbas2025"
+literal "false"
+
+\end_inset
+
+) are substantially based.
+ The present investigation proposes an information-theoretic perspective.
+ In contrast,
+ information economics and decision analaysis emphasize utility values of information.
+ Although,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Birchler2007"
+literal "false"
+
+\end_inset
+
+ do invoke information-theoretic and probabilistic state-space (along the lines of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "deFinetti1974"
+literal "false"
+
+\end_inset
+
+) concepts in their study of information economics.
+\end_layout
+
 \begin_layout Paragraph*
 By what mechanism do we infer the differential information between hierarchically-adjacent AHP hierarchy models?
 \end_layout
@@ -1114,52 +1177,10 @@ literal "false"
 
 ;
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Guanlei2025}{Guanlei}
-\end_layout
-
-\end_inset
-
-,
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Guanlei2025}{Xiaogang}
-\end_layout
-
-\end_inset
-
-,
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Guanlei2025}{Xiaotong}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Guanlei2025}{(2025}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guanlei2025"
+literal "false"
 
 \end_inset
 
@@ -1191,57 +1212,19 @@ weighted
 \emph default
  edges.
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Brown2020}{Brown}
-\end_layout
-
-\end_inset
-
-,
- 
-\emph on
-et al
-\emph default
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Brown2020}{(2020)}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
 
 \end_inset
 
  analyzed directed graphs with unweighted (uniformly unit-weighted) edges.
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Chen2015}{Chen}
-\end_layout
-
-\end_inset
-
-,
- et al 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Chen2015}{(2015)}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2015"
+literal "false"
 
 \end_inset
 
@@ -1311,7 +1294,7 @@ heavy
 \end_layout
 
 \begin_layout Standard
-We might intiutively expect that individual comparative judgements suffice to inform us about the most-influential elements.
+One might intiutively assume that individual comparative judgements suffice to inform us about the most-influential elements.
  The AHP's machinery however introduces 
 \begin_inset Quotes eld
 \end_inset
@@ -1477,7 +1460,11 @@ literal "false"
 
 \begin_layout Itemize
 By definition,
- the act of deciding involves selection of one or more options from a discrete,
+ the act of deciding 
+\emph on
+requires
+\emph default
+ selection of one or more options from a discrete,
  precisely defined set of 
 \emph on
 Creative Alternatives
@@ -1661,7 +1648,7 @@ literal "false"
 
 \end_inset
 
- through adoption of a Laplacian structure that includes edge weights and unit-weight undirected edges.
+ through adoption of a Laplacian structure that includes weighted directed edges and unit-weight undirected edges.
  Our AHP-graph Laplacian fuses the structure of a conventional unit-edge-weighted directed-graph Laplacian with comparative-judgement importance intensities,
  which provide the edge weights.
  This incorporates information about degree of influence in the interconnected evidentiary framework.
@@ -1816,7 +1803,7 @@ priority vector
 \end_layout
 
 \begin_layout Subsection*
-Specification of the evidentiary span.
+Specify the evidentiary span.
 \end_layout
 
 \begin_layout Standard
@@ -1884,7 +1871,7 @@ literal "false"
 
 \end_inset
 
- describe an extensive material-testing regime to ascertain the the performance of each alloy with respect to the metalurgicasl criteria.
+ describe an extensive material-testing regime to ascertain the the performance of each alloy with respect to the metallurgical criteria.
  Although comparative judgments introduce subjective aspects to the material-selection decision,
  
 \begin_inset CommandInset citation
@@ -2278,7 +2265,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection*
-Comparative judgements about relative importance of criteria.
+Perform comparative judgements about elements' relative importances.
 \end_layout
 
 \begin_layout Standard
@@ -2291,7 +2278,7 @@ AHP imbues values and tradeoffs into decision-making through comparative judgeme
 \emph on
 pairwise comparisons
 \emph default
- of the relative importance of the elements [criteria]...
+ of the relative importance of the elements...
 \begin_inset Quotes erd
 \end_inset
 
@@ -2313,11 +2300,11 @@ Pairwise
  Practically,
  one assembles a list of unique,
  unordered element pairs for each hierarchy model.
- Conventionally,
- explicit representation of hierarchy-element comparative judgements is skipped.
- The results applied directly to a reciprocal matrix.
- Since these results provide our excursion into graph-based evidentiary reasoning,
- we pay particular attention here.
+ Frequently,
+ explicit representation of hierarchy-element comparative judgements is skipped in practice.
+ The results are applied directly to a reciprocal matrix.
+ Since comparative judgements themselves provide our excursion into graph-based evidentiary reasoning,
+ we explicitly represent them here.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2335,16 +2322,7 @@ If the hierarchy model for a given objective (or crietrion) spans
 \end_inset
 
  element pairs must be considered.
- The cardinality 
-\begin_inset Formula $\binom{n}{2}$
-\end_inset
-
- specifies the range of hierarchy-model element pairs that must be considered.
- 
-\end_layout
-
-\begin_layout Standard
-Application of comparative judgement imposes an ordering that must subsequently be observed.
+ Application of comparative judgement imposes an ordering that must subsequently be observed.
  Consider a hierarchy model 
 \begin_inset Formula $\mathfrak{H}$
 \end_inset
@@ -2390,7 +2368,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-(e_{j},e_{i}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{j,i}=a^{-1}_{i,j}\mbox{, and}
+(e_{j},e_{i}):\mathcal{J}_{\mathfrak{H}}\mapsto a_{j,i}=a^{-1}_{i,j}\mbox{, and}\label{eq:comparative-judgement-reciprocity}
 \end{equation}
 
 \end_inset
@@ -2489,8 +2467,7 @@ tuple "list"
 
 \end_inset
 
-),
- are axiomatically assigned values of unity.
+) are axiomatically assigned values of unity.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2602,7 +2579,7 @@ tuple "list"
 
 \end_inset
 
- provide a key of departure for subsequent extension of the AHP methodology.
+ provide a key of departure for subsequent graphical extension of the AHP methodology.
 \end_layout
 
 \begin_layout Standard
@@ -5542,7 +5519,15 @@ fundamental scale
 \begin_inset Quotes erd
 \end_inset
 
- deflects a common critique of AHP's logical rigor.
+ deflects a common critique of AHP's logical rigor by recasting it terms of probabilism (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pettigrew2016"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5761,7 +5746,7 @@ mixed graphs
 We subsequently handle this in construction of the graph Laplacians,
  on which entropy calculations are based.
  Our Laplacians must account for both directed and undirected edges,
- as well as other-than-unity edge weights.
+ as well as other-than-unit edge weights.
  Aluded to previously,
  graph-Laplacian constructions for distinct graph classes appear separately in the literature (
 \begin_inset CommandInset citation
@@ -5821,7 +5806,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection*
-Transformation of comparative judments into 
+Transform comparative judments into 
 \emph on
 priority vectors
 \emph default
@@ -5835,7 +5820,7 @@ priority vectors
 \emph default
  provide the key quantitative mechanism for evidentiary aggregation in MCDM applications.
  Mechanically,
- this is accomplished by constructiong a 
+ this is accomplished by constructing a 
 \emph on
 reciprocal matrix
 \emph default
@@ -5885,23 +5870,28 @@ begin{subequations}
 \begin{equation}
 \boldsymbol{A}_{\mathfrak{H}}=\left[\begin{array}{cccc}
 1 & a_{1,2} & \cdots & a_{1,n}\\
-a_{2,1} & 1 & \cdots & a_{2,n}\\
+a_{2,1} & 1 & \ddots & a_{2,n}\\
 \vdots & \ddots & 1 & \vdots\\
 a_{n,1} & a_{n,2} & \cdots & 1
-\end{array}\right]
+\end{array}\right]\label{eq:reciprocal-matrix-general}
 \end{equation}
 
 \end_inset
 
-subject to 
-\begin_inset Formula 
-\begin{equation}
-a_{i,j}=a^{-1}_{j,i}\mbox{,}
-\end{equation}
+subject to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:comparative-judgement-reciprocity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
 
 \end_inset
 
-and where values of 
+),
+ and where values of 
 \begin_inset Formula $a_{i,j}$
 \end_inset
 
@@ -5922,38 +5912,15 @@ tuple "list"
 \end_inset
 
 ).
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:reciprocal-matrix-B1"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-) illustrated reciprocal-matrix construction for criterion-to-alternative hierarchy model 
+Illustratively,
+ the reciprocal-matrix for criterion-to-alternative hierarchy model 
 \begin_inset Formula $B_{1}$
 \end_inset
 
-.
+ becomes
 \begin_inset Formula 
 \begin{equation}
 A_{B_{1}}=\left(\begin{array}{ccc}
@@ -5962,6 +5929,18 @@ A_{B_{1}}=\left(\begin{array}{ccc}
 3 & 5 & 1
 \end{array}\right)\label{eq:reciprocal-matrix-B1}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -5978,7 +5957,37 @@ tuple "list"
 \end_inset
 
 .
- 
+ Although 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ exhaustively represnet the reciprocal-matrix set in their 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 10"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl10"
+literal "false"
+
+\end_inset
+
+ and equation (13),
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-general,eq:reciprocal-matrix-B1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) suffice to obviate the need for complete reproduction here.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6007,8 +6016,15 @@ literal "false"
 
 \end_inset
 
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1990"
+literal "false"
+
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -6307,7 +6323,17 @@ literal "false"
 
 \end_inset
 
- argued that arithmetic or geometric means provided suitable priority vectors in some cases.
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Csató2019"
+literal "false"
+
+\end_inset
+
+,
+ and others argued that arithmetic or geometric means provided suitable priority vectors in some cases.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -6330,12 +6356,12 @@ literal "false"
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty2001a"
+key "Saaty1990,Saaty2001a"
 literal "false"
 
 \end_inset
 
- demonstrated the accompanying risk of rank-reversal with this approach even under near-trivial conditions.
+ however demonstrated the accompanying risk of rank-reversal with this approach even under near-trivial conditions.
  Nonetheless,
  when a high degree of comparative-judgement transitivity (
 \begin_inset CommandInset ref
@@ -6387,7 +6413,7 @@ tuple "list"
 
 \end_inset
 
-) offers transparency and reproducibility advantages.
+) offers transparency and reproducibility advantages that many researc.
 \end_layout
 
 \begin_layout Subparagraph*
@@ -6769,6 +6795,23 @@ tuple "list"
 \end_inset
 
 ).
+ The arguments by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Forman1996"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Csató2019"
+literal "false"
+
+\end_inset
+
+ apparently hold up in this case.
  
 \end_layout
 
@@ -6891,6 +6934,20 @@ tuple "list"
 
 ) increases the likelihood of rank reversal for the latter.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ only consider three alternatives.
+ Provided that criterion-to-alternative proirity vectors 
+\begin_inset Formula $\boldsymbol{\omega}_{B_{1}},\cdots,\boldsymbol{\omega}_{B_{9}}$
+\end_inset
+
+ and input measurements to which they are applied are sufficiently distinct,
+ the risks of rank reversal are small.
 \end_layout
 
 \begin_layout Standard
@@ -9768,7 +9825,11 @@ vector
 \end_layout
 
 \begin_layout Subsection*
-On inconsistencies in comparative judgements.
+Evaluate comparative judgements for 
+\emph on
+transitive
+\emph default
+ consistency.
 \end_layout
 
 \begin_layout Standard
@@ -11563,7 +11624,62 @@ tuple "list"
  
 \end_layout
 
+\begin_layout Subsubsection*
+Remediation of reciprocal-matrix transitive inconsistencies.
+\end_layout
+
 \begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ describes a procedure to 
+\begin_inset Quotes eld
+\end_inset
+
+...transform a positive reciprocal matrix to a near-consistent matrix.
+\begin_inset Quotes erd
+\end_inset
+
+ This involves applying perturbations to the matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ following a procedure described by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Harker1987"
+literal "false"
+
+\end_inset
+
+.
+ Performing such a procedure may lead to an epistemic conundrum:
+ One applies algorithmic logic to override comparative judgements.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2003"
+literal "false"
+
+\end_inset
+
+ elsewhere argued that 
+\begin_inset Quotes eld
+\end_inset
+
+When we deal with tangibles,
+ a pairwise comparison judgment matrix may be perfectly consistent but irrelevant and far off the mark of the true values.
+ For several reasons a modicum of inconsistency may be considered as a good thing and forced consistency without knowledge of the precise values as an undesirable compulsion.
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
@@ -11602,6 +11718,44 @@ onecolumn
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Abbas & Hazen (2025)"
+key "Abbas2025"
+literal "false"
+
+\end_inset
+
+Abbas,
+ A.
+ & Hazen,
+ G.
+ (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On the value of information across decision problems.
+\begin_inset Quotes erd
+\end_inset
+
+ Decision Analysis:
+ 22(1)1-88.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1287/deca.2024.0187
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -11651,10 +11805,10 @@ literal "false"
 \end_inset
 
 Altuzarra,
- A.,
+ A.;
  Moreno-Jiménez,
  J.
- M.,
+ M.;
  Salvador,
  M.
  (2007).
@@ -11696,9 +11850,9 @@ literal "false"
 
 Barons,
  M.
- J.,
+ J.;
  Mascaro,
- S.,
+ S.;
  Hanea,
  A.
  M.
@@ -11724,6 +11878,41 @@ status open
 \begin_layout Plain Layout
 https://doi.org/10.1111/risa.13772
 \end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Birchler & Bütler (2007)"
+key "Birchler2007"
+literal "false"
+
+\end_inset
+
+Birchler,
+ U.
+ & Bütler,
+ M (2007).
+ 
+\emph on
+Information Economics
+\emph default
+.
+ Abington,
+ UK:
+ Routledge.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780415373456"
+target "https://www.routledge.com/Information-Economics/Birchler-Butler/p/book/9780415373456"
+literal "false"
 
 \end_inset
 
@@ -11885,10 +12074,9 @@ literal "false"
 \end_inset
 
 Camuffo,
- A.,
+ A.;
  Gambardella,
- A.,
- Pignataro,
+ A.;ß Pignataro,
  A.
  (2024b).
  
@@ -12325,6 +12513,45 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Csató (2019)"
+key "Csató2019"
+literal "false"
+
+\end_inset
+
+Csató,
+ L.
+ (2019).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A characterization of the Logarithmic Least Squares Method.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Journal of Operations Research
+\emph default
+:
+ 276(1):212-216.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.ejor.2018.12.046
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "de Finetti (1974)"
 key "deFinetti1974"
 literal "false"
@@ -12509,9 +12736,9 @@ literal "false"
 \end_inset
 
 Ehrig,
- T.,
+ T.;
  Felin,
- T.,
+ T.;
  Zenger,
  T.
  (2026).
@@ -12683,9 +12910,9 @@ label{ref:Guanlei2025}
 \end_inset
 
  Guanlei,
- X.,
+ X.;
  Siogang,
- X.,
+ X.;
  Xiaotong,
  W.
  (2025).
@@ -12727,9 +12954,9 @@ literal "false"
 
 Hagberg,
  A.
- A.,
+ A.;
  Schult D.
- A,
+ A.;
  Swart,
  P.
  J.
@@ -12852,6 +13079,47 @@ https://doi.org/10.1142/9789811296475_0002
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Harker (1987)"
+key "Harker1987"
+literal "false"
+
+\end_inset
+
+Harker,
+ P.
+ T.
+ (1987).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Derivatives of the Perron root of a positive reciprocal matrix:
+ With application to the analytic hierarchy process.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Applied Mathmatics and Computation
+\emph default
+:
+ 22(2-3):217-232.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/0096-3003(87)90043-9
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Hastie, Tibshirani, Friedman (2009)"
 key "Hastie2009"
 literal "false"
@@ -12871,10 +13139,9 @@ label{ref:Hastie2009}
 \end_inset
 
 Hastie,
- T.,
+ T.;
  Tibshirina,
- R.,
- Friedman,
+ R.;ß Friedman,
  J.
  (2009).
  
@@ -13123,10 +13390,9 @@ literal "false"
 \end_inset
 
 Jiroušek,
- R.,
+ R.;
  Kratochvíl,
- V.,
- Shenoy,
+ V.;ß Shenoy,
  P.
  P.
  (2023).
@@ -13358,9 +13624,9 @@ literal "false"
 
 Lindley,
  D.
- V.,
+ V.;
  Tversky,
- A.,
+ A.;
  Brown,
  R.
  V.
@@ -13490,9 +13756,9 @@ literal "false"
 \end_inset
 
 Lukinskiy,
- Valery,
+ Valery;
  Lukinskly,
- Vladislav,
+ Vladislav;
  Bazhina,
  D.
  (2025).
@@ -13572,10 +13838,10 @@ literal "false"
 Merrick,
  J.
  R.
- W.,
+ W.;
  van Dorp,
  J.
- R.,
+ R.;
  Singh,
  A.
  (2005).
@@ -13621,7 +13887,7 @@ Moon,
  (2015).
  
 \emph on
-Topics on Tournaments in graph Theory
+Topics on Tournaments in Graph Theory
 \emph default
 .
  Dover.
@@ -14051,7 +14317,7 @@ literal "false"
 
 \end_inset
 
-Saaty T.,
+Saaty T.
  L.
  & Vargas,
  L.
@@ -14171,6 +14437,46 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1111/j.1539-6924.1987.tb00980.x
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Saaty (1990)"
+key "Saaty1990"
+literal "false"
+
+\end_inset
+
+Saaty,
+ T.
+ L.
+ (1990).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Eigenvector and logarithmic least squares.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+European Journal of Operational Research
+\emph default
+:
+ 48(1):156-160.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/0377-2217(90)90073-K
 \end_layout
 
 \end_inset
@@ -14753,9 +15059,9 @@ literal "false"
 \end_inset
 
 Spetzler,
- C.,
+ C.;
  Winter,
- H.,
+ H.;
  Meyer,
  J.
  (2016).
@@ -14800,12 +15106,20 @@ literal "false"
 \end_inset
 
 Sun,
- G.,
+ G.;
  Kroesen,
- M.
+ M.;
  Rezael,
  J.
  (2025).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Anchoring bias in value function elicitation within multiattribute value theory.
+\begin_inset Quotes erd
+\end_inset
+
  
 \emph on
 Decision Analysis
@@ -14880,9 +15194,9 @@ literal "false"
 \end_inset
 
 Syed,
- Z.,
+ Z.;
  Shabarchin,
- O.,
+ O.;
  Lawryshyn,
  Y.
  (2020).
@@ -14924,10 +15238,10 @@ literal "false"
 
 Townsend,
  D.
- M.,
+ M.;
  Hunt,
  R.
- A.,
+ A.;
  Rady,
  J.
  (2024).
@@ -15099,7 +15413,7 @@ literal "false"
 \end_inset
 
 von Hayek,
- Fredrick (1974),
+ Fredrick (1974).
  
 \begin_inset Quotes eld
 \end_inset
@@ -15221,7 +15535,7 @@ literal "false"
 \end_inset
 
 Zellweger,
- T.,
+ T.
  & Zenger,
  T.
  (2023).

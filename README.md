@@ -12,16 +12,26 @@
 
 ### Couple the *sub-trees* of multi-level AHP formulation.
 
-The sketched-out approach thus far considers only a two-tier sub-tree of a larger AHP problem. Its scope strictly spans the tournament graph defined by the pairwise comparisons. This at best provides only information of academic interest, or for trivial contexts. More-pragmatic applications, exempliefied by our case study [Bu, *et al* (2026)](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-materials/multi-criterion-decision-making/2605%20energy%20confersion%20and%20mgmt%20—%20multi-crieterion%20evaluation%20of%20symmetric%20tesli-like⋯.pdf), span multiple AHP sub-trees each defined by its own pairwise-comparison tournament graph.
+The sketched-out approach thus far considers only a two-tier sub-tree of a larger AHP problem. Its scope strictly spans the tournament graph defined by the pairwise comparisons. This at best provides only information of academic interest, or for trivial contexts. More-pragmatic applications, exempliefied by our case study [`Zheng, et al (2026)`](https://doi.org/10.1016/j.ijpvp.2025.105461), span multiple AHP sub-trees each defined by its own pairwise-comparison tournament graph.
 
 ***Lines of inquiry***.
 
-* Can the AHP *priority vectors* be used for entropy-based coupling between tournament graphs for hierarchically-adjacent sub-trees? After all, we define priority vectors as unit-simplex projections. If we also think if them as probability distributions, can they provide an entropy mechanism by which to couple tournament graphs associated with subordinate sub-trees to the sub-tree of interest?
+#### Coupling entropies of hierarchically adjacent hierarchy models.
 
-* 🌟 Entropy *chain rules*. Each pariwise-comparison edge list leads to an entropy structure associated with an AHP decision subtree. [Cover & Thomas (2026), §2.5](https://doi.org/10.1002/047174882X) presents chain rules for entropy, relative entropy, and mutual information. This provides rigorous coupling between the tournament graph for a given AHP decisional layer and that associated with its immediate constituent tournament graph. 🌟
+🌟 Entropy *chain rules*. Each pariwise-comparison edge list leads to an entropy structure associated with an AHP decision subtree. [`Cover & Thomas (2026), §2.5`](https://doi.org/10.1002/047174882X) presents chain rules for entropy, relative entropy, and mutual information. This provides rigorous coupling between the tournament graph for a given AHP decisional layer and that associated with its immediate constituent tournament graph. 🌟
+
+#### Graphical connection of hierarchically-adjacent comparative-judgement graphs.
+
+Hierarchy-model tree graphs provide the *connective tissue*. Proiority-vector weights — unit-simplex projections — behave like probability distributions. [`Brown, et al (2020`](https://doi.org/10.1016/j.laa.2019.09.026) explore graph entropies based on spectra of normalized Laplacian matrices. 
+
 
 ### Weave in the [*Decision-Quality* (DQ)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119176657) narrative more-deeply. 
 Its appearance amplifies the theme of evidentiary reasoning. Given the current composition risks its appearance as tangential, gratuitious. If DQ becomes a more-central theme, then this work's attractiveness for certain target journals might be enhanced. Moreover, DQ must be differentiated from AHP. Naïve application of AHP mechanics can introduce logical contradictions — recently described, *e.g.*, by [`Abbas (2026)`](https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents). This stands in antithesis to the *Sound Reasoning* link in the DQ framework.
+
+
+### Amplify the evidentiary-reasoning aspects of AHP.
+
+As of commit [`735d77f96fd192ecdce3a2ecd11c35cd05bf49b4`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/tree/735d77f96fd192ecdce3a2ecd11c35cd05bf49b4), the case study focuses on the mechanics of AHP. Given the title and objective, some mention of the epistemology of AHP seems called-for. Spefically, AHP focuses on prioritization and ordering, in contrast with utility-optimization of mainstream decision theory. 
 
 ### Clarify AHP terminology.
 
