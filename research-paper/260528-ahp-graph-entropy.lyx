@@ -2249,8 +2249,10 @@ literal "false"
 
 \end_inset
 
- speak to utility qualities,
- but do not explicitly articulate a utility function or theory.
+ speak to qualities —
+ values —
+ of utility.
+ They do not however explicitly articulate a utility function or theory.
  
 \end_layout
 
@@ -2432,7 +2434,7 @@ tuple "list"
 
 ),
  
-\begin_inset Formula $\left\{ a_{i,j}\right\} $
+\begin_inset Formula $a_{i,j}$
 \end_inset
 
  is positive-definite.
@@ -5424,8 +5426,12 @@ literal "false"
 
 \end_inset
 
- offers a psychophysics justification for this scale,
- and argues for an upper bound of 
+ offered a 
+\emph on
+psychophysics
+\emph default
+ justification for this scale,
+ and recommended an upper bound of 
 \begin_inset Formula $9$
 \end_inset
 
@@ -6390,7 +6396,7 @@ literal "false"
 
 \end_inset
 
- employed the geometric-mean approach
+ employed such a geometric-mean approach
 \begin_inset Formula 
 \begin{equation}
 \left[\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
@@ -6681,7 +6687,7 @@ tuple "list"
 
 \end_inset
 
--
+)-(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:limit-perron-eigenvalue-definition"
@@ -6824,7 +6830,7 @@ tuple "list"
 
 \end_inset
 
- and 
+ here and 
 \begin_inset CommandInset href
 LatexCommand href
 name "Figure 25"
@@ -11941,7 +11947,7 @@ Element-measurement normalization.
 \end_layout
 
 \begin_layout Standard
-Our priority vectors reside in the unit simplex 
+Our priority vectors reside on the unit simplex 
 \begin_inset Formula $\Delta^{n}$
 \end_inset
 
@@ -12190,7 +12196,7 @@ The the elements of the vector
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
 \end_inset
 
- enumerate the strength of preference of the alternatives within the scope consideration by the multi-criterion decision problem.
+ enumerate the strength of preference for each corresponding alternative within the range considered by the multi-criterion decision problem.
  Given the element-measurement normalization schema (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12208,10 +12214,12 @@ tuple "list"
 \begin_inset Formula $i^{\text{th}}$
 \end_inset
 
- alternative where 
+ alternative —
+ where 
 \begin_inset Formula $i=\text{argmax}\left(\boldsymbol{p}_{\text{target}}\right)$
 \end_inset
 
+ —
  is the most-preferred.
  Linearly combining priority vectors obtained from comparative judgements about the degree of influence by hierarchy-model elements with measurements against each element for each alternative produces 
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
@@ -12245,6 +12253,22 @@ literal "false"
 ).
  Chosing any other alternative constitues a departure from rationality.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abbas2026"
+literal "false"
+
+\end_inset
+
+ leveled this core criticism against decision methods based on 
+\begin_inset Quotes eld
+\end_inset
+
+pairwise comparisons
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -12291,7 +12315,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Identifying mechanics for an expected-utility-based AHP formulation lie beyond the scope of the present investigation.
+Identifying mechanics for an expected-utility-based AHP formulation lies beyond the scope of the present investigation.
  It sufficies here to reiterate this epistemic variance between AHP and mainstream decision science.
  Providing an information-theoretic characterization of the degree of influence by evidentiary elements within hierarchy models represents our goal.
 \end_layout
@@ -12352,7 +12376,7 @@ literal "false"
 \begin_inset Formula $B_{9}$
 \end_inset
 
- are provided.
+ apper.
  An ordinal ranking is the most-precise information provided.
 \end_layout
 
@@ -12444,7 +12468,7 @@ tuple "list"
 ) and (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalized-metallurgical-property-measurements"
+reference "eq:normalized-measurement-block-matrix"
 plural "false"
 caps "false"
 noprefix "false"
@@ -12456,7 +12480,7 @@ tuple "list"
 ),
  respectively.
  Obviously,
- one transposes each row into a column vector in order to construct the block matrices.
+ one transposes each row from a table into a column vector in order to construct the block matrices.
  Subsequent calculations employ block-matrix structure.
 \end_layout
 
