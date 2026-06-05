@@ -1,0 +1,10 @@
+﻿hierarchy_model,criterion,TA3,TA10,TA36,physical_units,reference_source,effect
+B1,tensile_strength,564,487,666,MPa,Figure 10,beneficial
+B2,impact_energy,8.27,7.29,9.02,kN,Figure 11,beneficial
+B3,bending_strength,848.93,741.98,1101.03,MPa,Figure 13,beneficial
+B4,surface_hardness,200.52,200.44,239.57,HV,Figure 14,beneficial
+B5,friction_wear_rate,0.06,0.17,0.03,%/h,Figure 15,deleterious
+B6,erosion_rate,0.36,0.37,0.25,mg/g,Figure 17,deleterious
+B7,corrosion_rate,3.90E-07,4.39E-07,5.04E-07,A/cm**2,Table 8,deleterious
+B8,tribocorrosion_rate,100.231,177.4759,59.6312,μm,Figure 22,deleterious
+B9,material_price,2,3,1,unitless,Figure 23,deleterious

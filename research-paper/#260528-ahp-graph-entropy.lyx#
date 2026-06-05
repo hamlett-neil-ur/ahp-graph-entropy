@@ -47,10 +47,12 @@
 \definecolor{Brick}{HTML}{971b2f}
 \definecolor{Lake}{HTML}{2767ff}
 \definecolor{TCotta}{HTML}{c66e43}
+\definecolor{JBlue4}{HTML}{262e33}
 
 \sectionfont{\color{JBlue}}
 \subsectionfont{\color{Night}}
 \subsubsectionfont{\color{Brick}}
+\paragraphfont{\color{JBlue4}}
 
 % --- Main Page Style Definition ---
 \fancypagestyle{mypagestyle}{%
@@ -592,7 +594,7 @@ Nontrivial challenges inevitably arise
  even
 \emph default
  when considerable amounts of statistically coherent,
- phenomenologically illuminating data exist.
+ phenomenologically illuminating empirical data exist.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -709,7 +711,7 @@ literal "false"
 
 \end_inset
 
- offered a rigorous approach to quantifying epistemic uncertainty in evidentiary reasoning.
+ offered a rigorous framework to characterize epistemic uncertainty in evidentiary reasoning.
  More-recently,
  
 \begin_inset CommandInset citation
@@ -739,7 +741,7 @@ literal "false"
 
 \end_inset
 
- use a stochastic-detection area-under-the-curve (AuC) approach (
+ used a stochastic-detection area-under-the-curve (AuC) approach (
 \emph on
 cf
 \emph default
@@ -959,7 +961,7 @@ Evidentiary-strength analysis using the AHP.
 \end_layout
 
 \begin_layout Standard
-That comparative judgements for an AHP hierarchy model define a complete graph provides the seminal insight underlying this investigation.
+That comparative judgements for an AHP hierarchy model define a complete graph provides the seminal point of departure for this investigation.
  Additional opportunities arise when the resulting graph is also directed and acyclic.
  
 \begin_inset CommandInset citation
@@ -1094,7 +1096,7 @@ Evidentiary strength relates to the concept of
 \emph on
 Value of Information
 \emph default
- on which the disciplines Information Economics (
+ on which the disciplines of Information Economics (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Birchler2007"
@@ -1123,8 +1125,8 @@ literal "false"
 ) are substantially based.
  The present investigation proposes an information-theoretic perspective.
  In contrast,
- information economics and decision analaysis emphasize utility values of information.
- Although,
+ information economics and decision analysis focus on utility values of information.
+ Notwithstanding,
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1133,7 +1135,7 @@ literal "false"
 
 \end_inset
 
- do invoke information-theoretic and probabilistic state-space (along the lines of 
+ do invoke additional concepts including information theory and probabilistic state spaces (along the lines of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "deFinetti1974"
@@ -1141,7 +1143,7 @@ literal "false"
 
 \end_inset
 
-) concepts in their study of information economics.
+).
 \end_layout
 
 \begin_layout Paragraph*
@@ -1421,13 +1423,66 @@ tuple "list"
 
 \end_inset
 
- depicts the DQ framework,
+ depicts the framework,
  comprised of six 
 \emph on
 links.
 
 \emph default
  
+\begin_inset Float figure
+placement document
+alignment document
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Decision-Quality-framework.-(Fro"
+
+\end_inset
+
+Decision-Quality framework.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SDP-DQ"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "decision-quality"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/sdp-who_we_are-dq-source.png
+	lyxscale 25
+	width 5.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1446,7 +1501,7 @@ literal "false"
 
 \end_inset
 
- describes this as 
+ described this as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1528,65 +1583,11 @@ literal "false"
 Commitment to Action
 \emph default
  represents the follow-through in implementing or adopting the selected alternative.
- Absent a commitment to adopt or act upon the best alternative,
+ Absent a commitment to act,
  a decision arguably has not occurred.
- The analysis was academic.
+ The decision analysis was merely academic.
  Persistence with the status quo nearly always occurs among the alternatives under consideration.
  Such a selection should however result from applying sound reasoning to the relevant available evidence.
- 
-\begin_inset Float figure
-placement document
-alignment document
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Decision-Quality-framework.-(Fro"
-
-\end_inset
-
-Decision-Quality framework.
- (From 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SDP-DQ"
-literal "false"
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "decision-quality"
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/sdp-who_we_are-dq-source.png
-	lyxscale 25
-	width 5.5in
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1596,9 +1597,9 @@ status open
 \begin_layout Plain Layout
 
 \backslash
-par
+hspace*{
 \backslash
-indent 
+parindent}
 \end_layout
 
 \end_inset
@@ -1691,7 +1692,7 @@ literal "false"
 
 \end_inset
 
- employed AHP to select materials from which to construct pipelines for use in an offshore oil and gas project.
+ employed AHP to select materials from which to construct pipelines for use in offshore oil and gas extraction.
  Their analysis considers metalurgical technical details that are tangential to our purposes.
  We principally focus on the AHP mechanics.
 \end_layout
@@ -1715,6 +1716,8 @@ It demonstrates a real-world application
 .
  Introductory AHP presentations often employ contrived cases.
  A real-world case study provides a more-informative and -convincing demonstration.
+ It involves nontrivial,
+ idiosyncratic complexities that challenge our methodology.
 \end_layout
 
 \begin_layout Enumerate
@@ -2099,7 +2102,7 @@ literal "false"
  showing all of them clutters the hierarch-model depiction.
  
 \begin_inset Float figure
-placement h
+placement t
 alignment document
 wide false
 sideways false
@@ -2116,7 +2119,7 @@ name "fig:Hierarchy-decomposition-used"
 
 \end_inset
 
-Hierarchy model used for offshore-pipeline material-selection case study.
+Hierarchy model used for Titanium-alloy prioritization case study.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2164,19 +2167,6 @@ name "case-study-hierarchy-model"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-par
-\backslash
-indent 
-\end_layout
-
-\end_inset
-
 That the target-to-criterion hierarchy model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2442,7 +2432,7 @@ tuple "list"
 
 ),
  
-\begin_inset Formula $a_{i,j}$
+\begin_inset Formula $\left\{ a_{i,j}\right\} $
 \end_inset
 
  is positive-definite.
@@ -2471,7 +2461,7 @@ tuple "list"
 \end_layout
 
 \begin_layout Subsubsection*
-Material-selection comparative judgements.
+Comparative judgements for Titanium-alloy prioritization.
 \end_layout
 
 \begin_layout Standard
@@ -5657,6 +5647,19 @@ comparative element
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hspace*{
+\backslash
+parindent}
+\end_layout
+
+\end_inset
+
 This convention imbues two conveniences into the procedure.
  First,
  the structure of the table endogenously contains the directive structure of the graph.
@@ -5695,7 +5698,7 @@ literal "false"
 
 \end_inset
 
-) in lieu of the less-widely-recognized problematic 
+) in lieu of the less-widely-recognized 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5730,7 +5733,52 @@ tuple "list"
 
  —
  raises both interest and a challenge.
- Four undirected edges appear.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty's}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental scale
+\begin_inset Quotes erd
+\end_inset
+
+ explicitly allows for this.
+ Four undirected edges appear in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
  This introduces an aspect of complexity.
  Unit-valued importance intensities imply undirected edges.
  In such cases,
@@ -6039,9 +6087,9 @@ First,
 
  where
 \begin_inset Formula 
-\[
-\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right.\right\} 
-\]
+\begin{equation}
+\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right.\right\} \label{eq:unit-simplex-definition}
+\end{equation}
 
 \end_inset
 
@@ -6103,7 +6151,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}=\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}
+\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}=\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}\label{eq:reciprocal-matrix-eigenstructure}
 \end{equation}
 
 \end_inset
@@ -6156,7 +6204,7 @@ The priority vector
  follows from the principal eigenvector as
 \begin_inset Formula 
 \begin{equation}
-\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
+\left[\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
 \end{equation}
 
 \end_inset
@@ -6270,7 +6318,7 @@ literal "false"
  proves a limiting case
 \begin_inset Formula 
 \begin{equation}
-\lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}=\boldsymbol{\omega}_{\mathfrak{H}}\label{eq:limit-perron-eigenvalue-definition}
+\lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}\rightarrow\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\label{eq:limit-perron-eigenvalue-definition}
 \end{equation}
 
 \end_inset
@@ -6345,7 +6393,7 @@ literal "false"
  employed the geometric-mean approach
 \begin_inset Formula 
 \begin{equation}
-\left[\boldsymbol{\omega}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
+\left[\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
 \end{equation}
 
 \end_inset
@@ -6413,7 +6461,7 @@ tuple "list"
 
 \end_inset
 
-) offers transparency and reproducibility advantages that many researc.
+) offers transparency and reproducibility advantages that many researchers find convenient.
 \end_layout
 
 \begin_layout Subparagraph*
@@ -6422,9 +6470,33 @@ Entropy-weight method.
 
 \begin_layout Standard
 Now,
- the priority-vector methods based on subjectively based comparative judgements.
- Sometimes more-empirical bases for priority vectors become beneificial.
- This allows for consideration of phenomenological information exogenous to the comparative judgements.
+ the priority-vector methods of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:geometric-mean-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) are solely based reciprocal matrices constructed from subjective comparative judgements.
+ Sometimes more-empirical bases for priority vectors prove useful.
+ This allows for consideration of phenomenological information exogenous to comparative judgements.
 \end_layout
 
 \begin_layout Standard
@@ -6484,21 +6556,23 @@ tuple "list"
 \end_inset
 
  reproduces their hierarchy model.
- The intermediate criteria 
+ The intermediate criteria —
+ current density 
 \begin_inset Formula $I$
 \end_inset
 
 ,
- 
+ pressure drop 
 \begin_inset Formula $\Delta P$
 \end_inset
 
 ,
- and 
+ Oxygen-uniformity index and 
 \begin_inset Formula $UI$
 \end_inset
 
- represent device physical-operating parameters.
+ —
+ represent device physical-operating characteristics.
  The subcriteria 
 \begin_inset Formula $Angle$
 \end_inset
@@ -6516,7 +6590,7 @@ tuple "list"
  correspond to geometric design parameters.
  
 \begin_inset Float figure
-placement h
+placement t
 alignment center
 wide false
 sideways false
@@ -6580,7 +6654,7 @@ literal "false"
 
 \end_inset
 
- performed computational simulations to establish relationships between the device-geometry subcriteria and the operating parameters.
+ employed a physics-based computational model to establish relationships between the device-geometry subcriteria and the operating parameters.
  These simulation results led to an emprical basis for an entropy-based priority vector.
  Combining this with a priority vector based on comparative judgements produced a 
 \begin_inset Quotes eld
@@ -6593,8 +6667,49 @@ hybrid
  priority vector on which their design decision was based.
 \end_layout
 
+\begin_layout Standard
+Now,
+ entropy-weight priority vectors are not based constraints enforcing transitive consistency along the lines of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:limit-perron-eigenvalue-definition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ Nonetheless,
+ exemplified by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+,
+ emprical phenomenologically-based evidence can prove more-reliable than subjective comparative judgements.
+ The highest-quality decision depends on judicious use of the most-informative evidence available.
+\end_layout
+
 \begin_layout Paragraph*
-Priority vectors used for pipeline-material selection.
+Priority vectors used for Titanium-alloy prioritization.
 \end_layout
 
 \begin_layout Standard
@@ -6636,7 +6751,7 @@ tuple "list"
 
 .
  The priority vector 
-\begin_inset Formula $\boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}}$
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
  values result from (
@@ -6652,7 +6767,7 @@ tuple "list"
 \end_inset
 
 ).
- In the 
+ The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6664,21 +6779,16 @@ tuple "list"
 \begin_inset Quotes erd
 \end_inset
 
- column,
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:geometric-mean-priority-vector"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ column contains the Euclidean 
+\begin_inset Formula $\mathds{L}^{2}$
 \end_inset
 
-) produces 
-\begin_inset Formula $\boldsymbol{\omega}^{\text{(GM)}}_{\mathfrak{H}}$
+ distance between 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
 \end_inset
 
 .
@@ -6686,15 +6796,7 @@ tuple "list"
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
- hierarchy model corresponds to the 
-\begin_inset Quotes eld
-\end_inset
-
-Target
-\begin_inset Quotes erd
-\end_inset
-
- in Figure 
+ hierarchy model corresponds to the target-to-criterion model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "case-study-hierarchy-model"
@@ -6767,34 +6869,14 @@ literal "false"
 \end_inset
 
  column in the former indicates negligible differences between 
-\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
- calculated by (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:perron-priority-vector"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ and 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
 \end_inset
 
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:geometric-mean-priority-vector"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-).
+.
  The arguments by 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -6820,7 +6902,7 @@ The priority-vector values for the
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
- hierarchy model differ from those reported by 
+ hierarchy model reported by 
 \begin_inset CommandInset href
 LatexCommand href
 name "Table 11"
@@ -6903,7 +6985,15 @@ tuple "list"
 \end_inset
 
 ) becomes increasingly tenuous.
- 
+ Divergence of 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
+\end_inset
+
+ from 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
+\end_inset
+
+ also becomes more likely.
 \end_layout
 
 \begin_layout Standard
@@ -7048,7 +7138,7 @@ priority
 
 \begin_layout Plain Layout
 vector 
-\begin_inset Formula $\boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}_{i}}$
+\begin_inset Formula $\left[\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\right]_{i}$
 \end_inset
 
 
@@ -7067,7 +7157,7 @@ vector
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $\left\Vert \boldsymbol{\omega}^{\text{(PE)}}_{\mathfrak{H}}-\boldsymbol{\omega}^{\text{(GM)}}_{\mathfrak{H}}\right\Vert $
+\begin_inset Formula $\left\Vert \boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}-\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}\right\Vert $
 \end_inset
 
 
@@ -9886,52 +9976,11 @@ literal "false"
 
  contains an extensive set of definitions,
  axioms,
- and theorems culminating in the demonstration that,
- if the eigenvector/eigenvalue decomposition of a 
-\emph on
-perfectly consistent
-\emph default
- reciprocal matrix 
-\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
-\end_inset
-
- is
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
+ and theorems leading to
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A}_{\mathfrak{H}}\boldsymbol{X}_{\mathfrak{H}}=\boldsymbol{X}_{\mathfrak{H}}\boldsymbol{\Lambda}_{\mathfrak{H}}\mbox{,}\label{eq:general-reciprocal-eigendecomposition}
+\lambda^{\mathcal{P}}_{\mathfrak{H}}\rightarrow n\mbox{,}\label{eq:reciprocal-consistency-condition}
 \end{equation}
-
-\end_inset
-
-then 
-\begin_inset Formula 
-\begin{equation}
-\lambda_{\mathfrak{H}}=n\label{eq:reciprocal-consistency-condition}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-end{subequations}
-\end_layout
 
 \end_inset
 
@@ -9940,18 +9989,51 @@ where
 \end_inset
 
  denotes the order of 
+\emph on
+perfectly consistent
+\emph default
+ reciprocal matrix 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
  and 
-\begin_inset Formula $\lambda_{\mathfrak{H}}=[\boldsymbol{\Lambda}_{\mathfrak{H}}]_{\text{argmax}(\boldsymbol{\Lambda}_{\mathfrak{H}})}$
+\begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
-.
- Such a matrix invariantly satisfies (
+ is defined in (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:saaty-ahp-transitivity,eq:limit-perron-eigenvalue-definition"
+reference "eq:reciprocal-matrix-principal-eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ Being perfectly consistent,
+ 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ invariantly satisfies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:limit-perron-eigenvalue-definition"
 plural "false"
 caps "false"
 noprefix "false"
@@ -10017,7 +10099,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-CI=\frac{\lambda_{\mathfrak{H}}-n}{n-1}\label{eq:reciprocal-consistency-index}
+CI=\frac{\lambda^{\mathcal{P}}_{\mathfrak{H}}-n}{n-1}\label{eq:reciprocal-consistency-index}
 \end{equation}
 
 \end_inset
@@ -10053,10 +10135,10 @@ tuple "list"
 
 ),
  one obtains 
-\begin_inset Formula $CI=$
+\begin_inset Formula $CI\rightarrow0$
 \end_inset
 
-0 for a perfectly consistent reciprocal matrix.
+ for a perfectly consistent reciprocal matrix.
  
 \end_layout
 
@@ -10085,7 +10167,11 @@ end{subequations}
 
 \end_inset
 
-accompanies the consistency index.
+accompanies 
+\begin_inset Formula $CI$
+\end_inset
+
+.
  In (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10113,7 +10199,7 @@ tuple "list"
 \end_inset
 
  values are commonly repeated.
- Reproducing the common result with higher numerical precision,
+ Reproducing the common result with atypically greater numerical precision,
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -10136,6 +10222,15 @@ literal "false"
 
  for 
 \begin_inset Formula $n=9$
+\end_inset
+
+.
+ Use of these values leads to small disparities between calculations reproduced here and those reported in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
 \end_inset
 
 .
@@ -10248,8 +10343,13 @@ literal "false"
 
 \end_inset
 
+,
+ which actually reports 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
+\end_inset
+
 .
- 
+ That 
 \begin_inset Formula $CI$
 \end_inset
 
@@ -10257,7 +10357,7 @@ literal "false"
 \begin_inset Formula $CR$
 \end_inset
 
- differe slightly since 
+ employ 
 \begin_inset Formula $RI$
 \end_inset
 
@@ -10271,8 +10371,8 @@ literal "false"
 
  —
  which contain greater numerical precision —
- do not exactly coincide.
- Comparable similarities occur for the target model 
+ contributes to the small disparities.
+ Comparable diparities occur for the target model 
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
@@ -10310,7 +10410,7 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Float table
-placement document
+placement h
 alignment center
 wide false
 sideways false
@@ -11581,7 +11681,7 @@ tuple "list"
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
- hierarchy mnodel,
+ hierarchy model,
  the quantities coincide very closely.
  
 \begin_inset CommandInset citation
@@ -11591,7 +11691,7 @@ literal "false"
 
 \end_inset
 
- identify the heuristic 
+ reiterate the heuristic 
 \begin_inset Formula $CR\apprle0.1$
 \end_inset
 
@@ -11678,6 +11778,1371 @@ When we deal with tangibles,
  a pairwise comparison judgment matrix may be perfectly consistent but irrelevant and far off the mark of the true values.
  For several reasons a modicum of inconsistency may be considered as a good thing and forced consistency without knowledge of the precise values as an undesirable compulsion.
 \begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Prioritize alternatives based on comparative judgements.
+\end_layout
+
+\begin_layout Subsubsection*
+The mechanics of prioritizing alternatives.
+\end_layout
+
+\begin_layout Standard
+Prioritization of alternatives by the AHP follows a linear operation.
+ The following discussion employs a linear-algebra notation in lieu of commonly used nested summations.
+ This offers advantages in terms of conceptual clarity.
+ We develop the notation for two 
+\begin_inset Quotes eld
+\end_inset
+
+layers
+\begin_inset Quotes erd
+\end_inset
+
+ of hierarchy models,
+ 
+\begin_inset Formula $\mathfrak{H}_{\text{target}}\supseteq\left\{ \mathfrak{H_{1}},\cdots,\mathfrak{H}_{M}\right\} $
+\end_inset
+
+.
+ Induction extends the notation to more-complex hierarchical structures.
+\end_layout
+
+\begin_layout Paragraph*
+Measurement-matrix construction.
+\end_layout
+
+\begin_layout Standard
+The measurement matrix contains the enumerated evidence weighed during multi-criterion decision making.
+ Consider hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{n}$
+\end_inset
+
+ spanning 
+\begin_inset Formula $N$
+\end_inset
+
+ elements 
+\begin_inset Formula $\mathfrak{H}_{n}\supseteq\left\{ e_{\mathfrak{H}_{n,1}},\cdots,e_{\mathfrak{H}_{n,N}}\right\} $
+\end_inset
+
+.
+ Expressed in block-matrix form,
+ the measurement matrix for all hierarchy models within the span 
+\begin_inset Formula $\mathfrak{H}_{\text{target}}$
+\end_inset
+
+ appears as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{R}_{\mathfrak{H}}=\left[\begin{array}{cccc}
+\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
+\vdots & \vdots & \ddots & \vdots\\
+\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}
+\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{r}^{T}_{\mathfrak{H}_{n}}=\left[r_{\mathfrak{H}_{n,1}},\cdots,r_{\mathfrak{H}_{n,N}}\right]
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+contains measurements for each of the 
+\begin_inset Formula $\left\{ e_{\mathfrak{H}_{n,1}},\cdots,e_{\mathfrak{H}_{n,N}}\right\} $
+\end_inset
+
+ elements within the span of 
+\begin_inset Formula $\mathfrak{H}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The constituent elements for each hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{n}$
+\end_inset
+
+ must be treated as distinct entities.
+ Measurements of elements 
+\begin_inset Formula $e_{\mathfrak{H}_{m,m'}}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{\mathfrak{H}_{n,n'}}$
+\end_inset
+
+ are plausibly —
+ thought not necessarily in practice —
+ independent.
+ The elements 
+\begin_inset Formula $\{e_{Angle},e_{Height},e_{Width}\}$
+\end_inset
+
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pemfc-hierarchy-model"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ exemplify an exception.
+ Such occurrences are however rare in practice.
+\end_layout
+
+\begin_layout Paragraph*
+Element-measurement normalization.
+\end_layout
+
+\begin_layout Standard
+Our priority vectors reside in the unit simplex 
+\begin_inset Formula $\Delta^{n}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:unit-simplex-definition"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ In order to constrain the prioritization values to 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+,
+ we similarly normalize the element-measurement vectors.
+\end_layout
+
+\begin_layout Standard
+Normalization maps the elements of our hierarchy-model element-measurement vectors 
+\begin_inset Formula $\boldsymbol{r}_{\mathfrak{H}_{n}}$
+\end_inset
+
+ to the interval 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{r}_{\mathfrak{H}_{n}}:\mathcal{P}\mapsto\boldsymbol{p}_{\mathfrak{H}_{n}}\mid p_{\mathfrak{H}_{n,n'}}\in\left[0,1\right]\:\forall\,n'\mbox{.}
+\end{equation}
+
+\end_inset
+
+The measurment-normalization map 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ is defined by
+\begin_inset Formula 
+\begin{equation}
+p_{\mathfrak{H}_{n,n'}}=\begin{cases}
+\frac{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -r_{\mathfrak{H}_{n,n'}}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is beneficial}\\
+\frac{r_{\mathfrak{H}_{n,n'}}-\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is deleterious}
+\end{cases}\mbox{.}\label{eq:hierarchy-measurement-normalization}
+\end{equation}
+
+\end_inset
+
+Consequently,
+ the normalized element-measurement block matrix becomes 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}_{\mathfrak{H}}=\left[\begin{array}{cccc}
+\boldsymbol{p}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{p}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
+\vdots & \vdots & \ddots & \vdots\\
+\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{p}_{\mathfrak{H}_{M}}
+\end{array}\right]\mbox{.}\label{eq:normalized-measurement-block-matrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The 
+\emph on
+beneficial
+\emph default
+ versus 
+\emph on
+deleterious
+\emph default
+ characterizations in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) indicate whether increasing the value of the measurement of element 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
+\end_inset
+
+ increases the or decreases,
+ respectively,
+ the degree to which 
+\begin_inset Formula $\mathfrak{H}_{n}$
+\end_inset
+
+ is prefered.
+ Employing a utility analogy,
+ if 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
+\end_inset
+
+ is 
+\emph on
+beneficial
+\emph default
+,
+ then a higher-valued measurement 
+\begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
+\end_inset
+
+ indicates greater utility of 
+\begin_inset Formula $\mathfrak{H}_{\text{target}}$
+\end_inset
+
+,
+ all other things being equal.
+ In contrast,
+ if 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
+\end_inset
+
+ is deleterious,
+ then increasing 
+\begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
+\end_inset
+
+ diminishes the utility of 
+\begin_inset Formula $\mathfrak{H}_{\text{target}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Proiritization of alternatives.
+\end_layout
+
+\begin_layout Standard
+The priority ranking of alternatives results from a linear operation applying proirity vectors to our normalized hierarchy-element measurement matrix 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+.
+ Representing the priority vectors associated with 
+\begin_inset Formula $\left\{ \mathfrak{H_{1}},\cdots,\mathfrak{H}_{M}\right\} $
+\end_inset
+
+ in block-matrix form produces
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\Omega}_{\mathfrak{H}}=\left[\begin{array}{cccc}
+\boldsymbol{\omega}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{\omega}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
+\vdots & \vdots & \ddots & \vdots\\
+\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{\omega}_{\mathfrak{H}_{M}}
+\end{array}\right]\mbox{.}
+\end{equation}
+
+\end_inset
+
+The prioritization of the alternatives finally becomes
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{p}_{\text{target}}=\boldsymbol{P}^{T}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\omega}_{\text{target}}\mbox{,}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $\boldsymbol{\omega}_{\text{target}}$
+\end_inset
+
+ denotes the priority vector associated with hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{\text{target}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subparagraph*
+What does 
+\begin_inset Formula $\boldsymbol{p}_{\text{target}}$
+\end_inset
+
+ represent?
+\end_layout
+
+\begin_layout Standard
+The vector 
+\begin_inset Formula $\boldsymbol{p}_{\text{target}}$
+\end_inset
+
+ contains an enumerated strength of preference of the alternatives within the scope 
+\end_layout
+
+\begin_layout Subsubsection*
+Prioritized Titanium-alloy alternatives.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment center
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Metallurgical-property measurements influencing Titanium-alloy prioritization.
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "zheng-et-al-metallurgical-properties"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="8">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+model,
+ 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+units
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+effect (
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 2"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl2"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tensile strength
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+564
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+487
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+666
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $MPa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+beneficial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 10"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr10_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+impact energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.29
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $kN$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+beneficial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 11"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr11_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bending strength
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+848.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+741.98
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1101.03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $MPa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+beneficial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 13"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr13_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+surface hardness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200.52
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200.44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+239.57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $HV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+beneficial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 14"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr14_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+friction-wear rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\%/h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deleterious
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 15"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr15_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+erosion rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.37
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $mg/g$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deleterious
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 17"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr17_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+corrosion current 
+\begin_inset Formula $i_{\text{corr}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.90
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{7}\:A/cm^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deleterious
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 8"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl8"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tribo-corrosion rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100.231
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+177.476
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59.631
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deleterious
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 22"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr22_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+material price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unitless
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deleterious
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 23"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr23_lrg.jpg"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -11882,7 +13347,40 @@ https://doi.org/10.1111/risa.13772
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Biggs (2012)"
+key "Biggs2012"
+literal "false"
+
+\end_inset
+
+Biggs,
+ N.
+ (2012).
  
+\emph on
+Algebraic Graph Theory
+\emph default
+.
+ Second Edition.
+ Cambridge,
+ UK:
+ Cambridge University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780511608704"
+target "https://doi.org/10.1017/CBO9780511608704"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -12891,6 +14389,40 @@ https://doi.org/10.13033/isahp.y1996.009
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Godsil & Royle (2001)"
+key "Godsil2001"
+literal "false"
+
+\end_inset
+
+Godsil,
+ C.
+ & Royle,
+ G.
+ (2001).
+ 
+\emph on
+Algebraic Graph Theory
+\emph default
+.
+ New York:
+ Springer.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9781461301639"
+target "https://doi.org/10.1007/978-1-4613-0163-9"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Guanlei, Xiaogang, Xiaotong (2025)"
 key "Guanlei2025"
 literal "false"
@@ -13455,6 +14987,41 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Khuri (2003)"
+key "Khuri2003"
+literal "false"
+
+\end_inset
+
+Khuri,
+ A.
+ I.
+ (2003).
+ 
+\emph on
+Advanced Calculus with Applications in Statistics
+\emph default
+.
+ second edition.
+ Hoboken,
+ NJ:
+ Wiley.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780471461623"
+target "https://www.wiley.com/en-us/shop/general-introductory-statistics/advanced-calculus-with-applications-in-statistics-2nd-edition-p-9780471461623"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -14033,6 +15600,18 @@ LatexCommand bibitem
 label "Pant, et al (2022)"
 key "Pant2022"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Pant2022}
+\end_layout
 
 \end_inset
 
