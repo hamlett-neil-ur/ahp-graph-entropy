@@ -2668,7 +2668,11 @@ reference
 \end_layout
 
 \begin_layout Plain Layout
-element
+element 
+\begin_inset Formula $e_{\mathfrak{H}_{i}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2681,7 +2685,11 @@ comparative
 \end_layout
 
 \begin_layout Plain Layout
-element
+element 
+\begin_inset Formula $e_{\mathfrak{H}_{j}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2694,7 +2702,11 @@ intensity of
 \end_layout
 
 \begin_layout Plain Layout
-importance
+importance 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4041,7 +4053,11 @@ hierarchy
 \end_layout
 
 \begin_layout Plain Layout
-model
+model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4054,7 +4070,11 @@ reference
 \end_layout
 
 \begin_layout Plain Layout
-element
+element 
+\begin_inset Formula $e_{\mathfrak{H}_{i}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4067,7 +4087,11 @@ comparative
 \end_layout
 
 \begin_layout Plain Layout
-element
+element 
+\begin_inset Formula $e_{\mathfrak{H}_{j}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4080,7 +4104,11 @@ intensity of
 \end_layout
 
 \begin_layout Plain Layout
-importance
+importance 
+\begin_inset Formula $\mathcal{J}_{\mathfrak{H}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7387,7 +7415,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -7617,7 +7645,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -7847,7 +7875,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -11844,7 +11872,7 @@ The measurement matrix contains the enumerated evidence weighed during multi-cri
 \end_inset
 
 .
- Expressed in block-matrix form,
+ Expressed in matrix form,
  the measurement matrix for all hierarchy models within the span 
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
@@ -11865,11 +11893,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{R}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
+\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
 \end{equation}
 
 \end_inset
@@ -12017,15 +12041,11 @@ p_{\mathfrak{H}_{n,n'}}=\begin{cases}
 \end_inset
 
 Consequently,
- the normalized element-measurement block matrix becomes 
+ the normalized element-measurement matrix becomes 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{p}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{p}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{p}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{.}\label{eq:normalized-measurement-block-matrix}
+\boldsymbol{p}_{\mathfrak{H}_{1}} & \boldsymbol{p}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{p}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{.}\label{eq:normalized-measurement-block-matrix}
 \end{equation}
 
 \end_inset
@@ -12143,19 +12163,19 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\Omega}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{\omega}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{\omega}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{\omega}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{.}
+\boldsymbol{\omega}_{\mathfrak{H}_{1}} & \boldsymbol{\omega}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{\omega}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{.}
 \end{equation}
 
 \end_inset
 
-The prioritization of the alternatives finally becomes
+The 
+\emph on
+strength of preference
+\emph default
+ among the alternatives finally becomes
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{p}_{\text{target}}=\boldsymbol{P}^{T}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\omega}_{\text{target}}\mbox{,}
+\boldsymbol{p}_{\text{target}}=\left(\boldsymbol{P}_{\mathfrak{H}}\varotimes\boldsymbol{\Omega}_{\mathfrak{H}}\right)\boldsymbol{\omega}_{\text{target}}\mbox{,}\label{eq:ahp-rank-ordered-preference}
 \end{equation}
 
 \end_inset
@@ -12180,7 +12200,23 @@ where
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
 
-.
+ and the Kronecker product is defined as (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Graham2018"
+literal "false"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\left[\boldsymbol{A}\varotimes\boldsymbol{B}\right]_{i,j}=a_{i,j}b_{i,j}\mbox{.}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph*
@@ -12196,7 +12232,11 @@ The the elements of the vector
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
 \end_inset
 
- enumerate the strength of preference for each corresponding alternative within the range considered by the multi-criterion decision problem.
+ enumerate the 
+\emph on
+strength of preference
+\emph default
+ for each corresponding alternative within the range considered by the multi-criterion decision problem.
  Given the element-measurement normalization schema (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12276,7 +12316,8 @@ One might plausibly construct an AHP application so that
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
 \end_inset
 
- corresponds to a utility function.
+ corresponds to a utility function,
+ if not an actual utility function itself.
  This must also employ a comparative-judgement intensity-of-importance assignment schema 
 \begin_inset Formula $\mathcal{J}$
 \end_inset
@@ -12311,7 +12352,12 @@ literal "false"
 \end_inset
 
  did not provide for these by default.
- 
+ Since 
+\begin_inset Formula $\left[\boldsymbol{p}_{\text{target}}\right]_{i}\in\left[0,1\right]$
+\end_inset
+
+,
+ it exhibits at least one property of a probablity.
 \end_layout
 
 \begin_layout Standard
@@ -12376,8 +12422,50 @@ literal "false"
 \begin_inset Formula $B_{9}$
 \end_inset
 
- apper.
+ appear.
  An ordinal ranking is the most-precise information provided.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
+\end_inset
+
+ effect
+\begin_inset Quotes erd
+\end_inset
+
+ column in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "zheng-et-al-metallurgical-properties"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ is based on 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 2"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl2"
+literal "false"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -12453,7 +12541,7 @@ tuple "list"
 
 \end_inset
 
- is represented in block-matrix form of (
+ is represented in matrix form of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:block-enumerated-evidence"
@@ -12567,7 +12655,11 @@ model,
 \begin_inset Text
 
 \begin_layout Plain Layout
-element
+element 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -12621,16 +12713,10 @@ units
 \begin_inset Text
 
 \begin_layout Plain Layout
-effect (
-\begin_inset CommandInset href
-LatexCommand href
-name "Zheng, et al"
-target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl2"
-literal "false"
-
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
-)
+ effect
 \end_layout
 
 \end_inset
@@ -14347,9 +14433,541 @@ arabic{table}}
 
 \end_layout
 
+\begin_layout Standard
+The rows of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ correspond to the vectors 
+\begin_inset Formula $\boldsymbol{p}_{\mathfrak{H}_{i}}$
+\end_inset
+
+ corresponding to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:normalized-measurement-block-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+ then is the transpose of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ Similarly,
+ 
+\begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
+\end_inset
+
+ is constructed from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{\varOmega}_{\mathfrak{H}} & =\left[\begin{array}{cccc}
+\boldsymbol{\omega}_{B_{1}} & \boldsymbol{\omega}_{B_{2}} & \cdots & \boldsymbol{\omega}_{B_{9}}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{cccc}
+0.2582 & 0.1047 & \cdots & 0.2583\\
+0.1047 & 0.2582 & \cdots & 0.1047\\
+0.6370 & 0.6370 & \cdots & 0.6370
+\end{array}\right]\mbox{.}\label{eq:titanium-alloy-priority-matrix}
+\end{align}
+
+\end_inset
+
+Likewise after populating the elements of 
+\begin_inset Formula $\boldsymbol{\omega}_{TA_{\text{opt}}}$
+\end_inset
+
+ from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) produces elements of 
+\begin_inset Formula $\boldsymbol{p}_{TA_{\text{opt}}}$
+\end_inset
+
+ displayed in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "priority-ranked-alloy-alternatives"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Priority-ranked Titanium-alloy alternatives 
+\begin_inset Formula $\boldsymbol{p}_{TA_{\text{opt}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "priority-ranked-alloy-alternatives"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Titanium
+\end_layout
+
+\begin_layout Plain Layout
+alloy
+\end_layout
+
+\begin_layout Plain Layout
+alternative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+preference
+\end_layout
+
+\begin_layout Plain Layout
+strength
+\end_layout
+
+\begin_layout Plain Layout
+from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1237
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1117
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0074
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "priority-ranked-alloy-alternatives"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ represents the ultimate result.
+ From it we conclude a slight preference for Titanium alloy 
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+ over 
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+.
+ Alternative 
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+ is considerably less-preferred,
+ relatively speaking.
+\end_layout
+
+\begin_layout Standard
+Now,
+ 
+\begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]$
+\end_inset
+
+.
+ Each of the preference strengths in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "priority-ranked-alloy-alternatives"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ falls to the lower end of this scale.
+ This might indicate that none of the alternatives provides a highly satisfactory solution,
+ given the metallurgical criteria identified by Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ Whether such a result motivates analysis of additional alternatives or reflects an inherent investment precarity depends on the business context.
+\end_layout
+
 \begin_layout Section*
 Entropy of edge-weighted,
  directed acyclic graph.
+\end_layout
+
+\begin_layout Standard
+Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of comparative judgements.
+ This represents the essential analytical innovation.
+ Within AHP applications,
+ strength-of-preference based on the linear operation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) represents common practice.
+ That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast constitutes our motivating preference.
+\end_layout
+
+\begin_layout Standard
+We begin with brief consideration of the comparative-judgement graphs based on Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements,tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ Our attention then turns to Laplacian-matrix formulation for the different commparative-judgement scenarios.
+ Within the context of the Titanium-alloy case study,
+ Laplacians for 
+\begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{1}}$
+\end_inset
+
+ are straightforward,
+ involving simple extensions of the approach from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+.
+ The graph associated with 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ however involves greater complexity,
+ involving a mixed graph.
+\end_layout
+
+\begin_layout Standard
+Following on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brown2020"
+literal "false"
+
+\end_inset
+
+ and others.
+ Laplacian matrices provide the bases for graph-entropy calculations.
+ Graph entropies for individual hierarchy-model comparative judgements follow straightforwardly.
+ Coupling them into an overarching network involves innovative coupling using hierarchy-model priority vectors.
+ That the latters' coincidence to the unit simplex proves useful,
+ allowing us to treat the hierarchy-model tree graphs as probabilities.
+\end_layout
+
+\begin_layout Standard
+Finally apply relative entropy to consider the loss of information —
+ increase in entropy —
+ occuring when a key informational component is omitted.
+ With the Titanium-alloy case study,
+ the metallurgical criteria in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ represent the key informational components for which we contributional characterization.
+ The approach by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiroušek2023"
+literal "false"
+
+\end_inset
+
+ for belief-function graphical models informs our approach.
+\end_layout
+
+\begin_layout Subsection*
+Construct comparative-judgement graphs.
+\end_layout
+
+\begin_layout Subsubsection*
+Criterion-alternative comparative-judgement graphs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparative-judgement graph for tensile-strength metallurgical alloy-selection criterion based on hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{B_{1}}$
+\end_inset
+
+ from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-tensile-strength-judgement-graph.png
+	lyxscale 10
+	width 3.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -14773,7 +15391,8 @@ literal "false"
 Camuffo,
  A.;
  Gambardella,
- A.;ß Pignataro,
+ A.;
+ Pignataro,
  A.
  (2024b).
  
@@ -15622,6 +16241,39 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Graham (2018)"
+key "Graham2018"
+literal "false"
+
+\end_inset
+
+Graham,
+ A.
+ (2018).
+ 
+\emph on
+Kronecker Products & Matrix Calculus with Applications
+\emph default
+.
+ Mineola,
+ NY:
+ Dover.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780486824178"
+target "https://store.doverpublications.com/products/9780486824178"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Guanlei, Xiaogang, Xiaotong (2025)"
 key "Guanlei2025"
 literal "false"
@@ -16123,7 +16775,8 @@ literal "false"
 Jiroušek,
  R.;
  Kratochvíl,
- V.;ß Shenoy,
+ V.;
+ Shenoy,
  P.
  P.
  (2023).

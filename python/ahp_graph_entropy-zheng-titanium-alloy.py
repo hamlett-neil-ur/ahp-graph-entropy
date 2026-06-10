@@ -34,6 +34,7 @@ def set_project_root():
 project_root = set_project_root()
 
 
+
 #%%
 
 
@@ -318,6 +319,255 @@ class calculateHierarchyModelEntropy:
 #%%
 
 
+class calculateStrengthOfAlternativePreference:
+    def __init__(self,
+                 comparative_judgements = None):
+    
+        self.comparative_judgements = comparative_judgements
+        
+        self.orchestrate_strengh_of_preference_calculation()
+    #
+    def assemble_structural_hierarchy_from_comparative_judgements(self):
+    
+        self.structural_hierarchy = {
+                                      hierarchy_model : calculateHierarchyModelEntropy(comparative_judgements = self.comparative_judgements.loc[hierarchy_model])
+                                    
+                                       for hierarchy_model
+                                       in set(self.comparative_judgements.index)
+                                    }
+        
+        return self.structural_hierarchy.keys()
+    #
+    def export_hierarchy_model_element_consistency_ratio_to_csv(self):
+    
+        '''
+           Construct `pandas.DataFrame` containing consistency ratios of hierarchy-model 
+           comparative judgements. Export as `*.csv`. Rendered as research-paper Table 3.
+        '''
+        
+        from pandas import DataFrame   
+        (
+            DataFrame.from_dict(
+                                data = {
+                                         hierarchy_model : ahp_structure.consistency_index_ratio
+                                         for (hierarchy_model,
+                                              ahp_structure    )
+                                         in self.structural_hierarchy.items()
+                                         },
+                                 orient = 'index'
+                                )
+                .rename_axis(index = 'hierarchy_model')
+                .reset_index(drop = False)
+                .sort_values(by = 'hierarchy_model')
+                .reset_index(drop = True)
+                 .to_csv(path_or_buf = './data/zheng-et-al-reciprocal-matrix-consistency-index-ratio.csv',
+                         index = False,
+                         encoding = 'utf-8')
+        
+        )
+        
+        return '🗂️📂📋📝🖊️'
+    #
+    def consntruct_priority_vector_table_export_to_csv(self):
+    
+        '''
+           Construct `pandas.DataFrame` containing consistency ratios of hierarchy-model 
+           priority vectors. Export as `*.csv`. Rendered as research-paper Table 2.
+        '''
+        
+        from pandas import DataFrame, concat
+        
+        eigenvector_geometric_mean_priority_vector_comparison = (
+                                concat(
+                                        objs = {
+                                                 hierarchy_model : DataFrame.from_dict(data = {'principal_eigenvector' : ahp_structure.priority_vector,
+                                                                                               'geometric_mean' : ahp_structure.geometric_mean_priority_vector})
+                                                                            .rename_axis(index = 'hierarchy_element')
+                                                                            .reset_index(drop = False)
+                                                                            .assign(
+                                                                                    hierarchy_model = ahp_structure.hierarchy_model,
+                                                                                    hierarchy_element = lambda Ξ : Ξ['hierarchy_element']
+                                                                                                                    .apply(func = lambda ξ :   ahp_structure.hierarchy_model
+                                                                                                                                             + ':'
+                                                                                                                                             + ξ)
+                                                                                   )
+                                                                            [['hierarchy_model',
+                                                                              'hierarchy_element',
+                                                                              'principal_eigenvector',
+                                                                              'geometric_mean'        ]]
+                                                 for (hierarchy_model,
+                                                      ahp_structure   )
+                                                 in self.structural_hierarchy.items()
+                                                 }.values()
+                                        )
+                            .sort_values(by = ['hierarchy_model',
+                                               'hierarchy_element'])
+                            .reset_index(drop = True)
+                   )
+        
+        priority_vector_euclidean_distances = (
+                                                  eigenvector_geometric_mean_priority_vector_comparison
+                                                                  .assign(
+                                                                          priority_vector_distance = lambda Χ : Χ[['principal_eigenvector',
+                                                                                                                   'geometric_mean'       ]]
+                                                                                                                 .apply(func = lambda χ : pow(  χ['principal_eigenvector']
+                                                                                                                                              - χ['geometric_mean'],
+                                                                                                                                              2                           ),
+                                                                                                                        axis = 1                                            )
+                                                                         )
+                                                                  [['hierarchy_model',
+                                                                    'priority_vector_distance']]
+                                                                  .groupby(by = 'hierarchy_model',
+                                                                           as_index = False        )
+                                                                  .sum()
+                                                 )
+        
+        (
+         eigenvector_geometric_mean_priority_vector_comparison
+                 .merge(right = priority_vector_euclidean_distances)
+                 [['hierarchy_model',
+                   'hierarchy_element',
+                   'principal_eigenvector',
+                   'priority_vector_distance']]
+                 .sort_values(by = ['hierarchy_model',
+                                    'hierarchy_element'])
+                 .reset_index(drop = True)
+                 .to_csv(path_or_buf = './data/zheng-et-al-priority-vectors.csv',
+                         index = False,
+                         encoding = 'utf-8')
+         )
+        
+        return eigenvector_geometric_mean_priority_vector_comparison
+    #
+    def extract_criterion_target_priority_vectors_from_structural_hierarchy(self):
+    
+        # Extract from dictionary of class objects `structural_hierarchy` priority vectors for
+        # each hierarchy model.
+        
+        self.criterion_alternative_priority_vector = { 
+                                                    hierarchy_model : ahp_structure.priority_vector
+                                                    for (hierarchy_model,
+                                                         ahp_structure    )
+                                                    in self.structural_hierarchy.items()
+                                                    if hierarchy_model != 'TA_opt'
+                                                    
+                                                }
+        
+        self.target_criterion_priority_vector = (self.structural_hierarchy.get('TA_opt')
+                                                                .priority_vector)
+        
+        return (self.criterion_alternative_priority_vector,
+                self.target_criterion_priority_vector      )
+    #
+    def load_alternative_criterion_measurements(self):
+    
+        from pandas import read_csv
+        
+        # Construct dictionary of functions to apply [0,1]-standardization to criterion-element
+        # measurements conditioned on whether deleterious or beneficial to target objective.
+        self.normalize_measurement = {
+                                         'deleterious': lambda υ:  (υ - υ.min(axis=1)
+                                                                         .to_numpy()
+                                                                         [:, None]   ) 
+                                                                  /(υ.max(axis=1)
+                                                                     .to_numpy()
+                                                                     [:, None] - υ.min(axis=1)
+                                                                                  .to_numpy()
+                                                                                  [:, None]       ),
+                                         'beneficial':  lambda χ:  (χ.max(axis=1)
+                                                                     .to_numpy()
+                                                                     [:, None] - χ)
+                                                                  /(χ.max(axis=1)
+                                                                     .to_numpy()
+                                                                     [:, None] - χ.min(axis=1)
+                                                                                  .to_numpy()
+                                                                                  [:, None]    )
+                                         }
+        
+        
+        # Read in csv file containing raw measurements of each criterion element. Apply
+        # Assign column `normalize_measurement` conditioned on value of `effect`, latter
+        # of which is dropped.
+        self.measurements_staged_for_normalization = (
+                                                         read_csv(filepath_or_buffer = './data/zheng-et-al-alternative-criterion-measures.csv',
+                                                                  usecols = ['hierarchy_model',
+                                                                             'TA3',
+                                                                             'TA10',
+                                                                             'TA36',
+                                                                             'effect'],
+                                                                  index_col = 'hierarchy_model')
+                                                             .assign(
+                                                                     normalize_measurment = lambda Ξ : Ξ['effect']
+                                                                                                        .apply(func = lambda ξ : self.normalize_measurement.get(ξ))
+                                                                    )
+                                                             .drop(columns = ['effect'])
+                                                         )
+        
+        return self.measurements_staged_for_normalization
+    #
+    def normalize_alternative_criterion_measurements_export_to_csv(self):
+    
+        from pandas import concat
+        
+        # Collect dictionary mapping `hierarchy_model` to `normalize_element` from 
+        # pandas.DataFrame object `measurements_staged_for_normalization`. 
+        self.normalize_measurement = (self.measurements_staged_for_normalization
+                                                        ['normalize_measurment']
+                                                        .to_dict()               )
+        
+        self.normalized_measurements = concat(
+                                                objs = [
+                                                         self.normalize_measurement.get(hierarchy_model)(self.measurements_staged_for_normalization.loc[[hierarchy_model],
+                                                                                                                                                        ['TA3',
+                                                                                                                                                         'TA10',
+                                                                                                                                                         'TA36'  ]        ])
+                                                         for hierarchy_model
+                                                         in self.measurements_staged_for_normalization.index
+                                                        ],
+                                                axis = 0                                                                                                                             )
+        
+        # Export to `csv the `normalized_measurements` pandas.DataFrame object for incorporation into
+        # research paper.
+        (
+          self.normalized_measurements.map(func = lambda υ : round(υ, 4))
+                                      .to_csv(path_or_buf = './data/zheng-et-al-normalized-element-measurements.csv',
+                                              index = True,
+                                              encoding = 'utf-8')
+         )
+        
+        return self.normalized_measurements
+    #
+    def calculate_strength_of_preference_given_measurements_comparative_judgements(self):
+    
+        from pandas import DataFrame
+        
+        self.strength_of_preference = (
+                                       DataFrame.from_dict(data = self.criterion_alternative_priority_vector,
+                                                           orient = 'columns')
+                                                .mul(other = self.normalized_measurements.T)
+                                                .dot(other = DataFrame.from_dict(data = self.target_criterion_priority_vector,
+                                                                                 orient = 'index')                            )
+                                                .rename(columns = {0 : 'preference_strength'})
+                                                .sort_values(by = 'preference_strength',
+                                                             ascending = False    )
+                                     )
+        
+        return self.strength_of_preference
+    #
+    def orchestrate_strengh_of_preference_calculation(self):
+    
+        self.assemble_structural_hierarchy_from_comparative_judgements()
+        self.export_hierarchy_model_element_consistency_ratio_to_csv()
+        self.consntruct_priority_vector_table_export_to_csv()
+        self.extract_criterion_target_priority_vectors_from_structural_hierarchy()
+        self.load_alternative_criterion_measurements()
+        self.normalize_alternative_criterion_measurements_export_to_csv()
+        self.calculate_strength_of_preference_given_measurements_comparative_judgements()
+        
+        return self.strength_of_preference
+    #
+
+
 
 #%%
 
@@ -331,9 +581,17 @@ from pandas import read_csv
 
 path_to_judgement_comparison = './data/zheng-et-al-target-criterion-alternative-judgements.csv'
 
-judgement_comparison = (read_csv(filepath_or_buffer = path_to_judgement_comparison)
+comparative_judgements = (read_csv(filepath_or_buffer = path_to_judgement_comparison)
                             .set_index(keys = 'hierarchy_model',
                                        drop = True              ))
+
+
+#%%
+
+
+pref_str = calculateStrengthOfAlternativePreference(comparative_judgements = comparative_judgements)
+
+
 
 
 
@@ -341,14 +599,13 @@ judgement_comparison = (read_csv(filepath_or_buffer = path_to_judgement_comparis
 
 #%%
 
-structural_hierarchy = {
-                          hierarchy_model : calculateHierarchyModelEntropy(comparative_judgements = judgement_comparison.loc[hierarchy_model])
-                        
-                           for hierarchy_model
-                           in set(judgement_comparison.index)
-                        }
-ho_b1 = structural_hierarchy.get('B1')
-ho_target = structural_hierarchy.get('target')
+
+
+ho_b1_judgement_graph_plot = (pref_str.structural_hierarchy
+                                      .get('B1')
+                                      .judgement_graph_plot_axes
+                                      .get('plot')               )
+
 
 # (
 #  ho_mc.judgement_graph_plot_axes.get('plot')
@@ -357,213 +614,36 @@ ho_target = structural_hierarchy.get('target')
 #                                          transparent = True) 
 # )
 
-structural_hierarchy.keys()
+
 
                                          
 #%%
 
-'''
-   Construct `pandas.DataFrame` containing consistency ratios of hierarchy-model 
-   comparative judgements. Export as `*.csv`. Rendered as research-paper Table 3.
-'''
 
-from pandas import DataFrame   
-(
-    DataFrame.from_dict(
-                        data = {
-                                 hierarchy_model : ahp_structure.consistency_index_ratio
-                                 for (hierarchy_model,
-                                      ahp_structure    )
-                                 in structural_hierarchy.items()
-                                 },
-                         orient = 'index'
-                        )
-        .rename_axis(index = 'hierarchy_model')
-        .reset_index(drop = False)
-        .sort_values(by = 'hierarchy_model')
-        .reset_index(drop = True)
-         .to_csv(path_or_buf = './data/zheng-et-al-reciprocal-matrix-consistency-index-ratio.csv',
-                 index = False,
-                 encoding = 'utf-8')
-
-)
 
 
 #%%
 
-'''
-   Construct `pandas.DataFrame` containing consistency ratios of hierarchy-model 
-   priority vectors. Export as `*.csv`. Rendered as research-paper Table 2.
-'''
 
-from pandas import DataFrame, concat
-
-eigenvector_geometric_mean_priority_vector_comparison = (
-                        concat(
-                                objs = {
-                                         hierarchy_model : DataFrame.from_dict(data = {'principal_eigenvector' : ahp_structure.priority_vector,
-                                                                                       'geometric_mean' : ahp_structure.geometric_mean_priority_vector})
-                                                                    .rename_axis(index = 'hierarchy_element')
-                                                                    .reset_index(drop = False)
-                                                                    .assign(
-                                                                            hierarchy_model = ahp_structure.hierarchy_model,
-                                                                            hierarchy_element = lambda Ξ : Ξ['hierarchy_element']
-                                                                                                            .apply(func = lambda ξ :   ahp_structure.hierarchy_model
-                                                                                                                                     + ':'
-                                                                                                                                     + ξ)
-                                                                           )
-                                                                    [['hierarchy_model',
-                                                                      'hierarchy_element',
-                                                                      'principal_eigenvector',
-                                                                      'geometric_mean'        ]]
-                                         for (hierarchy_model,
-                                              ahp_structure   )
-                                         in structural_hierarchy.items()
-                                         }.values()
-                                )
-                    .sort_values(by = ['hierarchy_model',
-                                       'hierarchy_element'])
-                    .reset_index(drop = True)
-           )
-
-priority_vector_euclidean_distances = (
-                                          eigenvector_geometric_mean_priority_vector_comparison
-                                                          .assign(
-                                                                  priority_vector_distance = lambda Χ : Χ[['principal_eigenvector',
-                                                                                                           'geometric_mean'       ]]
-                                                                                                         .apply(func = lambda χ : pow(  χ['principal_eigenvector']
-                                                                                                                                      - χ['geometric_mean'],
-                                                                                                                                      2                           ),
-                                                                                                                axis = 1                                            )
-                                                                 )
-                                                          [['hierarchy_model',
-                                                            'priority_vector_distance']]
-                                                          .groupby(by = 'hierarchy_model',
-                                                                   as_index = False        )
-                                                          .sum()
-                                         )
-
-(
- eigenvector_geometric_mean_priority_vector_comparison
-         .merge(right = priority_vector_euclidean_distances)
-         [['hierarchy_model',
-           'hierarchy_element',
-           'principal_eigenvector',
-           'priority_vector_distance']]
-         .sort_values(by = ['hierarchy_model',
-                            'hierarchy_element'])
-         .reset_index(drop = True)
-         .to_csv(path_or_buf = './data/zheng-et-al-priority-vectors.csv',
-                 index = False,
-                 encoding = 'utf-8')
- )
 
                                          
 #%%
 
-from pandas import DataFrame
-
-criterion_alternative_priority_vector = (DataFrame.from_dict(data = {
-                                                                     hierarchy_model : ahp_structure.priority_vector
-                                                                     for (hierarchy_model,
-                                                                          ahp_structure    )
-                                                                     in structural_hierarchy.items()
-                                                                     if hierarchy_model != 'TA_opt'
-                                                                     
-                                                                     },
-                                                             orient = 'index')
-                                                .sort_index(axis = 0)
-                                                [['TA3',
-                                                  'TA10',
-                                                  'TA36' ]])
-
-
-target_criterion_priority_vector = DataFrame.from_dict(data = {
-                                                                 hierarchy_model : ahp_structure.priority_vector
-                                                                 for (hierarchy_model,
-                                                                      ahp_structure    )
-                                                                 in structural_hierarchy.items()
-                                                                 if hierarchy_model == 'TA_opt'
-                                                                 
-                                                                 },
-                                                        orient = 'columns')
 
 
 
 #%%
 
-from pandas import read_csv, concat
-
-# Update your dictionary definitions to this:
-normalize_measurement = {
-                         'deleterious': lambda υ:  (υ - υ.min(axis=1)
-                                                         .to_numpy()
-                                                         [:, None]   ) 
-                                                  /(υ.max(axis=1)
-                                                     .to_numpy()
-                                                     [:, None] - υ.min(axis=1)
-                                                                  .to_numpy()
-                                                                  [:, None]       ),
-                         'beneficial':  lambda χ:  (χ.max(axis=1)
-                                                     .to_numpy()
-                                                     [:, None] - χ)
-                                                  /(χ.max(axis=1)
-                                                     .to_numpy()
-                                                     [:, None] - χ.min(axis=1)
-                                                                  .to_numpy()
-                                                                  [:, None]    )
-                         }
-
-measurements_staged_for_normalization = (
-                                         read_csv(filepath_or_buffer = './data/zheng-et-al-alternative-criterion-measures.csv',
-                                                  usecols = ['hierarchy_model',
-                                                             'TA3',
-                                                             'TA10',
-                                                             'TA36',
-                                                             'effect'],
-                                                  index_col = 'hierarchy_model')
-                                             .assign(
-                                                     normalize_measurment = lambda Ξ : Ξ['effect']
-                                                                                        .apply(func = lambda ξ : normalize_measurement.get(ξ))
-                                                    )
-                                             .drop(columns = ['effect'])
-                                         )
-
-normalize_measurement = (measurements_staged_for_normalization
-                                 ['normalize_measurment']
-                                 .to_dict()                    )
-
-normalized_measurements = concat(
-                                    objs = [
-                                             normalize_measurement.get(hierarchy_model)(measurements_staged_for_normalization.loc[[hierarchy_model],
-                                                                                                                                  ['TA3',
-                                                                                                                                   'TA10',
-                                                                                                                                   'TA36'  ]        ])
-                                             for hierarchy_model
-                                             in measurements_staged_for_normalization.index
-                                            ],
-                                    axis = 0                                                                                                            )
-
-
-(
-  normalized_measurements.map(func = lambda υ : round(υ, 4))
-                         .to_csv(path_or_buf = './data/zheng-et-al-normalized-element-measurements.csv',
-                                 index = True,
-                                 encoding = 'utf-8')
- )
-
-
-#%%
-
-
-# (normalized_measurements.dot(other = criterion_alternative_priority_vector)
-#  )
 
 
 
 #%%
 
-criterion_alternative_priority_vector
+
+#%%
+
+
+
 
 
 

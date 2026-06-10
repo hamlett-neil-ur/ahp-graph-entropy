@@ -2249,8 +2249,10 @@ literal "false"
 
 \end_inset
 
- speak to utility qualities,
- but do not explicitly articulate a utility function or theory.
+ speak to qualities —
+ values —
+ of utility.
+ They do not however explicitly articulate a utility function or theory.
  
 \end_layout
 
@@ -2432,7 +2434,7 @@ tuple "list"
 
 ),
  
-\begin_inset Formula $\left\{ a_{i,j}\right\} $
+\begin_inset Formula $a_{i,j}$
 \end_inset
 
  is positive-definite.
@@ -5424,8 +5426,12 @@ literal "false"
 
 \end_inset
 
- offers a psychophysics justification for this scale,
- and argues for an upper bound of 
+ offered a 
+\emph on
+psychophysics
+\emph default
+ justification for this scale,
+ and recommended an upper bound of 
 \begin_inset Formula $9$
 \end_inset
 
@@ -6390,7 +6396,7 @@ literal "false"
 
 \end_inset
 
- employed the geometric-mean approach
+ employed such a geometric-mean approach
 \begin_inset Formula 
 \begin{equation}
 \left[\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
@@ -6681,7 +6687,7 @@ tuple "list"
 
 \end_inset
 
--
+)-(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:limit-perron-eigenvalue-definition"
@@ -6725,7 +6731,7 @@ tuple "list"
 
 \end_inset
 
- lists the proirity vectors for each hierarchy model depicted by Figure 
+ lists the priority vectors for each hierarchy model depicted by Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "case-study-hierarchy-model"
@@ -6824,7 +6830,7 @@ tuple "list"
 
 \end_inset
 
- and 
+ here and 
 \begin_inset CommandInset href
 LatexCommand href
 name "Figure 25"
@@ -6851,7 +6857,7 @@ literal "false"
 \end_inset
 
 ,
- the proirity-vector values for hierarchy models 
+ the priority-vector values for hierarchy models 
 \begin_inset Formula $B_{1},\cdots,B_{9}$
 \end_inset
 
@@ -7032,7 +7038,7 @@ literal "false"
 \end_inset
 
  only consider three alternatives.
- Provided that criterion-to-alternative proirity vectors 
+ Provided that criterion-to-alternative priority vectors 
 \begin_inset Formula $\boldsymbol{\omega}_{B_{1}},\cdots,\boldsymbol{\omega}_{B_{9}}$
 \end_inset
 
@@ -7381,7 +7387,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -7611,7 +7617,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -7841,7 +7847,7 @@ vector
 \uwave off
 \noun off
 \color none
-0.6369
+0.6370
 \end_layout
 
 \end_inset
@@ -11784,7 +11790,14 @@ When we deal with tangibles,
 \end_layout
 
 \begin_layout Subsection*
-Prioritize alternatives based on comparative judgements.
+Prioritize alternatives based on comparative judgements and measurements of hierarchy-model elements.
+\end_layout
+
+\begin_layout Standard
+We now turn our attention to prioritization of alternatives by the AHP.
+ We first describe the mechanics for the general case.
+ We then apply the machinery to the Titanium-alloy selection case study.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -11831,7 +11844,7 @@ The measurement matrix contains the enumerated evidence weighed during multi-cri
 \end_inset
 
 .
- Expressed in block-matrix form,
+ Expressed in matrix form,
  the measurement matrix for all hierarchy models within the span 
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
@@ -11852,11 +11865,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{R}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
+\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
 \end{equation}
 
 \end_inset
@@ -11934,7 +11943,7 @@ Element-measurement normalization.
 \end_layout
 
 \begin_layout Standard
-Our priority vectors reside in the unit simplex 
+Our priority vectors reside on the unit simplex 
 \begin_inset Formula $\Delta^{n}$
 \end_inset
 
@@ -12004,15 +12013,11 @@ p_{\mathfrak{H}_{n,n'}}=\begin{cases}
 \end_inset
 
 Consequently,
- the normalized element-measurement block matrix becomes 
+ the normalized element-measurement matrix becomes 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{p}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{p}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{p}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{.}\label{eq:normalized-measurement-block-matrix}
+\boldsymbol{p}_{\mathfrak{H}_{1}} & \boldsymbol{p}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{p}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{.}\label{eq:normalized-measurement-block-matrix}
 \end{equation}
 
 \end_inset
@@ -12052,14 +12057,14 @@ tuple "list"
 
 \end_inset
 
-) indicate whether increasing the value of the measurement of element 
+) indicate whether increasing the measured value of element 
 \begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
  increases the or decreases,
  respectively,
  the degree to which 
-\begin_inset Formula $\mathfrak{H}_{n}$
+\begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
 
  is prefered.
@@ -12101,11 +12106,11 @@ beneficial
 \end_layout
 
 \begin_layout Paragraph*
-Proiritization of alternatives.
+Prioritization of alternatives.
 \end_layout
 
 \begin_layout Standard
-The priority ranking of alternatives results from a linear operation applying proirity vectors to our normalized hierarchy-element measurement matrix 
+The priority ranking of alternatives results from a linear operation applying priority vectors to our normalized hierarchy-element measurement matrix 
 \begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
 \end_inset
 
@@ -12130,11 +12135,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\Omega}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{\omega}_{\mathfrak{H}_{1}} & \boldsymbol{0} & \cdots & \boldsymbol{0}\\
-\boldsymbol{0} & \boldsymbol{\omega}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{0}\\
-\vdots & \vdots & \ddots & \vdots\\
-\boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{\omega}_{\mathfrak{H}_{M}}
-\end{array}\right]\mbox{.}
+\boldsymbol{\omega}_{\mathfrak{H}_{1}} & \boldsymbol{\omega}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{\omega}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{.}
 \end{equation}
 
 \end_inset
@@ -12142,7 +12143,7 @@ begin{subequations}
 The prioritization of the alternatives finally becomes
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{p}_{\text{target}}=\boldsymbol{P}^{T}_{\mathfrak{H}}\boldsymbol{\Omega}_{\mathfrak{H}}\boldsymbol{\omega}_{\text{target}}\mbox{,}
+\boldsymbol{p}_{\text{target}}=\left(\boldsymbol{P}_{\mathfrak{H}}\varotimes\boldsymbol{\Omega}_{\mathfrak{H}}\right)\boldsymbol{\omega}_{\text{target}}\mbox{,}\label{eq:ahp-rank-ordered-preference}
 \end{equation}
 
 \end_inset
@@ -12167,7 +12168,23 @@ where
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
 
-.
+ and the Kronecker product (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Graham2018"
+literal "false"
+
+\end_inset
+
+) is defined as
+\begin_inset Formula 
+\[
+\left[\boldsymbol{A}\varotimes\boldsymbol{B}\right]_{i,j}=a_{i,j}b_{i,j}\mbox{.}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph*
@@ -12179,11 +12196,138 @@ What does
 \end_layout
 
 \begin_layout Standard
+The the elements of the vector 
+\begin_inset Formula $\boldsymbol{p}_{\text{target}}$
+\end_inset
+
+ enumerate the strength of preference for each corresponding alternative within the range considered by the multi-criterion decision problem.
+ Given the element-measurement normalization schema (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ the 
+\begin_inset Formula $i^{\text{th}}$
+\end_inset
+
+ alternative —
+ where 
+\begin_inset Formula $i=\text{argmax}\left(\boldsymbol{p}_{\text{target}}\right)$
+\end_inset
+
+ —
+ is the most-preferred.
+ Linearly combining priority vectors obtained from comparative judgements about the degree of influence by hierarchy-model elements with measurements against each element for each alternative produces 
+\begin_inset Formula $\boldsymbol{p}_{\text{target}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subparagraph*
 The vector 
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
 \end_inset
 
- contains an enumerated strength of preference of the alternatives within the scope 
+ does not contain expected utilities.
+\end_layout
+
+\begin_layout Standard
+The principles of decision science lead us to select the alternative producing the 
+\emph on
+greatest expected utility
+\emph default
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+).
+ Chosing any other alternative constitues a departure from rationality.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abbas2026"
+literal "false"
+
+\end_inset
+
+ leveled this core criticism against decision methods based on 
+\begin_inset Quotes eld
+\end_inset
+
+pairwise comparisons
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+One might plausibly construct an AHP application so that 
+\begin_inset Formula $\boldsymbol{p}_{\text{target}}$
+\end_inset
+
+ corresponds to a utility function,
+ if not an actual utility function itself.
+ This must also employ a comparative-judgement intensity-of-importance assignment schema 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:comparative-judgement-assignment"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) consistent with the principles of probabilism (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pettigrew2016"
+literal "false"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986"
+literal "false"
+
+\end_inset
+
+ did not provide for these by default.
+ Since 
+\begin_inset Formula $\left[\boldsymbol{p}_{\text{target}}\right]_{i}\in\left[0,1\right]$
+\end_inset
+
+,
+ it exhibits at least one property of a probablity.
+\end_layout
+
+\begin_layout Standard
+Identifying mechanics for an expected-utility-based AHP formulation lies beyond the scope of the present investigation.
+ It sufficies here to reiterate this epistemic variance between AHP and mainstream decision science.
+ Providing an information-theoretic characterization of the degree of influence by evidentiary elements within hierarchy models represents our goal.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -12191,16 +12335,188 @@ Prioritized Titanium-alloy alternatives.
 \end_layout
 
 \begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "zheng-et-al-metallurgical-properties"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ contains the 
+\begin_inset Quotes eld
+\end_inset
+
+raw
+\begin_inset Quotes erd
+\end_inset
+
+ measurements of elements within hierarchy models 
+\begin_inset Formula $\left\{ B_{1},\cdots,B_{9}\right\} $
+\end_inset
+
+ for each Titanium-alloy alternative considered by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
+ The 
+\emph on
+source
+\emph default
+ column indicates location within 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ from which each element measurement was drawn.
+ Exact values appear for each element related to metallurgical properties.
+ No explicit measurements for hierarchy model 
+\begin_inset Formula $B_{9}$
+\end_inset
+
+ apper.
+ An ordinal ranking is the most-precise information provided.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ provides the normalized hierarchy-model element measurements.
+ It results from applying the schema in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) to the rows in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "zheng-et-al-metallurgical-properties"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ conditioned on the 
+\emph on
+effect
+\emph default
+ value associated with each metallurgical criterion.
+ 
+\end_layout
+
+\begin_layout Standard
+For compactness,
+ neither Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "zheng-et-al-metallurgical-properties"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ nor Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ is represented in block-matrix form of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:block-enumerated-evidence"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:normalized-measurement-block-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+),
+ respectively.
+ Obviously,
+ one transposes each row from a table into a column vector in order to construct the block matrices.
+ Subsequent calculations employ block-matrix structure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}a}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float table
 placement document
 alignment center
 wide true
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -12318,7 +12634,7 @@ units
 effect (
 \begin_inset CommandInset href
 LatexCommand href
-name "Table 2"
+name "Zheng, et al"
 target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl2"
 literal "false"
 
@@ -12541,7 +12857,7 @@ bending strength
 \begin_inset Text
 
 \begin_layout Plain Layout
-848.93
+848.9
 \end_layout
 
 \end_inset
@@ -12550,7 +12866,7 @@ bending strength
 \begin_inset Text
 
 \begin_layout Plain Layout
-741.98
+742.0
 \end_layout
 
 \end_inset
@@ -12559,7 +12875,7 @@ bending strength
 \begin_inset Text
 
 \begin_layout Plain Layout
-1101.03
+1101.0
 \end_layout
 
 \end_inset
@@ -12629,7 +12945,7 @@ surface hardness
 \begin_inset Text
 
 \begin_layout Plain Layout
-200.52
+200.5
 \end_layout
 
 \end_inset
@@ -12638,7 +12954,7 @@ surface hardness
 \begin_inset Text
 
 \begin_layout Plain Layout
-200.44
+200.4
 \end_layout
 
 \end_inset
@@ -12884,11 +13200,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-corrosion current 
-\begin_inset Formula $i_{\text{corr}}$
-\end_inset
-
-
+corrosion current
 \end_layout
 
 \end_inset
@@ -12924,7 +13236,7 @@ corrosion current
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $10^{7}\:A/cm^{2}$
+\begin_inset Formula $10^{7}A/cm^{2}$
 \end_inset
 
 
@@ -12985,7 +13297,7 @@ tribo-corrosion rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-100.231
+100.2
 \end_layout
 
 \end_inset
@@ -12994,7 +13306,7 @@ tribo-corrosion rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-177.476
+177.5
 \end_layout
 
 \end_inset
@@ -13003,7 +13315,7 @@ tribo-corrosion rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-59.631
+59.63
 \end_layout
 
 \end_inset
@@ -13133,6 +13445,1047 @@ literal "false"
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+addtocounter{table}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}b}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Normalized metallurgical-property measurements from applying (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) to Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "zheng-et-al-metallurgical-properties"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "normalized-metallurgical-property-measurements"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="4">
+<features borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5698
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.4335
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.7021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.998
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.2143
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.9167
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.4298
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.3445
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+arabic{table}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rows of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ correspond to the vectors 
+\begin_inset Formula $\boldsymbol{p}_{\mathfrak{H}_{i}}$
+\end_inset
+
+ corresponding to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:normalized-measurement-block-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+ then is the transpose of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ Similarly,
+ 
+\begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
+\end_inset
+
+ is constructed from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{\varOmega}_{\mathfrak{H}} & =\left[\begin{array}{cccc}
+\boldsymbol{\omega}_{B_{1}} & \boldsymbol{\omega}_{B_{2}} & \cdots & \boldsymbol{\omega}_{B_{9}}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{cccc}
+0.2582 & 0.1047 & \cdots & 0.2583\\
+0.1047 & 0.2582 & \cdots & 0.1047\\
+0.6370 & 0.6370 & \cdots & 0.6370
+\end{array}\right]\mbox{.}\label{eq:titanium-alloy-priority-matrix}
+\end{align}
+
+\end_inset
+
+Likewise after populating the elements of 
+\begin_inset Formula $\boldsymbol{\omega}_{TA_{\text{opt}}}$
+\end_inset
+
+ from Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "material-selection-priority-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) produces elements of 
+\begin_inset Formula $\boldsymbol{p}_{TA_{\text{opt}}}$
+\end_inset
+
+ displayed in table
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -13574,7 +14927,8 @@ literal "false"
 Camuffo,
  A.;
  Gambardella,
- A.;ß Pignataro,
+ A.;
+ Pignataro,
  A.
  (2024b).
  
@@ -14413,6 +15767,39 @@ Algebraic Graph Theory
 LatexCommand href
 name "9781461301639"
 target "https://doi.org/10.1007/978-1-4613-0163-9"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Graham (2018)"
+key "Graham2018"
+literal "false"
+
+\end_inset
+
+Graham,
+ A.
+ (2018).
+ 
+\emph on
+Kronecker Products & Matrix Calculus with Applications
+\emph default
+.
+ Mineola,
+ NY:
+ Dover.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780486824178"
+target "https://store.doverpublications.com/products/9780486824178"
 literal "false"
 
 \end_inset
