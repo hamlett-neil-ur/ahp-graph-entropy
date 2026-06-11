@@ -161,28 +161,56 @@ class calculateHierarchyModelEntropy:
         self.comparative_judgement_network = DiGraph()
         
         
-        self.comparative_judgement_network.add_edges_from(
-                                                          self.comparative_judgements
-                                                              .assign(
-                                                                      comparative_factor = lambda Η : Η['comparative_factor']
-                                                                                                       .apply(func = lambda η : self.hierarchy_model
-                                                                                                                                + ':'
-                                                                                                                                + η                   ),
-                                                                      reference_factor = lambda Χ : Χ['reference_factor']
-                                                                                                     .apply(func = lambda χ :   self.hierarchy_model
-                                                                                                                              + ':'
-                                                                                                                              + χ                    ),
-                                                                      importance = lambda Ξ : Ξ['importance']
-                                                                                               .apply(func = lambda ξ : {'importance' : ξ})
-                                                                      )
-                                                              [['comparative_factor',
-                                                                'reference_factor',
-                                                                'importance'           ]]
-                                                              .to_records(index = False)
-                                                           )
-        
+        (self.comparative_judgement_network
+             .add_edges_from(
+                             self.comparative_judgements
+                                 .assign(
+                                         comparative_factor = lambda Η : Η['comparative_factor']
+                                                                          .apply(func = lambda η : self.hierarchy_model
+                                                                                                   + ':'
+                                                                                                   + η                   ),
+                                         reference_factor = lambda Χ : Χ['reference_factor']
+                                                                        .apply(func = lambda χ :   self.hierarchy_model
+                                                                                                 + ':'
+                                                                                                 + χ                    ),
+                                         importance = lambda Ξ : Ξ['importance']
+                                                                  .apply(func = lambda ξ : {'importance' : ξ})
+                                         )
+                                 [['comparative_factor',
+                                   'reference_factor',
+                                   'importance'           ]]
+                                 .to_records(index = False)
+                             )
+        )
         return self.comparative_judgement_network.edges()
     #
+    def determine_acylicity_of_directed_spanning_subgraph(self):
+        
+        '''
+            Construct a directed spanning subgraph `self.comparative_judgement_network`. 
+            Take only the edges from `self.comparative_judgements` for which 
+            `reference_factor` > 1. This eliminates all of the undirected edges.
+            Apply the resultant edge list to `networkx.DiGraph` object `self.directed_spanning_subgraph`.
+            Then apply `networkx.is_directed_acyclic_graph` to `self.directed_spanning_subgraph`.
+        '''
+    
+        from networkx import DiGraph, is_directed_acyclic_graph
+        
+        self.directed_spanning_subgraph = DiGraph()
+        
+        (
+          self.directed_spanning_subgraph
+                  .add_edges_from(self.comparative_judgements
+                                      .loc[lambda Χ : Χ['importance'] > 1,
+                                           ['comparative_factor',
+                                            'reference_factor'   ]         ]
+                                      .to_records(index = False))
+          )
+        
+        self.directed_spanning_subgraph = {'directed_spanning_subgraphi_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph)}
+        
+        return self.directed_spanning_subgraph
+    # 
     def construct_comparative_judgement_network_plot(self):
     
         from numpy import sign
@@ -310,6 +338,7 @@ class calculateHierarchyModelEntropy:
         self.calculate_reciprocal_matrix_consistency_index_ratio()
         self.join_priority_vector_to_reciprocal_matrix()
         self.construct_comparative_judgement_network()
+        self.determine_acylicity_of_directed_spanning_subgraph()
         self.construct_comparative_judgement_network_plot()
         
         return self.reciprocal_matrix_priority_vector
@@ -592,7 +621,8 @@ comparative_judgements = (read_csv(filepath_or_buffer = path_to_judgement_compar
 pref_str = calculateStrengthOfAlternativePreference(comparative_judgements = comparative_judgements)
 
 
-
+ho_TAopt = (pref_str.structural_hierarchy
+                    .get('TA_opt')               )
 
 
 
@@ -607,12 +637,11 @@ ho_b1_judgement_graph_plot = (pref_str.structural_hierarchy
                                       .get('plot')               )
 
 
-# (
-#  ho_mc.judgement_graph_plot_axes.get('plot')
-#                                 .savefig(fname = './illustrations/objective_criterion_graph.png',
-#                                          dpi = 512,
-#                                          transparent = True) 
-# )
+(
+ ho_b1_judgement_graph_plot.savefig(fname = './illustrations/zheng-tensile-strength-judgement-graph.png',
+                                         dpi = 512,
+                                         transparent = True) 
+)
 
 
 

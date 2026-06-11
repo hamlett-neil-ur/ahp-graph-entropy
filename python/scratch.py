@@ -6,16 +6,23 @@ Created on Wed May 20 10:00:34 2026
 @author: nahamlet
 """
 
-def orchestrate_strengh_of_preference_calculation(self):
+def determine_acylicity_of_directed_spanning_subgraph(self):
 
-    self.assemble_structural_hierarchy_from_comparative_judgements()
-    self.export_hierarchy_model_element_consistency_ratio_to_csv()
-    self.consntruct_priority_vector_table_export_to_csv()
-    self.extract_criterion_target_priority_vectors_from_structural_hierarchy()
-    self.load_alternative_criterion_measurements()
-    self.normalize_alternative_criterion_measurements_export_to_csv()
-    self.calculate_strength_of_preference_given_measurements_comparative_judgements()
+    from networkx import DiGraph, is_directed_acyclic_graph
     
-    return self.strength_of_preference
+    self.directed_spanning_subgraph = DiGraph()
+    
+    (
+      self.directed_spanning_subgraph
+              .add_edges_from(self.comparative_judgements
+                                      .loc[lambda Χ : Χ['importance'] > 1,
+                                           ['comparative_factor',
+                                            'reference_factor'   ]         ]
+                                      .to_records(index = False))
+      )
+    
+    self.directed_spanning_subgraph = {'directed_spanning_subgraphi_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph)}
+    
+    return self.directed_spanning_subgraph
 #
 
