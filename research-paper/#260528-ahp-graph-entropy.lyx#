@@ -192,6 +192,15 @@ subequations
 \paperfontsize 10
 \spacing single
 \use_hyperref false
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letter
 \use_geometry true
 \use_package amsmath 2
@@ -962,7 +971,13 @@ Evidentiary-strength analysis using the AHP.
 \end_layout
 
 \begin_layout Standard
-That comparative judgements for an AHP hierarchy model define a complete graph provides the seminal point of departure for this investigation.
+That comparative judgements for an AHP hierarchy model define a complete graph —
+ or 
+\emph on
+clique
+\emph default
+ —
+ provides the seminal point of departure for this investigation.
  Additional opportunities arise when the resulting graph is also directed and acyclic.
  
 \begin_inset CommandInset citation
@@ -1633,7 +1648,21 @@ We begin with a brief illustration of AHP methodology.
 \emph on
 real-world
 \emph default
- case study concisely demonstrates its application to preference-ranking a set of scenarios.
+ case study —
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[sec:ahp-case-study]{Titanium-alloy selection}
+\end_layout
+
+\end_inset
+
+ —
+ concisely demonstrates its application to preference-ranking a set of scenarios.
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
  The complete graphs resulting from the comparative judgements provide our point of departure into a novel methodology.
@@ -1675,7 +1704,8 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
-AHP case study 
+AHP case study:
+ Titanium-alloy selection
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:ahp-case-study"
@@ -1693,8 +1723,8 @@ literal "false"
 
 \end_inset
 
- employed AHP to select materials from which to construct pipelines for use in offshore oil and gas extraction.
- Their analysis considers metalurgical technical details that are tangential to our purposes.
+ employed AHP to select the best candidate Titanium alloy from which to construct pipelines for use in offshore oil and gas extraction.
+ Their analysis considers metallurgical technical details that are tangential to our purposes.
  We principally focus on the AHP mechanics.
 \end_layout
 
@@ -1706,7 +1736,7 @@ literal "false"
 
 \end_inset
 
- particularly suits the purposes of this investigation for three reasons.
+ provide a particularly useful case study for three reasons.
 \end_layout
 
 \begin_layout Enumerate
@@ -1728,7 +1758,7 @@ This case is recent
 \emph default
 .
  Given that the AHP literature spans decades,
- a reader might succomb to the temptation to conclude that the method is anochronistic.
+ one might succomb to the temptation to conclude that the method is anochronistic.
  Our case here demonstrates the application of AHP to a contemporary design problem for an economically meaningful application.
 \end_layout
 
@@ -1742,7 +1772,8 @@ It strikes a balance between tractability and complexity
  constructed to illustrate AHP mechanics.
  The present investigation benefits from a moderately greater degree of complexity.
  The selected case provides the opportunity to demonstrate the use of relative entropy to couple hierarchically adjacent hierarchy models.
- That it considers nine distinct criteria also makes it interesting.
+ Moreover,
+ its results are straightforwardly reproducible.
 \end_layout
 
 \begin_layout Standard
@@ -1835,7 +1866,7 @@ literal "false"
 
 \end_inset
 
- for their pipeline-material selection.
+ for their Titanium-alloy selection decision.
  It depicts a hierarchically structured decision.
  The identified target describes a decisional activity:
  
@@ -1850,7 +1881,7 @@ Material selection of titanium alloy
 \begin_inset Quotes erd
 \end_inset
 
- Their nine criteria include eight metalurgical characteristics,
+ Their nine criteria include eight metallurgical characteristics,
  
 \begin_inset Formula $B_{1}\mbox{,}\cdots,B_{8}$
 \end_inset
@@ -1861,12 +1892,12 @@ Material selection of titanium alloy
 \end_inset
 
 .
- The latter suggests an economic basis for marginal utility.
+ The latter suggests a basis for marginal utility.
  
 \end_layout
 
 \begin_layout Standard
-The constituent criterion-to-alternative hierarchy models address how each of three candidate alloys address the metalurgical desidirata.
+The constituent criterion-to-alternative hierarchy models address how each of three candidate alloys address the metallurgical desidirata.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2064,7 +2095,7 @@ Alternatives
 \emph default
  under consideration.
  That only three —
- distinguished by labels 
+ 
 \begin_inset Formula $TA_{3}$
 \end_inset
 
@@ -2233,7 +2264,7 @@ literal "false"
 \end_inset
 
 ).
- Representing comparative judgements as a directed graph provides an unambiguous mechanism to identify violations of von Neumann-Morgenstern transitivity.
+ Representing comparative judgements as a directed graph provides an unambiguous mechanism to explicitly identify violations of von Neumann-Morgenstern transitivity.
  
 \end_layout
 
@@ -2276,48 +2307,41 @@ pairwise comparisons
 \begin_inset Quotes erd
 \end_inset
 
- (emphasis added) (
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
+after "emphasis added"
 key "Saaty1986"
 literal "false"
 
 \end_inset
 
-).
+.
  
 \emph on
 Pairwise
 \emph default
  is the operative term,
  here.
- Practically,
+ 
+\end_layout
+
+\begin_layout Standard
+Practically,
  one assembles a list of unique,
  unordered element pairs for each hierarchy model.
- Frequently,
- explicit representation of hierarchy-element comparative judgements is skipped in practice.
+ Explicit representation of hierarchy-element comparative judgements is frequently skipped in practice.
  The results are applied directly to a reciprocal matrix.
  Since comparative judgements themselves provide our excursion into graph-based evidentiary reasoning,
  we explicitly represent them here.
 \end_layout
 
 \begin_layout Subsubsection*
-Comparative-judgement principles.
+The logic of comparative judgement.
 \end_layout
 
 \begin_layout Standard
-If the hierarchy model for a given objective (or crietrion) spans 
-\begin_inset Formula $n$
-\end_inset
-
- elements,
- then 
-\begin_inset Formula $\binom{n}{2}$
-\end_inset
-
- element pairs must be considered.
- Application of comparative judgement imposes an ordering that must subsequently be observed.
- Consider a hierarchy model 
+Consider a hierarchy model 
 \begin_inset Formula $\mathfrak{H}$
 \end_inset
 
@@ -2407,6 +2431,20 @@ status open
 
 \backslash
 end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hspace*{
+\backslash
+parindent}
 \end_layout
 
 \end_inset
@@ -2546,7 +2584,7 @@ tuple "list"
 \end_inset
 
  contains element-pair judgements for each of the criterion-to-alternative models.
- Explicit depiction of the comparative judgements here contributes to the clarity of present course of reasoning.
+ Explicit depiction of the comparative judgements here contributes to the clarity of the present course of reasoning.
  In particular,
  the edge lists in Tables 
 \begin_inset CommandInset ref
@@ -2610,7 +2648,11 @@ name "tab:target-criterion-element-judgements"
 
 \end_inset
 
-Comparative judgements for each element pair within the target-to-criterion hierarchy model of Figure 
+Comparative judgements for each element pair within the target-to-criterion hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -3990,7 +4032,11 @@ name "tab:criterion-alternative-comparative-judgements"
 
 \end_inset
 
-Comparative judgements for each element pair within each of the criterion-to-alternative hierarchy models in Figure 
+Comparative judgements for each element pair within each of the criterion-to-alternative hierarchy models 
+\begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{b_{9}}$
+\end_inset
+
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -5515,8 +5561,33 @@ literal "false"
  Application of the personal-probability indifference principle arises as one option (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Savage1972,deFinetti1974"
+key "Savage1972"
 literal "false"
+
+\end_inset
+
+;
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{deFinetti1974}{de Finetti}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{deFinetti1974}{(1974)}
+\end_layout
 
 \end_inset
 
@@ -5556,7 +5627,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection*
-Constructing comparative-judgement tables.
+Constructing comparative-judgement tables
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:comparative-judgement-table-construction"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5661,7 +5739,7 @@ reference element
 \end_inset
 
 .
- This element subsequently corresponds to the head of the directed graph edge connecting the two elements.
+ This element subsequently corresponds to the head of the directed-graph edge connecting the two elements.
 \end_layout
 
 \begin_layout Itemize
@@ -5746,6 +5824,13 @@ fundamental scale
 
 \begin_layout Subsubsection*
 Comparative-judgement indifference and its consequences.
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:comparative-judgement-indifference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5801,6 +5886,7 @@ fundamental scale
 \end_inset
 
  explicitly allows for this.
+ Such occurrences represent undirected edges in an otherwise-directed graph.
  Four undirected edges appear in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5814,15 +5900,21 @@ tuple "list"
 \end_inset
 
 .
- This introduces an aspect of complexity.
- Unit-valued importance intensities imply undirected edges.
- In such cases,
- 
+ Consequently,
+ the comparative judgements 
+\begin_inset Formula $\mathcal{J}_{TA_{\text{opt}}}$
+\end_inset
+
+ for 
+\begin_inset Formula $\mathfrak{H}_{TA_{\textrm{opt}}}$
+\end_inset
+
+ are represented by a 
 \emph on
-mixed graphs
+mixed graph,
+
 \emph default
- occur:
- Graphs containing both directed and undirected edges.
+ containing both directed and undirected edges.
 \end_layout
 
 \begin_layout Standard
@@ -5830,7 +5922,7 @@ We subsequently handle this in construction of the graph Laplacians,
  on which entropy calculations are based.
  Our Laplacians must account for both directed and undirected edges,
  as well as other-than-unity edge weights.
- Aluded to previously,
+ Alluded to previously,
  graph-Laplacian constructions for distinct graph classes appear separately in the literature (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5903,7 +5995,7 @@ literal "false"
 \end_inset
 
 ).
- Judiciously combining graph-class-specific Laplacian structures with our mixed-graph structures represents a key task of the present investigation.
+ Judiciously combining graph-class-specific Laplacian structures with our mixed-graph scenario represents a key task of the present investigation.
 \end_layout
 
 \begin_layout Subsection*
@@ -5926,7 +6018,7 @@ priority vectors
 reciprocal matrix
 \emph default
  from the comparative judgements for each hierarchy model.
- A reciprocal matrix' values are assigned according to (
+ Reciprocal matrices' values are assigned according to (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:comparative-judgement-assignment"
@@ -6003,20 +6095,7 @@ a_{n,1} & a_{n,2} & \cdots & 1
 
 \end_inset
 
-subject to (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:comparative-judgement-reciprocity"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-),
- and where values of 
+where values of 
 \begin_inset Formula $a_{i,j}$
 \end_inset
 
@@ -6036,7 +6115,7 @@ tuple "list"
 
 \end_inset
 
-) and (
+) - (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reciprocal-matrix-diagonal-identity"
@@ -6054,7 +6133,7 @@ tuple "list"
 \begin_layout Standard
 Illustratively,
  the reciprocal-matrix for criterion-to-alternative hierarchy model 
-\begin_inset Formula $B_{1}$
+\begin_inset Formula $\mathfrak{H}_{B_{1}}$
 \end_inset
 
  becomes
@@ -6124,7 +6203,7 @@ The AHP-application literature contains different approaches to translating a re
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
- for a hierarchy model 
+ for hierarchy model 
 \begin_inset Formula $\mathfrak{H}$
 \end_inset
 
@@ -6165,18 +6244,22 @@ First,
  where
 \begin_inset Formula 
 \begin{equation}
-\Delta^{n}=\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\sum_{i}x_{i}=1\;\wedge x_{i}\geq0\:\forall i\right.\right\} \label{eq:unit-simplex-definition}
+\Delta^{n}\triangleq\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\left(\sum_{i}x_{i}=1\right)\;\wedge\left(x_{i}\geq0\:\forall i\right)\right.\right\} \label{eq:unit-simplex-definition}
 \end{equation}
 
 \end_inset
 
 is highly significant.
- All AHP calculation results are constrained to the interval 
+ Both AHP-calculation results and standardized inputs are constrained to the interval 
 \begin_inset Formula $\left[0,\,1\right]$
 \end_inset
 
 .
- This inlcudes both AHP-calculation results and standardization of inputs demonstrated in a subsequent subsection.
+ The constraint 
+\begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}\in\Delta^{n}$
+\end_inset
+
+ ensures this.
 \end_layout
 
 \begin_layout Paragraph*
@@ -6280,7 +6363,7 @@ The priority vector
  follows from the principal eigenvector as
 \begin_inset Formula 
 \begin{equation}
-\left[\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\right]_{i}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
+\left[\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\right]_{j}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{j,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
 \end{equation}
 
 \end_inset
@@ -6335,7 +6418,11 @@ tuple "list"
 \end_inset
 
 ),
- AHP transitivity requires
+ 
+\emph on
+AHP transitivity
+\emph default
+ requires
 \begin_inset ERT
 status open
 
@@ -6358,6 +6445,71 @@ a_{i,j}a_{j,k}=a_{i,k}\mbox{.}\label{eq:saaty-ahp-transitivity}
 Transitive consistency applies not just to preferential ordering,
  but also of intensities of importance.
  
+\end_layout
+
+\begin_layout Standard
+Consider a stylized illustration of the consequence of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) based on preferences for pizza.
+ Say that one prefers margherita twice as much as pepperoni pizza.
+ Also,
+ pepperoni is preferred three times as much as ham-and-pineapple pizza.
+ Reciprocal-matrix notation represents this as
+\begin_inset Formula 
+\[
+\begin{array}{c}
+a_{\text{margherita,pepperoni}}=2\\
+\mbox{and}\\
+a_{\text{pepperoni,ham-pinapple}}=3
+\end{array}\mbox{.}
+\]
+
+\end_inset
+
+The AHP-transitivity constraint (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) consequently requires
+\begin_inset Formula 
+\[
+a_{\text{margherita,ham-pineapple}}=6\mbox{.}
+\]
+
+\end_inset
+
+The von Neumann-Morgenstern transitivity axiom (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) certainly requires the preferential ordering.
+ The validity of intensity-of-importance transitivity poses a more-complicated proposition.
 \end_layout
 
 \begin_layout Standard
@@ -6466,7 +6618,7 @@ literal "false"
 
 \end_inset
 
- employed such a geometric-mean approach
+ employed a geometric-mean approach
 \begin_inset Formula 
 \begin{equation}
 \left[\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}\right]_{i}=\frac{\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}{{\displaystyle \sum^{n}_{i=1}}\left({\displaystyle \prod^{n}_{j=1}a_{i,j}}\right)^{\frac{1}{n}}}\mbox{.}\label{eq:geometric-mean-priority-vector}
@@ -6537,7 +6689,7 @@ tuple "list"
 
 \end_inset
 
-) offers transparency and reproducibility advantages that many researchers find convenient.
+) offers transparency and reproducibility advantages that many researchers find more-straightforward than eigenvector calculation.
 \end_layout
 
 \begin_layout Subparagraph*
@@ -6618,7 +6770,7 @@ literal "false"
 
 \end_inset
 
- applied a hybrid approach to the design of fuel cells.
+ applied such a hybrid approach to the design of fuel cells.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6666,7 +6818,7 @@ tuple "list"
  correspond to geometric design parameters.
  
 \begin_inset Float figure
-placement t
+placement h
 alignment center
 wide false
 sideways false
@@ -6745,7 +6897,7 @@ hybrid
 
 \begin_layout Standard
 Now,
- entropy-weight priority vectors are not based constraints enforcing transitive consistency along the lines of (
+ entropy-weight priority vectors are not subject to constraints enforcing transitive consistency along the lines of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -6772,15 +6924,31 @@ tuple "list"
 ).
  Nonetheless,
  exemplified by 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bu2026"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bu2026}{Bu,}
+\end_layout
+
+\end_inset
+
+ et al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bu2026}{(2026)}
+\end_layout
 
 \end_inset
 
 ,
- emprical phenomenologically-based evidence can prove more-reliable than subjective comparative judgements.
+ emprical phenomenologically-based evidence can prove more-informative than subjective comparative judgements alone.
  The highest-quality decision depends on judicious use of the most-informative evidence available.
 \end_layout
 
@@ -6801,7 +6969,7 @@ tuple "list"
 
 \end_inset
 
- lists the priority vectors for each hierarchy model depicted by Figure 
+ lists the priority-vector elements for each hierarchy model depicted by Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "case-study-hierarchy-model"
@@ -6888,7 +7056,7 @@ tuple "list"
 \end_layout
 
 \begin_layout Standard
-By visual comparison between Table 
+Visual comparison between Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "material-selection-priority-vectors"
@@ -6909,7 +7077,7 @@ literal "false"
 
 \end_inset
 
- (and 
+ and 
 \begin_inset CommandInset href
 LatexCommand href
 name "Table 12"
@@ -6918,7 +7086,7 @@ literal "false"
 
 \end_inset
 
-) from 
+ from 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -6926,9 +7094,8 @@ literal "false"
 
 \end_inset
 
-,
- the priority-vector values for hierarchy models 
-\begin_inset Formula $B_{1},\cdots,B_{9}$
+ reveals that priority-vector values for hierarchy models 
+\begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{9}}$
 \end_inset
 
  coincide exactly.
@@ -6945,11 +7112,11 @@ literal "false"
 \end_inset
 
  column in the former indicates negligible differences between 
-\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{B_{i}}$
 \end_inset
 
  and 
-\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{B_{i}}$
 \end_inset
 
 .
@@ -7022,7 +7189,20 @@ tuple "list"
 
  column.
  As the hierarchy-model element span expands,
- achieving transitive consistency (
+ achieving transitive consistency —
+ according to both (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -7034,8 +7214,9 @@ tuple "list"
 
 \end_inset
 
-) becomes increasingly difficult.
- Comensurately,
+) —
+ becomes increasingly challenging.
+ Commensurately,
  the equivalence between (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7061,44 +7242,19 @@ tuple "list"
 \end_inset
 
 ) becomes increasingly tenuous.
- Divergence of 
-\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
-\end_inset
-
- from 
-\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
-\end_inset
-
- also becomes more likely.
 \end_layout
 
 \begin_layout Standard
 For large sets of alternatives,
- the divergence between priority vectors based on (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:perron-priority-vector"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ the divergence between 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:geometric-mean-priority-vector"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ and 
+\begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
 \end_inset
 
-) increases the likelihood of rank reversal for the latter.
+ increases the likelihood of rank reversal when using the latter.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -7107,7 +7263,7 @@ literal "false"
 
 \end_inset
 
- only consider three alternatives.
+ only considered three alternatives.
  Provided that criterion-to-alternative priority vectors 
 \begin_inset Formula $\boldsymbol{\omega}_{B_{1}},\cdots,\boldsymbol{\omega}_{B_{9}}$
 \end_inset
@@ -10030,15 +10186,14 @@ literal "false"
 
 ).
  Here,
- we consider the types of inconsistencies in comparative judgements from which concerns might arise.
- We then review 
+ we introduce 
 \emph on
 consistency indices
 \emph default
 ,
- AHP's mechanism to quantify the degree of inconsistency.
- Finally,
- we consider alternative graph-theoretic approaches to mitigate inconsistencies in reasoning.
+ AHP's out-of-the-box mechanism to quantify the degree of inconsistency.
+ Later,
+ we demonstrate alternative graph-theoretic approaches to mitigate inconsistencies in reasoning.
  
 \end_layout
 
@@ -10050,7 +10205,7 @@ literal "false"
 
 \end_inset
 
- contains an extensive set of definitions,
+ presents an extensive set of definitions,
  axioms,
  and theorems leading to
 \begin_inset Formula 
@@ -10184,7 +10339,7 @@ provides a commonly used
 \emph on
 Consistency Index
 \emph default
- for a reciprocal matrix
+ for reciprocal matrix 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -10214,7 +10369,23 @@ tuple "list"
 \begin_inset Formula $CI\rightarrow0$
 \end_inset
 
- for a perfectly consistent reciprocal matrix.
+ when 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+ is perfectly consistent in terms of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -10301,7 +10472,7 @@ literal "false"
 \end_inset
 
 .
- Use of these values leads to small disparities between calculations reproduced here and those reported in 
+ Use of these values leads to small disparities between calculations reproduced here and those reported by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -10548,7 +10719,7 @@ name "material-selection-case-consistency-indices"
 \begin_inset Text
 
 \begin_layout Plain Layout
-hierarchy
+hierarchy model
 \end_layout
 
 \begin_layout Plain Layout
@@ -11754,10 +11925,10 @@ tuple "list"
 
 ) is satisfied.
  Except for the 
-\begin_inset Formula $TA_{\text{opt}}$
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
 \end_inset
 
- hierarchy model,
+,
  the quantities coincide very closely.
  
 \begin_inset CommandInset citation
@@ -11796,7 +11967,7 @@ tuple "list"
 
 \end_inset
 
- meet this condition.
+ meet this criterion.
  
 \end_layout
 
@@ -11833,6 +12004,32 @@ literal "false"
 \end_inset
 
 .
+ To be clear,
+ the transform enforces importance-intensity transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) as well as von Neumann-Morgernsern transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  Performing such a procedure may lead to an epistemic conundrum:
  One applies algorithmic logic to override comparative judgements.
  
@@ -11856,7 +12053,184 @@ When we deal with tangibles,
 \begin_inset Quotes erd
 \end_inset
 
+ Our pizza-preference thought exercise above illustrates.
+\end_layout
 
+\begin_layout Subsubsection*
+Graphical detection of transitive inconsistencies.
+\end_layout
+
+\begin_layout Standard
+The graphical structure of pairwise judgements motivates an unambiguous approach to detect violations of von Neumann-Morgenstern transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ Consider the comparative-judgement graph 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ for hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+.
+ The preceding subsection on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:comparative-judgement-table-construction]{comparative-judgement tables}
+\end_layout
+
+\end_inset
+
+ described how comparative judgements are represented as a list of directed graph edges for a given 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+.
+ So then,
+ violations of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) become straightforwardly detectable as cycles in 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Previously described 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:comparative-judgement-indifference]{comparative-judgement indifferences}
+\end_layout
+
+\end_inset
+
+ complicate this approach modestly.
+ Specifically,
+ edges associated with unit-valued intensities of importance are undirected edges.
+ Their presence can introduce cycles whose presence mask violations of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) associated with directed edges.
+ We must therefore apply our directed-graph acyclicity test above to a spanning subgraph 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+.
+ By definition,
+ a spanning subgraph 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ contains all of the nodes of the latter,
+ but omits one or more edges (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Godsil2001"
+literal "false"
+
+\end_inset
+
+).
+ In our case,
+ 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+ omits from 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ edges with unit-valued intensities of importance.
+\end_layout
+
+\begin_layout Standard
+Commonly available open-source software libraries contain off-the-shelf logic to detect cycles in directed graphs.
+ Illustratively,
+ the python library 
+\begin_inset CommandInset href
+LatexCommand href
+name "networkx"
+target "https://networkx.org/en/"
+literal "false"
+
+\end_inset
+
+ contains a built-in method 
+\emph on
+is_directed_acyclic_graph
+\emph default
+,
+ which returns a value of 
+\begin_inset Formula $True$
+\end_inset
+
+ or 
+\begin_inset Formula $False$
+\end_inset
+
+ depending on whether or not the directed graph contains cycles (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagberg (2008)"
+literal "false"
+
+\end_inset
+
+).
+ The library also contains methods to identify directed-graph cycles if they are present.
+ Such feedback to the comparative-judgement panel serves to sharpen their reasoning about hierarchy-model elements' relative importance.
+ Applying this method to 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+ based on 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -11916,7 +12290,7 @@ The measurement matrix contains the enumerated evidence weighed during multi-cri
 .
  Expressed in matrix form,
  the measurement matrix for all hierarchy models within the span 
-\begin_inset Formula $\mathfrak{H}_{\text{target}}$
+\begin_inset Formula $\mathfrak{H}_{\text{target}}\supseteq\left\{ \mathfrak{H}_{1},\cdots,\mathfrak{H}_{N}\right\} $
 \end_inset
 
  appears as
@@ -11935,7 +12309,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{R}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
+\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{N}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
 \end{equation}
 
 \end_inset
@@ -11943,7 +12317,7 @@ begin{subequations}
 where
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}^{T}_{\mathfrak{H}_{n}}=\left[r_{\mathfrak{H}_{n,1}},\cdots,r_{\mathfrak{H}_{n,N}}\right]
+\boldsymbol{r}^{T}_{\mathfrak{H}_{n}}=\left[r_{\mathfrak{H}_{n,1}},\cdots,r_{\mathfrak{H}_{n,M}}\right]
 \end{equation}
 
 \end_inset
@@ -11960,12 +12334,12 @@ end{subequations}
 
 \end_inset
 
-contains measurements for each of the 
-\begin_inset Formula $\left\{ e_{\mathfrak{H}_{n,1}},\cdots,e_{\mathfrak{H}_{n,N}}\right\} $
+contains measurements for each of 
+\begin_inset Formula $M$
 \end_inset
 
- elements within the span of 
-\begin_inset Formula $\mathfrak{H}_{n}$
+ alternatives with respect to hierarchy-model element 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
 .
@@ -12030,7 +12404,11 @@ tuple "list"
 \end_inset
 
 ).
- In order to constrain the prioritization values to 
+ In order to constrain the 
+\emph on
+strengths of preference
+\emph default
+ among the alternatives to 
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
@@ -12062,13 +12440,13 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}_{\mathfrak{H}_{n}}:\mathcal{P}\mapsto\boldsymbol{p}_{\mathfrak{H}_{n}}\mid p_{\mathfrak{H}_{n,n'}}\in\left[0,1\right]\:\forall\,n'\mbox{.}
+\boldsymbol{r}_{\mathfrak{H}_{n}}:\mathcal{P}_{e_{n}}\mapsto\boldsymbol{p}_{\mathfrak{H}_{n}}\mid p_{\mathfrak{H}_{n,n'}}\in\left[0,1\right]\:\forall\,n'\mbox{.}
 \end{equation}
 
 \end_inset
 
 The measurment-normalization map 
-\begin_inset Formula $\mathcal{P}$
+\begin_inset Formula $\mathcal{P}_{e_{n}}$
 \end_inset
 
  is defined by
@@ -12131,13 +12509,9 @@ tuple "list"
 \begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
- increases the or decreases,
+ increases or decreases,
  respectively,
- the degree to which 
-\begin_inset Formula $\mathfrak{H}_{\text{target}}$
-\end_inset
-
- is prefered.
+ the degree to to which a given alternative is prefered.
  Employing a utility analogy,
  if 
 \begin_inset Formula $e_{\mathfrak{H}_{n}}$
@@ -12148,11 +12522,11 @@ tuple "list"
 beneficial
 \emph default
 ,
- then a higher-valued measurement 
+ then increasing the value of 
 \begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
 \end_inset
 
- indicates greater utility of 
+ returns greater utility of 
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
 
@@ -12180,7 +12554,7 @@ Prioritization of alternatives.
 \end_layout
 
 \begin_layout Standard
-The priority ranking of alternatives results from a linear operation applying priority vectors to our normalized hierarchy-element measurement matrix 
+The preferential ranking of alternatives results from a linear operation applying priority vectors to our normalized hierarchy-element measurement matrix 
 \begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
 \end_inset
 
@@ -12189,7 +12563,7 @@ The priority ranking of alternatives results from a linear operation applying pr
 \begin_inset Formula $\left\{ \mathfrak{H_{1}},\cdots,\mathfrak{H}_{M}\right\} $
 \end_inset
 
- in block-matrix form produces
+ in matrix form produces
 \begin_inset ERT
 status open
 
@@ -12359,7 +12733,7 @@ One might plausibly construct an AHP application so that
 \end_inset
 
  corresponds to a utility function,
- if not an actual utility function itself.
+ if not represnets an actual utility function itself.
  This must also employ a comparative-judgement intensity-of-importance assignment schema 
 \begin_inset Formula $\mathcal{J}$
 \end_inset
@@ -12611,7 +12985,7 @@ tuple "list"
  respectively.
  Obviously,
  one transposes each row from a table into a column vector in order to construct the block matrices.
- Subsequent calculations employ block-matrix structure.
+ Subsequent calculations employ a matrix structure.
 \end_layout
 
 \begin_layout Standard
@@ -12642,7 +13016,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Metallurgical-property measurements influencing Titanium-alloy prioritization.
+Metallurgical-property measurements 
+\begin_inset Formula $\boldsymbol{R}_{\mathfrak{H}}$
+\end_inset
+
+ influencing Titanium-alloy prioritization.
  (From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -13611,7 +13989,11 @@ name "tab:Normalized-metallurgical-propert"
 
 \end_inset
 
-Normalized metallurgical-property measurements from applying (
+Normalized metallurgical-property measurements 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+ from applying (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:hierarchy-measurement-normalization"
@@ -14621,8 +15003,28 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Priority-ranked Titanium-alloy alternatives 
+Strengths of preference 
 \begin_inset Formula $\boldsymbol{p}_{TA_{\text{opt}}}$
+\end_inset
+
+ from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) for candidate Titanium alloys considered by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
 \end_inset
 
 .
@@ -14665,11 +15067,11 @@ alternative
 \begin_inset Text
 
 \begin_layout Plain Layout
-preference
+strength of 
 \end_layout
 
 \begin_layout Plain Layout
-strength
+preference
 \end_layout
 
 \begin_layout Plain Layout
@@ -14867,10 +15269,10 @@ Entropy of edge-weighted,
 \end_layout
 
 \begin_layout Standard
-Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of comparative judgements.
+Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of a set of AHP comparative judgements.
  This represents the essential analytical innovation.
  Within AHP applications,
- strength-of-preference based on the linear operation (
+ strength-of-preference sensitivity analysis of the linear operation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ahp-rank-ordered-preference"
@@ -14883,7 +15285,7 @@ tuple "list"
 \end_inset
 
 ) represents common practice.
- That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast constitutes our motivating preference.
+ That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast constitutes our motivation.
 \end_layout
 
 \begin_layout Standard
@@ -14933,7 +15335,7 @@ literal "false"
 
 \end_inset
 
- and others.
+ and others,
  Laplacian matrices provide the bases for graph-entropy calculations.
  Graph entropies for individual hierarchy-model comparative judgements follow straightforwardly.
  Coupling them into an overarching network involves innovative coupling using hierarchy-model priority vectors.
@@ -14994,7 +15396,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Comparative-judgement graph for tensile-strength metallurgical alloy-selection criterion based on hierarchy model 
+Comparative-judgement graph 
+\begin_inset Formula $\mathcal{G}_{B_{1}}$
+\end_inset
+
+ for tensile-strength metallurgical alloy-selection criterion based on hierarchy model 
 \begin_inset Formula $\mathfrak{H}_{B_{1}}$
 \end_inset
 
@@ -15090,7 +15496,7 @@ On the value of information across decision problems.
 \end_inset
 
  Decision Analysis:
- 22(1)1-88.
+ 22(1)1-13.
  
 \begin_inset Flex URL
 status open
@@ -15363,6 +15769,18 @@ LatexCommand bibitem
 label "Bu, et al (2026)"
 key "Bu2026"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Bu2026}
+\end_layout
 
 \end_inset
 

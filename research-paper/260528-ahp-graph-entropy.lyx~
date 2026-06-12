@@ -192,6 +192,15 @@ subequations
 \paperfontsize 10
 \spacing single
 \use_hyperref false
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letter
 \use_geometry true
 \use_package amsmath 2
@@ -962,7 +971,13 @@ Evidentiary-strength analysis using the AHP.
 \end_layout
 
 \begin_layout Standard
-That comparative judgements for an AHP hierarchy model define a complete graph provides the seminal point of departure for this investigation.
+That comparative judgements for an AHP hierarchy model define a complete graph —
+ or 
+\emph on
+clique
+\emph default
+ —
+ provides the seminal point of departure for this investigation.
  Additional opportunities arise when the resulting graph is also directed and acyclic.
  
 \begin_inset CommandInset citation
@@ -1633,7 +1648,21 @@ We begin with a brief illustration of AHP methodology.
 \emph on
 real-world
 \emph default
- case study concisely demonstrates its application to preference-ranking a set of scenarios.
+ case study —
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[sec:ahp-case-study]{Titanium-alloy selection}
+\end_layout
+
+\end_inset
+
+ —
+ concisely demonstrates its application to preference-ranking a set of scenarios.
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
  The complete graphs resulting from the comparative judgements provide our point of departure into a novel methodology.
@@ -1676,7 +1705,7 @@ literal "false"
 
 \begin_layout Section*
 AHP case study:
- Titanium-alloy selection
+ Titanium-alloy selection for offshore pipelines.
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:ahp-case-study"
@@ -1837,7 +1866,7 @@ literal "false"
 
 \end_inset
 
- for their Titanium-alloy selection.
+ for their Titanium-alloy selection decision.
  It depicts a hierarchically structured decision.
  The identified target describes a decisional activity:
  
@@ -5598,7 +5627,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection*
-Constructing comparative-judgement tables.
+Constructing comparative-judgement tables
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:comparative-judgement-table-construction"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5788,6 +5824,13 @@ fundamental scale
 
 \begin_layout Subsubsection*
 Comparative-judgement indifference and its consequences.
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:comparative-judgement-indifference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6433,7 +6476,7 @@ a_{\text{pepperoni,ham-pinapple}}=3
 
 \end_inset
 
-The AHP-transitivity constraint (
+The AHP-transitivity condition (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -6466,7 +6509,7 @@ tuple "list"
 \end_inset
 
 ) certainly requires the preferential ordering.
- The validity of intensity-of-importance transitivity poses a more-complicated proposition.
+ The necessity of intensity-of-importance transitivity poses a more-complicated question.
 \end_layout
 
 \begin_layout Standard
@@ -11961,6 +12004,32 @@ literal "false"
 \end_inset
 
 .
+ To be clear,
+ the transform enforces importance-intensity transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) as well as von Neumann-Morgernsern transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  Performing such a procedure may lead to an epistemic conundrum:
  One applies algorithmic logic to override comparative judgements.
  
@@ -11984,7 +12053,184 @@ When we deal with tangibles,
 \begin_inset Quotes erd
 \end_inset
 
- Our pizza-preference thought exercise above exemplifies.
+ Our pizza-preference thought exercise above illustrates.
+\end_layout
+
+\begin_layout Subsubsection*
+Graphical detection of transitive inconsistencies.
+\end_layout
+
+\begin_layout Standard
+The graphical structure of pairwise judgements motivates an unambiguous approach to detect violations of von Neumann-Morgenstern transitivity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ Consider the comparative-judgement graph 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ for hierarchy model 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+.
+ The preceding subsection on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:comparative-judgement-table-construction]{comparative-judgement tables}
+\end_layout
+
+\end_inset
+
+ described how comparative judgements are represented as a list of directed graph edges for a given 
+\begin_inset Formula $\mathfrak{H}$
+\end_inset
+
+.
+ So then,
+ violations of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) become straightforwardly detectable as cycles in 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Previously described 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:comparative-judgement-indifference]{comparative-judgement indifferences}
+\end_layout
+
+\end_inset
+
+ complicate this approach modestly.
+ Specifically,
+ edges associated with unit-valued intensities of importance are undirected edges.
+ Their presence can introduce cycles whose presence mask violations of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vonNeumann-Morgernstern-transitivity-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) associated with directed edges.
+ We must therefore apply our directed-graph acyclicity test above to a spanning subgraph 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+.
+ By definition,
+ a spanning subgraph 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ contains all of the nodes of the latter,
+ but omits one or more edges (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Godsil2001"
+literal "false"
+
+\end_inset
+
+).
+ In our case,
+ 
+\begin_inset Formula $\breve{\mathcal{G}}$
+\end_inset
+
+ omits from 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ edges with unit-valued intensities of importance.
+\end_layout
+
+\begin_layout Standard
+Commonly available open-source software libraries contain off-the-shelf logic to detect cycles in directed graphs.
+ Illustratively,
+ the python library 
+\begin_inset CommandInset href
+LatexCommand href
+name "networkx"
+target "https://networkx.org/en/"
+literal "false"
+
+\end_inset
+
+ contains a built-in method 
+\emph on
+is_directed_acyclic_graph
+\emph default
+,
+ which returns a value of 
+\begin_inset Formula $True$
+\end_inset
+
+ or 
+\begin_inset Formula $False$
+\end_inset
+
+ depending on whether or not the directed graph contains cycles (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagberg (2008)"
+literal "false"
+
+\end_inset
+
+).
+ The library also contains methods to identify directed-graph cycles if they are present.
+ Such feedback to the comparative-judgement panel serves to sharpen their reasoning about hierarchy-model elements' relative importance.
+ Applying this method to 
+\begin_inset Formula $\breve{\mathcal{G}}_{TA_{\text{opt}}}$
+\end_inset
+
+ based on 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ reveals no transitivity violations within the directed edges.
 \end_layout
 
 \begin_layout Subsection*
@@ -12044,7 +12290,7 @@ The measurement matrix contains the enumerated evidence weighed during multi-cri
 .
  Expressed in matrix form,
  the measurement matrix for all hierarchy models within the span 
-\begin_inset Formula $\mathfrak{H}_{\text{target}}\supseteq\left\{ \mathfrak{H}_{n}\right\} $
+\begin_inset Formula $\mathfrak{H}_{\text{target}}\supseteq\left\{ \mathfrak{H}_{1},\cdots,\mathfrak{H}_{N}\right\} $
 \end_inset
 
  appears as
@@ -12063,7 +12309,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{R}_{\mathfrak{H}}=\left[\begin{array}{cccc}
-\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{M}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
+\boldsymbol{r}_{\mathfrak{H}_{1}} & \boldsymbol{r}_{\mathfrak{H}_{2}} & \cdots & \boldsymbol{r}_{\mathfrak{H}_{N}}\end{array}\right]\mbox{,}\label{eq:block-enumerated-evidence}
 \end{equation}
 
 \end_inset
@@ -12071,7 +12317,7 @@ begin{subequations}
 where
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}^{T}_{\mathfrak{H}_{n}}=\left[r_{\mathfrak{H}_{n,1}},\cdots,r_{\mathfrak{H}_{n,N}}\right]
+\boldsymbol{r}^{T}_{\mathfrak{H}_{n}}=\left[r_{\mathfrak{H}_{n,1}},\cdots,r_{\mathfrak{H}_{n,M}}\right]
 \end{equation}
 
 \end_inset
@@ -12088,12 +12334,12 @@ end{subequations}
 
 \end_inset
 
-contains measurements for each of the 
-\begin_inset Formula $\left\{ e_{\mathfrak{H}_{n,1}},\cdots,e_{\mathfrak{H}_{n,N}}\right\} $
+contains measurements for each of 
+\begin_inset Formula $M$
 \end_inset
 
- elements within the span of 
-\begin_inset Formula $\mathfrak{H}_{n}$
+ alternatives with respect to hierarchy-model element 
+\begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
 .
@@ -12263,7 +12509,7 @@ tuple "list"
 \begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
 
- increases the or decreases,
+ increases or decreases,
  respectively,
  the degree to to which a given alternative is prefered.
  Employing a utility analogy,
@@ -12276,11 +12522,11 @@ tuple "list"
 beneficial
 \emph default
 ,
- then a higher-valued measurement 
+ then increasing the value of 
 \begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
 \end_inset
 
- indicates greater utility of 
+ returns greater utility of 
 \begin_inset Formula $\mathfrak{H}_{\text{target}}$
 \end_inset
 
@@ -12308,7 +12554,7 @@ Prioritization of alternatives.
 \end_layout
 
 \begin_layout Standard
-The priority ranking of alternatives results from a linear operation applying priority vectors to our normalized hierarchy-element measurement matrix 
+The preferential ranking of alternatives results from a linear operation applying priority vectors to our normalized hierarchy-element measurement matrix 
 \begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
 \end_inset
 
@@ -15023,8 +15269,8 @@ Entropy of edge-weighted,
 \end_layout
 
 \begin_layout Standard
-Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of a set of AHP comparative judgements.
- This represents the essential analytical innovation.
+Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of sets of AHP comparative judgements.
+ This constitutes our essential analytical innovation.
  Within AHP applications,
  strength-of-preference sensitivity analysis of the linear operation (
 \begin_inset CommandInset ref
@@ -15039,7 +15285,7 @@ tuple "list"
 \end_inset
 
 ) represents common practice.
- That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast constitutes our motivation.
+ That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast provides our motivation.
 \end_layout
 
 \begin_layout Standard
@@ -15089,7 +15335,7 @@ literal "false"
 
 \end_inset
 
- and others.
+ and others,
  Laplacian matrices provide the bases for graph-entropy calculations.
  Graph entropies for individual hierarchy-model comparative judgements follow straightforwardly.
  Coupling them into an overarching network involves innovative coupling using hierarchy-model priority vectors.
@@ -15150,7 +15396,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Comparative-judgement graph for tensile-strength metallurgical alloy-selection criterion based on hierarchy model 
+Comparative-judgement graph 
+\begin_inset Formula $\mathcal{G}_{B_{1}}$
+\end_inset
+
+ for tensile-strength metallurgical alloy-selection criterion based on hierarchy model 
 \begin_inset Formula $\mathfrak{H}_{B_{1}}$
 \end_inset
 
