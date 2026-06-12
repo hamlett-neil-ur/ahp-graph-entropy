@@ -1712,7 +1712,7 @@ name "sec:ahp-case-study"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -12773,13 +12773,63 @@ literal "false"
 \end_inset
 
 ,
- it exhibits at least one property of a probablity.
+ it coincidentally exhibits at least one property of a probablity.
+\end_layout
+
+\begin_layout Subparagraph*
+Decision-Quality consequences of AHP.
+\end_layout
+
+\begin_layout Standard
+DQ emphasizes 
+\emph on
+Sound Reasoning
+\emph default
+ as a key link.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Howard2016"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+ articulate decision-science foundations for decision quality in particular,
+ and the decision-analysis discipline in general.
+ This is grounded in the von Neumann-Morgenstern principle that the most-rational decision selects the alternative yielding the greatest expected utility.
+ 
+\end_layout
+
+\begin_layout Standard
+AHP in contrast returns a preferential ranking based on linear combination of comparative judgements and measurements of decision factors,
+ or elements.
+ This preferential ranking is not equivalent to identifying the maximum expected utility.
+ Consequently no guarantee occurs that the most-preferred alternative also yields the expected maximum utility (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
 Identifying mechanics for an expected-utility-based AHP formulation lies beyond the scope of the present investigation.
  It sufficies here to reiterate this epistemic variance between AHP and mainstream decision science.
  Providing an information-theoretic characterization of the degree of influence by evidentiary elements within hierarchy models represents our goal.
+ Consequently,
+ the methodology developed here complements utility-optimizing decisional reasoning.
+ Nothing herein should be construed as asserting that AHP sufficies as a decision-quality reasoning approach.
 \end_layout
 
 \begin_layout Subsubsection*
