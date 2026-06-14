@@ -495,7 +495,7 @@ class calculateStrengthOfAlternativePreference:
         # Construct dictionary of functions to apply [0,1]-standardization to criterion-element
         # measurements conditioned on whether deleterious or beneficial to target objective.
         self.normalize_measurement = {
-                                         'deleterious': lambda υ:  (υ - υ.min(axis=1)
+                                        'beneficial' : lambda υ:  (υ - υ.min(axis=1)
                                                                          .to_numpy()
                                                                          [:, None]   ) 
                                                                   /(υ.max(axis=1)
@@ -503,7 +503,7 @@ class calculateStrengthOfAlternativePreference:
                                                                      [:, None] - υ.min(axis=1)
                                                                                   .to_numpy()
                                                                                   [:, None]       ),
-                                         'beneficial':  lambda χ:  (χ.max(axis=1)
+                                         'deleterious' :  lambda χ:  (χ.max(axis=1)
                                                                      .to_numpy()
                                                                      [:, None] - χ)
                                                                   /(χ.max(axis=1)

@@ -751,7 +751,7 @@ literal "false"
 
 \end_inset
 
- used a stochastic-detection area-under-the-curve (AuC) approach (
+ applied a stochastic-detection area-under-the-curve (AuC) statistic (
 \emph on
 cf
 \emph default
@@ -764,7 +764,7 @@ literal "false"
 
 \end_inset
 
-) to ascertain evidentiary elements' relative strengths.
+) to ascertain evidentiary elements' relative influence.
  Resembling stepwise regression (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1897,7 +1897,7 @@ Material selection of titanium alloy
 \end_layout
 
 \begin_layout Standard
-The constituent criterion-to-alternative hierarchy models address how each of three candidate alloys address the metallurgical desidirata.
+The constituent criterion-to-alternative hierarchy models account for how each of three candidate alloys addresses the metallurgical desidirata.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1916,7 +1916,7 @@ literal "false"
 
 \end_inset
 
- also bring to bear extensive emprical experimental evidence.
+ also bring to bear extensive empirical experimental evidence.
 \end_layout
 
 \begin_layout Standard
@@ -2199,6 +2199,19 @@ name "case-study-hierarchy-model"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hspace*{
+\backslash
+parindent}
+\end_layout
+
+\end_inset
+
 That the target-to-criterion hierarchy model in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2243,23 +2256,40 @@ literal "false"
 \end_inset
 
 proscribes circular reasoning.
+ Enforcing this constraint during the comparative-judgement process can prove challenging,
+ particluarly as the number of hierarchy-model elements grows.
  
 \end_layout
 
 \begin_layout Standard
-Enforcing this constraint during the comparative-judgement process can prove challenging,
- particluarly as the number of hierarchy-model elements grows.
- Conventionally,
+Conventionally,
  AHP practitioners calculate a 
 \emph on
-Consistency Index
+Consistency Index.
+
 \emph default
+ This algebraically characterizes the degree to which both transitivity conditions are satisfied (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Pant2022}{Pant}
+\end_layout
+
+\end_inset
+
 ,
- which algebraically quantifies the degree to which this transitivity is satisfied (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pant2022"
-literal "false"
+ et al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Pant2022}{(2022)}
+\end_layout
 
 \end_inset
 
@@ -2289,7 +2319,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection*
-Perform comparative judgements about elements' relative importances.
+Perform comparative judgements about elements' relative importances
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:hierarchy-element-comparative-judgement"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5529,7 +5566,7 @@ literal "false"
 \end_inset
 
 ),
- as do many other AHP applications appearing in the literature.
+ as do many other AHP applications throughout the MCDM literature.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5615,7 +5652,7 @@ fundamental scale
 \begin_inset Quotes erd
 \end_inset
 
- deflects a common critique of AHP's logical rigor by recasting comparative jundgements in terms of probabilism (
+ deflects a common critique of AHP's logical rigor by recasting comparative judgments in terms of probabilism (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Pettigrew2016"
@@ -5734,7 +5771,7 @@ reference element
 \end_inset
 
 ,
- associated with the prefered intensity-of-importance value 
+ associated with the preferred intensity-of-importance value 
 \begin_inset Formula $a_{i,j}$
 \end_inset
 
@@ -5999,10 +6036,17 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection*
-Transform comparative judments into 
+Transform comparative judgments into 
 \emph on
 priority vectors
 \emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:calculate-priority-vector"
+
+\end_inset
+
 .
 \end_layout
 
@@ -6199,7 +6243,7 @@ Priority-vector calculation.
 \end_layout
 
 \begin_layout Standard
-The AHP-application literature contains different approaches to translating a reciprocial matrix 
+The AHP-application literature contains different approaches to translating a reciprocal matrix 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -6250,7 +6294,31 @@ First,
 \end_inset
 
 is highly significant.
- Both AHP-calculation results and standardized inputs are constrained to the interval 
+ Both normalized AHP inputs (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-element-normalization-map"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and AHP-calculation results (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ahp-rank-ordered-preference"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) are constrained to the interval 
 \begin_inset Formula $\left[0,\,1\right]$
 \end_inset
 
@@ -6742,7 +6810,7 @@ literal "false"
 \end_inset
 
 .
- It requires a larger number of alternanitives than 
+ It requires a larger number of alternatives than 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -6759,7 +6827,7 @@ literal "false"
 
  —
  the measurements to which priority vectors are applied.
- A series of calculations including entropy leads to an emprically-based priority vector.
+ A series of calculations including entropy leads to an empirically-based priority vector.
 \end_layout
 
 \begin_layout Standard
@@ -6801,7 +6869,7 @@ tuple "list"
 
  —
  represent device physical-operating characteristics.
- The subcriteria 
+ The sub-criteria 
 \begin_inset Formula $Angle$
 \end_inset
 
@@ -6882,8 +6950,8 @@ literal "false"
 
 \end_inset
 
- employed a physics-based computational model to establish relationships between the device-geometry subcriteria and the operating parameters.
- These simulation results led to an emprical basis for an entropy-based priority vector.
+ employed a physics-based computational model to establish relationships between the device-geometry sub-criteria and the operating parameters.
+ These simulation results led to an empirical basis for an entropy-based priority vector.
  Combining this with a priority vector based on comparative judgements produced a 
 \begin_inset Quotes eld
 \end_inset
@@ -6948,7 +7016,7 @@ refcite{Bu2026}{(2026)}
 \end_inset
 
 ,
- emprical phenomenologically-based evidence can prove more-informative than subjective comparative judgements alone.
+ empirical phenomenologically-based evidence can prove more-informative than subjective comparative judgements alone.
  The highest-quality decision depends on judicious use of the most-informative evidence available.
 \end_layout
 
@@ -10191,10 +10259,51 @@ literal "false"
 consistency indices
 \emph default
 ,
- AHP's out-of-the-box mechanism to quantify the degree of inconsistency.
- Later,
- we demonstrate alternative graph-theoretic approaches to mitigate inconsistencies in reasoning.
+ AHP's out-of-the-box mechanism to quantify the degree of comparative judgements' consistency.
+ We also demonstrate a graph-theoretic approaches to identify von Neumann-Morgenstern transitivity violations.
  
+\end_layout
+
+\begin_layout Standard
+Although this analysis could occur as part of the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:hierarchy-element-comparative-judgement]{comparative-judgement}
+\end_layout
+
+\end_inset
+
+ stage,
+ it typically appears in MCDM literature after 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:calculate-priority-vector]{priority-vector calculation}
+\end_layout
+
+\end_inset
+
+.
+ The consistency indices reuse intermediate results of the latter when employing the principal-eigenvector approach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perron-priority-vector"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -10619,7 +10728,7 @@ literal "false"
  —
  which contain greater numerical precision —
  contributes to the small disparities.
- Comparable diparities occur for the target model 
+ Comparable disparities occur for the target model 
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
 
@@ -12017,7 +12126,7 @@ tuple "list"
 
 \end_inset
 
-) as well as von Neumann-Morgernsern transitivity (
+) as well as von Neumann-Morgenstern transitivity (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:vonNeumann-Morgernstern-transitivity-1"
@@ -12251,7 +12360,7 @@ The mechanics of prioritizing alternatives.
 \begin_layout Standard
 Prioritization of alternatives by the AHP follows a linear operation.
  The following discussion employs a linear-algebra notation in lieu of commonly used nested summations.
- This offers advantages in terms of conceptual clarity.
+ This offers conceptual-clarity advantages.
  We develop the notation for two 
 \begin_inset Quotes eld
 \end_inset
@@ -12440,7 +12549,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}_{\mathfrak{H}_{n}}:\mathcal{P}_{e_{n}}\mapsto\boldsymbol{p}_{\mathfrak{H}_{n}}\mid p_{\mathfrak{H}_{n,n'}}\in\left[0,1\right]\:\forall\,n'\mbox{.}
+\boldsymbol{r}_{\mathfrak{H}_{n}}:\mathcal{P}_{e_{n}}\mapsto\boldsymbol{p}_{\mathfrak{H}_{n}}\mid p_{\mathfrak{H}_{n,n'}}\in\left[0,1\right]\:\forall\,n'\mbox{.}\label{eq:hierarchy-element-normalization-map}
 \end{equation}
 
 \end_inset
@@ -12453,15 +12562,24 @@ The measurment-normalization map
 \begin_inset Formula 
 \begin{equation}
 p_{\mathfrak{H}_{n,n'}}=\begin{cases}
-\frac{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -r_{\mathfrak{H}_{n,n'}}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is beneficial}\\
-\frac{r_{\mathfrak{H}_{n,n'}}-\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is deleterious}
+\frac{r_{\mathfrak{H}_{n,n'}}-\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is beneficial}\\
+\frac{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -r_{\mathfrak{H}_{n,n'}}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is deleterious}
 \end{cases}\mbox{.}\label{eq:hierarchy-measurement-normalization}
 \end{equation}
 
 \end_inset
 
-Consequently,
- the normalized element-measurement matrix becomes 
+We seek in all cases the following element-normalization behavior:
+\begin_inset Formula 
+\begin{gather}
+p_{\mathfrak{H}_{n,\text{argmax}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=1\label{eq:normalized-element-measure-max}\\
+\mbox{and}\nonumber \\
+p_{\mathfrak{H}_{n,\text{argmin}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=0\mbox{.}\label{eq:eq:normalized-element-measure-min}
+\end{gather}
+
+\end_inset
+
+The resulting normalized element-measurement matrix now becomes 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}_{\mathfrak{H}}=\left[\begin{array}{cccc}
@@ -12511,8 +12629,8 @@ tuple "list"
 
  increases or decreases,
  respectively,
- the degree to to which a given alternative is prefered.
- Employing a utility analogy,
+ the degree to to which a given alternative is preferred.
+ Illustrating with a utility analogy,
  if 
 \begin_inset Formula $e_{\mathfrak{H}_{n}}$
 \end_inset
@@ -12785,7 +12903,19 @@ DQ emphasizes
 \emph on
 Sound Reasoning
 \emph default
- as a key link.
+ as a key link (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Decision-Quality-framework.-(Fro"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -12803,7 +12933,7 @@ literal "false"
 \end_inset
 
  articulate decision-science foundations for decision quality in particular,
- and the decision-analysis discipline in general.
+ and the decision-analysis discipline more generally.
  This is grounded in the von Neumann-Morgenstern principle that the most-rational decision selects the alternative yielding the greatest expected utility.
  
 \end_layout
@@ -14165,7 +14295,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.5698
+0.4302
 \end_layout
 
 \end_inset
@@ -14188,7 +14318,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14211,7 +14341,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14248,7 +14378,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.4335
+0.5665
 \end_layout
 
 \end_inset
@@ -14271,7 +14401,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14294,7 +14424,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14331,7 +14461,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.7021
+0.2979
 \end_layout
 
 \end_inset
@@ -14354,7 +14484,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14377,7 +14507,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14414,7 +14544,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.998
+0.002
 \end_layout
 
 \end_inset
@@ -14437,7 +14567,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14460,7 +14590,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14497,7 +14627,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.2143
+0.7857
 \end_layout
 
 \end_inset
@@ -14520,7 +14650,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14543,7 +14673,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14580,7 +14710,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.9167
+0.0833
 \end_layout
 
 \end_inset
@@ -14603,7 +14733,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14626,7 +14756,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14663,7 +14793,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14686,7 +14816,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.4298
+0.5702
 \end_layout
 
 \end_inset
@@ -14709,7 +14839,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14746,7 +14876,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0.3445
+0.6555
 \end_layout
 
 \end_inset
@@ -14769,7 +14899,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14792,7 +14922,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14852,7 +14982,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-1
+0
 \end_layout
 
 \end_inset
@@ -14875,7 +15005,7 @@ name "normalized-metallurgical-property-measurements"
 \uwave off
 \noun off
 \color none
-0
+1
 \end_layout
 
 \end_inset
@@ -14960,6 +15090,44 @@ tuple "list"
 \end_inset
 
 .
+ Obviously,
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalized-metallurgical-property-measurements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ exhibits the behavior of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:normalized-element-measure-max"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq:normalized-element-measure-min"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  Similarly,
  
 \begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
@@ -15044,10 +15212,6 @@ alignment center
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -15148,7 +15312,7 @@ tuple "list"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $TA_{10}$
+\begin_inset Formula $TA_{36}$
 \end_inset
 
 
@@ -15160,7 +15324,7 @@ tuple "list"
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.1237
+0.5936
 \end_layout
 
 \end_inset
@@ -15183,7 +15347,7 @@ tuple "list"
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.1117
+0.1531
 \end_layout
 
 \end_inset
@@ -15194,7 +15358,7 @@ tuple "list"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $TA_{36}$
+\begin_inset Formula $TA_{10}$
 \end_inset
 
 
@@ -15206,7 +15370,7 @@ tuple "list"
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0074
+0.0105
 \end_layout
 
 \end_inset
@@ -15216,10 +15380,6 @@ tuple "list"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -15241,76 +15401,53 @@ tuple "list"
 
 \end_inset
 
- represents the ultimate result.
- From it we conclude a slight preference for Titanium alloy 
-\begin_inset Formula $TA_{10}$
-\end_inset
-
- over 
-\begin_inset Formula $TA_{3}$
-\end_inset
-
-.
- That 
-\begin_inset Formula $TA_{10}$
-\end_inset
-
- would be the most-preferred seems expected considering its corresponding normalized-measurement values in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Normalized-metallurgical-propert"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
+ represents the ultimate result:
+ Preference-ranked Titanium-alloy alternatives
+\begin_inset Formula 
+\begin{equation}
+TA_{36}\succ TA_{3}\succ TA_{10}\mbox{.}
+\end{equation}
 
 \end_inset
 
-.
- Alternative 
-\begin_inset Formula $TA_{36}$
-\end_inset
-
- is considerably less-preferred,
- relatively speaking.
-\end_layout
-
-\begin_layout Standard
-Now,
+By design,
  
 \begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]$
 \end_inset
 
 .
- Each of the preference strengths in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "priority-ranked-alloy-alternatives"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
+ A strong preference for 
+\begin_inset Formula $TA_{36}$
 \end_inset
 
- falls to the lower end of this scale.
- This might indicate that none of the alternatives provides a highly satisfactory solution,
- given the metallurgical criteria identified by Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Hierarchy-decomposition-used"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
+ appears.
+ We prefer 
+\begin_inset Formula $TA_{36}$
+\end_inset
 
+ nearly four times as much as we prefer 
+\begin_inset Formula $TA_{3}$
 \end_inset
 
 .
- Whether such a result motivates analysis of additional alternatives or reflects an inherent investment precarity depends on the business context.
+ We in turn prefer 
+\begin_inset Formula $TA_{3}$
+\end_inset
+
+ nearly fifteen times as much as we prefer 
+\begin_inset Formula $TA_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Preferential ranking produces a string signal to the advantage of 
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -15410,7 +15547,7 @@ tuple "list"
 
 \end_inset
 
- represent the key informational components for which we contributional characterization.
+ represent the key informational components for which we characterize relative contributions.
  The approach by 
 \begin_inset CommandInset citation
 LatexCommand cite

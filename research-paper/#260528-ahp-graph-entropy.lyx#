@@ -751,7 +751,7 @@ literal "false"
 
 \end_inset
 
- used a stochastic-detection area-under-the-curve (AuC) approach (
+ applied a stochastic-detection area-under-the-curve (AuC) statistic (
 \emph on
 cf
 \emph default
@@ -764,7 +764,7 @@ literal "false"
 
 \end_inset
 
-) to ascertain evidentiary elements' relative strengths.
+) to ascertain evidentiary elements' relative influence.
  Resembling stepwise regression (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1705,14 +1705,14 @@ literal "false"
 
 \begin_layout Section*
 AHP case study:
- Titanium-alloy selection
+ Titanium-alloy selection for offshore pipelines.
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:ahp-case-study"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -6476,7 +6476,7 @@ a_{\text{pepperoni,ham-pinapple}}=3
 
 \end_inset
 
-The AHP-transitivity constraint (
+The AHP-transitivity condition (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -6509,7 +6509,7 @@ tuple "list"
 \end_inset
 
 ) certainly requires the preferential ordering.
- The validity of intensity-of-importance transitivity poses a more-complicated proposition.
+ The necessity of intensity-of-importance transitivity poses a more-complicated question.
 \end_layout
 
 \begin_layout Standard
@@ -12223,14 +12223,14 @@ literal "false"
  The library also contains methods to identify directed-graph cycles if they are present.
  Such feedback to the comparative-judgement panel serves to sharpen their reasoning about hierarchy-model elements' relative importance.
  Applying this method to 
-\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\begin_inset Formula $\breve{\mathcal{G}}_{TA_{\text{opt}}}$
 \end_inset
 
  based on 
 \begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
 \end_inset
 
- 
+ reveals no transitivity violations within the directed edges.
 \end_layout
 
 \begin_layout Subsection*
@@ -12453,10 +12453,19 @@ The measurment-normalization map
 \begin_inset Formula 
 \begin{equation}
 p_{\mathfrak{H}_{n,n'}}=\begin{cases}
-\frac{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -r_{\mathfrak{H}_{n,n'}}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is beneficial}\\
-\frac{r_{\mathfrak{H}_{n,n'}}-\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is deleterious}
+\frac{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -r_{\mathfrak{H}_{n,n'}}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is deleterious}\\
+\frac{r_{\mathfrak{H}_{n,n'}}-\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}}{\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} -\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\}} & if\;e_{\mathfrak{H}_{n}}\,\text{is beneficial}
 \end{cases}\mbox{.}\label{eq:hierarchy-measurement-normalization}
 \end{equation}
+
+\end_inset
+
+The desired behavoir is represented by
+\begin_inset Formula 
+\begin{gather*}
+\boldsymbol{p}_{\mathfrak{H}_{n,\text{argmax}\left(p_{\mathfrak{H}_{n,n'}}\right)}}=1\\
+\boldsymbol{p}_{\mathfrak{H}_{n,\text{argmin}\left(p_{\mathfrak{H}_{n,n'}}\right)}}=0
+\end{gather*}
 
 \end_inset
 
@@ -12773,13 +12782,75 @@ literal "false"
 \end_inset
 
 ,
- it exhibits at least one property of a probablity.
+ it coincidentally exhibits at least one property of a probablity.
+\end_layout
+
+\begin_layout Subparagraph*
+Decision-Quality consequences of AHP.
+\end_layout
+
+\begin_layout Standard
+DQ emphasizes 
+\emph on
+Sound Reasoning
+\emph default
+ as a key link (Figure 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "fig:Decision-Quality-framework.-(Fro"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Howard2016"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Spetzler2016"
+literal "false"
+
+\end_inset
+
+ articulate decision-science foundations for decision quality in particular,
+ and the decision-analysis discipline in general.
+ This is grounded in the von Neumann-Morgenstern principle that the most-rational decision selects the alternative yielding the greatest expected utility.
+ 
+\end_layout
+
+\begin_layout Standard
+AHP in contrast returns a preferential ranking based on linear combination of comparative judgements and measurements of decision factors,
+ or elements.
+ This preferential ranking is not equivalent to identifying the maximum expected utility.
+ Consequently no guarantee occurs that the most-preferred alternative also yields the expected maximum utility (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kochenderfer2015"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
 Identifying mechanics for an expected-utility-based AHP formulation lies beyond the scope of the present investigation.
  It sufficies here to reiterate this epistemic variance between AHP and mainstream decision science.
  Providing an information-theoretic characterization of the degree of influence by evidentiary elements within hierarchy models represents our goal.
+ Consequently,
+ the methodology developed here complements utility-optimizing decisional reasoning.
+ Nothing herein should be construed as asserting that AHP sufficies as a decision-quality reasoning approach.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -15269,8 +15340,8 @@ Entropy of edge-weighted,
 \end_layout
 
 \begin_layout Standard
-Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of a set of AHP comparative judgements.
- This represents the essential analytical innovation.
+Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of sets of AHP comparative judgements.
+ This constitutes our essential analytical innovation.
  Within AHP applications,
  strength-of-preference sensitivity analysis of the linear operation (
 \begin_inset CommandInset ref
@@ -15285,7 +15356,7 @@ tuple "list"
 \end_inset
 
 ) represents common practice.
- That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast constitutes our motivation.
+ That the graph structure resulting from combining comparative judgements using hierarchy models provides greater contrast provides our motivation.
 \end_layout
 
 \begin_layout Standard
