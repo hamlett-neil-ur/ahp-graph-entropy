@@ -375,7 +375,9 @@ pairwise comparisons
  such graphs are also directed and acyclic,
  belonging to the class of tournament graphs.
  Intensities of Importance from comparative judgements provide weights for graphs' edges.
- Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+ Relative-entropy calculations based on Laplacian matrices for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
+ Motivated by quantum-computing research,
+ recent innovations in matrix representations of graphs support the idiosyncratic structures arising from AHP comparative judgements.
  A previously published case study related to an offshore-pipeline material selection demonstrates the approach.
  The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
 \begin_inset ERT
@@ -445,7 +447,8 @@ emph{a pretence of exact knowledge that is likely to be false}
 \begin_inset Quotes erd
 \end_inset
 
- (emphasis added) (
+ (emphasis added,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "vonHayek1974"
@@ -6131,8 +6134,8 @@ begin{subequations}
 \begin{equation}
 \boldsymbol{A}_{\mathfrak{H}}=\left[\begin{array}{cccc}
 1 & a_{1,2} & \cdots & a_{1,n}\\
-a_{2,1} & 1 & \ddots & a_{2,n}\\
-\vdots & \ddots & 1 & \vdots\\
+a_{2,1} & 1 & \cdots & a_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
 a_{n,1} & a_{n,2} & \cdots & 1
 \end{array}\right]\label{eq:reciprocal-matrix-general}
 \end{equation}
@@ -10932,6 +10935,7 @@ order
 \end_layout
 
 \begin_layout Plain Layout
+of 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -12004,7 +12008,11 @@ The coincidence between
 \begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
- and the order of 
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ the order of 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -12525,6 +12533,10 @@ strengths of preference
  we similarly normalize the element-measurement vectors.
 \end_layout
 
+\begin_layout Subparagraph*
+Mechanics of element-measurement normalization.
+\end_layout
+
 \begin_layout Standard
 Normalization maps the elements of our hierarchy-model element-measurement vectors 
 \begin_inset Formula $\boldsymbol{r}_{\mathfrak{H}_{n}}$
@@ -12569,7 +12581,7 @@ p_{\mathfrak{H}_{n,n'}}=\begin{cases}
 
 \end_inset
 
-We seek in all cases the following element-normalization behavior:
+We seek in all cases the following element-measurement normalization behavior:
 \begin_inset Formula 
 \begin{gather}
 p_{\mathfrak{H}_{n,\text{argmax}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=1\label{eq:normalized-element-measure-max}\\
@@ -12665,6 +12677,64 @@ beneficial
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subparagraph*
+Element-mesasurement normalization and rank reversal.
+\end_layout
+
+\begin_layout Standard
+The operation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) provides the mechanism by which rank reversal can occur,
+ regarding which 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994"
+literal "false"
+
+\end_inset
+
+ warned.
+ Consider a scenario in which a new alternative is introduced for consideration.
+ If one or more of that new alternative's measurements 
+\begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
+\end_inset
+
+ fall outside of the range 
+\begin_inset Formula $\left[\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\},\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} \right]$
+\end_inset
+
+,
+ then (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) leads to different normalized measurements in 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+ for all previously evaluated alternatives.
+ This reëvaluation certainly alters the strenghts of preference for each previously evaluated alternative.
+ Such reëvaluations provide the rank-reversal mechanism.
 \end_layout
 
 \begin_layout Paragraph*
@@ -12878,10 +12948,26 @@ literal "false"
 
 ).
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
 
 \end_inset
 
@@ -15056,7 +15142,7 @@ tuple "list"
 
 \end_inset
 
- correspond to the vectors 
+ contain elements of 
 \begin_inset Formula $\boldsymbol{p}_{\mathfrak{H}_{i}}$
 \end_inset
 
@@ -15103,7 +15189,7 @@ tuple "list"
 
 \end_inset
 
- exhibits the behavior of (
+ conforms to the requirements of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:normalized-element-measure-max"
@@ -15128,7 +15214,7 @@ tuple "list"
 \end_inset
 
 ).
- Similarly,
+ Moreover,
  
 \begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
 \end_inset
@@ -15159,7 +15245,7 @@ tuple "list"
 
 \end_inset
 
-Likewise after populating the elements of 
+After populating the elements of 
 \begin_inset Formula $\boldsymbol{\omega}_{TA_{\text{opt}}}$
 \end_inset
 
@@ -15410,17 +15496,11 @@ TA_{36}\succ TA_{3}\succ TA_{10}\mbox{.}
 
 \end_inset
 
-By design,
- 
-\begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]$
-\end_inset
-
-.
- A strong preference for 
+A strong preference for 
 \begin_inset Formula $TA_{36}$
 \end_inset
 
- appears.
+ appears within this alternative set.
  We prefer 
 \begin_inset Formula $TA_{36}$
 \end_inset
@@ -15442,11 +15522,89 @@ By design,
 \end_layout
 
 \begin_layout Standard
-Preferential ranking produces a string signal to the advantage of 
-\begin_inset Formula $TA_{36}$
+By design,
+ 
+\begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]$
 \end_inset
 
 .
+ The strength of preference 
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+ clarly falls in the upper half of this scale.
+ To reiterate however,
+ a link between the strength of preference and a business utility does not explicitly appear.
+ 
+\end_layout
+
+\begin_layout Standard
+Additionally,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Table 1"
+target "https://www.sciencedirect.com/science/article/pii/S0308016125000316?via%3Dihub#tbl1"
+literal "false"
+
+\end_inset
+
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ samples the Titanium-alloy chemical-composition sample space very sparsely.
+ The alloy alternatives' composition consist of mixtures of nine distinct elements including Titanium.
+ That 
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+ produces a dramatically higher strength of preference by no means implies that it represents the best that can be done.
+ 
+\end_layout
+
+\begin_layout Standard
+Physical-model simulation along the lines of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ might not be practical for 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
+ However,
+ the 
+\emph on
+Taguchi method
+\emph default
+ is often applied to efficiently localize optima in highly dimensional attribute spaces.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiN2019"
+literal "false"
+
+\end_inset
+
+ exemplify for a different material-design problem.
+ Such an approach might lead to a higher-utility alternative in the neighborhod of alloy 
+\begin_inset Formula $TA_{36}$
+\end_inset
+
+'s chemical composition.
  
 \end_layout
 
@@ -15459,7 +15617,7 @@ Entropy of edge-weighted,
 Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of sets of AHP comparative judgements.
  This constitutes our essential analytical innovation.
  Within AHP applications,
- strength-of-preference sensitivity analysis of the linear operation (
+ strength-of-preference sensitivity analysis based on the linear operation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ahp-rank-ordered-preference"
@@ -15531,7 +15689,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Finally apply relative entropy to consider the loss of information —
+We finally evaluate relative entropy to consider the loss of information —
  increase in entropy —
  occuring when a key informational component is omitted.
  With the Titanium-alloy case study,
@@ -17613,6 +17771,50 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.61336/jcm2022-3
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Lin, N. et al (2019)"
+key "LiN2019"
+literal "false"
+
+\end_inset
+
+Li,
+ N.,
+ 
+\emph on
+et al
+\emph default
+ (2019).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A review in mixture design methods for geopolymer concrete.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Composites Part B:
+ Engineering
+\emph default
+:
+ 178:107490.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.compositesb.2019.107490
 \end_layout
 
 \end_inset

@@ -2,11 +2,12 @@
 
 ## Abstract.
 
- Decision makers often require insight into the relative strength of the evidence on which their choices hinge. The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of decision factors' relative evidentiary strength. Pairwise-comparison analysis specifies edges for a complete, directed, acyclic graph, often called a *tournament graph*. Pairwise-comparison “preference ratios” provide tournament-graph edge weights, leading to a novel Laplacian matrix. Relative-entropy calculations based on Laplacians for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them. Relative-entropy *chain rules* provide mechanisms to couple hierarchically adjacent AHP tournament graphs into an overarching entropy structure for a multi-level decision problem. A case study related to Titanium-alloy selection for offshore oil and gas pipelines ([`Zheng, et al` (2005)](https://doi.org/10.1016/j.ijpvp.2025.105461)) provides a practical demonstration of the proposed method.
+ Decision makers often require insight into the relative strength of the elements of evidence on which their choices hinge. The Analytic Hierarchy Process (AHP) contains innate mechanisms leading to the rigorous quantification of elements' relative strength. Comparative judgements (“pairwise comparisons”) between elements of a given hierarchy model produce lists of edges for a complete graph. Under certain conditions, such graphs are also directed and acyclic, belonging to the class of tournament graphs. Intensities of Importance from comparative judgements provide weights for graphs' edges. Relative-entropy calculations based on Laplacian matrices for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them. Motivated by quantum-computing research, recent innovations in matrix representations of graphs support the idiosyncratic structures arising from comparative judgements. A previously published case study related to an offshore-pipeline material selection demonstrates the approach ([`Zheng, et al` (2005)](https://doi.org/10.1016/j.ijpvp.2025.105461)). The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
+
 
 ## Draft research paper. 📝 
 
-[`260528-ahp-graph-entropy.pdf`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260528-ahp-graph-entropy.pdf).
+[`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb).
 
 ## 𝓣𝓸 𝓓𝓸. 🏗️🧱👷
 
