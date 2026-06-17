@@ -376,8 +376,9 @@ pairwise comparisons
  belonging to the class of tournament graphs.
  Intensities of Importance from comparative judgements provide weights for graphs' edges.
  Relative-entropy calculations based on Laplacian matrices for induced subgraphs quantify the relative evidentiary strength associated with the decisional evidence ommitted from them.
- Motivated by the quantum-computing community,
- recent research in matrix representations of graphs support the idiosyncratic structures  A previously published case study related to an offshore-pipeline material selection demonstrates the approach.
+ Motivated by quantum-computing research,
+ recent innovations in matrix representations of graphs support the idiosyncratic structures arising from AHP comparative judgements.
+ A previously published case study related to an offshore-pipeline material selection demonstrates the approach.
  The graph-entropy method provides greater strength-of-contribution contrast than sensitivity analysis from the case study.
 \begin_inset ERT
 status open
@@ -446,7 +447,8 @@ emph{a pretence of exact knowledge that is likely to be false}
 \begin_inset Quotes erd
 \end_inset
 
- (emphasis added) (
+ (emphasis added,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "vonHayek1974"
@@ -2265,8 +2267,22 @@ proscribes circular reasoning.
 \begin_layout Standard
 Conventionally,
  AHP practitioners calculate a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:comparative-judgement-consistency-index]{
+\backslash
+textit{Consistency Index}}
+\end_layout
+
+\end_inset
+
+
 \emph on
-Consistency Index.
+.
 
 \emph default
  This algebraically characterizes the degree to which both transitivity conditions are satisfied (
@@ -6132,8 +6148,8 @@ begin{subequations}
 \begin{equation}
 \boldsymbol{A}_{\mathfrak{H}}=\left[\begin{array}{cccc}
 1 & a_{1,2} & \cdots & a_{1,n}\\
-a_{2,1} & 1 & \ddots & a_{2,n}\\
-\vdots & \ddots & 1 & \vdots\\
+a_{2,1} & 1 & \cdots & a_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
 a_{n,1} & a_{n,2} & \cdots & 1
 \end{array}\right]\label{eq:reciprocal-matrix-general}
 \end{equation}
@@ -6295,7 +6311,7 @@ First,
 \end_inset
 
 is highly significant.
- Both normalized AHP inputs (
+ Both normalized measurements of hierarchy-model elements (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:hierarchy-element-normalization-map"
@@ -6307,7 +6323,7 @@ tuple "list"
 
 \end_inset
 
-) and AHP-calculation results (
+) and strengths of preference between alternatives (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ahp-rank-ordered-preference"
@@ -6324,11 +6340,11 @@ tuple "list"
 \end_inset
 
 .
- The constraint 
+ That 
 \begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}\in\Delta^{n}$
 \end_inset
 
- ensures this.
+ ensures the latter given the former.
 \end_layout
 
 \begin_layout Paragraph*
@@ -6474,7 +6490,7 @@ literal "false"
 
 ).
  Priority-ordering stability by AHP proves highly sensitive to the transitive consistency of comparative judgements.
- More-strenuous than von Neumann-Morgenstern transitivity (
+ More-strenuous than von Neumann-Morgenstern preferential-ordering transitivity (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:vonNeumann-Morgernstern-transitivity-1"
@@ -6506,13 +6522,12 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{equation}
-a_{i,j}a_{j,k}=a_{i,k}\mbox{.}\label{eq:saaty-ahp-transitivity}
+a_{i,j}a_{j,k}=a_{i,k}\mbox{,}\label{eq:saaty-ahp-transitivity}
 \end{equation}
 
 \end_inset
 
-Transitive consistency applies not just to preferential ordering,
- but also of intensities of importance.
+also applying to intensities of importance.
  
 \end_layout
 
@@ -6530,7 +6545,7 @@ tuple "list"
 \end_inset
 
 ) based on preferences for pizza.
- Say that one prefers margherita twice as much as pepperoni pizza.
+ Say that one prefers margherita-style pizza twice as much as pepperoni pizza.
  Also,
  pepperoni is preferred three times as much as ham-and-pineapple pizza.
  Reciprocal-matrix notation represents this as
@@ -6951,7 +6966,7 @@ literal "false"
 
 \end_inset
 
- employed a physics-based computational model to establish relationships between the device-geometry sub-criteria and the operating parameters.
+ employed a physics-based computational model to establish relationships between the device-geometry sub-criteria and the physical operating parameters.
  These simulation results led to an empirical basis for an entropy-based priority vector.
  Combining this with a priority vector based on comparative judgements produced a 
 \begin_inset Quotes eld
@@ -7017,7 +7032,7 @@ refcite{Bu2026}{(2026)}
 \end_inset
 
 ,
- empirical phenomenologically-based evidence can prove more-informative than subjective comparative judgements alone.
+ empirical phenomenologically based evidence can prove more-informative than subjective comparative judgements alone.
  The highest-quality decision depends on judicious use of the most-informative evidence available.
 \end_layout
 
@@ -7104,7 +7119,7 @@ tuple "list"
 \begin_inset Formula $\boldsymbol{\omega}^{\mathcal{G}}_{\mathfrak{H}}$
 \end_inset
 
-.
+ for each.
  The 
 \begin_inset Formula $TA_{\text{opt}}$
 \end_inset
@@ -10220,7 +10235,14 @@ Evaluate comparative judgements for
 \emph on
 transitive
 \emph default
- consistency.
+ consistency
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:comparative-judgement-consistency-index"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -10933,6 +10955,7 @@ order
 \end_layout
 
 \begin_layout Plain Layout
+of 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -12005,7 +12028,11 @@ The coincidence between
 \begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
- and the order of 
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ the order of 
 \begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
 \end_inset
 
@@ -12247,7 +12274,7 @@ hyperref[subsec:comparative-judgement-indifference]{comparative-judgement indiff
  complicate this approach modestly.
  Specifically,
  edges associated with unit-valued intensities of importance are undirected edges.
- Their presence can introduce cycles whose presence mask violations of (
+ Their presence can introduce cycles whose presence masks violations of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:vonNeumann-Morgernstern-transitivity-1"
@@ -12330,7 +12357,16 @@ literal "false"
 \end_inset
 
 ).
- The library also contains methods to identify directed-graph cycles if they are present.
+ The library also 
+\begin_inset CommandInset href
+LatexCommand href
+name "methods"
+target "https://networkx.org/documentation/stable/reference/algorithms/cycles.html"
+literal "false"
+
+\end_inset
+
+ methods to explicitly identify directed-graph cycles if they are present.
  Such feedback to the comparative-judgement panel serves to sharpen their reasoning about hierarchy-model elements' relative importance.
  Applying this method to 
 \begin_inset Formula $\breve{\mathcal{G}}_{TA_{\text{opt}}}$
@@ -12526,6 +12562,10 @@ strengths of preference
  we similarly normalize the element-measurement vectors.
 \end_layout
 
+\begin_layout Subparagraph*
+Mechanics of element-measurement normalization.
+\end_layout
+
 \begin_layout Standard
 Normalization maps the elements of our hierarchy-model element-measurement vectors 
 \begin_inset Formula $\boldsymbol{r}_{\mathfrak{H}_{n}}$
@@ -12570,7 +12610,7 @@ p_{\mathfrak{H}_{n,n'}}=\begin{cases}
 
 \end_inset
 
-We seek in all cases the following element-normalization behavior:
+We seek in all cases the following element-measurement normalization behavior:
 \begin_inset Formula 
 \begin{gather}
 p_{\mathfrak{H}_{n,\text{argmax}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=1\label{eq:normalized-element-measure-max}\\
@@ -12666,6 +12706,71 @@ beneficial
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subparagraph*
+Element-mesasurement normalization and rank reversal.
+\begin_inset CommandInset label
+LatexCommand label
+name "par:element-normalization-rank-reversal"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The operation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) provides the mechanism by which rank reversal can occur,
+ regarding which 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty1986,Saaty1994"
+literal "false"
+
+\end_inset
+
+ warned.
+ Consider a scenario in which a new alternative is introduced for consideration.
+ If one or more of that new alternative's measurements 
+\begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
+\end_inset
+
+ fall outside of the range 
+\begin_inset Formula $\left[\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\},\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} \right]$
+\end_inset
+
+,
+ then (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-measurement-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) leads to different normalized measurements in 
+\begin_inset Formula $\boldsymbol{P}_{\mathfrak{H}}$
+\end_inset
+
+ for all previously evaluated alternatives.
+ This reëvaluation certainly alters the strenghts of preference for each previously evaluated alternative.
+ Such reëvaluations provide the rank-reversal mechanism.
 \end_layout
 
 \begin_layout Paragraph*
@@ -12772,19 +12877,7 @@ The the elements of the vector
 strength of preference
 \emph default
  for each corresponding alternative within the range considered by the multi-criterion decision problem.
- Given the element-measurement normalization schema (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:hierarchy-measurement-normalization"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-tuple "list"
-
-\end_inset
-
-),
+ Specifically,
  the 
 \begin_inset Formula $i^{\text{th}}$
 \end_inset
@@ -12796,7 +12889,7 @@ tuple "list"
 
  —
  is the most-preferred.
- Linearly combining priority vectors obtained from comparative judgements about the degree of influence by hierarchy-model elements with measurements against each element for each alternative produces 
+ Linearly combining priority vectors obtained from comparative judgements about the degree of influence by hierarchy-model elements with measurements against each element for each alternative produces the strengths of preference in 
 \begin_inset Formula $\boldsymbol{p}_{\text{target}}$
 \end_inset
 
@@ -12879,10 +12972,26 @@ literal "false"
 
 ).
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Saaty1986"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{Saaty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Saaty1986}{(1986)}
+\end_layout
 
 \end_inset
 
@@ -13033,6 +13142,16 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
+ —
+ 
+\emph on
+beneficial
+\emph default
+ versus 
+\emph on
+deleterious
+\emph default
+ —
  column in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15057,7 +15176,7 @@ tuple "list"
 
 \end_inset
 
- correspond to the vectors 
+ contain elements of 
 \begin_inset Formula $\boldsymbol{p}_{\mathfrak{H}_{i}}$
 \end_inset
 
@@ -15104,7 +15223,7 @@ tuple "list"
 
 \end_inset
 
- exhibits the behavior of (
+ conforms to the requirements of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:normalized-element-measure-max"
@@ -15129,7 +15248,7 @@ tuple "list"
 \end_inset
 
 ).
- Similarly,
+ Moreover,
  
 \begin_inset Formula $\boldsymbol{\Omega}_{\mathfrak{H}}$
 \end_inset
@@ -15160,7 +15279,7 @@ tuple "list"
 
 \end_inset
 
-Likewise after populating the elements of 
+After populating the elements of 
 \begin_inset Formula $\boldsymbol{\omega}_{TA_{\text{opt}}}$
 \end_inset
 
@@ -15415,7 +15534,7 @@ A strong preference for
 \begin_inset Formula $TA_{36}$
 \end_inset
 
- appears within this range.
+ appears within this alternative set.
  We prefer 
 \begin_inset Formula $TA_{36}$
 \end_inset
@@ -15491,8 +15610,21 @@ literal "false"
 
 \end_inset
 
- might not be practical in this case.
- The Taguchi method is often applied to local optima in highly dimensional spaces.
+ might not be practical for 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
+ However,
+ the 
+\emph on
+Taguchi method
+\emph default
+ is often applied to efficiently localize optima in highly dimensional attribute spaces.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -15501,8 +15633,8 @@ literal "false"
 
 \end_inset
 
- exmplify for a different material-design problem.
- Such an approach might lead to a higher-utility alternative in the neighborhod of 
+ exemplify for a different material-design problem.
+ Such an approach might lead to a higher-utility alternative in the neighborhod of alloy 
 \begin_inset Formula $TA_{36}$
 \end_inset
 
@@ -15511,15 +15643,14 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
-Entropy of edge-weighted,
- directed acyclic graph.
+Entropy of comparative-judgement graphs.
 \end_layout
 
 \begin_layout Standard
 Our attention now pivots to information-theoretic analysis of the hierarchical framework comprised of sets of AHP comparative judgements.
  This constitutes our essential analytical innovation.
  Within AHP applications,
- strength-of-preference sensitivity analysis of the linear operation (
+ strength-of-preference sensitivity analysis based on the linear operation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ahp-rank-ordered-preference"
@@ -15591,10 +15722,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Finally apply relative entropy to consider the loss of information —
+We finally evaluate relative entropy to consider the loss of information —
  increase in entropy —
  occuring when a key informational component is omitted.
- With the Titanium-alloy case study,
+ Within the Titanium-alloy case study,
  the metallurgical criteria in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15623,11 +15754,182 @@ literal "false"
 Construct comparative-judgement graphs.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Standard
+Visualization of our comparative-judgement graphs provides useful preparation for construction of associated Laplacians,
+ the prerequisite for entropy calculations.
+ Here,
+ we inspect visual representations of exemplary graphs.
+ The depictions in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparative-judgement-graph-,fig:target-criterion-comparative-judgement-graph"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ are constructed using methods from the python 
+\emph on
+networkx
+\emph default
+ library (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagberg (2008)"
+literal "false"
+
+\end_inset
+
+),
+ which invoke 
+\emph on
+matplotlib
+\emph default
+ methods (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hunter2007"
+literal "false"
+
+\end_inset
+
+) to actually construct the figures.
+ 
+\end_layout
+
+\begin_layout Standard
+The two figures conform to a common schema.
+ Directed edges are represented by solid,
+ dark-blue 
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-002540.png
+	lyxscale 7
+	height 0.2in
+
+\end_inset
+
+ curves,
+ and have arrow heads indicating their directivity.
+ The thickness of the curve correlates with the 
+\emph on
+intensity of importance
+\emph default
+ assigned with the corresponding comparative judgement.
+ Dashed,
+ dark-red 
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-23060b.png
+	lyxscale 7
+	height 0.2in
+
+\end_inset
+
+ without arrow heads represent undirected edges.
+\end_layout
+
+\begin_layout Paragraph*
 Criterion-alternative comparative-judgement graphs.
 \end_layout
 
 \begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparative-judgement-graph-"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ depicts 
+\begin_inset Formula $\mathcal{G}_{B_{1}}$
+\end_inset
+
+,
+ the directed-graph representation of hierarhcy model 
+\begin_inset Formula $\mathfrak{H}_{B_{1}}$
+\end_inset
+
+.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:criterion-alternative-comparative-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ lists the edges of which 
+\begin_inset Formula $\mathcal{G}_{B_{1}}$
+\end_inset
+
+ is comprised.
+ This corresponds to one of nine,
+ criterion-alternative comparative judgements.
+ Having only three nodes and three edges,
+ these graphs are near-trivial.
+ Explicitly depiction of graphs 
+\begin_inset Formula $\mathcal{G}_{B_{2}},\cdots,\mathcal{G}_{B_{9}}$
+\end_inset
+
+ provides little additional information.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparative-judgement-graph-"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ explicit depiction of the intensities of importance —
+ the edge weight —
+ is not inconvenient.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+addtocounter{figure}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thefigure}{
+\backslash
+arabic{figure}a}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+addtocounter{figure}{-1}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float figure
 placement document
 alignment center
@@ -15636,13 +15938,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparative-judgement-graph-"
+
+\end_inset
+
 Comparative-judgement graph 
 \begin_inset Formula $\mathcal{G}_{B_{1}}$
 \end_inset
@@ -15651,7 +15955,7 @@ Comparative-judgement graph
 \begin_inset Formula $\mathfrak{H}_{B_{1}}$
 \end_inset
 
- from Table 
+ for which edges are specified in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:criterion-alternative-comparative-judgements"
@@ -15679,8 +15983,147 @@ tuple "list"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Target-criterion comparative-judgement graph.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:target-criterion-comparative-judgement-graph"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ displays 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+,
+ the graph for the target-to-criterion hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+.
+ The corresponding comparative-judgement edge list appears in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ The figure exemplifies the 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
+\backslash
+addtocounter{figure}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thefigure}{
+\backslash
+arabic{figure}b}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment center
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:target-criterion-comparative-judgement-graph"
+
+\end_inset
+
+Comparative-judgement graph 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+ based on target-to-criterion hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ for which edges are specified in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:target-criterion-element-judgements"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/zheng-target-criterion-judgement-graph.png
+	lyxscale 15
+	width 7in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thefigure}{
+\backslash
+arabic{figure}}
 \end_layout
 
 \end_inset
@@ -17253,8 +17696,9 @@ label{ref:Hastie2009}
 
 Hastie,
  T.;
- Tibshirina,
- R.;ß Friedman,
+ Tibshirani,
+ R.;
+ Friedman,
  J.
  (2009).
  
@@ -17417,7 +17861,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -17453,6 +17896,47 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1287/mnsc.2023.02025
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Hunter (2007)"
+key "Hunter2007"
+literal "false"
+
+\end_inset
+
+Hunter,
+ J.
+ D.
+ (2007).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Matplotlib:
+ A 2D graphics environment.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Computing in Science & Engineering
+\emph default
+:
+ 9(3):90-95.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1109/MCSE.2007.55
 \end_layout
 
 \end_inset
