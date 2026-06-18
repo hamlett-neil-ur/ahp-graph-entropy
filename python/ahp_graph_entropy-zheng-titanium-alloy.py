@@ -213,7 +213,7 @@ class calculateHierarchyModelEntropy:
                                       .to_records(index = False))
           )
         
-        self.directed_spanning_subgraph = {'directed_spanning_subgraphi_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph)}
+        self.directed_spanning_subgraph = {'directed_spanning_subgraph_is_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph)}
         
         return self.directed_spanning_subgraph
     # 
@@ -657,10 +657,7 @@ class calculateStrengthOfAlternativePreference:
     
         from pandas import read_csv
         
-        # Construct dictionary of functions to apply [0,1]-standardization to criterion-element
-        # measurements conditioned on whether deleterious or beneficial to target objective.
-        self.normalize_measurement = {
-                                        'beneficial' : lambda υ:  (υ - υ.min(axis=1)
+        self.normalize_measurement = {  'beneficial' : lambda υ:  (υ - υ.min(axis=1)
                                                                          .to_numpy()
                                                                          [:, None]   ) 
                                                                   /(υ.max(axis=1)
@@ -675,13 +672,7 @@ class calculateStrengthOfAlternativePreference:
                                                                      .to_numpy()
                                                                      [:, None] - χ.min(axis=1)
                                                                                   .to_numpy()
-                                                                                  [:, None]    )
-                                         }
-        
-        
-        # Read in csv file containing raw measurements of each criterion element. Apply
-        # Assign column `normalize_measurement` conditioned on value of `effect`, latter
-        # of which is dropped.
+                                                                                  [:, None]    )  }
         self.measurements_staged_for_normalization = (
                                                          read_csv(filepath_or_buffer = './data/zheng-et-al-alternative-criterion-measures.csv',
                                                                   usecols = ['hierarchy_model',
@@ -794,8 +785,11 @@ ho_TAopt = (pref_str.structural_hierarchy
 
 #%%
 
+from networkx import is_directed_acyclic_graph
 
 
+is_directed_acyclic_graph(ho_TAopt.comparative_judgement_network)
+is_directed_acyclic_graph(ho_TAopt.directed_spanning_subgraph)
 
                                          
 #%%

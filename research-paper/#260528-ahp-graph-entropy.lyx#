@@ -574,7 +574,7 @@ literal "false"
 
 ).
  Fundamentally,
- entrepreneurial ventures amount to 
+ all entrepreneurial ventures amount to 
 \emph on
 epistemic
 \emph default
@@ -687,7 +687,7 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
- for many tasks.
+ for many activities.
 \end_layout
 
 \begin_layout Standard
@@ -794,7 +794,7 @@ literal "false"
 
 \end_inset
 
- offers an emerging approach to uncertainty characterization based on sheaf theory (
+ borrows from sheaf theory (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Rosiak2022"
@@ -802,7 +802,7 @@ literal "false"
 
 \end_inset
 
-).
+) to characterize global epistemic alignment.
 \end_layout
 
 \begin_layout Subsection*
@@ -879,7 +879,8 @@ literal "false"
 \end_inset
 
  —
- believed to differentiate within the range of scenarios under consideration.
+ believed to differentiate within a discrete,
+ finite range of scenarios under consideration.
  A 
 \emph on
 hierarchy model
@@ -907,7 +908,19 @@ literal "false"
 \end_inset
 
 ).
- A case study herein demonstrates AHP's use to rank plausible alternatives.
+ A subsequent section presents a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[sec:ahp-case-study]{case study}
+\end_layout
+
+\end_inset
+
+ demonstrating the mechanics of AHP to rank plausible alternatives.
  
 \end_layout
 
@@ -957,7 +970,7 @@ literal "false"
 
 \end_inset
 
-studied methods to improve the rubustness of expert inputs into comparative judgements.
+ studied methods to improve the rubustness of expert inputs into comparative judgements.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1000,7 +1013,11 @@ Partially ordered sets with a finite number of elements can be conveniently repr
 \end_inset
 
 .
- Complete Directed Acyclic Graphs (DAGs) belong to a special class of graphs called 
+ 
+\end_layout
+
+\begin_layout Standard
+Complete Directed Acyclic Graphs (DAGs) belong to a special class of graphs called 
 \emph on
 tournament graphs
 \emph default
@@ -1126,7 +1143,6 @@ literal "false"
 ) and Decision Analysis (
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Chapter 18"
 key "Howard2016"
 literal "false"
 
@@ -1154,7 +1170,7 @@ literal "false"
 
 \end_inset
 
- do invoke additional concepts including information theory and probabilistic state spaces (along the lines of 
+ apply information-theoretic and probabilistic-state-space (along the lines of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "deFinetti1974"
@@ -1162,7 +1178,7 @@ literal "false"
 
 \end_inset
 
-).
+) principles.
 \end_layout
 
 \begin_layout Paragraph*
@@ -1286,7 +1302,6 @@ Hierarchy
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "§2.5"
 key "Cover2006"
 literal "false"
 
@@ -1342,7 +1357,11 @@ literal "false"
 \end_inset
 
 ).
- That comparative judgements define a graph —
+ This calls into question the efficacy of sensitivity analyses based based on linear combinations of hierarchy-model priority vectors.
+\end_layout
+
+\begin_layout Standard
+That comparative judgements define a graph —
  a network —
  provides the basis of their power.
  Our graph-entropy machinery accounts for the 
@@ -1369,7 +1388,7 @@ Decision Quality
  (DQ) represents a prominent applied decision-analysis framework that emphasizes evidentiary reasoning (
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Spetzler2016"
+key "Spetzler2016,SDP-DQ"
 literal "false"
 
 \end_inset
@@ -1646,7 +1665,7 @@ Course of investigation.
 \end_layout
 
 \begin_layout Standard
-We begin with a brief illustration of AHP methodology.
+We begin with an illustration of AHP methodology.
  A 
 \emph on
 real-world
@@ -1665,7 +1684,7 @@ hyperref[sec:ahp-case-study]{Titanium-alloy selection}
 \end_inset
 
  —
- concisely demonstrates its application to preference-ranking a set of scenarios.
+ demonstrates its application to preference-ranking a set of scenarios.
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
  The complete graphs resulting from the comparative judgements provide our point of departure into a novel methodology.
@@ -1694,10 +1713,52 @@ Finally,
  hierarchically coupled hierarchy models.
  We interpret the results for our real-world case study.
  Approaches analogous to those by 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Jiroušek2023"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Jiroušek2023}{Jiroušek}
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Jiroušek2023}{Kratochvil}
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Jiroušek2023}{Shenoy}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Jiroušek2023}{(2023)}
+\end_layout
 
 \end_inset
 
@@ -1840,6 +1901,21 @@ priority vector
  here.
 \end_layout
 
+\begin_layout Standard
+The following reiterates the case study in sufficient detail to reconstruct its results without explicit reference to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+.
+ Beyond reproducing AHP mechanics,
+ sufficient reference to its underlying principles is provided to justify assertions of complimentarity to the utility-optimization fundamentals of decision theory.
+ We believe that the consolidated assembly of these concepts in itself constitutes a minor contribution in its own right.
+\end_layout
+
 \begin_layout Subsection*
 Specify the evidentiary span.
 \end_layout
@@ -1871,7 +1947,11 @@ literal "false"
 
  for their Titanium-alloy selection decision.
  It depicts a hierarchically structured decision.
- The identified target describes a decisional activity:
+ Their identified target hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ describes a decisional activity:
  
 \begin_inset Quotes eld
 \end_inset
@@ -1884,7 +1964,19 @@ Material selection of titanium alloy
 \begin_inset Quotes erd
 \end_inset
 
- Their nine criteria include eight metallurgical characteristics,
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hierarchy-decomposition-used"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+ identifies eight metallurgical elements,
  
 \begin_inset Formula $B_{1}\mbox{,}\cdots,B_{8}$
 \end_inset
@@ -1900,7 +1992,21 @@ Material selection of titanium alloy
 \end_layout
 
 \begin_layout Standard
-The constituent criterion-to-alternative hierarchy models account for how each of three candidate alloys addresses the metallurgical desidirata.
+The constituent criterion-to-alternative hierarchy models 
+\begin_inset Formula $\mathfrak{H}_{B_{1}}\mbox{,}\cdots,\mathfrak{H}_{B_{9}}\subseteq\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ account for how each of three candidate alloys —
+ 
+\begin_inset Formula $TA_{3},TA_{10},TA_{36}$
+\end_inset
+
+ —
+ addresses the metallurgical desidirata 
+\begin_inset Formula $B_{1}\mbox{,}\cdots,B_{9}$
+\end_inset
+
+.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2048,6 +2154,11 @@ refcite{Saaty1986}{(1986)}
 \end_inset
 
  terms.
+ We use 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ to denote this hierarchy model.
  A clear goal or focus results from thoughtful 
 \emph on
 Framing
@@ -2061,6 +2172,11 @@ The horizontally centered box identifies
 \emph on
 Criteria
 \emph default
+,
+ denoted by 
+\begin_inset Formula $\mathfrak{H}_{B_{1}}\mbox{,}\cdots,\mathfrak{H}_{B_{9}}$
+\end_inset
+
 .
  Corresponding to DQ's 
 \emph on
@@ -2215,7 +2331,11 @@ parindent}
 
 \end_inset
 
-That the target-to-criterion hierarchy model in Figure 
+That the target-to-criterion hierarchy model 
+\begin_inset Formula $\mathfrak{H}_{TA_{\text{opt}}}$
+\end_inset
+
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Hierarchy-decomposition-used"
@@ -2227,7 +2347,11 @@ tuple "list"
 
 \end_inset
 
- spans nine elements introduces a modicum of complexity.
+ spans nine elements 
+\begin_inset Formula $B_{1}\mbox{,}\cdots,B_{9}$
+\end_inset
+
+ introduces a modicum of complexity.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2286,27 +2410,10 @@ textit{Consistency Index}}
 
 \emph default
  This algebraically characterizes the degree to which both transitivity conditions are satisfied (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Pant2022}{Pant}
-\end_layout
-
-\end_inset
-
-,
- et al 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Pant2022}{(2022)}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pant2022"
+literal "false"
 
 \end_inset
 
@@ -5560,8 +5667,8 @@ literal "false"
 psychophysics
 \emph default
  justification for this scale,
- and recommended an upper bound of 
-\begin_inset Formula $9$
+ and recommended 
+\begin_inset Formula $a_{i,j}\in[\nicefrac{1}{9},9]\:\forall\,(i,j)$
 \end_inset
 
  when assigning values to importance intensities.
@@ -5716,7 +5823,19 @@ tuple "list"
 
 \end_inset
 
- anticipates their use in defining directed graphs in the sequel.
+ anticipates their use as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+hyperref[subsec:construct-comparative-judgement-graph]{edge lists for comparative-judgement graphs}
+\end_layout
+
+\end_inset
+
+.
  The AHP literature —
  
 \begin_inset CommandInset citation
@@ -5833,26 +5952,10 @@ This convention imbues two conveniences into the procedure.
  This simplifies the algorithmic logic used to construct the resultant complete graph.
  Second,
  it inclines us to think of importance intensities in terms as personal probabilities (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Savage1972}{Savage}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Savage1972}{(1972)}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Savage1972"
+literal "false"
 
 \end_inset
 
@@ -5902,7 +6005,7 @@ tuple "list"
 
  contains unit-valued importance intensities —
  occurrences of 
-\begin_inset Formula $(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto1$
+\begin_inset Formula $(e_{i},e_{j}):\mathcal{J}_{\mathfrak{H}}\mapsto1\mid i\neq j$
 \end_inset
 
  —
@@ -6242,7 +6345,15 @@ literal "false"
 
 \end_inset
 
- exhaustively represent the reciprocal-matrix set in their 
+ exhaustively represent the reciprocal-matrix set 
+\begin_inset Formula $\boldsymbol{A}_{TA_{\text{opt}}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ \boldsymbol{A}_{B_{1}},\cdots,\boldsymbol{A}_{B_{9}}\right\} $
+\end_inset
+
+ in their 
 \begin_inset CommandInset href
 LatexCommand href
 name "Table 10"
@@ -6251,8 +6362,21 @@ literal "false"
 
 \end_inset
 
-.
- Complete reproduction here is unnecessary.
+ and equation (13),
+ respectively.
+ Complete reproduction here is unnecessary given the pattern (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reciprocal-matrix-general"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6302,10 +6426,11 @@ First,
 \begin_inset Formula $\Delta^{n}$
 \end_inset
 
+,
  where
 \begin_inset Formula 
 \begin{equation}
-\Delta^{n}\triangleq\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\left(\sum_{i}x_{i}=1\right)\;\wedge\left(x_{i}\geq0\:\forall i\right)\right.\right\} \label{eq:unit-simplex-definition}
+\Delta^{n}\triangleq\left\{ \boldsymbol{x}\in\mathbb{R}^{n}\left|\left(\sum_{i}x_{i}=1\right)\;\wedge\left(x_{i}\geq0\:\forall i\right)\right.\right\} \mbox{,}\label{eq:unit-simplex-definition}
 \end{equation}
 
 \end_inset
@@ -6352,16 +6477,19 @@ Summary of priority-vector approaches.
 \end_layout
 
 \begin_layout Standard
-We summarize here comparisons previously described by 
+Within the AHP literature,
+ priority-vector calculation preponderantly occurs using one of two approaches.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Saaty1984"
+key "Saaty2001a,Saaty2003"
 literal "false"
 
 \end_inset
 
-.
- We also make passing observation of a more-empirical approach to obtaining priority vectors.
+ preferred an eigenvector-based approach.
+ Researchers often find a geometric-mean approach more-convenient.
+ We also briefly consider a more-empirical approach to obtaining priority vectors.
 \end_layout
 
 \begin_layout Subparagraph*
@@ -6433,7 +6561,7 @@ of the reciprocal matrix
 \end_inset
 
  .
- The principal eigenvalue then appears as
+ The resulting principal eigenvalue then becomes
 \begin_inset Formula 
 \begin{equation}
 \lambda^{\mathcal{P}}_{\mathfrak{H}}=\left[\boldsymbol{\lambda}_{\mathfrak{H}}\right]_{\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}\mbox{.}\label{eq:reciprocal-matrix-principal-eigenvector}
@@ -6445,7 +6573,7 @@ The priority vector
 \begin_inset Formula $\boldsymbol{\omega}_{\mathfrak{H}}$
 \end_inset
 
- follows from the principal eigenvector as
+ follows from the corresponding principal eigenvector
 \begin_inset Formula 
 \begin{equation}
 \left[\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\right]_{j}=\frac{\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{j,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}{{\displaystyle \sum_{i}}\left[\boldsymbol{\Omega}_{\mathfrak{H}}\right]_{i,\text{argmax}(\boldsymbol{\lambda}_{\mathfrak{H}})}}\mbox{.}\label{eq:perron-priority-vector}
@@ -6476,7 +6604,7 @@ literal "false"
 
 \end_inset
 
- grounds the rationale for this priority-vector choice in the 
+ grounded the rationale for this priority-vector choice in the 
 \emph on
 Perron-Frobenius Theorem
 \emph default
@@ -6489,7 +6617,7 @@ literal "false"
 \end_inset
 
 ).
- Priority-ordering stability by AHP proves highly sensitive to the transitive consistency of comparative judgements.
+ He suggested that priority-ordering stability by AHP proves highly sensitive to the transitive consistency of comparative judgements.
  More-strenuous than von Neumann-Morgenstern preferential-ordering transitivity (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6594,6 +6722,21 @@ tuple "list"
 
 ) certainly requires the preferential ordering.
  The necessity of intensity-of-importance transitivity poses a more-complicated question.
+ When probabilistically framed,
+ the validity of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) depends on statistical independence,
+ among other conditions.
 \end_layout
 
 \begin_layout Standard
@@ -6627,7 +6770,11 @@ literal "false"
 
 \end_inset
 
- proves a limiting case
+ proves a limiting case for transitively consistent reciprocal matrix 
+\begin_inset Formula $\boldsymbol{A}_{\mathfrak{H}}$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \lim_{k\rightarrow\infty}\frac{\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}{\boldsymbol{\omega}^{T}\boldsymbol{A}^{k}_{\mathfrak{H}}\boldsymbol{\omega}}\rightarrow\boldsymbol{\omega}^{\mathcal{P}}_{\mathfrak{H}}\label{eq:limit-perron-eigenvalue-definition}
@@ -6721,7 +6868,7 @@ literal "false"
 
 \end_inset
 
- however demonstrated the accompanying risk of rank-reversal with this approach even under near-trivial conditions.
+ however insinuated an accompanying risk of rank-reversal with this approach even under near-trivial conditions.
  Nonetheless,
  when a high degree of comparative-judgement transitivity (
 \begin_inset CommandInset ref
@@ -15752,6 +15899,13 @@ literal "false"
 
 \begin_layout Subsection*
 Construct comparative-judgement graphs.
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:construct-comparative-judgement-graph"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -16028,7 +16182,48 @@ tuple "list"
 \end_inset
 
 .
- The figure exemplifies the 
+ The figure exemplifies the challenge of depicting higher-order graphs with high-valence vertices.
+ A complete graph of order nine,
+ 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+ makes for a messy plot.
+\end_layout
+
+\begin_layout Standard
+As with Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparative-judgement-graph-"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+,
+ the edge weights correspond to the thickness of their corresponding curves in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:target-criterion-comparative-judgement-graph"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+.
+ An illegible figure results from explicitly depicting the edge weights here.
+ The presence of four undirected edges in 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+ introduces a modicum of complexity into subsequent Laplacian-matrix construction.
 \end_layout
 
 \begin_layout Standard
@@ -17676,6 +17871,34 @@ https://doi.org/10.1016/0096-3003(87)90043-9
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Harris, et al (2020)"
+key "Harris2020"
+literal "false"
+
+\end_inset
+
+Harris,
+ C.
+ R.,
+ 
+\emph on
+et al
+\emph default
+ (2020).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Array programming with NumPy.
+\begin_inset Quotes erd
+\end_inset
+
+ Nature
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Hastie, Tibshirani, Friedman (2009)"
 key "Hastie2009"
 literal "false"
@@ -17983,6 +18206,18 @@ LatexCommand bibitem
 label "Jiroušek, Kratochvíl, Shenoy (2023)"
 key "Jiroušek2023"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Jiroušek2023}
+\end_layout
 
 \end_inset
 
