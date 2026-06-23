@@ -16051,10 +16051,34 @@ literal "false"
 The two figures conform to a common schema.
  Directed edges are represented by solid,
  dark-blue 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "0.5in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "default"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-002540.png
 	lyxscale 7
-	height 0.2in
+	height 15pt
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -16067,10 +16091,34 @@ intensity of importance
  assigned with the corresponding comparative judgement.
  Dashed,
  dark-red 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "0.5in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "default"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-23060b.png
 	lyxscale 7
-	height 0.2in
+	height 15pt
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -17280,6 +17328,43 @@ An Introductory Logic
 LatexCommand href
 name "33034164"
 target "https://lccn.loc.gov/33034164"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cvetković, Rowlinson, Simić (2010)"
+key "Cvetković2010"
+literal "false"
+
+\end_inset
+
+Cvetković,
+ D.;
+ Rowlinson,
+ P.;
+ Simić,
+ S.
+ (2010).
+ 
+\emph on
+An Introduction to the Theory of Graph Spectra
+\emph default
+.
+ Cambridge,
+ UK:
+ Cambridge University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780511801518"
+target "https://doi.org/10.1017/CBO9780511801518"
 literal "false"
 
 \end_inset

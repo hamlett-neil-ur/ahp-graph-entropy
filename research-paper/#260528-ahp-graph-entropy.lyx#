@@ -6988,7 +6988,19 @@ literal "false"
 \begin_inset Formula $\left[0,\,1\right]$
 \end_inset
 
- —
+ along the lines of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hierarchy-element-normalization-map"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+) —
  the measurements to which priority vectors are applied.
  A series of calculations including entropy leads to an empirically-based priority vector.
 \end_layout
@@ -7113,7 +7125,7 @@ literal "false"
 
 \end_inset
 
- employed a physics-based computational model to establish relationships between the device-geometry sub-criteria and the physical operating parameters.
+ employed a physics-based computational model to establish relationships between the device-geometry elements and the physical operating parameters.
  These simulation results led to an empirical basis for an entropy-based priority vector.
  Combining this with a priority vector based on comparative judgements produced a 
 \begin_inset Quotes eld
@@ -7128,7 +7140,7 @@ hybrid
 
 \begin_layout Standard
 Now,
- entropy-weight priority vectors are not subject to constraints enforcing transitive consistency along the lines of (
+ entropy-weight priority vectors are not subject to constraints associated with transitive consistency along the lines of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -7155,26 +7167,10 @@ tuple "list"
 ).
  Nonetheless,
  exemplified by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Bu2026}{Bu,}
-\end_layout
-
-\end_inset
-
- et al 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-refcite{Bu2026}{(2026)}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
 
 \end_inset
 
@@ -7242,6 +7238,32 @@ tuple "list"
 \end_inset
 
 ).
+ The 
+\begin_inset Formula $linalg.eig$
+\end_inset
+
+ method from the python 
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "numpy"
+target "https://numpy.org/"
+literal "false"
+
+\end_inset
+
+
+\emph default
+ library (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Harris2020"
+literal "false"
+
+\end_inset
+
+) produced these results.
  The 
 \begin_inset Quotes eld
 \end_inset
@@ -7405,7 +7427,7 @@ tuple "list"
 
 \end_inset
 
- in about the fifth significant digit.
+ beginning at about the fifth significant digit.
  This is consistent with the 
 \begin_inset Quotes eld
 \end_inset
@@ -10429,7 +10451,19 @@ literal "false"
 consistency indices
 \emph default
 ,
- AHP's out-of-the-box mechanism to quantify the degree of comparative judgements' consistency.
+ AHP's out-of-the-box mechanism to quantify the degree of comparative judgements' consistency in terms of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:saaty-ahp-transitivity"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+tuple "list"
+
+\end_inset
+
+).
  We also demonstrate a graph-theoretic approaches to identify von Neumann-Morgenstern transitivity violations.
  
 \end_layout
@@ -10540,7 +10574,7 @@ tuple "list"
 
 \end_inset
 
-) and (
+)-(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:limit-perron-eigenvalue-definition"
@@ -12327,7 +12361,8 @@ literal "false"
 
 \end_inset
 
- elsewhere argued that 
+ elsewhere argued,
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12474,6 +12509,8 @@ literal "false"
 Commonly available open-source software libraries contain off-the-shelf logic to detect cycles in directed graphs.
  Illustratively,
  the python library 
+\emph on
+
 \begin_inset CommandInset href
 LatexCommand href
 name "networkx"
@@ -12482,10 +12519,12 @@ literal "false"
 
 \end_inset
 
- contains a built-in method 
-\emph on
-is_directed_acyclic_graph
+
 \emph default
+ contains a built-in method 
+\begin_inset Formula $is\_directed\_acyclic\_graph$
+\end_inset
+
 ,
  which returns a value of 
 \begin_inset Formula $True$
@@ -12495,7 +12534,11 @@ is_directed_acyclic_graph
 \begin_inset Formula $False$
 \end_inset
 
- depending on whether or not the directed graph contains cycles (
+ depending on whether or not the directed graph 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ contains cycles (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hagberg (2008)"
@@ -12513,9 +12556,9 @@ literal "false"
 
 \end_inset
 
- methods to explicitly identify directed-graph cycles if they are present.
+ to explicitly identify directed-graph cycles if they are present.
  Such feedback to the comparative-judgement panel serves to sharpen their reasoning about hierarchy-model elements' relative importance.
- Applying this method to 
+ Applying this method to the spanning subgraph 
 \begin_inset Formula $\breve{\mathcal{G}}_{TA_{\text{opt}}}$
 \end_inset
 
@@ -12524,6 +12567,12 @@ literal "false"
 \end_inset
 
  reveals no transitivity violations within the directed edges.
+ The complete graph 
+\begin_inset Formula $\mathcal{G}_{TA_{\text{opt}}}$
+\end_inset
+
+ does however contain cycles,
+ indicating transitivity violations.
 \end_layout
 
 \begin_layout Subsection*
@@ -12760,9 +12809,9 @@ p_{\mathfrak{H}_{n,n'}}=\begin{cases}
 We seek in all cases the following element-measurement normalization behavior:
 \begin_inset Formula 
 \begin{gather}
-p_{\mathfrak{H}_{n,\text{argmax}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=1\label{eq:normalized-element-measure-max}\\
+\underset{n'}{\max}\left\{ \boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right\} =1\label{eq:normalized-element-measure-max}\\
 \mbox{and}\nonumber \\
-p_{\mathfrak{H}_{n,\text{argmin}\left(\boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right)}}=0\mbox{.}\label{eq:eq:normalized-element-measure-min}
+\underset{n'}{\min}\left\{ \boldsymbol{p}_{\mathfrak{H}_{n,n'}}\right\} =0\mbox{.}\label{eq:eq:normalized-element-measure-min}
 \end{gather}
 
 \end_inset
@@ -12879,7 +12928,7 @@ tuple "list"
 
 \end_inset
 
-) provides the mechanism by which rank reversal can occur,
+) provides a key mechanism by which rank reversal can occur,
  regarding which 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -12891,11 +12940,12 @@ literal "false"
  warned.
  Consider a scenario in which a new alternative is introduced for consideration.
  If one or more of that new alternative's measurements 
-\begin_inset Formula $r_{\mathfrak{H}_{n,n'}}$
+\begin_inset Formula $r_{\mathfrak{H}_{n,\ell}}$
 \end_inset
 
- fall outside of the range 
-\begin_inset Formula $\left[\min\{\boldsymbol{r}_{\mathfrak{H}_{n}}\},\max\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} \right]$
+ fall outside of the range of prior alternatives,
+ 
+\begin_inset Formula $r_{\mathfrak{H}_{n,\ell}}\notin\left[\underset{n}{\min}\{\boldsymbol{r}_{\mathfrak{H}_{n}}\},\:\underset{n}{\max}\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} \right]$
 \end_inset
 
 ,
@@ -12916,8 +12966,9 @@ tuple "list"
 \end_inset
 
  for all previously evaluated alternatives.
- This reëvaluation certainly alters the strenghts of preference for each previously evaluated alternative.
- Such reëvaluations provide the rank-reversal mechanism.
+ This reëvaluation certainly alters the strengths of preference for each previously evaluated alternative.
+ Consequently,
+ they also provide a likely rank-reversal mechanism.
 \end_layout
 
 \begin_layout Paragraph*
@@ -13144,7 +13195,7 @@ refcite{Saaty1986}{(1986)}
 
  did not provide for these by default.
  Since 
-\begin_inset Formula $\left[\boldsymbol{p}_{\text{target}}\right]_{i}\in\left[0,1\right]$
+\begin_inset Formula $\left[\boldsymbol{p}_{\text{target}}\right]_{i}\in\left[0,1\right]\:\forall\,i$
 \end_inset
 
 ,
@@ -13196,9 +13247,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-AHP in contrast returns a preferential ranking based on linear combination of comparative judgements and measurements of decision factors,
- or elements.
- This preferential ranking is not equivalent to identifying the maximum expected utility.
+AHP in contrast returns a preferential ranking based on linear combination of comparative judgements and measurements of decision elements.
+ Preferential ranking is not generally equivalent to identifying the maximum expected utility.
  Consequently no guarantee occurs that the most-preferred alternative also yields the expected maximum utility (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -13212,11 +13262,11 @@ literal "false"
 
 \begin_layout Standard
 Identifying mechanics for an expected-utility-based AHP formulation lies beyond the scope of the present investigation.
- It sufficies here to reiterate this epistemic variance between AHP and mainstream decision science.
+ Reiterating the epistemic variance between AHP and mainstream decision science sufficies here.
  Providing an information-theoretic characterization of the degree of influence by evidentiary elements within hierarchy models represents our goal.
  Consequently,
  the methodology developed here complements utility-optimizing decisional reasoning.
- Nothing herein should be construed as asserting that AHP sufficies as a decision-quality reasoning approach.
+ Nothing herein should be construed as asserting that AHP sufficies as a sound reasoning approach in DQ terms.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -13245,7 +13295,7 @@ raw
 \end_inset
 
  measurements of elements within hierarchy models 
-\begin_inset Formula $\left\{ B_{1},\cdots,B_{9}\right\} $
+\begin_inset Formula $\left\{ \mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{9}}\right\} $
 \end_inset
 
  for each Titanium-alloy alternative considered by 
@@ -13270,13 +13320,38 @@ literal "false"
 \end_inset
 
  from which each element measurement was drawn.
- Exact values appear for each element related to metallurgical properties.
+ Exact values appear for each metallurgical element 
+\begin_inset Formula $\left\{ B_{1},\cdots,B_{8}\right\} $
+\end_inset
+
+.
  No explicit measurements for hierarchy model 
 \begin_inset Formula $B_{9}$
 \end_inset
 
  appear.
- An ordinal ranking is the most-precise information provided.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Figure 23"
+target "https://ars.els-cdn.com/content/image/1-s2.0-S0308016125000316-gr23_lrg.jpg"
+literal "false"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zeng2025"
+literal "false"
+
+\end_inset
+
+ contains ordinal ranking of the alternatives according to 
+\begin_inset Formula $B_{9}$
+\end_inset
+
+.
  The 
 \begin_inset Quotes eld
 \end_inset
@@ -15705,7 +15780,7 @@ A strong preference for
 \begin_layout Standard
 By design,
  
-\begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]$
+\begin_inset Formula $\left[\boldsymbol{p}_{TA_{\text{opt}}}\right]_{i}\in\left[0,1\right]\:\forall\,i$
 \end_inset
 
 .
@@ -15744,7 +15819,7 @@ literal "false"
 \begin_inset Formula $TA_{36}$
 \end_inset
 
- produces a dramatically higher strength of preference by no means implies that it represents the best that can be done.
+ produces a dramatically higher strength of preference by no means implies that it represents a global optimum.
  
 \end_layout
 
@@ -15780,7 +15855,7 @@ literal "false"
 
 \end_inset
 
- exemplify for a different material-design problem.
+ exemplified this approach for a different material-design problem.
  Such an approach might lead to a higher-utility alternative in the neighborhod of alloy 
 \begin_inset Formula $TA_{36}$
 \end_inset
@@ -15827,7 +15902,7 @@ tuple "list"
 \end_inset
 
 .
- Our attention then turns to Laplacian-matrix formulation for the different commparative-judgement scenarios.
+ Our attention then turns to Laplacian-matrix formulation for the different comparative-judgement scenarios.
  Within the context of the Titanium-alloy case study,
  Laplacians for 
 \begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{1}}$
@@ -15852,7 +15927,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Following on 
+Following 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Brown2020"
@@ -15864,7 +15939,7 @@ literal "false"
  Laplacian matrices provide the bases for graph-entropy calculations.
  Graph entropies for individual hierarchy-model comparative judgements follow straightforwardly.
  Coupling them into an overarching network involves innovative coupling using hierarchy-model priority vectors.
- That the latters' coincidence to the unit simplex proves useful,
+ That the latters' coincidence with the unit simplex proves useful,
  allowing us to treat the hierarchy-model tree graphs as probabilities.
 \end_layout
 
@@ -15927,7 +16002,16 @@ tuple "list"
 
  are constructed using methods from the python 
 \emph on
-networkx
+
+\begin_inset CommandInset href
+LatexCommand href
+name "networkx"
+target "https://networkx.org/"
+literal "false"
+
+\end_inset
+
+
 \emph default
  library (
 \begin_inset CommandInset citation
@@ -15940,7 +16024,16 @@ literal "false"
 ),
  which invoke 
 \emph on
-matplotlib
+
+\begin_inset CommandInset href
+LatexCommand href
+name "matplotlib"
+target "https://matplotlib.org/"
+literal "false"
+
+\end_inset
+
+
 \emph default
  methods (
 \begin_inset CommandInset citation
@@ -15958,10 +16051,34 @@ literal "false"
 The two figures conform to a common schema.
  Directed edges are represented by solid,
  dark-blue 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "0.5in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "default"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-002540.png
 	lyxscale 7
-	height 0.2in
+	height 15pt
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -15974,10 +16091,34 @@ intensity of importance
  assigned with the corresponding comparative judgement.
  Dashed,
  dark-red 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "0.5in"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "default"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/nahamlet/My Drive (neil.hamlett@uncertainty-research.science)/data-sci-eng-lab/ahp-graph-entropy/illustrations/color-swatch-23060b.png
 	lyxscale 7
-	height 0.2in
+	height 15pt
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -17197,6 +17338,24 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Cvetković, Rowlinson, Simić (2010)"
+key "Cvetković2010"
+literal "false"
+
+\end_inset
+
+Cvetković,
+ D.;
+ Rowlinson,
+ P.;
+ Simić,
+ S.
+ (2010).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Csató (2019)"
 key "Csató2019"
 literal "false"
@@ -17893,7 +18052,23 @@ Array programming with NumPy.
 \begin_inset Quotes erd
 \end_inset
 
- Nature
+ 
+\emph on
+Nature
+\emph default
+:
+ 585:357-362.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1038/s41586-020-2649-2
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography

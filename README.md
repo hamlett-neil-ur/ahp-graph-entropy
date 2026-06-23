@@ -32,7 +32,18 @@ Its appearance amplifies the theme of evidentiary reasoning. Given the current c
 
 ### Amplify the evidentiary-reasoning aspects of AHP.
 
-As of commit [`735d77f96fd192ecdce3a2ecd11c35cd05bf49b4`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/tree/735d77f96fd192ecdce3a2ecd11c35cd05bf49b4), the case study focuses on the mechanics of AHP. Given the title and objective, some mention of the epistemology of AHP seems called-for. Spefically, AHP focuses on prioritization and ordering, in contrast with utility-optimization of mainstream decision theory. 
+#### Preferential ordering versus utility.
+
+As of commit [`735d77f96fd192ecdce3a2ecd11c35cd05bf49b4`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/tree/735d77f96fd192ecdce3a2ecd11c35cd05bf49b4), the case study focuses on the mechanics of AHP. Given the title and objective, some mention of the epistemology of AHP seems called-for. Spefically, AHP focuses on "prioritized" ordering, in contrast with utility-optimization of mainstream decision theory. [Saaty (2001a)](https://doi.org/10.13033/isahp.y2001.029) seemingly differentiates AHP from *utility theory*, positioning as a distinct logical paradigm. The dearth of articles in INFORMS [*Decision Analysis*](https://pubsonline.informs.org/journal/deca) seems to corroborate the hypothesis of a schism. [Abbas' (2026)](https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents) seemingly categorical indictment of the irrationality of reasoning based on "pairwise comparisons" also fits the pattern.
+
+Nonetheless, 
+
+$$
+\boldsymbol{p}
+$$
+
+
+
 
 ### Clarify AHP terminology.
 
