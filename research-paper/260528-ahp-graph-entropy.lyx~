@@ -17338,6 +17338,43 @@ literal "false"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Cvetković, Rowlinson, Simić (2010)"
+key "Cvetković2010"
+literal "false"
+
+\end_inset
+
+Cvetković,
+ D.;
+ Rowlinson,
+ P.;
+ Simić,
+ S.
+ (2010).
+ 
+\emph on
+An Introduction to the Theory of Graph Spectra
+\emph default
+.
+ Cambridge,
+ UK:
+ Cambridge University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780511801518"
+target "https://doi.org/10.1017/CBO9780511801518"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Csató (2019)"
 key "Csató2019"
 literal "false"

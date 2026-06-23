@@ -32,16 +32,42 @@ Its appearance amplifies the theme of evidentiary reasoning. Given the current c
 
 ### Amplify the evidentiary-reasoning aspects of AHP.
 
+The AHP formulation superficially resembles that of the canonical *decision problem under uncertainty* (d.p.u.u.) representing the departure point by [`Luce & Raiffa (1985), chapter 13`](https://store.doverpublications.com/products/9780486659435). 
+
+* [`Luce & Raiffa (1985)`](https://store.doverpublications.com/products/9780486659435). Consider a Cartesian product {(𝐴<sub>i</sub>, 𝑆<sub>j</sub>)} of acts 𝐴<sub>i</sub> performed given a specific decision and unknown states of nature 𝑆<sub>j</sub>. Which 𝑆<sub>j</sub> corresponds to the actual ontic state 𝑆<sup>ont</sup> represents the essential aspect of uncertainty. A utility mapping 𝑢<sub>i,j</sub> ↤ 𝒰(𝐴<sub>i</sub>, 𝑆<sub>j</sub>) for utility function 𝒰 provides the objective to be optimized. We seek a decision rule to find 𝓊<sup>opt</sup>=max<sub>i,j</sub>{𝑢<sub>i,j</sub>}.
+
+* With AHP (and MAUT) we begin with a set of decision elements ℌ⊇{𝑒₁,⋯,𝑒<sub>𝑁</sub>} fo hierarchy model ℌ. Moreover we have a set of options 𝒪⊇{ℴ₁,⋯,𝑜<sub>𝑀</sub>} from which to select. We also have a matrix of measurements measurements 𝑹<sub>ℌ</sub>=[𝒓₁ ⋯ 𝒓<sub>𝑁</sub>] within which each column 𝒓<sub>𝑛</sub> is a vector of measurements for each ℴ<sub>𝑚</sub>∈𝒪 with respect to the 𝑛<sup>th</sup> element in ℌ. We standardize 𝑹<sub>ℌ</sub> to obtain 𝑷<sub>ℌ</sub>, and as in (12b) of [`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb), our utility-optimization operation becomes 𝒑<sub>target</sub>=(𝑷<sub>ℌ</sub>⊗𝜴<sub>ℌ</sub>)𝝎<sub>target</sub>.
+
+These are qualitatively different problems. Our plausible states of nature {𝑆<sub>j</sub>} are categorically different from our preference-ordering element measurements {𝒓<sub>𝑛</sub>}, and their standardized equivalents {𝒑<sub>𝑛</sub>}. We must address the following.
+
+1. Formulate the argument that [`Luce's & Raiffa's (1985)`](https://store.doverpublications.com/products/9780486659435) axioms for d.m.u.u. represent a valid logic for preferential ordering of options given element measurements and comparative judgements about elements' relative importances with respect to each other.
+2. Either demonstrate that widely perceived logical deficiencies in AHP do not inescapably trap one in a state of irrationality. The most-obvious perceived deficiencies include:
+
+    a. **Use of the "universal scale" in comparative judgements** ([`Saaty (2001b)`](https://doi.org/10.13033/isahp.y2001.030)). We argue alternatively for personal-probability-based approach to assigning intensities of importance during comparative judgement.
+
+    b. **Rank reversal upon introduction of new options**. We dispel the perception that rank-reversal mysteriously arises from aberrant approaches to priority-vector calculations. This violates foundational principles of *Linear Time-Invariant* (LTI) systems. Alternatively, rank-reversal can arise upon introduction of an additional option ℴ' for which one or more hierachy-model elements 𝑟<sub>𝑛</sub>' falls outside of the measured range of previously observed element measurements 𝑟<sub>𝑛</sub>' ∉ [min(𝒓<sub>𝑛</sub>), max(𝒓<sub>𝑛</sub>)]. If this occurs, it is inconsequential provided that ℴ'⊁ℴ<sup>opt</sup>∈𝒪.
+
+
 #### Preferential ordering versus utility.
 
 As of commit [`735d77f96fd192ecdce3a2ecd11c35cd05bf49b4`](https://github.com/hamlett-neil-ur/ahp-graph-entropy/tree/735d77f96fd192ecdce3a2ecd11c35cd05bf49b4), the case study focuses on the mechanics of AHP. Given the title and objective, some mention of the epistemology of AHP seems called-for. Spefically, AHP focuses on "prioritized" ordering, in contrast with utility-optimization of mainstream decision theory. [Saaty (2001a)](https://doi.org/10.13033/isahp.y2001.029) seemingly differentiates AHP from *utility theory*, positioning as a distinct logical paradigm. The dearth of articles in INFORMS [*Decision Analysis*](https://pubsonline.informs.org/journal/deca) seems to corroborate the hypothesis of a schism. [Abbas' (2026)](https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents) seemingly categorical indictment of the irrationality of reasoning based on "pairwise comparisons" also fits the pattern.
 
-Nonetheless, 
+Nonetheless, the strength-of-preference ordering ***p***<sub>target</sub> in (12b) of [`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb) resemble quantities characterized as *utilities* in, e.g., Multi-Attribute Utility Theory (MAUT).  Following [`Pettigrew's (2016)`](https://global.oup.com/academic/product/accuracy-and-the-laws-of-credence-9780198732716) reasoning, "A utility function 𝒰 ... takes an option ℴ [from option set 𝒪] and a world 𝓌 from [palusible ontic states] 𝒲 and returs a real number 𝒰(ℴ,𝓌) that measures ... the utility of ℴ at 𝓌." Seemingly a strength-of-preference [***p***<sub>target</sub>]<sub>i</sub> can be framed in these terms. Note that [`Pettigrew's (2016)`](https://global.oup.com/academic/product/accuracy-and-the-laws-of-credence-9780198732716) framing exactly corresponds to [`Luce & Raiffa (1985), §13.3`](https://store.doverpublications.com/products/9780486659435).
 
-$$
-\boldsymbol{p}
-$$
+#### Rank reversal by AHP.
 
+The occurrence of rank reversal appears to form the basis for, e.g., [Abbas' (2026)](https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents) categorical castigation of decision-making methods based pairwise comparisons. [Abbas (2026)](https://www.decisionprofessionals.com/events/simple-registration?CalendarEventKey=bd2fb3d0-7aa0-4d4e-a38d-019d891f176e&Home=%2fsdp-participate%2fevents) did not single out MAUT or AHP. He referred to parwise comparisons employed within the context of Gaussian cupolas (e.g., [Haugh (2016)](https://www.columbia.edu/~mh2078/QRM/Copulas.pdf)), apparently a contributor to catastrophic financial-modeling failures associated with the financial crisis.
+
+##### Mechanisms leading to rank reversal.
+
+Now, the rank-reversal dilemma bears consideration from two perspectives. First, [`Saaty, e.g., (2001a)`](https://doi.org/10.13033/isahp.y2001.029) made some amount of hubbub about the sensitive of preferential ordering to the manner by which the priority vector 𝞈<sub>ℌ</sub> is calculated. We observe in [`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb) that — using [`Pettigrew's (2016)`](https://global.oup.com/academic/product/accuracy-and-the-laws-of-credence-9780198732716) notation — adding another option ℴ' to 𝒪 can lead to re-normalization of the element-measurement matrix 𝑷<sub>ℌ</sub>, (11e) in [`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb). This occurs specifically if any of the element measurements for ℴ' fall outside the range of those previously observed in 𝒪.
+
+When this occurs, our utility function 𝒰(ℴ,𝓌) has effectively changed: 𝒰'(ℴ,𝓌) ≠ 𝒰(ℴ,𝓌), where 𝒰' is based on 𝒪' = 𝒪⋃{ℴ'}. So then, does a non-preffered approach to calculating 𝞈<sub>ℌ</sub> induce rank reversal? Or does the phenomenon occur because re-standardization of decision-element measurements leads to 𝒰'|𝒪'≠𝒰|𝒪? That 𝞈<sub>ℌ</sub>∈Δ<sup>n</sup>, where Δ<sup>n</sup> denotes the unit simplex, would cause rank reversal seems to violate principles of *Linear Time-Invariant* (LTI) systems theory ([`Strum & Kirk (1988)`](https://lccn.loc.gov/86026542); [`Therrien (1992)`](https://lccn.loc.gov/91031057); [`Keesman (2011)`](https://doi.org/10.1007/978-0-85729-522-4); [`Proakis & Manolakis (2024)`](https://www.pearson.com/en-us/subject-catalog/p/digital-signal-processing-principles-algorithms-and-applications/P200000003415/9780137348657)).
+
+
+##### Consequences of rank-reversal for rationality.
+
+[`Saaty, e.g., (2001a)`](https://doi.org/10.13033/isahp.y2001.029) observes equivocation by [`Luce & Raiffa (1985), §13.3`](https://store.doverpublications.com/products/9780486659435) regarding rank-preservation order. Tha latter spoke to the effect of adding ℴ' to 𝒪. The core axiom of interest asserts that, "If an [option] is non-optimal ..., it cannot be made optimal by adding new [options]." The ordering of non-optimal options 𝒪 upon incorporation of a new option ℴ' does not affect the optimality of ℴ<sup>opt</sup>∈𝒪 provided that ℴ'⊁ℴ<sup>opt</sup>.
 
 
 
