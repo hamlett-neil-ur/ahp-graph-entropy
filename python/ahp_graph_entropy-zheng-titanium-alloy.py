@@ -213,9 +213,10 @@ class calculateHierarchyModelEntropy:
                                       .to_records(index = False))
           )
         
-        self.directed_spanning_subgraph = {'directed_spanning_subgraph_is_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph)}
+        self.directed_spanning_subgraph_acyclicity = {'directed_spanning_subgraph_is_acyclic' : is_directed_acyclic_graph(self.directed_spanning_subgraph),
+                                                      'directed_spanning_subgraph' : self.directed_spanning_subgraph}
         
-        return self.directed_spanning_subgraph
+        return self.directed_spanning_subgraph_acyclicity
     # 
     def construct_comparative_judgement_network_plot(self):
     
@@ -475,7 +476,41 @@ class calculateHierarchyModelEntropy:
         
         return self.elliptical_comparative_judgement_plot
     #
+    def construct_judgement_digraph_with_mirror_unit_weighted_edges(self):
     
+        self.judgement_network_unit_weight_edges_mirrored = self.comparative_judgement_network.__class__()
+        self.judgement_network_unit_weight_edges_mirrored.add_nodes_from(nodes_for_adding = self.comparative_judgement_network
+                                                                                               .nodes()                       )
+        self.judgement_network_unit_weight_edges_mirrored.add_edges_from(ebunch_to_add = self.comparative_judgement_network
+                                                                                            .edges
+                                                                                            .data()                           )
+        
+        
+        self.judgement_network_unit_weight_edges_mirrored.add_edges_from(
+            ebunch_to_add =  self.comparative_judgements
+                                     .loc[lambda Χ : Χ['importance'] == 1]
+                                     .assign(
+                                             comparative_factor = lambda Η : Η['comparative_factor']
+                                                                              .apply(func = lambda η : self.hierarchy_model
+                                                                                                       + ':'
+                                                                                                       + η                   ),
+                                             reference_factor = lambda Χ : Χ['reference_factor']
+                                                                            .apply(func = lambda χ :   self.hierarchy_model
+                                                                                                     + ':'
+                                                                                                     + χ                    ),
+                                             importance = lambda Ξ : Ξ['importance']
+                                                                      .apply(func = lambda ξ : {'importance' : ξ})
+                                            )
+                                     [['reference_factor',
+                                       'comparative_factor',
+                                       'importance'        ]]
+                                     .to_records(index = False)
+        )
+        
+        return (self.judgement_network_unit_weight_edges_mirrored
+                        .edges
+                        .data()                                   )
+    #    
     def calculate_reciprocal_matrix_consistency_index_ratio(self):
         from pandas import read_csv
         from numpy import real, argmax
@@ -502,6 +537,56 @@ class calculateHierarchyModelEntropy:
         
         return self.consistency_index_ratio
     #
+    def calculate_vertex_edge_weight_graph_entropy(self):
+    
+        from pandas import DataFrame
+        from math import log2
+        
+        out_edge_importance = (
+                                DataFrame(data = self.judgement_network_unit_weight_edges_mirrored
+                                                     .edges
+                                                     .data(),
+                                          columns = ['comparative_factor',
+                                                     'reference_factor',
+                                                     'importance'        ]                         )
+                                    .assign(importance = lambda Ξ : Ξ['importance']
+                                                                     .apply(func = lambda ξ : ξ.get('importance')))
+                              )
+        
+        vertex_probability_entropy = (
+                                      out_edge_importance
+                                          .merge(right = out_edge_importance
+                                                              [['comparative_factor',
+                                                                'importance'         ]]
+                                                              .groupby(by = 'comparative_factor',
+                                                                       as_index = False          )
+                                                              .sum()
+                                                              .rename(columns = {'importance' : 'net_out_edge_importance'}))
+                                          .assign(
+                                                  vertex_probability = lambda Η : Η.apply(func = lambda η :  η['importance']
+                                                                                                            /η['net_out_edge_importance'],
+                                                                                          axis = 1                                         ),
+                                                  vertex_entropy = lambda Χ : Χ['vertex_probability']
+                                                                               .apply(func = lambda χ : -χ * log2(χ))
+                                                 )
+                                          [['comparative_factor',
+                                            'vertex_probability',
+                                            'vertex_entropy']]
+                                    )
+        
+        graph_entropy = float(
+                              vertex_probability_entropy
+                                 .set_index(keys = 'comparative_factor',
+                                            drop = True                 )
+                                 ['vertex_entropy']
+                                 .sum()
+                              )
+        
+        self.graph_vertex_entropy = {'vertex_entropy' : vertex_probability_entropy,
+                                     'graph_entropy' : graph_entropy               }
+        
+        return self.graph_vertex_entropy
+    #
     def construct_hierarchy_model_tournament_graph(self):
     
         self.construct_reciprocal_matrix_from_comparative_judgements()
@@ -513,6 +598,9 @@ class calculateHierarchyModelEntropy:
         self.determine_acylicity_of_directed_spanning_subgraph()
         self.construct_comparative_judgement_network_plot()
         self.construct_elliptical_layout_unlabeled_edge_graph_plot()
+        
+        self.construct_judgement_digraph_with_mirror_unit_weighted_edges()
+        self.calculate_vertex_edge_weight_graph_entropy()
         
         return self.reciprocal_matrix_priority_vector
     #
@@ -779,46 +867,56 @@ pref_str = calculateStrengthOfAlternativePreference(comparative_judgements = com
 
 ho_TAopt = (pref_str.structural_hierarchy
                     .get('TA_opt')               )
+ho_B1 = (pref_str.structural_hierarchy
+                    .get('B1')               )
 
-
+# (
+#    ho_TAopt.elliptical_comparative_judgement_plot
+#            .get('plot')
+#            .savefig(fname = './illustrations/zheng-target-criterion-judgement-graph.png',
+#                     transparent = True,
+#                     bbox_inches = 'tight',
+#                     dpi = 512                                                             )
+#  )
 
 
 #%%
 
-from networkx import is_directed_acyclic_graph
 
-
-is_directed_acyclic_graph(ho_TAopt.comparative_judgement_network)
-is_directed_acyclic_graph(ho_TAopt.directed_spanning_subgraph)
 
                                          
 #%%
 
 
 
-
-
-#%%
-
-(
-   ho_TAopt.elliptical_comparative_judgement_plot
-           .get('plot')
-           .savefig(fname = './illustrations/zheng-target-criterion-judgement-graph.png',
-                    transparent = True,
-                    bbox_inches = 'tight',
-                    dpi = 512                                                             )
- )
-
+judgement_matrix_out_edges_by_vertex = {
+                                         judgement_vertex : ho_B1.judgement_network_unit_weight_edges_mirrored
+                                                                    .out_edges(nbunch = judgement_vertex,
+                                                                               data = True               )
+                                         for judgement_vertex
+                                         in ho_B1.judgement_network_unit_weight_edges_mirrored.nodes()
+                                        }
 
 
 
 #%%
 
+from numpy.random import choice
+
+judgement_vertex = str(choice(a = list(judgement_matrix_out_edges_by_vertex.keys())))
+out_edges_weights = judgement_matrix_out_edges_by_vertex.get(judgement_vertex)
+
+print(f'🧪 Testing with `judgement_vertex` = «{judgement_vertex}» 🧪')
 
 
 
-                                         
 #%%
+
+
+
+
+#%%
+
 
 
 

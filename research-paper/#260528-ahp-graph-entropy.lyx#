@@ -598,7 +598,6 @@ literal "false"
  devoted considerable attention to the adverse effects of imperfect information —
  an endemic condition within entrepreneurship —
  when trying to select optimum scenarios.
- 
 \end_layout
 
 \begin_layout Standard
@@ -856,7 +855,6 @@ literal "false"
 ),
  and other problems.
  AHP is often applied to situations where substantial amounts of statistically coherent measurements are not immediately available to support more-empirical approaches.
- 
 \end_layout
 
 \begin_layout Standard
@@ -921,7 +919,6 @@ hyperref[sec:ahp-case-study]{case study}
 \end_inset
 
  demonstrating the mechanics of AHP to rank plausible alternatives.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1013,7 +1010,6 @@ Partially ordered sets with a finite number of elements can be conveniently repr
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -1124,7 +1120,6 @@ literal "false"
  belief-function graphical models
 \emph default
  to decompose their elements' relative evidentiary strength.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1233,7 +1228,6 @@ literal "false"
  explored entropy differences between same-order tournament graphs with differing directional structures.
  In our case,
  the relative entropy of the graph associated with the overall evidentiary span with respect to a constituent induced subgraph quantifies the information lost by ommission of elements from the latter.
- 
 \end_layout
 
 \begin_layout Paragraph*
@@ -1285,7 +1279,6 @@ literal "false"
 
  formulate entropies for regular (non-directional) graphs comprised of weighted edges.
  The intensities of importance from the AHP comparative judgements provide graph-edge weights used here.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1548,7 +1541,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Itemize
@@ -1612,7 +1604,6 @@ literal "false"
  The reasoning approach must therefore fit the circumstances resulting from the links above.
  AHP is itself a distinct reasoning approach,
  with accompanying advantages and disadvantages.
- 
 \end_layout
 
 \begin_layout Itemize
@@ -1688,7 +1679,6 @@ hyperref[sec:ahp-case-study]{Titanium-alloy selection}
  The actual ranking lies beyond our specific interest,
  but is included for completeness.
  The complete graphs resulting from the comparative judgements provide our point of departure into a novel methodology.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1988,7 +1978,6 @@ tuple "list"
 
 .
  The latter suggests a basis for marginal utility.
- 
 \end_layout
 
 \begin_layout Standard
@@ -2385,7 +2374,6 @@ literal "false"
 proscribes circular reasoning.
  Enforcing this constraint during the comparative-judgement process can prove challenging,
  particluarly as the number of hierarchy-model elements grows.
- 
 \end_layout
 
 \begin_layout Standard
@@ -2419,7 +2407,6 @@ literal "false"
 
 ).
  Representing comparative judgements as a directed graph provides an unambiguous mechanism to explicitly identify violations of von Neumann-Morgenstern transitivity.
- 
 \end_layout
 
 \begin_layout Standard
@@ -2439,7 +2426,6 @@ literal "false"
  values —
  of utility.
  They do not however explicitly articulate a utility function or theory.
- 
 \end_layout
 
 \begin_layout Subsection*
@@ -2484,7 +2470,6 @@ Pairwise
 \emph default
  is the operative term,
  here.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4229,7 +4214,6 @@ literal "false"
 \end_inset
 
 ).
- 
 \end_layout
 
 \end_inset
@@ -5702,7 +5686,6 @@ literal "false"
 ,
  the most-rigorous description of the AHP methodology,
  contains no explicit prescription for this scale for importance-intensity assignment.
- 
 \end_layout
 
 \begin_layout Standard
@@ -6656,7 +6639,6 @@ a_{i,j}a_{j,k}=a_{i,k}\mbox{,}\label{eq:saaty-ahp-transitivity}
 \end_inset
 
 also applying to intensities of importance.
- 
 \end_layout
 
 \begin_layout Standard
@@ -7390,7 +7372,6 @@ literal "false"
 \end_inset
 
  apparently hold up in this case.
- 
 \end_layout
 
 \begin_layout Standard
@@ -7618,7 +7599,7 @@ element
 \begin_inset Text
 
 \begin_layout Plain Layout
-priority 
+priority
 \end_layout
 
 \begin_layout Plain Layout
@@ -10390,10 +10371,6 @@ vector
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -10465,7 +10442,6 @@ tuple "list"
 
 ).
  We also demonstrate a graph-theoretic approaches to identify von Neumann-Morgenstern transitivity violations.
- 
 \end_layout
 
 \begin_layout Standard
@@ -10699,7 +10675,6 @@ tuple "list"
 \end_inset
 
 ).
- 
 \end_layout
 
 \begin_layout Standard
@@ -11107,7 +11082,7 @@ tuple "list"
 \begin_inset Formula $\lambda^{\mathcal{P}}_{\mathfrak{H}}$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -12286,7 +12261,6 @@ tuple "list"
 \end_inset
 
  meet this criterion.
- 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -12350,7 +12324,6 @@ tuple "list"
 ).
  Performing such a procedure may lead to an epistemic conundrum:
  One applies algorithmic logic to override comparative judgements.
- 
 \end_layout
 
 \begin_layout Standard
@@ -12437,7 +12410,6 @@ tuple "list"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -12583,7 +12555,6 @@ Prioritize alternatives based on comparative judgements and measurements of hier
 We now turn our attention to prioritization of alternatives by the AHP.
  We first describe the mechanics for the general case.
  We then apply the machinery to the Titanium-alloy selection case study.
- 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -13092,7 +13063,6 @@ strength of preference
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Subparagraph*
@@ -13243,7 +13213,6 @@ literal "false"
  articulate decision-science foundations for decision quality in particular,
  and the decision-analysis discipline more generally.
  This is grounded in the von Neumann-Morgenstern principle that the most-rational decision selects the alternative yielding the greatest expected utility.
- 
 \end_layout
 
 \begin_layout Standard
@@ -13450,7 +13419,6 @@ tuple "list"
 effect
 \emph default
  value associated with each metallurgical criterion.
- 
 \end_layout
 
 \begin_layout Standard
@@ -15360,10 +15328,6 @@ name "normalized-metallurgical-property-measurements"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -15623,7 +15587,7 @@ alternative
 \begin_inset Text
 
 \begin_layout Plain Layout
-strength of 
+strength of
 \end_layout
 
 \begin_layout Plain Layout
@@ -15791,7 +15755,6 @@ By design,
  clarly falls in the upper half of this scale.
  To reiterate however,
  a link between the strength of preference and a business utility does not explicitly appear.
- 
 \end_layout
 
 \begin_layout Standard
@@ -15820,7 +15783,6 @@ literal "false"
 \end_inset
 
  produces a dramatically higher strength of preference by no means implies that it represents a global optimum.
- 
 \end_layout
 
 \begin_layout Standard
@@ -15861,7 +15823,6 @@ literal "false"
 \end_inset
 
 's chemical composition.
- 
 \end_layout
 
 \begin_layout Section*
@@ -16044,7 +16005,6 @@ literal "false"
 \end_inset
 
 ) to actually construct the figures.
- 
 \end_layout
 
 \begin_layout Standard
@@ -16467,6 +16427,73 @@ arabic{figure}}
 
 \end_layout
 
+\begin_layout Subsection*
+Calculate entropies of comparative-judgement networks.
+\end_layout
+
+\begin_layout Standard
+A variety of graph-entropy approaches exist.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun2021"
+literal "false"
+
+\end_inset
+
+ classified approaches based on graph-invariance characteristics of interest.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Degree-based vertex entropy
+\emph default
+ evaluates the robustness of the network and measures the importance of the vertex.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Distance-based entropy
+\emph default
+ evaluates classical topological indicators of interest in,
+ e.g.,
+ mathematical chemistry.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Subgraph-based structure entropy
+\emph default
+ describes the information metrics of a subgraph to investigate the overall properties of the graph.
+\end_layout
+
+\begin_layout Itemize
+Most-extensively explored,
+ 
+\emph on
+eigenvalue entropy
+\emph default
+ provides indices charaterizing the structure,
+ function,
+ and evolution of a network.
+\end_layout
+
+\begin_layout Standard
+We focus here primarily on importance of vertices.
+ We seek to answer the question,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+What elements of information —
+ represented by graph vertices —
+ most influence the 
+\end_layout
+
 \begin_layout Section*
 Data availability.
 \end_layout
@@ -16534,7 +16561,6 @@ https://doi.org/10.1287/deca.2024.0187
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -16571,7 +16597,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -16729,7 +16754,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -16786,7 +16810,6 @@ https://doi.org/10.1016/j.laa.2019.09.026
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -16928,7 +16951,6 @@ https://doi.org/10.1287/stsc.2024.0173
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -17216,7 +17238,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -17258,7 +17279,6 @@ https://doi.org/10.1111/risa.70206
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -17351,6 +17371,25 @@ Cvetković,
  Simić,
  S.
  (2010).
+ 
+\emph on
+An Introduction to the Theory of Graph Spectra
+\emph default
+.
+ Cambridge,
+ UK:
+ Cambridge University Press.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "9780511801518"
+target "https://doi.org/10.1017/CBO9780511801518"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Bibliography
@@ -17435,7 +17474,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -17940,7 +17978,6 @@ https://drive.google.com/file/d/1Cq7oM6BYrGWxmjf1bdhrdrORZnKBvLu4/view
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -18188,7 +18225,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -19200,7 +19236,6 @@ literal "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -19648,7 +19683,7 @@ literal "false"
 Saaty,
  T.
  L.
- (2001).
+ (2001a).
  
 \begin_inset Quotes eld
 \end_inset
@@ -19693,7 +19728,7 @@ literal "false"
 Saaty,
  T.
  L.
- (2001).
+ (2001b).
  
 \begin_inset Quotes eld
 \end_inset
@@ -19776,7 +19811,6 @@ https://doi.org/10.1016/S0377-2217(02)00227-8
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
@@ -19942,7 +19976,7 @@ The Foundations of Statistics
 \emph default
 .
  New York:
- Wiley.) 
+ Wiley.)
 \end_layout
 
 \begin_layout Bibliography
@@ -20198,6 +20232,50 @@ https://doi.org/10.1016/j.jlp.2019.104024
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Sun, et al (2021)"
+key "Sun2021"
+literal "false"
+
+\end_inset
+
+Sun,
+ Y.,
+ 
+\emph on
+et al
+\emph default
+ (2021).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Eigenvalue-based entropy in directed complex networks.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+PLoS ONE
+\emph default
+:
+ 16(6):
+ e0251993.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1371/journal.pone.0251993
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Sun, Kroesen, Razael (2025)"
 key "Sun2025"
 literal "false"
@@ -20240,7 +20318,6 @@ https://doi.org/10.1287/deca.2024.0308
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
