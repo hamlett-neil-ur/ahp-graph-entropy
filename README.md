@@ -67,7 +67,7 @@ When this occurs, our utility function 𝒰(ℴ,𝓌) has effectively changed: �
 
 ##### Consequences of rank-reversal for rationality.
 
-[`Saaty, e.g., (2001a)`](https://doi.org/10.13033/isahp.y2001.029) observes equivocation by [`Luce & Raiffa (1985), §13.3`](https://store.doverpublications.com/products/9780486659435) regarding rank-preservation order. Tha latter spoke to the effect of adding ℴ' to 𝒪. The core axiom of interest asserts that, "If an [option] is non-optimal ..., it cannot be made optimal by adding new [options]." The ordering of non-optimal options 𝒪 upon incorporation of a new option ℴ' does not affect the optimality of 𝒪'∋ℴ<sup>opt</sup>∈𝒪 provided that ℴ'⊁ℴ<sup>opt</sup>.
+[`Saaty, e.g., (2001a)`](https://doi.org/10.13033/isahp.y2001.029) observes equivocation by [`Luce & Raiffa (1985), §13.3`](https://store.doverpublications.com/products/9780486659435) regarding rank-preservation order. Tha latter spoke to the effect of adding ℴ' to 𝒪. The core axiom of interest asserts that, "If an [option] is non-optimal ..., it cannot be made optimal by adding new [options]." The ordering of non-optimal options 𝒪 upon incorporation of a new option ℴ' does not affect the optimality of ℴ<sup>opt</sup>∈𝒪⊂𝒪' provided that ℴ'⊁ℴ<sup>opt</sup>.
 
 
 
