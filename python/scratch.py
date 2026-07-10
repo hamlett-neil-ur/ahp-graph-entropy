@@ -50,5 +50,42 @@ Created on Wed May 20 10:00:34 2026
         
         return self.bauer_laplacian_basis_graph.edges(data = True)
     #
+    def construct_bauer_normalized_laplacian(self):
+    
+        from pandas import DataFrame
+        from numpy import diag, identity
+        from scipy.linalg import eig
+        
+        bauer_graph_edge_weight_matrix = (
+                                          DataFrame(data = self.chung_laplacian_network_base
+                                                                .edges(data = True),
+                                                    columns = ['comparative_element',
+                                                               'reference_element',
+                                                               'intensity_of_importance']     )
+                                              .assign(intensity_of_importance = lambda Ξ : Ξ['intensity_of_importance']
+                                                                                            .apply(func = lambda ξ : ξ.get('importance')))
+                                              .pivot(index = 'comparative_element',
+                                                     columns = 'reference_element',
+                                                     values = 'intensity_of_importance'  )
+                                              .fillna(value = 0)
+                                         )
+        inverse_vertex_in_degree = DataFrame(data = diag(v = bauer_graph_edge_weight_matrix.sum(axis = 1)
+                                                                                           .map(func = lambda χ :      0 if χ == 0
+                                                                                                                  else 1/χ         )),
+                                             columns = bauer_graph_edge_weight_matrix.columns,
+                                             index = bauer_graph_edge_weight_matrix.index                                            )
+        identity_matrix = DataFrame(data = identity(n = bauer_graph_edge_weight_matrix.shape[0]),
+                                    columns = bauer_graph_edge_weight_matrix.columns,
+                                    index = bauer_graph_edge_weight_matrix.index                 )
+        self.bauer_normalized_laplacian = (identity_matrix.sub(other = inverse_vertex_in_degree.dot(other = bauer_graph_edge_weight_matrix)))
+        
+        (Λ_bauer,
+         Χ_bauer ) = eig(self.bauer_normalized_laplacian)
+        
+        return self.bauer_normalized_laplacian
+    #
+
+
+
 
 

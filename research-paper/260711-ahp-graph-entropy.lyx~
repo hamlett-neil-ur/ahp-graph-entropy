@@ -17041,6 +17041,42 @@ http://dx.doi.org/10.1016/j.laa.2012.01.020
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Brouwer & Haemers (2012)"
+key "Brouwer2012"
+literal "false"
+
+\end_inset
+
+Brouwer,
+ A.
+ E.
+ & Heamers,
+ W.
+ H.
+ (2012).
+ 
+\emph on
+Spectra of Graphs
+\emph default
+.
+ New York:
+ Springer.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://doi.org/10.1007/978-1-4614-1939-6"
+target "9781461419389"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Biggs (2012)"
 key "Biggs2012"
 literal "false"
@@ -17099,42 +17135,6 @@ Information Economics
 LatexCommand href
 name "9780415373456"
 target "https://www.routledge.com/Information-Economics/Birchler-Butler/p/book/9780415373456"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-label "Brouwer & Heamers (2012)"
-key "Brouwer2012"
-literal "false"
-
-\end_inset
-
-Brouwer,
- A.
- E.
- & Heamers,
- W.
- H.
- (2012).
- 
-\emph on
-Spectra of Graphs
-\emph default
-.
- New York:
- Springer.
- ISBN:
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "https://doi.org/10.1007/978-1-4614-1939-6"
-target "9781461419389"
 literal "false"
 
 \end_inset
