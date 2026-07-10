@@ -118,7 +118,7 @@
 % --- Title and Author Metadata ---
 \title{%
   \bfseries \textcolor{Night}{Evidentiary reasoning within the Analytical Hierarchy Process:}\\
-  \textcolor{Night}{Use of graph entropy to rank decision elements}
+  \textcolor{Night}{Ranking decision elements by graph entropy}
   \par\vspace{0.6em}
   \normalfont\normalsize \href{https://github.com/hamlett-neil-ur/ahp-graph-entropy/blob/main/research-paper/260504-ahp-graph-entropy.pdf}{unpublished working paper}
   \par\vspace{0.4em}
@@ -1779,7 +1779,8 @@ literal "false"
 
  employed AHP to select the best candidate Titanium alloy from which to construct pipelines for use in offshore oil and gas extraction.
  Their analysis considers metallurgical technical details that are tangential to our purposes.
- We principally focus on the AHP mechanics.
+ Here,
+ we principally focus on the AHP mechanics.
 \end_layout
 
 \begin_layout Standard
@@ -5736,6 +5737,30 @@ refcite{deFinetti1974}{(1974)}
 \end_inset
 
 ).
+ In fact,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saaty2001a"
+literal "false"
+
+\end_inset
+
+ grounds AHP logic in 
+\emph on
+Perron-Frobenius Theory
+\emph default
+,
+ which begins from state-transition probabilities (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Horn2012"
+literal "false"
+
+\end_inset
+
+).
+ Alternatively,
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -7026,7 +7051,8 @@ tuple "list"
 
  —
  represent device physical-operating characteristics.
- The sub-criteria 
+ Represented as heptagons,
+ sub-criteria 
 \begin_inset Formula $Angle$
 \end_inset
 
@@ -7122,7 +7148,7 @@ hybrid
 
 \begin_layout Standard
 Now,
- entropy-weight priority vectors are not subject to constraints associated with transitive consistency along the lines of (
+ entropy-weight priority vectors are not necessarily subject to constraints associated with transitive consistency along the lines of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:saaty-ahp-transitivity"
@@ -12914,12 +12940,13 @@ literal "false"
 \begin_inset Formula $r_{\mathfrak{H}_{n,\ell}}$
 \end_inset
 
- fall outside of the range of prior alternatives,
+ fall outside of the range of prior alternatives —
+ that is,
  
 \begin_inset Formula $r_{\mathfrak{H}_{n,\ell}}\notin\left[\underset{n}{\min}\{\boldsymbol{r}_{\mathfrak{H}_{n}}\},\:\underset{n}{\max}\left\{ \boldsymbol{r}_{\mathfrak{H}_{n}}\right\} \right]$
 \end_inset
 
-,
+ —
  then (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13376,6 +13403,33 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+That the 
+\begin_inset Formula $units$
+\end_inset
+
+ column differs for each constituent hierarcy model 
+\begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{9}}$
+\end_inset
+
+ drives home the entire point of MCDM.
+ We seek a decision that weighs qualitatively different evidentiary elements.
+ In rare cases —
+ exemplified by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bu2026"
+literal "false"
+
+\end_inset
+
+ —
+ one might construct some computational model to combine the effects of qualitatively distinct evidence.
+ Even when possible,
+ the cost to obtain the resulting information might exceed its value.
+ 
+\end_layout
+
+\begin_layout Standard
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13511,7 +13565,11 @@ Metallurgical-property measurements
 \end_inset
 
  influencing Titanium-alloy prioritization.
- (From 
+ The 
+\begin_inset Formula $source$
+\end_inset
+
+ column indicates the exhibit within 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zeng2025"
@@ -13519,7 +13577,12 @@ literal "false"
 
 \end_inset
 
-)
+ that contains the element measurements for 
+\begin_inset Formula $\mathfrak{H}_{B_{1}},\cdots,\mathfrak{H}_{B_{9}}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_inset
@@ -13551,7 +13614,7 @@ name "zheng-et-al-metallurgical-properties"
 \begin_inset Text
 
 \begin_layout Plain Layout
-model,
+hierarchy model,
  
 \begin_inset Formula $\mathfrak{H}$
 \end_inset
@@ -16555,7 +16618,7 @@ literal "false"
 \emph on
 Vertex information-functional-based entropy
 \emph default
- evaluates the robustness of the network and measures the importance of the vertex.
+ evaluates the robustness of the network and measures the importance of the vertex based on a vertex-centered information functional.
  
 \end_layout
 
@@ -16602,6 +16665,132 @@ What elements of information —
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The literature contains a diverse variety of graph-entropy approaches.
+ The majority involve calculating the spectra —
+ Perron-eigenvalue arrays —
+ associated with matrix representations of graphs' connectivity structures.
+ The methods tend to be 
+\emph on
+ad hoc
+\emph default
+:
+ Few begin from some axiomatic foundation.
+ Many are tailored to address the needs of a specific research context.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bauer2012"
+literal "false"
+
+\end_inset
+
+ provides well-suited approach for purposes of this investigation.
+ It generalizes the ubiquitous undirected-graph Laplacian (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Godsil2001,Biggs2012,Brouwer2012"
+literal "false"
+
+\end_inset
+
+) to directed graphs with positive and negative edge weights.
+ The approach straightforwardly extends to DAGs and mixed graphs.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bauer2012}{Bauer's}
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bauer2012}{2012}
+\end_layout
+
+\end_inset
+
+) Laplacian formulation circumvents difficulties with a prominent approach by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chung2005"
+literal "false"
+
+\end_inset
+
+ based on transition-probablity matrices.
+ Consistent with Perron-Frobenious theory,
+ transition-probability spectra degenerate for DAGs,
+ because terminal-state distributions concentrate into a single 
+\begin_inset Quotes eld
+\end_inset
+
+sink
+\begin_inset Quotes erd
+\end_inset
+
+ vertex.
+ Alternatively,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2015"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kuo2022"
+literal "false"
+
+\end_inset
+
+ propose entropies based solely on the graph weights and disregard the graph's connective structure.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bauer2012}{Bauer's}
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+refcite{Bauer2012}{2012}
+\end_layout
+
+\end_inset
+
+) Laplacian approach acounts for connectivity.
 \end_layout
 
 \begin_layout Section*
@@ -16801,6 +16990,93 @@ https://doi.org/10.1111/risa.13772
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Bauer (2012)"
+key "Bauer2012"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Bauer2012}
+\end_layout
+
+\end_inset
+
+Bauer,
+ F.
+ (2012).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Noramlized graph Laplacians for directed graphs.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Linear Algebra and its Applications
+\emph default
+:
+ 436:4193-4222.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+http://dx.doi.org/10.1016/j.laa.2012.01.020
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Brouwer & Haemers (2012)"
+key "Brouwer2012"
+literal "false"
+
+\end_inset
+
+Brouwer,
+ A.
+ E.
+ & Heamers,
+ W.
+ H.
+ (2012).
+ 
+\emph on
+Spectra of Graphs
+\emph default
+.
+ New York:
+ Springer.
+ ISBN:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://doi.org/10.1007/978-1-4614-1939-6"
+target "9781461419389"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Biggs (2012)"
 key "Biggs2012"
 literal "false"
@@ -16975,6 +17251,45 @@ https://doi.org/10.1016/j.enconman.2025.120952
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Butler (2007)"
+key "Butler2007"
+literal "false"
+
+\end_inset
+
+Butler,
+ S.
+ (2007).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Interlacing for weighted graphs using the normalized Laplacian.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Electronic Journal of Linear Algebra
+\emph default
+:
+ 16:90-98.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.13001/1081-3810.1185
+\end_layout
+
+\end_inset
+
+/
 \end_layout
 
 \begin_layout Bibliography
@@ -17240,6 +17555,57 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1016/j.jclepro.2019.07.016
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Chung (2005)"
+key "Chung2005"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+label{ref:Chung2005}
+\end_layout
+
+\end_inset
+
+Chung,
+ F.
+ (2005).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Laplacians and the Cheeger Inequality for directed graphs.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Annals of Combinatorics
+\emph default
+:
+ 9:1-19.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1007/s00026-005-0237-z
 \end_layout
 
 \end_inset
@@ -17983,6 +18349,43 @@ LatexCommand href
 name "9780486824178"
 target "https://store.doverpublications.com/products/9780486824178"
 literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Guo & Mohar (2015)"
+key "Guo2015"
+literal "false"
+
+\end_inset
+
+Guo,
+ K.
+ & Mohar,
+ B.
+ (2015).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Hermitian adjacency matrix of digraphs and mixed graphs.
+\begin_inset Quotes erd
+\end_inset
+
+ (arXiv:1505.01321v1).
+ arXiv.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.48550/arXiv.1505.01321
+\end_layout
 
 \end_inset
 
@@ -20771,6 +21174,49 @@ https://www.nobelprize.org/prizes/economic-sciences/1974/hayek/lecture/
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+label "Wang, Z.; She, T.; Wang, C. (2024)"
+key "Wang2024"
+literal "false"
+
+\end_inset
+
+Wang,
+ Z.;
+ She,
+ T.;
+ Wang,
+ C.
+ (2024).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The Index Weighted Hermitian Adjacency Matrices for Mixed Graphs.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Utilitas Mathematica
+\emph default
+:
+ 199:63-71.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+http://dx.doi.org/10.61091/um119-07
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 label "Wong & You (1985)"
 key "Wong1985"
 literal "false"
@@ -20847,6 +21293,49 @@ status open
 
 \begin_layout Plain Layout
 https://doi.org/10.1016/j.ejor.2024.10.018
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Yu, Geng, Zhou (2023)"
+key "Yu2023"
+literal "false"
+
+\end_inset
+
+Yu,
+ Y.;
+ Geng,
+ X.;
+ Zhou,
+ Z.
+ (2023).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The k-generalized Hermitian adjacency matrices for mixed graphs.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Discrete Mathematics
+\emph default
+:
+ 346:113254.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+https://doi.org/10.1016/j.disc.2022.113254
 \end_layout
 
 \end_inset

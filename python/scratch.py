@@ -6,54 +6,49 @@ Created on Wed May 20 10:00:34 2026
 @author: nahamlet
 """
 
-def calculate_vertex_edge_weight_graph_entropy(self):
+    def construct_edge_weight_digraph_bases_for_bauer_laplacian(self):
+    
+        from networkx import difference, complete_graph, DiGraph, set_edge_attributes, compose
+        
+        # After: Bauer (2012) http://dx.doi.org/10.1016/j.laa.2012.01.020.
+        # Construct from the comparative-judgement graph a digraph conforming to the
+        # Bauer (2012) convention, in which edge-weight values contain all graph-
+        # connectivity information. 
+        # ⓵ Begin with the `self.judgement_network_unit_weight_edges_mirrored`
+        #    attribute constructed by method 
+        #    `construct_judgement_digraph_with_mirror_unit_weighted_edges`.
+        #    This contains all of comparative-judgement information. 
+        # ⓶ Constructed an edge-complement DiGraph object. 
+        #    ⓐ Construct a complete DiGraph based on the nodes in 
+        #       `self.judgement_network_unit_weight_edges_mirrored`. This 
+        #       complete DiGraph is not a tournament graph in the sence of
+        #       Brown, et al (2020) https://doi.org/10.1016/j.laa.2019.09.026,
+        #       containing only a single directed edge between each vertex pair.
+        #       Our "complete" DiGraph contains mirror edges — one in each direction —
+        #       for each vertex pair.
+        #    ⓑ The desired `unit_weight_edge_mirrored_edge_complement` DiGraph object
+        #       is the edge difference between the complete graph in ⓐ and our
+        #       DiGraph attribute `self.judgement_network_unit_weight_edges_mirrored`.
+        #    ⓒ Set ⟪{'importance' : 0}⟫ edge-weight attributes for each edge in our
+        #       `unit_weight_edge_mirrored_edge_complement` DiGraph object.
+        # ⓷ Our desired DiGraph object `bauer_laplacian_basis_graph` results from the
+        #    composition of `unit_weight_edge_mirrored_edge_complement` with
+        #    `self.judgement_network_unit_weight_edges_mirrored`.
+        
+        
+        unit_weight_edge_mirrored_edge_complement = difference(
+                                                               G = complete_graph(n = self.judgement_network_unit_weight_edges_mirrored.nodes(),
+                                                                                  create_using = DiGraph()                                       ),
+                                                               H = self.judgement_network_unit_weight_edges_mirrored
+                                                              )
+        set_edge_attributes(G = unit_weight_edge_mirrored_edge_complement, 
+                            values = 0,
+                            name = 'importance'                           )
+        
+        self.bauer_laplacian_basis_graph = compose(G = self.judgement_network_unit_weight_edges_mirrored,
+                                                   H = unit_weight_edge_mirrored_edge_complement           )
+        
+        return self.bauer_laplacian_basis_graph.edges(data = True)
+    #
 
-    from pandas import DataFrame
-    from math import log2
-    
-    out_edge_importance = (
-                            DataFrame(data = self.judgement_network_unit_weight_edges_mirrored
-                                                 .edges
-                                                 .data(),
-                                      columns = ['comparative_factor',
-                                                 'reference_factor',
-                                                 'importance'        ]                         )
-                                .assign(importance = lambda Ξ : Ξ['importance']
-                                                                 .apply(func = lambda ξ : ξ.get('importance')))
-                          )
-    
-    vertex_probability_entropy = (
-                                  out_edge_importance
-                                      .merge(right = out_edge_importance
-                                                          [['comparative_factor',
-                                                            'importance'         ]]
-                                                          .groupby(by = 'comparative_factor',
-                                                                   as_index = False          )
-                                                          .sum()
-                                                          .rename(columns = {'importance' : 'net_out_edge_importance'}))
-                                      .assign(
-                                              vertex_probability = lambda Η : Η.apply(func = lambda η :  η['importance']
-                                                                                                        /η['net_out_edge_importance'],
-                                                                                      axis = 1                                         ),
-                                              vertex_entropy = lambda Χ : Χ['vertex_probability']
-                                                                           .apply(func = lambda χ : -χ * log2(χ))
-                                             )
-                                      [['comparative_factor',
-                                        'vertex_probability',
-                                        'vertex_entropy']]
-                                )
-    
-    graph_entropy = float(
-                          vertex_probability_entropy
-                             .set_index(keys = 'comparative_factor',
-                                        drop = True                 )
-                             ['vertex_entropy']
-                             .sum()
-                          )
-    
-    graph_vertex_entropy = {'vertex_entropy' : vertex_probability_entropy,
-                            'graph_entropy' : graph_entropy               }
-    
-    return graph_vertex_entropy
-#
 

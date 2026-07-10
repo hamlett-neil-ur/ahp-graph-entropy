@@ -7,7 +7,7 @@
 
 ## Draft research paper. 📝 
 
-[`260528-ahp-graph-entropy.pdf`](https://drive.google.com/file/d/1BR45AW378_d-EXYlBj00NM6JgoaBYdBb).
+[`260710-ahp-graph-entropy.pdf`](./research-paper/260711-ahp-graph-entropy.pdf).
 
 ## 𝓣𝓸 𝓓𝓸. 🏗️🧱👷
 
