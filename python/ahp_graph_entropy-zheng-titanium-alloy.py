@@ -861,6 +861,13 @@ class calculateHierarchyModelEntropy:
         from numpy import diag, identity
         from scipy.linalg import eig
         
+        # After: Bauer (2012) http://dx.doi.org/10.1016/j.laa.2012.01.020.
+        # 
+        # Bauer (2012) constructs a Laplacian in terms of the directed-graph incidence matrix
+        # (Brouwer & Haemers, 2012, https://doi.org/10.1007/978-1-4614-1939-6). Instead of
+        # the cardinality of incident edges on which Brower's & Haemers' (2012) definition is based,
+        # Bauer (2012) employs the sum of the 
+        
         bauer_graph_edge_weight_matrix = (
                                           DataFrame(data = self.chung_laplacian_network_base
                                                                 .edges(data = True),
@@ -886,6 +893,12 @@ class calculateHierarchyModelEntropy:
         
         (Λ_bauer,
          Χ_bauer ) = eig(self.bauer_normalized_laplacian)
+        
+        self.bauer_lapacian_construction = {
+                        'bauer_normalized_laplacian' : self.bauer_normalized_laplacian,
+                        'bauer_graph_edge_weight_matrix' : bauer_graph_edge_weight_matrix,
+                        'Λ' : Λ_bauer,
+                        'Χ' : Χ_bauer                                                      }
         
         return self.bauer_normalized_laplacian
     #
@@ -1191,24 +1204,31 @@ ho_B1 = (pref_str.structural_hierarchy
 
 #%%
 
-from numpy import diagonal, identity, argmax, real
+from networkx import complete_graph, adjacency_matrix, random_regular_graph
+from scipy.sparse.linalg import eigs
+from numpy import identity, diagflat, array
 
-𝞍_chung = argmax(real(ho_B1.comparative_judgement_transition_probability
-                           .get('Λ')                                    ))
+vertex_count = 5
+graph_regularity = 2
+exemplary_complete_graph = complete_graph(n = vertex_count)
+exemplary_regular_graph = random_regular_graph(d = graph_regularity,
+                                               n = vertex_count      )
+complete_graph_adjacency = adjacency_matrix(G = exemplary_complete_graph)
+vertex_degree_digonal = diagflat(v = [vertex_degree
+                                      for (vertex_label,
+                                           vertex_degree)
+                                      in exemplary_complete_graph.degree])
 
+eigs(A = complete_graph_adjacency.toarray(),
+     which = 'LM')
 
+eigs(A = vertex_degree_digonal - complete_graph_adjacency,
+     which = 'LM')
 
 
 #%%
 
-from scipy.sparse.linalg import eigs
-
-(𝜆, 𝞆) = eigs(A = ho_B1.comparative_judgement_transition_probability_matrix
-                       .to_numpy(),
-              k = 1,
-              which = 'LM')
-
-
+type(complete_graph_adjacency.toarray())
 
 
 
